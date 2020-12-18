@@ -1,5 +1,5 @@
 {
-  "name": "example-http-client-name-api",
+  "name": "example-ipfs-client-add-files",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,12 @@
     "start": "parcel index.html -p 8888",
     "test": "test-ipfs-example"
   },
-  "author": "Tara Vancil <tbvanc@gmail.com>",
-  "license": "MIT",
   "dependencies": {
-    "ipfs-http-client": "^48.1.2"
+    "ipfs-client": "^0.1.0"
   },
   "devDependencies": {
     "execa": "^4.0.3",
-    "go-ipfs": "^0.7.0",
+    "ipfs": "^0.52.0",
     "ipfsd-ctl": "^7.2.0",
     "parcel-bundler": "^1.12.4",
     "rimraf": "^3.0.2",
