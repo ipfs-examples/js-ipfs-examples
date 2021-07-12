@@ -1,0 +1,32 @@
+{
+  "name": "js-ipfs-examples",
+  "version": "1.0.0",
+  "description": "Collection of opinionated and real-world examples of how you can use js-ipfs to build things",
+  "scripts": {
+    "init": "npm i",
+    "reset": "npm run clean -ws && rimraf packages/*/node_modules examples/*/node_modules node_modules .parcel-cache",
+    "test": "npm run test -ws",
+    "lint": "npm run lint -ws",
+    "test:examples": "npm start -ws && playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipfs-examples/js-ipfs-examples.git"
+  },
+  "keywords": [
+    "examples",
+    "js-ipfs"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ipfs-examples/js-ipfs-examples/issues"
+  },
+  "homepage": "https://github.com/ipfs-examples/js-ipfs-examples#readme",
+  "devDependencies": {
+    "playwright": "^1.12.3",
+    "rimraf": "^3.0.2"
+  },
+  "workspaces": [
+    "./examples/*"
+  ]
+}
