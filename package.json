@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Collection of opinionated and real-world examples of how you can use js-ipfs to build things",
   "scripts": {
-    "init": "npm i",
-    "reset": "npm run clean -ws && rimraf packages/*/node_modules examples/*/node_modules node_modules .parcel-cache",
+    "reset": "npm run clean -ws & rimraf examples/*/node_modules .parcel-cache package-lock.json examples/*/package-lock.json node_modules",
     "test": "npm run test -ws",
     "lint": "npm run lint -ws",
-    "test:examples": "npm start -ws && playwright test"
+    "test:examples": "npm run build -ws && npm run test -ws"
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,6 @@
   },
   "homepage": "https://github.com/ipfs-examples/js-ipfs-examples#readme",
   "devDependencies": {
-    "playwright": "^1.12.3",
     "rimraf": "^3.0.2"
   },
   "workspaces": [

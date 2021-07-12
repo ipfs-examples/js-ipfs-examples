@@ -1,30 +1,33 @@
 {
-  "name": "example-browser-vue",
+  "name": "example-browser-vue-up",
+  "description": "A minimal demonstration of how to use js-ipfs using vue cli",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "clean": "rimraf ./dist",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "start": "npm run serve",
     "lint": "vue-cli-service lint",
-    "test": "test-ipfs-example"
+    "test:example": "npm run build && playwright test tests"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
-    "ipfs": "^0.55.4",
-    "vue": "^2.6.11"
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "ipfs": "^0.55.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "5.0.0-alpha.8",
-    "@vue/cli-plugin-eslint": "5.0.0-alpha.8",
-    "@vue/cli-service": "5.0.0-alpha.8",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.22.0",
-    "eslint-plugin-vue": "^7.8.0",
-    "node-polyfill-webpack-plugin": "^1.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
     "rimraf": "^3.0.2",
-    "test-ipfs-example": "^3.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "@playwright/test": "^1.12.3",
+    "playwright": "^1.12.3",
+    "test-util-ipfs-example": "^1.0.0"
   },
   "eslintConfig": {
     "root": true,
@@ -32,20 +35,17 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+    },
+    "rules": {}
   },
   "browserslist": [
-    "last 2 versions and not dead and > 2%"
+    "> 1%",
+    "last 2 versions",
+    "not dead"
   ]
 }

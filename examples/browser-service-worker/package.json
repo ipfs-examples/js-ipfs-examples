@@ -27,8 +27,5 @@
     "ipfs-message-port-protocol": "^0.7.3",
     "ipfs-message-port-server": "^0.7.3",
     "process": "0.11.10"
-  },
-  "browserslist": [
-    "last 2 versions and not dead and > 2%"
-  ]
+  }
 }

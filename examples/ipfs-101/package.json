@@ -5,7 +5,9 @@
   "main": "1.js",
   "private": true,
   "scripts": {
-    "test": "test-ipfs-example"
+    "start": "node index.js",
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
   },
   "author": "David Dias <daviddias@ipfs.io>",
   "license": "MIT",
@@ -15,6 +17,6 @@
     "uint8arrays": "^2.1.3"
   },
   "devDependencies": {
-    "test-ipfs-example": "^3.0.0"
+    "test-util-ipfs-example": "^1.0.0"
   }
 }

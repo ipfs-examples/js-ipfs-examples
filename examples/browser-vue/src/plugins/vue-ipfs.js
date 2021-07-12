@@ -1,14 +1,7 @@
 import IPFS from 'ipfs'
 
-const plugin = {
-  install(Vue, opts = {}) {
-    Vue.prototype.$ipfs = IPFS.create(opts)
-  },
+export default {
+  install: (app, options) => {
+    app.config.globalProperties.$ipfs = IPFS.create(options)
+  }
 }
-
-// Auto-install
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(plugin)
-}
-
-export default plugin

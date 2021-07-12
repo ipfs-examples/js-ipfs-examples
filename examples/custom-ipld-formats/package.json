@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "test-ipfs-example"
+    "start": "node in-process-node.js & node daemon-node.js",
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
   },
   "license": "MIT",
   "devDependencies": {
-    "execa": "^5.0.0",
-    "test-ipfs-example": "^3.0.0"
+    "test-util-ipfs-example": "^1.0.0"
   },
   "dependencies": {
     "cids": "^1.1.6",

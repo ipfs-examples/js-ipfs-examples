@@ -5,12 +5,15 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "test-ipfs-example"
+    "start": "npm run test:example",
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
   },
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "test-ipfs-example": "^3.0.0"
+    "nanoid": "^3.1.23",
+    "test-util-ipfs-example": "^1.0.0"
   },
   "dependencies": {
     "ipfs": "^0.55.4"

@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-size: 1.5em;
+  padding: 5px 10px;
+}
+
+#container {
+  height: calc(100vh - 60px);
+  padding: 20px;
+  border: 10px transparent;
+}
+
+#container.drag-over {
+  border: 10px dashed green;
+}
+
+#buttons {
+  height: 50px;
+}
+
+#display {
+  display: flex;
+  height: calc(100vh - 90px);
+}
+
+#log {
+  flex-grow: 2;
+  padding: 10px;
+  height: calc(100vh - 120px);
+  overflow: auto;
+}
+
+#log p {
+  font-family: "Lucida Console", Monaco, monospace;
+  margin: 0;
+  white-space: pre;
+  line-height: 1.4;
+}
+
+#log p.error {
+  color: red;
+}
+
+#log p.output {
+  color: green;
+}
+
+#files {
+  width: 50vw;
+}
+
+#files pre {
+  margin: 0;
+  line-height: 1.4;
+}
+
+#modal-screen {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  -webkit-box-shadow: 0px 0px 92px -3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 92px -3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 92px -3px rgba(0, 0, 0, 0.4);
+  background-color: white;
+
+  position: absolute;
+  top: 50px;
+  width: 500px;
+  margin-left: 50%;
+  left: -250px;
+  padding: 20px;
+  display: none;
+}
+
+.modal h2 {
+  margin-top: 10px;
+}
+
+.modal input {
+  font-size: 1.5em;
+  padding: 5px 10px;
+}
+
+.modal label,
+.modal input,
+.modal checkbox,
+.modal button {
+  display: block;
+  margin: 10px 0;
+}

@@ -1,24 +1,35 @@
 {
   "name": "example-browser-add-readable-stream",
   "description": "How to add readable streams in the browser",
-  "version": "2.0.1",
+  "version": "1.0.0",
   "main": "dist/index.html",
   "private": true,
+  "targets": {
+    "main": {
+      "engines": {
+        "browsers": [
+          "last 1 Chrome version"
+        ]
+      }
+    }
+  },
   "scripts": {
-    "build": "parcel build index.html --dist-dir ./dist --no-scope-hoist",
-    "serve": "parcel serve index.html",
+    "clean": "rimraf ./dist ./.cache ./.parcel-cache",
+    "build": "parcel build index.html --no-scope-hoist",
+    "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
-    "test": "npx playwright test",
-    "clean": "rimraf ./dist ./.cache ./.parcel-cache"
+    "test:example": "npm run build && playwright test tests"
   },
   "keywords": [],
   "license": "MIT",
+  "dependencies": {
+    "ipfs": "^0.55.4"
+  },
   "devDependencies": {
     "parcel": "latest",
     "rimraf": "^3.0.2",
-    "@playwright/test": "^1.12.3"
-  },
-  "dependencies": {
-    "ipfs": "^0.55.4"
+    "@playwright/test": "^1.12.3",
+    "playwright": "^1.12.3",
+    "test-util-ipfs-example": "^1.0.0"
   }
 }

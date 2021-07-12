@@ -5,7 +5,8 @@
 const codecName = 'dag-test'
 const codecNumber = 392091
 
-const table = require('multicodec/src/base-table')
+const table = require('multicodec/src/generated-table')
+
 // @ts-ignore
 table.baseTable = {
   ...table.baseTable,
@@ -18,7 +19,7 @@ const multihashing = require('multihashing-async')
 const multihash = multihashing.multihash
 const multicodec = require('multicodec')
 const CID = require('cids')
-const ipfsHttpClient = require('ipfs-http-client')
+const {create: ipfsHttpClient} = require('ipfs-http-client')
 const uint8ArrayToString = require('uint8arrays/to-string')
 
 async function main () {

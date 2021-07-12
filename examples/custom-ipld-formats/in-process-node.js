@@ -5,7 +5,7 @@
 const codecName = 'dag-test'
 const codecNumber = 392091
 
-const table = require('multicodec/src/base-table')
+const table = require('multicodec/src/generated-table')
 // @ts-ignore
 table.baseTable = {
   ...table.baseTable,
