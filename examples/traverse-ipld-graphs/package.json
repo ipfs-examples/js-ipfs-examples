@@ -5,20 +5,21 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "test-ipfs-example"
+    "clean": "echo 'Nothing to clean...'",
+    "start": "npm run test:example",
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
   },
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "test-ipfs-example": "^3.0.0"
+    "test-util-ipfs-example": "^1.0.2"
   },
   "dependencies": {
-    "cids": "^1.1.6",
+    "@ipld/dag-pb": "^2.1.3",
     "ipfs": "^0.55.4",
-    "ipld-block": "^0.11.0",
-    "ipld-dag-pb": "^0.22.1",
     "ipld-git": "^0.6.1",
     "ipld-ethereum": "^6.0.0",
-    "multihashing-async": "^2.1.2"
+    "multiformats": "^9.4.1"
   }
 }

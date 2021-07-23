@@ -1,14 +1,24 @@
 {
   "name": "browser-ipns-publish",
-  "version": "1.0.0",
   "description": "An example demonstrating publishing to IPNS in the browser",
+  "version": "1.0.0",
+  "main": "dist/index.html",
   "private": true,
-  "main": "index.js",
+  "targets": {
+    "main": {
+      "engines": {
+        "browsers": [
+          "last 1 Chrome version"
+        ]
+      }
+    }
+  },
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
-    "start": "parcel index.html",
-    "test": "test-ipfs-example"
+    "serve": "parcel serve index.html --open -p 8888",
+    "start": "npm run serve",
+    "test:example": "npm run build && playwright test tests"
   },
   "author": "Doug Anderson",
   "license": "MIT",
@@ -16,23 +26,21 @@
     "human-crypto-keys": "^0.1.4",
     "ipfs": "^0.55.4",
     "ipfs-http-client": "^50.1.2",
-    "ipfs-utils": "^8.1.2",
-    "ipns": "^0.12.0",
+    "ipfs-utils": "^8.1.4",
+    "ipns": "^0.13.2",
     "it-last": "^1.0.4",
     "p-retry": "^4.2.0",
-    "uint8arrays": "^2.1.3"
+    "uint8arrays": "^2.1.6"
   },
-  "browserslist": [
-    "last 2 versions and not dead and > 2%"
-  ],
   "devDependencies": {
     "delay": "^5.0.0",
     "execa": "^5.0.0",
-    "ipfsd-ctl": "^8.0.1",
+    "ipfsd-ctl": "^9.0.0",
     "go-ipfs": "0.8.0",
-    "parcel": "2.0.0-beta.2",
-    "path": "^0.12.7",
-    "test-ipfs-example": "^3.0.0"
+    "parcel": "latest",
+    "rimraf": "^3.0.2",
+    "@playwright/test": "^1.12.3",
+    "playwright": "^1.12.3"
   },
   "repository": {
     "type": "git",

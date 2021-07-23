@@ -5,16 +5,19 @@
   "main": "1.js",
   "private": true,
   "scripts": {
-    "test": "test-ipfs-example"
+    "clean": "echo 'Nothing to clean...'",
+    "start": "node index.js",
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
   },
   "author": "David Dias <daviddias@ipfs.io>",
   "license": "MIT",
   "dependencies": {
     "ipfs": "^0.55.4",
     "it-all": "^1.0.4",
-    "uint8arrays": "^2.1.3"
+    "uint8arrays": "^2.1.6"
   },
   "devDependencies": {
-    "test-ipfs-example": "^3.0.0"
+    "test-util-ipfs-example": "^1.0.2"
   }
 }

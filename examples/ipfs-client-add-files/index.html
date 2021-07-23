@@ -1,36 +1,80 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>JS IPFS Client example</title>
-    <style>
-      .hidden {
-        opacity: 0;
-      }
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS IPFS API name example</title>
 
-      form {
-        padding-bottom: 1em;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" href="./src/app.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <script src="./src/app.js" defer></script>
   </head>
 
-  <body>
-    <h1>ipfs-client</h1>
-    <form id="connect-to-api">
-      <h3>Enter IPFS API details</h3>
-      <label for="grpc-input">
-        GRPC:
-        <input id="grpc-input" name="grpc-input" type="text" value="/ip4/127.0.0.1/tcp/5003" required>
-      </label>
-      <label for="http-input">
-        HTTP:
-        <input id="http-input" name="text" type="text" value="/ip4/127.0.0.1/tcp/5001" required>
-      </label>
-      <button id="connect-submit" type="submit">Connect</button>
-    </form>
-    <div id="output">
-    </div>
+  <body class="montserrat f5">
+    <header class="flex items-center pa3 bg-navy bb bw3 b--aqua">
+      <a href="https://ipfs.io" title="home">
+        <img
+          alt="IPFS logo"
+          src="./public/ipfs-logo.svg"
+          style="height: 50px;"
+          class="v-top"
+        />
+      </a>
+    </header>
 
-    <script src="index.js"></script>
+    <main class="pa4-l bg-snow mw7 mv5 center pa4">
+      <h1 class="pa0 f2 ma0 mb4 aqua tc">IPFS Client</h1>
+      <h3>Enter IPFS API details</h3>
+
+      <form id="connect-to-api">
+        <label for="grpc-input" class="f5 ma0 pb2 tracked aqua fw4 db"
+          >GRPC</label
+        >
+        <input
+          class="input-reset bn black-80 bg-white pa3 w-100 mb3"
+          id="grpc-input"
+          name="grpc-input"
+          type="text"
+          placeholder="/ip4/127.0.0.1/tcp/5003"
+          required
+        />
+
+        <label for="http-input" class="f5 ma0 pb2 tracked aqua fw4 db"
+          >HTTP</label
+        >
+        <input
+          class="input-reset bn black-80 bg-white pa3 w-100 mb3 ft"
+          id="http-input"
+          name="http-input"
+          type="text"
+          value="/ip4/127.0.0.1/tcp/5001"
+          required
+        />
+
+        <button
+          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100"
+          id="connect-submit"
+          type="submit"
+        >
+          Connect
+        </button>
+      </form>
+
+      <h3>Output</h3>
+
+      <div class="window">
+        <div class="header"></div>
+        <div id="terminal" class="terminal">
+          <div id="output"></div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,69 +1,169 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS IPFS API name example</title>
-    <style>
-      .hidden {
-        opacity: 0;
-      }
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <script src="./src/index.js" defer></script>
+
+    <style>
       form {
-        padding-bottom: 1em;
+        margin: 1.25rem 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      .hidden {
+        display: none;
+      }
+      button:disabled {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      button:hover:disabled {
+        background-color: rgba(0, 0, 0, 0.2);
+        cursor: not-allowed;
       }
     </style>
   </head>
 
-  <body>
-    <h1>js-ipfs-http-client</h1>
-    <h2><code>name.publish()</code> and <code>name.resolve()</code></h2>
-    <p id="status" style="color: white; padding: .5em; background: blue">
-      Ready to connect
-    </p>
+  <body class="montserrat f5">
+    <header class="flex items-center pa3 bg-navy bb bw3 b--aqua">
+      <a href="https://ipfs.io" title="home">
+        <img
+          alt="IPFS logo"
+          src="./public/ipfs-logo.svg"
+          style="height: 50px;"
+          class="v-top"
+        />
+      </a>
+    </header>
 
-    <form id="connect-to-http-api">
-      <h3>Enter the multiaddr of a IPFS HTTP API.</h3>
-      <input id="connect-input" name="text" type="text" value="/ip4/127.0.0.1/tcp/5001" required></textarea>
-      <button id="connect-submit" type="submit">Connect</button>
-    </form>
+    <main class="pa4-l bg-snow mw7 mv5 center pa4">
+      <h1 class="pa0 f2 ma0 mb4 aqua tc">IPFS HTTP Client</h1>
+      <h2><code>name.publish()</code> and <code>name.resolve()</code></h2>
 
-    <form id="publish-text">
-      <h3>Add a new file to IPFS and publish it.</h3>
-      <textarea id="add-file-input" name="text" placeholder="hello, world" required></textarea>
-      <button id="add-file-submit" type="submit" disabled>Publish</button>
-    </form>
-
-    <form id="publish-path">
-      <h3>Publish an existing file or directory from IPFS.</h3>
-      <input id="publish-cid-input" name="path" type="text" placeholder="IPFS path" required/>
-      <button id="publish-cid-submit" type="submit" disabled>Publish</button>
-    </form>
-
-    <div class="results--publish hidden">
-      <p>
-        Published at <code id="publish-result"></code>
+      <p id="status" class="bg-navy pa3 white-80 mb4">
+        Ready to connect
       </p>
-      <p>
-        <a id="publish-gateway-link">Open with HTTP gateway</a>
-      </p>
-    </div>
 
-    <hr />
+      <form id="connect-to-http-api">
+        <label for="connect-input" class="f5 ma0 pb2 aqua fw4 db"
+          >Enter the multiaddr of a IPFS HTTP API</label
+        >
+        <input
+          class="input-reset bn black-80 bg-white pa3 w-100 w-80-l mb3 mb0-l ft"
+          type="text"
+          name="connect-input"
+          id="connect-input"
+        />
+        <input
+          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100 w-20-l fr"
+          id="connect-submit"
+          type="submit"
+          value="Connect"
+        />
+      </form>
 
-    <form id="resolve-name">
-      <h3>Resolve an IPNS name</h3>
-      <input id="resolve-name-input" name="name" type="text" placeholder="IPNS name" required />
-      <button id="resolve-name-submit" type="submit" disabled>Resolve</button>
-    </form>
-    <div class="results--resolve hidden">
-      <p>
-        Resolves to <code id="resolve-result"></code>
-      </p>
-      <p>
-        <a id="resolve-gateway-link">Open with HTTP gateway</a>
-      </p>
-    </div>
+      <hr class="mv3" />
 
-    <script src="index.js"></script>
+      <form id="publish-text" class="flex flex-column">
+        <label for="add-file-input" class="f5 ma0 pb2 aqua fw4 db"
+          >Add a new file to IPFS and publish it</label
+        >
+        <textarea
+          id="add-file-input"
+          name="add-file-input"
+          placeholder="hello, world"
+          required
+          class="border-box hover-black w-100 ba b--light-gray pa2 mb2"
+          rows="6"
+        ></textarea>
+        <button
+          disabled
+          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100 w-20-l self-end"
+          id="add-file-submit"
+          type="submit"
+        >
+          Publish
+        </button>
+      </form>
+
+      <form id="publish-path">
+        <label for="publish-cid-input" class="f5 ma0 pb2 aqua fw4 db"
+          >Publish an existing file or directory from IPFS.</label
+        >
+        <input
+          class="input-reset bn black-80 bg-white pa3 w-100 w-80-l mb3 mb0-l ft"
+          id="publish-cid-input"
+          name="publish-cid-input"
+          type="text"
+          placeholder="IPFS path"
+          required
+        />
+        <button
+          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100 w-20-l fr"
+          id="publish-cid-submit"
+          type="submit"
+          disabled
+        >
+          Publish
+        </button>
+      </form>
+
+      <div class="results--publish hidden">
+        <p>Published at <code id="publish-result"></code></p>
+        <p>
+          <a id="publish-gateway-link" target="_blank"
+            >Open with HTTP gateway</a
+          >
+        </p>
+      </div>
+
+      <hr class="mv3" />
+
+      <form id="resolve-name">
+        <label for="resolve-name-input" class="f5 ma0 pb2 aqua fw4 db"
+          >Resolve an IPNS name</label
+        >
+        <input
+          id="resolve-name-input"
+          name="resolve-name-input"
+          type="text"
+          placeholder="IPNS name"
+          required
+          class="input-reset bn black-80 bg-white pa3 w-100 w-80-l mb3 mb0-l ft"
+        />
+        <button
+          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100 w-20-l fr"
+          id="resolve-name-submit"
+          type="submit"
+          disabled
+        >
+          Resolve
+        </button>
+      </form>
+
+      <div class="results--resolve hidden">
+        <p>IPNS: <code id="resolve-ipns"></code></p>
+        <p>Resolves to <code id="resolve-result"></code></p>
+        <p>
+          <a id="resolve-gateway-link-ipfs" target="_blank" class="db"
+            >Open IPFS with HTTP gateway</a
+          >
+          <a id="resolve-gateway-link-ipns" target="_blank" class="db"
+            >Open IPNS with HTTP gateway</a
+          >
+        </p>
+      </div>
+    </main>
   </body>
 </html>

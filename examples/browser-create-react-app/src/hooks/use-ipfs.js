@@ -7,24 +7,23 @@ import dotProp from 'dot-prop'
 /*
  * Pass the command you'd like to call on an ipfs instance.
  *
- * callIpfs uses setState write the response as a state variable, so that your component
+* callIpfs uses setState write the response as a state variable, so that your component
  * will re-render when the result 'res' turns up from the call await ipfsCmd.
  *
  */
 export default function useIpfs (ipfs, cmd, opts) {
-    // note: opts is not used here and is not passed as args of the call from App.js
-    const [res, setRes] = useState(null)
-    useEffect(() => {
-        callIpfs(ipfs, cmd, opts, setRes)
-    }, [ipfs, cmd, opts])
-    return res
+  const [res, setRes] = useState(null)
+  useEffect(() => {
+    callIpfs(ipfs, cmd, setRes, opts)
+  }, [ipfs, cmd, opts])
+  return res
 }
 
-async function callIpfs (ipfs, cmd, opts, setRes) {
-    if (!ipfs) return null
-    console.log(`Call ipfs.${cmd}`)
-    const ipfsCmd = dotProp.get(ipfs, cmd)
-    const res = await ipfsCmd(opts)
-    console.log(`Result ipfs.${cmd}`, res)
-    setRes(res)
+async function callIpfs (ipfs, cmd, setRes, ...opts) {
+  if (!ipfs) return null
+  console.log(`Call ipfs.${cmd}`)
+  const ipfsCmd = dotProp.get(ipfs, cmd)
+  const res = await ipfsCmd(...opts)
+  console.log(`Result ipfs.${cmd}`, res)
+  setRes(res)
 }

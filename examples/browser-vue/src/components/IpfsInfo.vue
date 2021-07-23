@@ -1,9 +1,12 @@
 <template>
-  <div class="ipfs-info">
-    <img class="ipfs-logo" alt="IPFS logo" src="../assets/logo.svg" />
-    <h1>{{ status }}</h1>
-    <h2>ID: {{ id }}</h2>
-    <h2>Agent version: {{ agentVersion }}</h2>
+  <h3>{{ status }}</h3>
+  <div v-if="online" class="ipfs-info">
+    <h3>
+      ID: <span id="ipfs-info-id">{{ id }}</span>
+    </h3>
+    <h3>
+      Agent version: <span id="ipfs-info-agent">{{ agentVersion }}</span>
+    </h3>
   </div>
 </template>
 
@@ -14,7 +17,8 @@ export default {
     return {
       status: "Connecting to IPFS...",
       id: "",
-      agentVersion: ""
+      agentVersion: "",
+      online: false
     };
   },
   mounted: function() {
@@ -32,6 +36,7 @@ export default {
         this.id = id;
         // Set successful status text.
         this.status = "Connected to IPFS =)";
+        this.online = ipfs.isOnline;
       } catch (err) {
         // Set error status text.
         this.status = `Error: ${err}`;
@@ -40,10 +45,3 @@ export default {
   }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.ipfs-logo {
-  height: 10rem;
-}
-</style>
