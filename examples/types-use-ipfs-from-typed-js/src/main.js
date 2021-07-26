@@ -1,7 +1,7 @@
 const { create } = require('ipfs')
 /**
  * @typedef {import('ipfs').IPFS} IPFS
- * @typedef {import('multiformats/cid').CID} CID
+* @typedef {import('multiformats/cid').CID} CID
  */
 
 async function main () {

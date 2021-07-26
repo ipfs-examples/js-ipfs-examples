@@ -1,27 +1,38 @@
 {
   "name": "example-exchange-files-in-browser",
   "version": "1.0.0",
+  "main": "dist/index.html",
   "private": true,
+  "targets": {
+    "main": {
+      "engines": {
+        "browsers": [
+          "last 1 Chrome version"
+        ]
+      }
+    }
+  },
   "scripts": {
-    "clean": "rimraf public/bundle.js",
-    "bundle": "browserify public/app.js > public/bundle.js",
-    "start": "http-server -c-1 -p 12345 public",
-    "dev": "npm run bundle && npm run start",
-    "test": "test-ipfs-example"
+    "clean": "rimraf ./dist ./.cache ./.parcel-cache",
+    "build": "parcel build index.html --no-scope-hoist",
+    "serve": "parcel serve index.html --open -p 8888",
+    "start": "npm run serve",
+    "test": "playwright test",
+    "test:example": "npm run build && playwright test tests"
   },
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^17.0.0",
-    "execa": "^5.0.0",
-    "http-server": "^0.12.3",
     "ipfs-http-client": "^50.1.2",
-    "uint8arrays": "^2.1.6"
+    "parcel": "latest",
+    "@playwright/test": "^1.12.3",
+    "playwright": "^1.12.3",
+    "rimraf": "^3.0.2",
+    "test-util-ipfs-example": "^1.0.2"
   },
   "dependencies": {
+    "uint8arrays": "^2.1.6",
     "ipfs": "^0.55.4",
     "it-all": "^1.0.4",
-    "libp2p-websockets": "^0.16.1",
-    "rimraf": "^3.0.2",
-    "test-ipfs-example": "^3.0.0"
+    "libp2p-websockets": "^0.16.1"
   }
 }

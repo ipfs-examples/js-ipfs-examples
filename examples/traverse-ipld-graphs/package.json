@@ -5,12 +5,15 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "test-ipfs-example"
+    "clean": "echo 'Nothing to clean...'",
+    "start": "npm run test:example",
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
   },
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "test-ipfs-example": "^3.0.0"
+    "test-util-ipfs-example": "^1.0.2"
   },
   "dependencies": {
     "@ipld/dag-pb": "^2.1.3",

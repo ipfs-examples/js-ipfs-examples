@@ -5,8 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "clean": "echo 'Nothing to clean...'",
     "start": "node index.js",
-    "test": "test-ipfs-example"
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -20,7 +22,6 @@
     "multiformats": "^9.4.1"
   },
   "devDependencies": {
-    "execa": "^5.0.0",
-    "test-ipfs-example": "^3.0.0"
+    "test-util-ipfs-example": "^1.0.2"
   }
 }

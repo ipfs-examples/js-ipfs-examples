@@ -1,9 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>IPFS with HLS-JS</title>
+    <link rel="icon" href="favicon.ico" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/hlsjs-ipfs-loader@0.3.0/dist/index.js"
+    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/hls.js@0.14.17"></script>
+
+    <script defer src="./src/index.js"></script>
+  </head>
   <body>
-    <video id="video" controls></video>
-    <script src="./node_modules/ipfs/dist/index.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hlsjs-ipfs-loader@0.3.0/dist/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@0.14.17"></script>
-    <script src="streaming.js"></script>
+    <video id="video" controls autoplay></video>
   </body>
 </html>

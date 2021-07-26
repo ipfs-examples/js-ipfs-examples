@@ -4,7 +4,7 @@ import IPFS from 'ipfs'
 import { Server, IPFSService } from 'ipfs-message-port-server'
 
 const main = async () => {
-  console.info('heelo')
+  console.info('Running SharedWorker...')
   // start listening to all the incoming connections (browsing contexts that
   // which run new SharedWorker...)
   // Note: It is important to start listening before we do any await to ensure

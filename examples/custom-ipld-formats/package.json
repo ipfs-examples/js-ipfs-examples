@@ -1,14 +1,16 @@
 {
-  "name": "example-custom-ipld-formats",
+  "name": "skipped-example-custom-ipld-formats",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "test-ipfs-example"
+    "clean": "echo 'Nothing to clean...'",
+    "start": "node in-process-node.js & node daemon-node.js",
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
   },
   "license": "MIT",
   "devDependencies": {
-    "execa": "^5.0.0",
-    "test-ipfs-example": "^3.0.0"
+    "test-util-ipfs-example": "^1.0.2"
   },
   "dependencies": {
     "dag-jose": "^1.0.0",

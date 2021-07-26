@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "webpack",
-    "start": "node server.js",
-    "test": "test-ipfs-example"
+    "build": "webpack --env production",
+    "serve": "webpack serve --hot-only --mode=development",
+    "start": "npm run serve",
+    "test:example": "npm run build && playwright test tests"
   },
   "author": "Victor Bjelkholm <victor@ipfs.io>",
   "license": "MIT",
@@ -23,16 +24,19 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^8.1.0",
-    "execa": "^5.0.0",
+    "css-loader": "^6.2.0",
+    "node-polyfill-webpack-plugin": "^1.0.3",
     "ipfs": "^0.55.4",
-    "ipfsd-ctl": "^9.0.0",
     "react-hot-loader": "^4.12.21",
     "rimraf": "^3.0.2",
-    "test-ipfs-example": "^3.0.0",
+    "style-loader": "^3.1.0",
     "webpack": "^5.28.0",
-    "webpack-cli": "^4.5.0"
+    "webpack-cli": "^4.5.0",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack-merge": "^5.8.0",
+    "test-util-ipfs-example": "^1.0.2"
   },
   "browserslist": [
-    "last 2 versions and not dead and > 2%"
+    "last 1 Chrome version"
   ]
 }

@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local env files
+.env.local
+.env.*.local
+
+# Coverage directory used by tools like istanbul
+coverage
+.nyc_output
+tests_output
+cache
+.cache
+.parcel-cache
+
+# Dependency directory
+node_modules
+
+# Build artefacts
+dist
+build
+bundle.js
+tsconfig-types.aegir.json
+.tsbuildinfo
+
+# Deployment files
+.npmrc
+
+# Editor files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Operating system files
+.DS_Store

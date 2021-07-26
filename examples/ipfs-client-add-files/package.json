@@ -4,24 +4,31 @@
   "description": "",
   "main": "dist/index.html",
   "private": true,
+  "targets": {
+    "main": {
+      "engines": {
+        "browsers": [
+          "last 1 Chrome version"
+        ]
+      }
+    }
+  },
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
-    "start": "parcel index.html -p 8888",
-    "test": "test-ipfs-example"
+    "serve": "parcel serve index.html --open -p 8888",
+    "start": "npm run serve",
+    "test:example": "npm run build && playwright test tests"
   },
   "dependencies": {
     "ipfs-client": "^0.4.3"
   },
   "devDependencies": {
-    "execa": "^5.0.0",
     "ipfs": "^0.55.4",
-    "ipfsd-ctl": "^9.0.0",
-    "parcel": "2.0.0-beta.2",
+    "parcel": "latest",
     "rimraf": "^3.0.2",
-    "test-ipfs-example": "^3.0.0"
-  },
-  "browserslist": [
-    "last 2 versions and not dead and > 2%"
-  ]
+    "@playwright/test": "^1.12.3",
+    "playwright": "^1.12.3",
+    "test-util-ipfs-example": "^1.0.2"
+  }
 }

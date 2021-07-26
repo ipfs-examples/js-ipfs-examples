@@ -1,0 +1,28 @@
+.react-logo {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .react-logo {
+    animation: react-logo-spin infinite 20s linear;
+  }
+}
+
+.react-header {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+}
+
+.react-link {
+  color: #61dafb;
+}
+
+@keyframes react-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

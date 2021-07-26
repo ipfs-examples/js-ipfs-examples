@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publish to IPNS from the browser</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css" />
+
+    <script src="src/index.js" defer></script>
+  </head>
+  <body></body>
+</html>
+
+<!DOCTYPE html>
 <html>
   <head>
     <title>Publish to IPNS from the browser</title>
@@ -41,10 +60,10 @@
             <p>
               The idea is to publish from js-ipfs so you control your own
               private keys, but publish to go-ipfs to benefit from the DHT.
-              Since the DHT in js-ipfs is still in the experimental phase, we need to use PubSub
-              and have a go-ipfs node subscribed to that PubSub to get our IPNS
-              record onto the DHT. In order to use PubSub between these two
-              nodes, you'll need a websocket to connect them.
+              Since the DHT in js-ipfs is still in the experimental phase, we
+              need to use PubSub and have a go-ipfs node subscribed to that
+              PubSub to get our IPNS record onto the DHT. In order to use PubSub
+              between these two nodes, you'll need a websocket to connect them.
             </p>
             <div>
               To make this demo work, you're going to need:
@@ -119,6 +138,14 @@
       >
         Connect
       </button>
+      <div
+        class="custom-block callout"
+        style="font-size: 0.75em; width: 75%; margin: 1em;"
+      >
+        For connecting to a local go-ipfs node, you can check its listening
+        address similar to:
+        <pre>/ip4/127.0.0.1/tcp/4003/ws/p2p/QmTheirServerPeerId</pre>
+      </div>
     </div>
     <div class="ph3 mb3">
       <div class="fw2 tracked ttu f6 teal-muted mb2">
@@ -137,13 +164,6 @@
       >
         Connect
       </button>
-      <div
-        class="custom-block callout"
-        style="font-size: 0.75em; width: 75%; margin: 1em;"
-      >
-        For connecting to a local go-ipfs node, you can check its listening address similar to:
-        <pre>/ip4/127.0.0.1/tcp/4003/ws/p2p/QmTheirServerPeerId</pre>
-      </div>
     </div>
 
     <div class="ph3 mb3">
@@ -164,14 +184,22 @@
             ><br />
           </li>
           <li>
-            <input type="radio" id="female" name="keyName" value="custom-key" disabled="disabled" />
+            <input
+              type="radio"
+              id="female"
+              name="keyName"
+              value="custom-key"
+              disabled="disabled"
+            />
             <label for="female"
               >Custom Key (<a
                 href="https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/KEY.md#ipfskeyimportname-pem-password-options"
                 target="_blank"
                 >imported</a
               >
-              onto the keychain) [waiting for <a href="https://github.com/ipfs/go-ipfs/issues/6360">#6360</a> to work]</label
+              onto the keychain) [waiting for
+              <a href="https://github.com/ipfs/go-ipfs/issues/6360">#6360</a> to
+              work]</label
             ><br />
           </li>
         </ul>
@@ -211,6 +239,5 @@
         style="height: 300px;"
       ></div>
     </div>
-    <script src="index.js"></script>
   </body>
 </html>

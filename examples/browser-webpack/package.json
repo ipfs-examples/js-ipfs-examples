@@ -1,13 +1,14 @@
 {
   "name": "example-browser-webpack",
-  "description": "Bundle js-ipfs with WebPack",
-  "version": "1.1.1",
+  "description": "Bundle js-ipfs with Webpack",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "webpack",
-    "start": "node server.js",
-    "test": "test-ipfs-example"
+    "build": "webpack --env production",
+    "serve": "webpack serve --hot-only --mode=development",
+    "start": "npm run serve",
+    "test:example": "npm run build && playwright test tests"
   },
   "license": "MIT",
   "keywords": [],
@@ -16,22 +17,25 @@
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
-    "copy-webpack-plugin": "^8.1.0",
-    "node-polyfill-webpack-plugin": "^1.0.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "node-polyfill-webpack-plugin": "^1.0.4",
     "react-hot-loader": "^4.12.21",
     "rimraf": "^3.0.2",
-    "stream-browserify": "^3.0.0",
-    "test-ipfs-example": "^3.0.0",
-    "webpack": "^5.28.0",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "style-loader": "^3.1.0",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0",
+    "test-util-ipfs-example": "^1.0.2"
   },
   "dependencies": {
-    "ipfs": "^0.55.4"
+    "ipfs": "^0.55.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "browserslist": [
-    "last 2 versions and not dead and > 2%"
+    "last 1 Chrome version"
   ]
 }

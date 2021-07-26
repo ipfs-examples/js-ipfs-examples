@@ -1,6 +1,84 @@
-# Tutorial - Understanding Circuit Relay
+<p align="center">
+  <a href="https://js.ipfs.io" title="JS IPFS">
+    <img src="https://ipfs.io/ipfs/Qme6KJdKcp85TYbLxuLV7oQzMiLremD7HMoXLZEmgo6Rnh/js-ipfs-sticker.png" alt="IPFS in JavaScript logo" width="244" />
+  </a>
+</p>
 
-> Welcome! This tutorial will help you understand circuit relay, where it fits in the stack and how to use it.
+<h3 align="center"><b>IPFS Circuit Relay</b></h3>
+
+<p align="center">
+    <b><i>Circuit relay, where it fits in the stack and how to use it.!</i></b>
+    <br />
+    <br />
+    <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
+    <br>
+    <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
+    ·
+    <a href="https://codesandbox.io/">View Demo</a>
+    ·
+    <a href="https://github.com/ipfs/js-ipfs/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/ipfs/js-ipfs/issues">Request Feature</a>
+  </p>
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation and Running example](#installation-and-running-example)
+- [Usage](#usage)
+  - [So what is a `circuit-relay` and what do we need it for?](#so-what-is-a-circuit-relay-and-what-do-we-need-it-for)
+    - [How does circuit relay work?](#how-does-circuit-relay-work)
+    - [What's up with this `HOP` and `STOP`?](#whats-up-with-this-hop-and-stop)
+    - [A few caveats (and features)](#a-few-caveats-and-features)
+    - [A word on circuit relay addresses](#a-word-on-circuit-relay-addresses)
+  - [Step-by-Step example](#step-by-step-example)
+  - [1. Configure and run the js or go ipfs node](#1-configure-and-run-the-js-or-go-ipfs-node)
+      - [Setting up a `go-ipfs` node](#setting-up-a-go-ipfs-node)
+      - [Setting up a `js-ipfs` node](#setting-up-a-js-ipfs-node)
+      - [Starting the relay node](#starting-the-relay-node)
+  - [2. Configure and run the bundled example](#2-configure-and-run-the-bundled-example)
+    - [3. Connect the two browser nodes to the circuit relay](#3-connect-the-two-browser-nodes-to-the-circuit-relay)
+  - [4. Dial the two browser nodes using a `/p2p-circuit` address](#4-dial-the-two-browser-nodes-using-a-p2p-circuit-address)
+  - [5. Send data browser to browser.](#5-send-data-browser-to-browser)
+  - [So what just happened?](#so-what-just-happened)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Want to hack on IPFS?](#want-to-hack-on-ipfs)
+
+## About The Project
+
+- Read the [docs](https://github.com/ipfs/js-ipfs/tree/master/docs)
+- Look into other [examples](https://github.com/ipfs/js-ipfs/tree/master/examples) to learn how to spawn an IPFS node in Node.js and in the Browser
+- Consult the [Core API docs](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api) to see what you can do with an IPFS node
+- Visit https://dweb-primer.ipfs.io to learn about IPFS and the concepts that underpin it
+- Head over to https://proto.school to take interactive tutorials that cover core IPFS APIs
+- Check out https://docs.ipfs.io for tips, how-tos and more
+- See https://blog.ipfs.io for news and more
+- Need help? Please ask 'How do I?' questions on https://discuss.ipfs.io
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have installed all of the following prerequisites on your development machine:
+
+- Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
+- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
+- IPFS Daemon - [Install js-ipfs](https://github.com/ipfs/js-ipfs) or [Download & Install IPFS Desktop](https://docs.ipfs.io/install/ipfs-desktop/) that will run the go version of IPFS or head over to https://dist.ipfs.io/#go-ipfs and hit the "Download go-ipfs" button. Extract the archive and read the instructions to install.
+
+### Installation and Running example
+
+```console
+> npm install
+> npm start
+```
+
+Now open your browser at `http://localhost:8888`
+
+## Usage
 
 ### So what is a `circuit-relay` and what do we need it for?
 
@@ -8,7 +86,6 @@ In p2p networks there are many cases where two nodes can't talk to each other di
 
 #### How does circuit relay work?
 
-> For a more in-depth explanation take a look at the [relay spec](https://github.com/libp2p/specs/blob/master/relay/README.md) and `js-libp2p-circuit` [README](https://github.com/libp2p/js-libp2p-circuit/blob/master/README.md)
 
 Here is a simple diagram depicting how a typical circuit-relay connection might look:
 
@@ -39,6 +116,8 @@ This is what it looks like, in simplified steps:
 
 That's it!
 
+> For a more in-depth explanation take a look at the [relay spec](https://github.com/libp2p/specs/blob/master/relay/README.md) and `js-libp2p-circuit` [README](https://github.com/libp2p/js-libp2p-circuit/blob/master/README.md)
+
 #### What's up with this `HOP` and `STOP`?
 
 Circuit relay consists of two logical parts — dialer/listener and relay (`HOP`). The listener is also known as the `STOP` node. Each of these — dial, listen, and relay — happen on a different node. If we use the nodes from the above example, it looks something like this:
@@ -62,7 +141,7 @@ There are a couple of caveats and features to be aware of:
 
 A circuit relay address is a [multiaddress](https://multiformats.io/multiaddr/) that describes how to either connect to a peer over a relay (or relays), or allow a peer to announce it is reachable over a particular relay or any relay it is already connected to.
 
-Circuit relay addresses are very flexible and can describe many different aspects of how to esablish the relayed connection. In its simplest form, it looks something like this:
+Circuit relay addresses are very flexible and can describe many different aspects of how to establish the relayed connection. In its simplest form, it looks something like this:
 
 - `/p2p-circuit/p2p/QmPeer`
 
@@ -79,12 +158,13 @@ We can take it a step further and encode the same information for the destinatio
 - `/ip4/127.0.0.1/tcp/65000/p2p/QmRelay/p2p-circuit`
 
 If a node is configured with this address, it will use the specified host (`/ip4/127.0.0.1/tcp/65000/p2p/QmRelay`) as a relay and it will be reachable over this relay.
-  - There could multiple addresses of this sort specified in the config, in which case the node will be reachable over all of them.
-  - This is useful if, for example, the node is behind a firewall but wants to be reachable from the outside over a specific relay.
+
+- There could multiple addresses of this sort specified in the config, in which case the node will be reachable over all of them.
+- This is useful if, for example, the node is behind a firewall but wants to be reachable from the outside over a specific relay.
 
 Other use-cases are also supported by this scheme, e.g. we can have multiple hops (circuit-relay nodes) encoded in the address, something planed for future releases.
 
-## Step-by-step instructions
+### Step-by-Step example
 
 Here's what we are going to be doing, today:
 
@@ -99,50 +179,7 @@ Here's what we are going to be doing, today:
 
 ![](./img/img7.png)
 
-Let's go.
-
-## Before you start
-
-First clone this repo, install dependencies in the project root and build the project.
-
-```console
-$ git clone https://github.com/ipfs/js-ipfs.git
-$ cd js-ipfs
-$ npm install
-$ npm run build
-```
-
-## Running the example
-
-### 1. Set up
-
-You'll need to have an implementation of IPFS running on your machine. Currently, this means either go-ipfs or js-ipfs.
-
-Installing go-ipfs can be done by installing the binary [here](https://ipfs.io/ipns/dist.ipfs.io/#go-ipfs). Alternatively, you could follow the instructions in the README at [ipfs/go-ipfs](https://github.com/ipfs/go-ipfs).
-
-Installing js-ipfs requires you to have node and [npm](https://www.npmjs.com). Then, you simply run:
-
-```sh
-> npm install --global ipfs
-...
-> jsipfs --help
-Commands:
-...
-```
-
-This will alias `jsipfs` on your machine; this is to avoid issues with `go-ipfs` being called `ipfs`.
-
-At this point, you have either js-ipfs or go-ipfs running. Now, initialize it:
-
-```sh
-> ipfs init
-# or
-> jsipfs init
-```
-
-This will set up your IPFS repo in your home directory.
-
-#### Configure and run the js or go ipfs node
+### 1. Configure and run the js or go ipfs node
 
 You can use a `go-ipfs` or a `js-ipfs` node as a relay. We'll demonstrate how to set both up in this tutorial and we encourage you to try both out. That said, either js or go should do the trick!
 
@@ -266,14 +303,14 @@ We should be able to run the project with `npm start` and get output similar to:
 
 ```sh
 npm start
-Server running at http://localhost:1234
+Server running at http://localhost:8888
 ```
 
 The bundled example is a simple chat app that uses another cool ipfs feature - [pubsub](https://github.com/libp2p/specs/tree/master/pubsub). Let's open up a browser and paste the above url into the address bar. We should see something similar to the following image:
 
 ![](./img/img1.png)
 
-### 3. Connect the two browser nodes to the circuit relay
+#### 3. Connect the two browser nodes to the circuit relay
 
 In order for our browser nodes to be able to messages each other, we need to get them connected. But to do that, we need to use a relay - browser nodes can't be connected directly because of lack of socket support.
 
@@ -291,7 +328,7 @@ Let's repeat the same steps with the second tab. Now, both of our browser nodes 
 
 ### 4. Dial the two browser nodes using a `/p2p-circuit` address
 
-Now that our browsers are both connected to the relay peer, let's get them connected to each other.  Create the p2p circuit address as follows:
+Now that our browsers are both connected to the relay peer, let's get them connected to each other. Create the p2p circuit address as follows:
 
 ```
 ${RELAY_ADDR}/p2p-circuit/p2p/${PEER_ID}
@@ -336,7 +373,7 @@ const ipfs = await IPFS.create({
   config: {
     Bootstrap: []
   }
-})
+});
 ```
 
 - We connected the browser nodes to an external node over its websocket transport using the `/ip4/127.0.0.1/tcp/4003/ws/p2p/...` multiaddr. That external node happens to be a `HOP` node, meaning that it can relay connections for our browsers (and other nodes) allowing them to connect
@@ -345,11 +382,11 @@ const ipfs = await IPFS.create({
 
 ```js
 try {
-  await ipfs.swarm.connect(peer)
+  await ipfs.swarm.connect(peer);
 } catch (err) {
-  return console.error(err)
+  return console.error(err);
 }
-$pAddrs.innerHTML += `<li>${peer.trim()}</li>`
+$pAddrs.innerHTML += `<li>${peer.trim()}</li>`;
 ```
 
 The above code snippet handles connecting to other nodes using `ipfs.swarm.connect`. Notice how there wasn't anything special we had to do to use the circuit once we had everything connected; all the magic is in the multiaddr! [Multiaddrs](https://multiformats.io/multiaddr/) are **AWESOME**!
@@ -359,3 +396,39 @@ I encourage the reader to take a look at the bundled app code to see how the bro
 Finally, a side note on [pubsub](https://github.com/libp2p/specs/blob/master/pubsub/README.md). We've used the amazing [ipfs-pubsub-room](https://github.com/ipfs-shipyard/ipfs-pubsub-room) module, to enable the chat functionality. Make sure to take a look at the demo [video](https://www.youtube.com/watch?v=Nv_Teb--1zg) that explains how pubsub works and how it can be used to build other applications!
 
 Cheers!
+
+_For more examples, please refer to the [Documentation](#documentation)_
+
+## Documentation
+
+- [Config](https://docs.ipfs.io/)
+- [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
+- [Examples](https://github.com/ipfs/js-ipfs/tree/master/examples)
+- [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the IPFS Project
+2. Create your Feature Branch (`git checkout -b feature/amazing-feature`)
+3. Commit your Changes (`git commit -a -m 'feat: add some amazing feature'`)
+4. Push to the Branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Want to hack on IPFS?
+
+[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md)
+
+The IPFS implementation in JavaScript needs your help! There are a few things you can do right now to help out:
+
+Read the [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md) and [JavaScript Contributing Guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING_JS.md).
+
+- **Check out existing issues** The [issue list](https://github.com/ipfs/js-ipfs/issues) has many that are marked as ['help wanted'](https://github.com/ipfs/js-ipfs/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22) or ['difficulty:easy'](https://github.com/ipfs/js-ipfs/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Adifficulty%3Aeasy) which make great starting points for development, many of which can be tackled with no prior IPFS knowledge
+- **Look at the [IPFS Roadmap](https://github.com/ipfs/roadmap)** This are the high priority items being worked on right now
+- **Perform code reviews** More eyes will help
+  a. speed the project along
+  b. ensure quality, and
+  c. reduce possible future bugs.
+- **Add tests**. There can never be enough tests.
+- **Join the [Weekly Core Implementations Call](https://github.com/ipfs/team-mgmt/issues/992)** it's where everyone discusses what's going on with IPFS and what's next
