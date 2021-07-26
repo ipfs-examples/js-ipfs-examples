@@ -16,9 +16,9 @@
     ·
     <a href="https://codesandbox.io/">View Demo</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Report Bug</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Request Feature</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
   </p>
 
 ## Table of Contents
@@ -36,9 +36,9 @@
     - [A word on circuit relay addresses](#a-word-on-circuit-relay-addresses)
   - [Step-by-Step example](#step-by-step-example)
   - [1. Configure and run the js or go ipfs node](#1-configure-and-run-the-js-or-go-ipfs-node)
-      - [Setting up a `go-ipfs` node](#setting-up-a-go-ipfs-node)
-      - [Setting up a `js-ipfs` node](#setting-up-a-js-ipfs-node)
-      - [Starting the relay node](#starting-the-relay-node)
+    - [Setting up a `go-ipfs` node](#setting-up-a-go-ipfs-node)
+    - [Setting up a `js-ipfs` node](#setting-up-a-js-ipfs-node)
+    - [Starting the relay node](#starting-the-relay-node)
   - [2. Configure and run the bundled example](#2-configure-and-run-the-bundled-example)
     - [3. Connect the two browser nodes to the circuit relay](#3-connect-the-two-browser-nodes-to-the-circuit-relay)
   - [4. Dial the two browser nodes using a `/p2p-circuit` address](#4-dial-the-two-browser-nodes-using-a-p2p-circuit-address)
@@ -85,7 +85,6 @@ Now open your browser at `http://localhost:8888`
 In p2p networks there are many cases where two nodes can't talk to each other directly. That may happen because of network topology, i.e. NATs, or execution environments - for example browser nodes can't connect to each other directly because they lack any sort of socket functionality and relaying on specialized rendezvous nodes introduces an undesirable centralization point to the network. A `circuit-relay` is a way to solve this problem - it is a node that allows two other nodes that can't otherwise talk to each other, use a third node, a relay to do so.
 
 #### How does circuit relay work?
-
 
 Here is a simple diagram depicting how a typical circuit-relay connection might look:
 
@@ -367,12 +366,12 @@ const ipfs = await IPFS.create({
   relay: {
     enabled: true,
     hop: {
-      enabled: true
-    }
+      enabled: true,
+    },
   },
   config: {
-    Bootstrap: []
-  }
+    Bootstrap: [],
+  },
 });
 ```
 

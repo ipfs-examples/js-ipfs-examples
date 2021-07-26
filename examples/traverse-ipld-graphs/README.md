@@ -16,9 +16,9 @@
     ·
     <a href="https://codesandbox.io/">View Demo</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Report Bug</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Request Feature</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
   </p>
 
 ## Table of Contents
@@ -89,10 +89,10 @@ const node = await IPFS.create({
       require("ipld-git"),
       require("ipld-zcash"),
       require("ipld-bitcoin"),
-      ...Object.values(require("ipld-ethereum")) // this format exports multiple codecs so flatten into a list
+      ...Object.values(require("ipld-ethereum")), // this format exports multiple codecs so flatten into a list
       // etc, etc
-    ]
-  }
+    ],
+  },
 });
 ```
 

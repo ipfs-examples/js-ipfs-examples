@@ -4,10 +4,10 @@
   </a>
 </p>
 
-<h3 align="center"><b>Custom IPFS repo</b></h3>
+<h3 align="center"><b>Tutorial 101</b></h3>
 
 <p align="center">
-    <b><i>How to customize a IPFS repository</i></b>
+    <b><i>Demo of "Using go-ipfs as a library" with js-ipfs</i></b>
     <br />
     <br />
     <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
@@ -16,9 +16,9 @@
     ·
     <a href="https://codesandbox.io/">View Demo</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Report Bug</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Request Feature</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
   </p>
 
 ## Table of Contents
@@ -124,7 +124,7 @@ async function main() {
 
   const fileAdded = await node.add({
     path: "hello.txt",
-    content: "Hello World 101"
+    content: "Hello World 101",
   });
 
   console.log("Added file:", fileAdded.path, fileAdded.cid);
@@ -158,7 +158,7 @@ async function main() {
 
   const fileAdded = await node.add({
     path: "hello.txt",
-    content: "Hello World 101"
+    content: "Hello World 101",
   });
 
   console.log("Added file:", fileAdded.path, fileAdded.cid);

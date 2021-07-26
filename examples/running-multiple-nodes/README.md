@@ -16,9 +16,9 @@
     ·
     <a href="https://codesandbox.io/">View Demo</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Report Bug</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Request Feature</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
   </p>
 
 ## Table of Contents
@@ -121,9 +121,9 @@ await IPFS.create({
       Swarm: ["/ip4/0.0.0.0/tcp/4012", "/ip4/127.0.0.1/tcp/4013/ws"],
       API: "/ip4/127.0.0.1/tcp/5012",
       Gateway: "/ip4/127.0.0.1/tcp/9191",
-      RPC: "/ip4/127.0.0.1/tcp/4839"
-    }
-  }
+      RPC: "/ip4/127.0.0.1/tcp/4839",
+    },
+  },
 });
 ```
 

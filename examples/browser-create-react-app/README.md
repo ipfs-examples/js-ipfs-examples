@@ -16,9 +16,9 @@
     ·
     <a href="https://codesandbox.io/">View Demo</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Report Bug</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ipfs/js-ipfs/issues">Request Feature</a>
+    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
   </p>
 
 ## Table of Contents
