@@ -33,7 +33,7 @@
   "devDependencies": {
     "@playwright/test": "^1.12.3",
     "playwright": "^1.12.3",
-    "parcel": "2.0.0-beta.2",
+    "parcel": "latest",
     "rimraf": "^3.0.2",
     "ipfs": "^0.55.4",
     "test-util-ipfs-example": "^1.0.2"

@@ -2,6 +2,7 @@
   "name": "js-ipfs-examples",
   "version": "1.0.0",
   "description": "Collection of opinionated and real-world examples of how you can use js-ipfs to build things",
+  "private": "true",
   "scripts": {
     "reset": "npm run clean -ws & rimraf examples/*/node_modules .parcel-cache package-lock.json examples/*/package-lock.json node_modules",
     "test:examples": "npm run test:example -ws"
