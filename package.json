@@ -4,8 +4,12 @@
   "version": "1.0.0",
   "private": "true",
   "scripts": {
-    "reset": "npm run clean -ws & rimraf examples/*/node_modules .parcel-cache package-lock.json examples/*/package-lock.json node_modules",
-    "test:examples": "npm run test:example -ws"
+    "init": "yarn install",
+    "clean": "yarn workspaces run clean && npm run clean:yarn && npm run clean:build && npm run clean:npm",
+    "clean:npm": "rimraf ./**/package-lock.json ./**/node_modules",
+    "clean:yarn": "rimraf ./**/yarn.lock",
+    "clean:build": "rimraf ./**/.parcel-cache",
+    "test:examples": "yarn workspaces run test:example"
   },
   "repository": {
     "type": "git",
