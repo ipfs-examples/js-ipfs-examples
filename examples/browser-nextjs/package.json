@@ -1,0 +1,26 @@
+{
+  "name": "example-browser-nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf ./dist ./.next",
+    "dev": "next dev",
+    "build": "next build && next export -o dist",
+    "serve": "npm run dev",
+    "start": "next start",
+    "lint": "next lint",
+    "test:example": "npm run build && playwright test tests"
+  },
+  "dependencies": {
+    "ipfs": "^0.55.4",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.0.1",
+    "test-util-ipfs-example": "^1.0.0",
+    "rimraf": "^3.0.2"
+  }
+}
