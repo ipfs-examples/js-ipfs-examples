@@ -34,6 +34,8 @@
   - [retrieve a node from a graph](#retrieve-a-node-from-a-graph)
   - [resolve a path in a graph](#resolve-a-path-in-a-graph)
   - [resolve through graphs of different kind](#resolve-through-graphs-of-different-kind)
+- [traverse through a slice of the ethereum blockchain](#traverse-through-a-slice-of-the-ethereum-blockchain)
+- [traverse through a git repo](#traverse-through-a-git-repo)
   - [Video of the demos](#video-of-the-demos)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
@@ -105,6 +107,14 @@ See [ipld/interface-ipld-format](https://github.com/ipld/interface-ipld-format) 
 ### [resolve a path in a graph](./get-path.js)
 
 ### [resolve through graphs of different kind](./get-path-accross-formats.js)
+
+## [traverse through a slice of the ethereum blockchain](./eth.js)
+
+## [traverse through a git repo](./git.js)
+
+The example objects contained in "git-objects" have already been decompressed with zlib. An example of how to do this:
+
+    $ cat .git/objects/7d/df25817f57c2090a9568cdb17106a76dad7d04 | zlib-flate -uncompress > 7ddf25817f57c2090a9568cdb17106a76dad7d04
 
 ### Video of the demos
 
