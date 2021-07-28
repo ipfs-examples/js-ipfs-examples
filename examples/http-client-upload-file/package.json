@@ -1,18 +1,14 @@
 {
   "name": "example-http-client-upload-file",
-  "description": "Upload file to IPFS via browser using js-ipfs-http-client",
   "version": "1.0.0",
-  "main": "dist/index.html",
   "private": true,
-  "targets": {
-    "main": {
-      "engines": {
-        "browsers": [
-          "last 1 Chrome version"
-        ]
-      }
-    }
-  },
+  "description": "Upload file to IPFS via browser using js-ipfs-http-client",
+  "license": "MIT",
+  "author": "Harlan T Wood <code@harlantwood.net>",
+  "contributors": [
+    "Victor Bjelkholm <victor@ipfs.io>"
+  ],
+  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -20,22 +16,19 @@
     "start": "npm run serve",
     "test:example": "npm run build && playwright test tests"
   },
-  "author": "Harlan T Wood <code@harlantwood.net>",
-  "contributors": [
-    "Victor Bjelkholm <victor@ipfs.io>"
-  ],
-  "license": "MIT",
+  "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-http-client": "^50.1.2",
+    "ipfs-http-client": "^51.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "playwright": "^1.12.3",
+    "ipfs": "^0.56.0",
     "parcel": "latest",
+    "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
-    "ipfs": "^0.55.4",
     "test-util-ipfs-example": "^1.0.2"
   }
 }

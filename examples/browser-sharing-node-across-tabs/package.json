@@ -1,18 +1,11 @@
 {
   "name": "example-browser-sharing-node-across-tabs",
-  "description": "Sharing IPFS node across browsing contexts",
   "version": "1.0.0",
-  "main": "dist/index.html",
   "private": true,
-  "targets": {
-    "main": {
-      "engines": {
-        "browsers": [
-          "last 1 Chrome version"
-        ]
-      }
-    }
-  },
+  "description": "Sharing IPFS node across browsing contexts",
+  "keywords": [],
+  "license": "MIT",
+  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -20,18 +13,18 @@
     "start": "npm run serve",
     "test:example": "npm run build && playwright test tests"
   },
-  "license": "MIT",
-  "keywords": [],
-  "devDependencies": {
-    "parcel": "latest",
-    "rimraf": "^3.0.2",
-    "@playwright/test": "^1.12.3",
-    "playwright": "^1.12.3",
-    "test-util-ipfs-example": "^1.0.2"
-  },
+  "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.55.4",
-    "ipfs-message-port-client": "^0.6.4",
-    "ipfs-message-port-server": "^0.7.3"
+    "ipfs": "^0.56.0",
+    "ipfs-message-port-client": "^0.7.0",
+    "ipfs-message-port-server": "^0.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@playwright/test": "^1.12.3",
+    "parcel": "latest",
+    "playwright": "^1.12.3",
+    "rimraf": "^3.0.2",
+    "test-util-ipfs-example": "^1.0.2"
   }
 }
