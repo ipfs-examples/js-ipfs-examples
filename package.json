@@ -1,8 +1,24 @@
 {
   "name": "js-ipfs-examples",
-  "description": "Collection of opinionated and real-world examples of how you can use js-ipfs to build things",
   "version": "1.0.0",
   "private": "true",
+  "description": "Collection of opinionated and real-world examples of how you can use js-ipfs to build things",
+  "keywords": [
+    "examples",
+    "js-ipfs"
+  ],
+  "homepage": "https://github.com/ipfs-examples/js-ipfs-examples#readme",
+  "bugs": {
+    "url": "https://github.com/ipfs-examples/js-ipfs-examples/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipfs-examples/js-ipfs-examples.git"
+  },
+  "license": "MIT",
+  "workspaces": [
+    "./examples/*"
+  ],
   "scripts": {
     "init": "yarn install",
     "clean": "yarn workspaces run clean && npm run clean:yarn && npm run clean:build && npm run clean:npm",
@@ -11,23 +27,7 @@
     "clean:build": "rimraf ./**/.parcel-cache",
     "test:examples": "yarn workspaces run test:example"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ipfs-examples/js-ipfs-examples.git"
-  },
-  "keywords": [
-    "examples",
-    "js-ipfs"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ipfs-examples/js-ipfs-examples/issues"
-  },
-  "homepage": "https://github.com/ipfs-examples/js-ipfs-examples#readme",
   "devDependencies": {
     "rimraf": "^3.0.2"
-  },
-  "workspaces": [
-    "./examples/*"
-  ]
+  }
 }

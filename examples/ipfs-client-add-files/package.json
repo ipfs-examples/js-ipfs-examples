@@ -1,18 +1,9 @@
 {
   "name": "example-ipfs-client-add-files",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "dist/index.html",
-  "private": true,
-  "targets": {
-    "main": {
-      "engines": {
-        "browsers": [
-          "last 1 Chrome version"
-        ]
-      }
-    }
-  },
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -20,15 +11,17 @@
     "start": "npm run serve",
     "test:example": "npm run build && playwright test tests"
   },
+  "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-client": "^0.4.3"
+    "ipfs-client": "^0.5.0"
   },
   "devDependencies": {
-    "ipfs": "^0.55.4",
-    "parcel": "latest",
-    "rimraf": "^3.0.2",
+    "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
+    "ipfs": "^0.56.0",
+    "parcel": "latest",
     "playwright": "^1.12.3",
+    "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
   }
 }

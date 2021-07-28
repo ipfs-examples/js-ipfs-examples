@@ -1,25 +1,25 @@
 {
   "name": "example-traverse-ipld-graphs",
-  "description": "How to traverse IPLD graphs",
   "version": "2.0.1",
-  "main": "index.js",
   "private": true,
+  "description": "How to traverse IPLD graphs",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
     "start": "npm run test:example",
     "serve": "npm run start",
     "test:example": "node tests/test.js"
   },
-  "keywords": [],
-  "license": "MIT",
-  "devDependencies": {
-    "test-util-ipfs-example": "^1.0.2"
-  },
   "dependencies": {
     "@ipld/dag-pb": "^2.1.3",
-    "ipfs": "^0.55.4",
-    "ipld-git": "^0.6.1",
+    "ipfs": "^0.56.0",
     "ipld-ethereum": "^6.0.0",
+    "ipld-git": "^0.6.1",
     "multiformats": "^9.4.1"
+  },
+  "devDependencies": {
+    "test-util-ipfs-example": "^1.0.2"
   }
 }

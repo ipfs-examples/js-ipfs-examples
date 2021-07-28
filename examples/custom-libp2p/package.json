@@ -1,18 +1,18 @@
 {
   "name": "example-custom-libp2p",
-  "description": "Customizing your libp2p node",
   "version": "1.0.0",
-  "main": "index.js",
   "private": true,
+  "description": "Customizing your libp2p node",
+  "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
     "start": "node index.js",
     "serve": "npm run start",
     "test:example": "node tests/test.js"
   },
-  "license": "MIT",
   "dependencies": {
-    "ipfs": "^0.55.4",
+    "ipfs": "^0.56.0",
     "libp2p": "^0.32.0",
     "libp2p-bootstrap": "^0.12.3",
     "libp2p-kad-dht": "^0.23.1",

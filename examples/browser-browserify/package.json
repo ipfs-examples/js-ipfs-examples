@@ -1,9 +1,11 @@
 {
   "name": "example-browser-browserify",
-  "description": "Bundle js-ipfs with Browserify",
   "version": "1.0.0",
-  "main": "dist/index.html",
   "private": true,
+  "description": "Bundle js-ipfs with Browserify",
+  "keywords": [],
+  "license": "MIT",
+  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "copyfiles -u 1 -a './public/**/*' './dist' && browserify ./src/index.js > ./dist/bundle.js",
@@ -11,8 +13,9 @@
     "start": "npm run build && npm run serve",
     "test:example": "npm run build && playwright test tests"
   },
-  "keywords": [],
-  "license": "MIT",
+  "dependencies": {
+    "ipfs": "^0.56.0"
+  },
   "devDependencies": {
     "@playwright/test": "^1.12.3",
     "browserify": "^17.0.0",
@@ -23,8 +26,5 @@
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
-  },
-  "dependencies": {
-    "ipfs": "^0.55.4"
   }
 }

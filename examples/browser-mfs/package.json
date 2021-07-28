@@ -1,18 +1,11 @@
 {
   "name": "example-browser-mfs",
-  "description": "How to use ipfs MFS in the browser",
   "version": "1.0.0",
-  "main": "dist/index.html",
   "private": true,
-  "targets": {
-    "main": {
-      "engines": {
-        "browsers": [
-          "last 1 Chrome version"
-        ]
-      }
-    }
-  },
+  "description": "How to use ipfs MFS in the browser",
+  "license": "ISC",
+  "author": "",
+  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -20,17 +13,17 @@
     "start": "npm run serve",
     "test:example": "npm run build && playwright test tests"
   },
-  "author": "",
-  "license": "ISC",
+  "browserslist": "last 1 Chrome version",
+  "dependencies": {
+    "ipfs": "^0.56.0",
+    "mime-sniffer": "~0.0.3"
+  },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
+    "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
-    "parcel": "latest",
     "test-util-ipfs-example": "^1.0.2"
-  },
-  "dependencies": {
-    "ipfs": "^0.55.4",
-    "mime-sniffer": "~0.0.3"
   }
 }

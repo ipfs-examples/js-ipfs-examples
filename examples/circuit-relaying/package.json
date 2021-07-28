@@ -1,18 +1,11 @@
 {
   "name": "example-circuit-relaying",
-  "description": "IPFS quick msg",
   "version": "1.0.0",
-  "main": "dist/index.html",
   "private": true,
-  "targets": {
-    "main": {
-      "engines": {
-        "browsers": [
-          "last 1 Chrome version"
-        ]
-      }
-    }
-  },
+  "description": "IPFS quick msg",
+  "license": "MIT",
+  "author": "Dmitriy Ryajov <dryajov@gmail.com>",
+  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "deploy": "ipfs add -r --quieter dist",
@@ -21,26 +14,23 @@
     "start": "npm run serve",
     "test:example": "npm run build && playwright test tests"
   },
-  "author": "Dmitriy Ryajov <dryajov@gmail.com>",
-  "license": "MIT",
+  "browserslist": "last 1 Chrome version",
   "dependencies": {
     "delay": "^5.0.0",
-    "ipfs": "^0.55.4",
+    "ipfs": "^0.56.0",
     "ipfs-css": "^1.3.0",
     "ipfs-pubsub-room": "^2.0.1",
     "libp2p-websockets": "^0.16.1",
     "uint8arrays": "^2.1.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
     "fs-extra": "^0.30.0",
-    "ipfs-http-client": "^50.1.2",
+    "ipfs-http-client": "^51.0.0",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
-  },
-  "browserslist": [
-    "last 2 versions and not dead and > 2%"
-  ]
+  }
 }

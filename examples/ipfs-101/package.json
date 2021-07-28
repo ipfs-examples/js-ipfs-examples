@@ -1,19 +1,19 @@
 {
   "name": "example-ipfs-101",
-  "description": "this package.json needs to exist because of new npm config https://github.com/ipfs/js-ipfs/issues/977#issuecomment-326741092",
   "version": "1.0.0",
-  "main": "1.js",
   "private": true,
+  "description": "this package.json needs to exist because of new npm config https://github.com/ipfs/js-ipfs/issues/977#issuecomment-326741092",
+  "license": "MIT",
+  "author": "David Dias <daviddias@ipfs.io>",
+  "main": "1.js",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
     "start": "node index.js",
     "serve": "npm run start",
     "test:example": "node tests/test.js"
   },
-  "author": "David Dias <daviddias@ipfs.io>",
-  "license": "MIT",
   "dependencies": {
-    "ipfs": "^0.55.4",
+    "ipfs": "^0.56.0",
     "it-all": "^1.0.4",
     "uint8arrays": "^2.1.6"
   },

@@ -1,22 +1,22 @@
 {
   "name": "example-running-multiple-nodes",
-  "description": "How to run multiple IPFS nodes at the same time",
   "version": "2.0.1",
-  "main": "index.js",
   "private": true,
+  "description": "How to run multiple IPFS nodes at the same time",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
     "start": "npm run test:example",
     "serve": "npm run start",
     "test:example": "node tests/test.js"
   },
-  "keywords": [],
-  "license": "MIT",
+  "dependencies": {
+    "ipfs": "^0.56.0"
+  },
   "devDependencies": {
     "nanoid": "^3.1.23",
     "test-util-ipfs-example": "^1.0.2"
-  },
-  "dependencies": {
-    "ipfs": "^0.55.4"
   }
 }

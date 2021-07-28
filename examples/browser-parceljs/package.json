@@ -1,18 +1,12 @@
 {
   "name": "example-browser-parceljs",
-  "description": "Bundle js-ipfs with ParcelJS",
   "version": "1.0.0",
-  "main": "dist/index.html",
   "private": true,
-  "targets": {
-    "main": {
-      "engines": {
-        "browsers": [
-          "last 1 Chrome version"
-        ]
-      }
-    }
-  },
+  "description": "Bundle js-ipfs with ParcelJS",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -20,17 +14,16 @@
     "start": "npm run serve",
     "test:example": "npm run build && playwright test tests"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.55.4"
+    "ipfs": "^0.56.0"
   },
   "devDependencies": {
-    "parcel": "latest",
-    "rimraf": "^3.0.2",
+    "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
+    "parcel": "latest",
     "playwright": "^1.12.3",
+    "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
   }
 }

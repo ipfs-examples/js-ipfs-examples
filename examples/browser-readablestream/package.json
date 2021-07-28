@@ -1,18 +1,11 @@
 {
   "name": "example-browser-readablestream",
-  "description": "An example of how to play a video in a browser using a readable stream",
   "version": "1.0.0",
-  "main": "dist/index.html",
   "private": true,
-  "targets": {
-    "main": {
-      "engines": {
-        "browsers": [
-          "last 1 Chrome version"
-        ]
-      }
-    }
-  },
+  "description": "An example of how to play a video in a browser using a readable stream",
+  "license": "ISC",
+  "author": "",
+  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -20,17 +13,18 @@
     "start": "npm run serve",
     "test:example": "npm run build && playwright test tests"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "parcel": "latest",
-    "rimraf": "^3.0.2",
-    "@playwright/test": "^1.12.3",
-    "playwright": "^1.12.3",
-    "test-util-ipfs-example": "^1.0.2"
-  },
+  "browserslist": "last 1 Chrome version",
   "dependencies": {
+    "ipfs": "^0.56.0",
     "it-to-stream": "^1.0.0",
     "videostream": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@playwright/test": "^1.12.3",
+    "parcel": "latest",
+    "playwright": "^1.12.3",
+    "rimraf": "^3.0.2",
+    "test-util-ipfs-example": "^1.0.2"
   }
 }
