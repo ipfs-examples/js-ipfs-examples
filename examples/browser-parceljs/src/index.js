@@ -36,7 +36,7 @@ const App = () => {
     }
 
     const line = document.createElement('p')
-    line.innerText = text
+    line.innerHTML = text
     line.style.color = bg
 
     if (id) {
@@ -86,7 +86,7 @@ const App = () => {
     const text = await cat(file.cid)
 
     showStatus(`\u2514\u2500 ${file.path} ${text.toString()}`)
-    showStatus(`Preview: https://ipfs.io/ipfs/${file.cid}`, COLORS.success)
+    showStatus(`Preview: <a href="https://ipfs.io/ipfs/${file.cid}" target="_blank" rel="noopener noreferrer">https://ipfs.io/ipfs/${file.cid}</a>`, COLORS.success)
   }
 
   // Event listeners

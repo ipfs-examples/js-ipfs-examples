@@ -59,7 +59,7 @@ const main = async () => {
     }
 
     const line = document.createElement('p')
-    line.innerText = text
+    line.innerHTML = text
     line.style.color = bg
 
     log.appendChild(line)
@@ -166,7 +166,7 @@ const main = async () => {
       }
 
       showStatus(`\u2514\u2500 ${file.name} ${file.path} ${content.toString()}`)
-      showStatus(`Preview: https://ipfs.io/ipfs/${file.path}`, COLORS.success)
+      showStatus(`Preview: <a href="https://ipfs.io/ipfs/${file.cid}" target="_blank" rel="noopener noreferrer">https://ipfs.io/ipfs/${file.cid}</a>`, COLORS.success)
       addFileDOM(file.name, content, DOM.content, false)
     }
 

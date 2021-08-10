@@ -14,7 +14,7 @@
     <br>
     <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
     ·
-    <a href="https://codesandbox.io/">View Demo</a>
+    <a href="https://githubbox.com/ipfs-examples/js-ipfs-examples/tree/master/examples/browser-mfs">View Demo</a>
     ·
     <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
     ·
