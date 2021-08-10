@@ -1,6 +1,7 @@
 {
   "name": "browser-angular",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "clean": "rimraf ./dist",
     "ng": "ng",
@@ -10,7 +11,6 @@
     "test": "ng test",
     "test:example": "npm run build && playwright test tests"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~12.1.2",
     "@angular/common": "~12.1.2",

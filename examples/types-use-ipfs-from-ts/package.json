@@ -8,7 +8,7 @@
     "test": "tsc --noEmit"
   },
   "dependencies": {
-    "ipfs": "^0.56.0",
+    "ipfs": "^0.56.1",
     "multiformats": "^9.4.1"
   },
   "devDependencies": {

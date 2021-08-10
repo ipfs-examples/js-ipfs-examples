@@ -14,7 +14,7 @@
     "test:example": "npm run build && playwright test tests"
   },
   "dependencies": {
-    "ipfs": "^0.56.0"
+    "ipfs": "^0.56.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.12.3",

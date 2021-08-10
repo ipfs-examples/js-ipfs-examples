@@ -12,7 +12,7 @@
     "test:example": "node tests/test.js"
   },
   "dependencies": {
-    "ipfs": "^0.56.0",
+    "ipfs": "^0.56.1",
     "libp2p": "^0.32.0",
     "libp2p-bootstrap": "^0.12.3",
     "libp2p-kad-dht": "^0.23.1",
