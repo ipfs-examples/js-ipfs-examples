@@ -1,7 +1,7 @@
 'use strict'
 
-import IPFS from 'ipfs'
-import { Server, IPFSService } from 'ipfs-message-port-server'
+const IPFS = require('ipfs')
+const { Server, IPFSService } = require('ipfs-message-port-server')
 
 const main = async () => {
   // start listening to all incoming connections - they will be from browsing
@@ -15,7 +15,7 @@ const main = async () => {
   const ipfs = await IPFS.create()
   // And add hello world for tests
   await ipfs.add({ content: 'hello world' })
-  
+
   // @ts-ignore
   const service = new IPFSService(ipfs)
   const server = new Server(service)
@@ -36,7 +36,7 @@ const main = async () => {
  * the given event `type`. It is like `target.addEventListener(type, listener, options)`
  * but instead of passing listener you get `AsyncIterable<Event>` instead.
  * @param {EventTarget} target
- * @param {string} type 
+ * @param {string} type
  * @param {AddEventListenerOptions} [options]
  */
 const listen = function (target, type, options) {

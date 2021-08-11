@@ -134,7 +134,7 @@ const createVideoElement = () => {
   return videoElement
 }
 
-export {
+module.exports = {
   log,
   dragDrop,
   createVideoElement,

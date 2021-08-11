@@ -1,7 +1,7 @@
 'use strict'
 
-import IPFS from 'ipfs'
-import { Server, IPFSService } from 'ipfs-message-port-server'
+const IPFS = require('ipfs')
+const { Server, IPFSService } = require('ipfs-message-port-server')
 
 const main = async () => {
   console.info('Running SharedWorker...')

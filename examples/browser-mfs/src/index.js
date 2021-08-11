@@ -2,15 +2,15 @@
 
 /* eslint-env browser */
 
-import {
+const {
   dragDrop,
   log,
   bufferToArrayBuffer
-} from './utils'
-import {
+} = require('./utils')
+const {
   updateTree
-} from './filetree'
-import {
+} = require('./filetree')
+const {
   mvForm,
   mkdirForm,
   rmForm,
@@ -18,11 +18,11 @@ import {
   statForm,
   readForm,
   hideForms
-} from './forms'
-import mime from 'mime-sniffer'
+} = require('./forms')
+const mime = require('mime-sniffer')
 
 /** @type {import('ipfs-core-types/src/index').IPFS} IPFS */
-import IPFS from 'ipfs';
+const IPFS = require('ipfs');
 
 document.addEventListener('DOMContentLoaded', async () => {
   const ipfs = await IPFS.create({

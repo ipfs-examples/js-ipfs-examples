@@ -167,7 +167,7 @@ const readForm = (onRead) => {
   button.disabled = false
 }
 
-export {
+module.exports = {
   mkdirForm,
   mvForm,
   rmForm,

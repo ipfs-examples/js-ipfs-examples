@@ -84,7 +84,7 @@ const bufferToArrayBuffer = (buffer) => {
   return ab
 }
 
-export {
+module.exports = {
   log,
   dragDrop,
   createNode,
