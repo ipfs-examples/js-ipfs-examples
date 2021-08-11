@@ -13,7 +13,6 @@
   },
   "license": "MIT",
   "author": "Doug Anderson",
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",

@@ -25,7 +25,8 @@
     "clean:npm": "rimraf ./**/package-lock.json ./**/node_modules",
     "clean:yarn": "rimraf ./**/yarn.lock",
     "clean:build": "rimraf ./**/.parcel-cache",
-    "test:examples": "yarn workspaces run test:example"
+    "test:examples": "yarn workspaces run test:example",
+    "test": "npm run test:examples"
   },
   "devDependencies": {
     "rimraf": "^3.0.2"

@@ -5,7 +5,6 @@
   "description": "IPFS quick msg",
   "license": "MIT",
   "author": "Dmitriy Ryajov <dryajov@gmail.com>",
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "deploy": "ipfs add -r --quieter dist",

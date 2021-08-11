@@ -8,7 +8,6 @@
   "contributors": [
     "Victor Bjelkholm <victor@ipfs.io>"
   ],
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
