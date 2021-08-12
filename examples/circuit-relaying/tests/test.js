@@ -108,7 +108,7 @@ play.describe('http client pubsub:', () => {
 
     const IPFS_RELAY_ADDRESS = id.addresses
       .map(ma => ma.toString())
-      .find(addr => addr.includes('/ws/p2p/Qm'))
+      .find(addr => addr.includes('/ws/p2p/'))
     const IPFS_RELAY_ID = id.id
 
     const pageOnePeerId = await subscribe(pageOne, IPFS_RELAY_ADDRESS, IPFS_RELAY_ID)
