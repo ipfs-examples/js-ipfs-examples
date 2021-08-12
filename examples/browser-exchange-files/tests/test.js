@@ -114,7 +114,7 @@ play.describe('upload file using http client: ', () => {
     const id = await daemon.api.id()
     const IPFS_RELAY_ADDRESS = id.addresses
       .map(ma => ma.toString())
-      .find(addr => addr.includes('/ws/p2p'))
+      .find(addr => addr.includes('/ws/p2p/'))
 
 
     const pageOnePeerId = (await pageOne.textContent(nodeId)).trim()
