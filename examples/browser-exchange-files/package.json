@@ -14,7 +14,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.56.0",
+    "ipfs": "^0.56.1",
     "it-all": "^1.0.4",
     "libp2p-websockets": "^0.16.1",
     "uint8arrays": "^2.1.6"
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "ipfs-http-client": "^51.0.0",
+    "ipfs-http-client": "^51.0.1",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",

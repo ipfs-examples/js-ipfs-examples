@@ -20,7 +20,7 @@
   "devDependencies": {
     "electron": "^12.0.2",
     "electron-rebuild": "^2.3.4",
-    "ipfs": "^0.56.0",
+    "ipfs": "^0.56.1",
     "test-util-ipfs-example": "^1.0.2"
   },
   "greenkeeper": {
