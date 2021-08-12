@@ -19,14 +19,17 @@
   "workspaces": [
     "./examples/*"
   ],
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.11"
+  },
   "scripts": {
-    "init": "yarn install",
-    "clean": "yarn workspaces run clean && npm run clean:yarn && npm run clean:build && npm run clean:npm",
+    "clean": "yarn workspaces run clean && yarn run clean:yarn && yarn run clean:build && yarn run clean:npm",
     "clean:npm": "rimraf ./**/package-lock.json ./**/node_modules",
     "clean:yarn": "rimraf ./**/yarn.lock",
     "clean:build": "rimraf ./**/.parcel-cache",
     "test:examples": "yarn workspaces run test:example",
-    "test": "npm run test:examples"
+    "test": "yarn run test:examples"
   },
   "devDependencies": {
     "rimraf": "^3.0.2"
