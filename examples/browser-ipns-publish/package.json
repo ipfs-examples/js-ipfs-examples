@@ -24,10 +24,10 @@
   "browserslist": "last 1 Chrome version",
   "dependencies": {
     "human-crypto-keys": "^0.1.4",
-    "ipfs": "^0.56.1",
-    "ipfs-http-client": "^51.0.1",
+    "ipfs": "^0.57.0",
+    "ipfs-http-client": "^52.0.0",
     "ipfs-utils": "^8.1.4",
-    "ipns": "^0.13.2",
+    "ipns": "^0.13.3",
     "it-last": "^1.0.4",
     "p-retry": "^4.2.0",
     "uint8arrays": "^2.1.6"
@@ -37,7 +37,7 @@
     "@playwright/test": "^1.12.3",
     "delay": "^5.0.0",
     "execa": "^5.0.0",
-    "go-ipfs": "0.8.0",
+    "go-ipfs": "0.9.1",
     "ipfsd-ctl": "^10.0.3",
     "parcel": "latest",
     "playwright": "^1.12.3",
