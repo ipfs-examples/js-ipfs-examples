@@ -18,7 +18,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "ipfs": "^0.56.1",
+    "ipfs": "^0.57.0",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
