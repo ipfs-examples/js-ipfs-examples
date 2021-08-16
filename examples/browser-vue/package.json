@@ -1,8 +1,13 @@
 {
-  "name": "example-browser-vue-up",
+  "name": "example-browser-vue-3",
   "version": "1.0.0",
   "private": true,
-  "description": "A minimal demonstration of how to use js-ipfs using vue cli",
+  "description": "A minimal demonstration of how to use js-ipfs using vue 3",
+  "workspaces": {
+    "nohoist": [
+      "**"
+    ]
+  },
   "scripts": {
     "clean": "rimraf ./dist",
     "serve": "vue-cli-service serve",
@@ -47,10 +52,5 @@
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
-  },
-  "workspaces": {
-    "nohoist": [
-      "@vue/**"
-    ]
   }
 }
