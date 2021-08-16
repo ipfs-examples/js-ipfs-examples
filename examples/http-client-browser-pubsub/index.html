@@ -10,10 +10,15 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+      crossorigin
     />
-    <link rel="stylesheet" href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css"
+      crossorigin
+    />
 
-    <script src="./src/index.js" defer></script>
+    <script type="module" src="./src/index.js" defer></script>
   </head>
   <body class="sans-serif">
     <header class="pv3 ph2 ph3-l bg-navy cf mb4">
@@ -21,7 +26,7 @@
         <img
           src="https://ipfs.io/images/ipfs-logo.svg"
           class="v-mid"
-          style="height:50px"
+          style="height: 50px"
         />
       </a>
       <h1 class="aqua fw2 montserrat dib ma0 pv2 ph1 v-mid fr f3 lh-copy">
@@ -58,9 +63,7 @@
       </button>
     </div>
     <div class="ph3 mb3">
-      <div class="fw2 ttu f6 teal-muted mb2">
-        Subscribe to pubsub topic
-      </div>
+      <div class="fw2 ttu f6 teal-muted mb2">Subscribe to pubsub topic</div>
       <input
         id="topic"
         class="dib w-50 ph1 pv2 monospace input-reset ba b--black-20 border-box"
@@ -90,7 +93,19 @@
       <div class="fw2 ttu f6 teal-muted mb2">Console</div>
       <div
         id="console"
-        class="f7 db w-100 ph1 pv2 monospace input-reset ba b--black-20 border-box overflow-scroll"
+        class="
+          f7
+          db
+          w-100
+          ph1
+          pv2
+          monospace
+          input-reset
+          ba
+          b--black-20
+          border-box
+          overflow-scroll
+        "
         style="height: 300px"
       ></div>
     </div>

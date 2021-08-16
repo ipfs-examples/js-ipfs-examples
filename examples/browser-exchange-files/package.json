@@ -9,7 +9,7 @@
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
     "test": "playwright test",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run build && playwright test tests --headed --retries=3"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {

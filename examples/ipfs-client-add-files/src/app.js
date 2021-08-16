@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 'use strict'
 
-const { create: ipfsClient } = require('ipfs-client')
+import { create as ipfsClient } from 'ipfs-client'
 
 const App = () => {
   let ipfs

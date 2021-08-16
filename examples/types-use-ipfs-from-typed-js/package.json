@@ -5,7 +5,8 @@
   "description": "Template for setting up a project with JSDoc",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
-    "test": "tsc --noEmit"
+    "test": "tsc --noEmit",
+    "test:example": "npm run test"
   },
   "dependencies": {
     "ipfs": "^0.57.0"

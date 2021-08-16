@@ -18,7 +18,7 @@
     "build": "parcel build index.html --no-scope-hoist",
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run build && playwright test tests --retries=3"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
@@ -28,6 +28,7 @@
     "ipfs-utils": "^8.1.4",
     "ipns": "^0.13.3",
     "it-last": "^1.0.4",
+    "multihashes": "^4.0.2",
     "p-retry": "^4.2.0",
     "uint8arrays": "^2.1.6"
   },

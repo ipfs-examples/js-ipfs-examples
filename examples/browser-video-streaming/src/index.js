@@ -1,6 +1,6 @@
 'use strict'
 
-const Ipfs = require('ipfs')
+import Ipfs from 'ipfs'
 
 /* global Hls Ipfs HlsjsIpfsLoader */
 /* eslint-env browser */

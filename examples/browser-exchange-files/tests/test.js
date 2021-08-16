@@ -2,7 +2,7 @@
 
 const webRTCStarSigServer = require('libp2p-webrtc-star/src/sig-server')
 
-const { test } = require('@playwright/test');
+const { test, expect } = require('@playwright/test');
 const { playwright } = require('test-util-ipfs-example');
 
 // Setup
@@ -44,6 +44,8 @@ const play = test.extend({
     ]
   )
 });
+
+test.setTimeout(1000 * 60 * 2);
 
 play.describe('upload file using http client: ', () => {
   // DOM
@@ -116,7 +118,6 @@ play.describe('upload file using http client: ', () => {
       .map(ma => ma.toString())
       .find(addr => addr.includes('/ws/p2p/'))
 
-
     const pageOnePeerId = (await pageOne.textContent(nodeId)).trim()
     const pageTwoPeerId = (await pageTwo.textContent(nodeId)).trim()
 
@@ -129,7 +130,21 @@ play.describe('upload file using http client: ', () => {
 
     // but should both see the added file
     await pageOne.waitForSelector(`${fileHistory}:has-text('${cid.toString()}')`)
-    await pageTwo.waitForSelector(`${fileHistory}:has-text('${cid.toString()}')`)
+    let passed = false;
+
+    for (let index = 0; index < 3; index++) {
+      await pageTwo.waitForTimeout(15000)
+      const contentHistory = await pageTwo.textContent(fileHistory)
+      passed = contentHistory.includes(cid.toString())
+
+      if (passed) {
+        break
+      } else {
+        await pageTwo.reload();
+      }
+    }
+
+    expect(passed).toBeTruthy()
   });
 
 });

@@ -10,7 +10,7 @@
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run build && playwright test tests --retries=3"
   },
   "browserslist": {
     "production": [

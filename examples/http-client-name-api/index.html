@@ -9,11 +9,16 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+      crossorigin
     />
-    <link rel="stylesheet" href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css"
+      crossorigin
+    />
     <link rel="shortcut icon" href="favicon.ico" />
 
-    <script src="./src/index.js" defer></script>
+    <script type="module" src="./src/index.js" defer></script>
 
     <style>
       form {
@@ -41,7 +46,7 @@
         <img
           alt="IPFS logo"
           src="./public/ipfs-logo.svg"
-          style="height: 50px;"
+          style="height: 50px"
           class="v-top"
         />
       </a>
@@ -51,9 +56,7 @@
       <h1 class="pa0 f2 ma0 mb4 aqua tc">IPFS HTTP Client</h1>
       <h2><code>name.publish()</code> and <code>name.resolve()</code></h2>
 
-      <p id="status" class="bg-navy pa3 white-80 mb4">
-        Ready to connect
-      </p>
+      <p id="status" class="bg-navy pa3 white-80 mb4">Ready to connect</p>
 
       <form id="connect-to-http-api">
         <label for="connect-input" class="f5 ma0 pb2 aqua fw4 db"
@@ -66,7 +69,18 @@
           id="connect-input"
         />
         <input
-          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100 w-20-l fr"
+          class="
+            button-reset
+            pv3
+            tc
+            bn
+            bg-animate bg-black-80
+            hover-bg-aqua
+            white
+            pointer
+            w-100 w-20-l
+            fr
+          "
           id="connect-submit"
           type="submit"
           value="Connect"
@@ -89,7 +103,18 @@
         ></textarea>
         <button
           disabled
-          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100 w-20-l self-end"
+          class="
+            button-reset
+            pv3
+            tc
+            bn
+            bg-animate bg-black-80
+            hover-bg-aqua
+            white
+            pointer
+            w-100 w-20-l
+            self-end
+          "
           id="add-file-submit"
           type="submit"
         >
@@ -110,7 +135,18 @@
           required
         />
         <button
-          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100 w-20-l fr"
+          class="
+            button-reset
+            pv3
+            tc
+            bn
+            bg-animate bg-black-80
+            hover-bg-aqua
+            white
+            pointer
+            w-100 w-20-l
+            fr
+          "
           id="publish-cid-submit"
           type="submit"
           disabled
@@ -143,7 +179,18 @@
           class="input-reset bn black-80 bg-white pa3 w-100 w-80-l mb3 mb0-l ft"
         />
         <button
-          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100 w-20-l fr"
+          class="
+            button-reset
+            pv3
+            tc
+            bn
+            bg-animate bg-black-80
+            hover-bg-aqua
+            white
+            pointer
+            w-100 w-20-l
+            fr
+          "
           id="resolve-name-submit"
           type="submit"
           disabled

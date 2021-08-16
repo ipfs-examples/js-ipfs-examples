@@ -1,12 +1,12 @@
-const Ipfs = require('ipfs')
-const VideoStream = require('videostream')
-const toStream = require('it-to-stream')
-const {
+import Ipfs from 'ipfs'
+import VideoStream from 'videostream'
+import toStream from 'it-to-stream'
+import {
   dragDrop,
   statusMessages,
   createVideoElement,
   log
-} = require('./utils')
+} from './utils'
 
 const App = async () => {
   // DOM

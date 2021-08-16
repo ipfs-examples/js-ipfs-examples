@@ -9,12 +9,18 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+      crossorigin
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="./src/app.css" />
-    <link rel="stylesheet" href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css" />
     <link rel="shortcut icon" href="favicon.ico" />
 
-    <script src="./src/app.js" defer></script>
+    <script type="module" src="./src/app.js" defer></script>
   </head>
 
   <body class="montserrat f5">
@@ -23,7 +29,7 @@
         <img
           alt="IPFS logo"
           src="./public/ipfs-logo.svg"
-          style="height: 50px;"
+          style="height: 50px"
           class="v-top"
         />
       </a>
@@ -59,7 +65,17 @@
         />
 
         <button
-          class="button-reset pv3 tc bn bg-animate bg-black-80 hover-bg-aqua white pointer w-100"
+          class="
+            button-reset
+            pv3
+            tc
+            bn
+            bg-animate bg-black-80
+            hover-bg-aqua
+            white
+            pointer
+            w-100
+          "
           id="connect-submit"
           type="submit"
         >

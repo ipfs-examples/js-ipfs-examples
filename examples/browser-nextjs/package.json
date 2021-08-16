@@ -9,7 +9,7 @@
     "serve": "npm run dev",
     "start": "next start",
     "lint": "next lint",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run build && playwright test tests --retries=3"
   },
   "dependencies": {
     "ipfs": "^0.57.0",

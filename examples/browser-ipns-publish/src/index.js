@@ -12,6 +12,7 @@ const { sha256 } = require('multiformats/hashes/sha2')
 const WS = require('libp2p-websockets')
 const transportKey = WS.prototype[Symbol.toStringTag]
 const filters = require('libp2p-websockets/src/filters')
+const mh = require('multihashes')
 
 const { sleep, Logger, onEnterPress, catchAndLog } = require("./util");
 
@@ -204,9 +205,9 @@ async function main() {
     last(ipfsAPI.name.resolve(keys.id, { stream: false })); // save the pubsub topic to the server to make them listen
 
     // set up the topic from ipns key
-    let b58 = await IPFS.multihash.fromB58String(keys.id);
+    let b58 = await mh.fromB58String(keys.id);
     const ipnsKeys = ipns.getIdKeys(b58);
-    const topic = `${namespace}${uint8ArrayToString(ipnsKeys.routingKey, 'base64url')}`;
+    const topic = `${namespace}${uint8ArrayToString(ipnsKeys.routingKey._buf, 'base64url')}`;
 
     // subscribe and log on both nodes
     await subs(ipfsBrowser, topic, log); // browserLog

@@ -1,6 +1,6 @@
 'use strict'
 
-const IPFS = require('ipfs')
+import IPFS from 'ipfs'
 
 const App = () => {
   let ipfs

@@ -13,7 +13,7 @@
       src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"
       defer
     ></script>
-    <script src="./src/index.js" defer></script>
+    <script type="module" src="./src/index.js" defer></script>
   </head>
   <body>
     <div
@@ -24,7 +24,6 @@
       <div id="form-wrapper">
         <form>
           <input type="text" id="cid" placeholder="CID" disabled />
-          <input type="file" id="file" disabled />
           <button id="gobutton" disabled>Go!</button>
         </form>
         <video id="video" controls></video>

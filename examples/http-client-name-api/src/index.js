@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 'use strict'
 
-const { create: ipfsHttp } = require('ipfs-http-client')
+import { create as ipfsHttp } from 'ipfs-http-client'
 
 const App = () => {
   let ipfs = null

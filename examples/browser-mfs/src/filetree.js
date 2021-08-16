@@ -68,7 +68,7 @@ const updateTree = async (ipfs) => {
   listFiles(container, files, '')
 }
 
-module.exports = {
+export {
   getSelected,
   updateTree
 }

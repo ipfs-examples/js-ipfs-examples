@@ -9,7 +9,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run build && playwright test tests --retries=3"
   },
   "dependencies": {
     "@angular/animations": "~12.1.2",

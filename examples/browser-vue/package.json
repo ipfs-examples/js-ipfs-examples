@@ -9,7 +9,7 @@
     "build": "vue-cli-service build",
     "start": "npm run serve",
     "lint": "vue-cli-service lint",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run build && playwright test tests --retries=3"
   },
   "browserslist": [
     "> 1%",
@@ -47,5 +47,10 @@
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
+  },
+  "workspaces": {
+    "nohoist": [
+      "@vue/**"
+    ]
   }
 }
