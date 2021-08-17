@@ -10,10 +10,12 @@
     "build": "parcel build index.html --no-scope-hoist",
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests --browser=webkit --retries=3"
+    "test:example": "npm run build && playwright test tests --browser=firefox --retries=3"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
+    "hls.js": "^0.14.17",
+    "hlsjs-ipfs-loader": "^0.3.0",
     "ipfs": "^0.58.0"
   },
   "devDependencies": {
