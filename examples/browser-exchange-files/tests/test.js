@@ -67,6 +67,7 @@ play.describe('upload file using http client: ', () => {
   const WORKSPACE = 'test-workspace'
 
   const connect = async (page, address, workspace, remotePeerId) => {
+    await page.waitForTimeout(2000)
     await page.waitForSelector(connectedPeers)
 
     await page.fill(multiAddressInput, address)
@@ -79,6 +80,7 @@ play.describe('upload file using http client: ', () => {
     await page.click(workspaceBtn)
 
     await page.waitForSelector(`${workspacePeers}:has-text('${remotePeerId}')`)
+    await page.waitForTimeout(2000)
   }
 
   let sigServer;
