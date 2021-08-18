@@ -15,7 +15,7 @@
     "clean": "echo 'Nothing to clean...'",
     "start": "electron .",
     "serve": "npm run start",
-    "test:example": "node tests/test.js"
+    "test:example": "node test.js"
   },
   "dependencies": {
     "ipfs": "^0.58.0"
@@ -23,8 +23,7 @@
   "devDependencies": {
     "electron": "^13.1.9",
     "electron-rebuild": "^3.1.1",
-    "ipfs": "^0.58.0",
-    "test-util-ipfs-example": "^1.0.2"
+    "playwright": "^1.12.3"
   },
   "greenkeeper": {
     "ignore": [

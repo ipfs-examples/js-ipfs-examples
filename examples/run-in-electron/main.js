@@ -1,7 +1,6 @@
 'use strict'
 
 const { app, BrowserWindow } = require('electron')
-const IPFS = require('ipfs')
 
 let mainWindow
 
@@ -28,14 +27,6 @@ function createWindow () {
 
 app.on('ready', async () => {
   createWindow()
-
-  try {
-    const node = await IPFS.create()
-    const id = await node.id()
-    console.log(id)
-  } catch (err) {
-    console.error(err)
-  }
 })
 
 // Quit when all windows are closed.
