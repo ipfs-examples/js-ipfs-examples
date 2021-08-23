@@ -21,7 +21,7 @@ play.describe('integrate ipfs with nuxtjs:', () => {
   play('should properly initialized a IPFS node and print some information about the node', async ({ page }) => {
     await page.waitForSelector(info)
 
-    expect(await page.textContent(id)).toContain("Qm");
+    expect(await page.isVisible(id)).toBeTruthy();
     expect(await page.textContent(agent)).toContain("js-ipfs/");
   });
 });

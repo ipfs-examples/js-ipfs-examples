@@ -1,4 +1,5 @@
 export default {
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'browser-nuxtjs',
@@ -38,9 +39,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    // ! TODO: TO BE REMOVED
-    // * For now it is needed to transpile "Optional chaining" from `ipfs-http-client`
-    transpile: ['ipfs-http-client'],
     babel: {
       plugins: [
         ['@babel/plugin-proposal-private-methods', { loose: true }],
