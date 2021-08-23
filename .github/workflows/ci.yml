@@ -20,5 +20,5 @@ jobs:
         run: yarn install
       - name: Install dependencies for browsers
         run: npx playwright install-deps
-      - name: Run test:examples
-        run: npx xvfb-maybe yarn run test:examples
+      - name: Run test
+        run: npx xvfb-maybe yarn run test

@@ -5,8 +5,9 @@
   "description": "Template for using js-ipfs in typescript project",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
-    "test": "tsc --noEmit",
-    "test:example": "npm run test"
+    "test:example": "npm run test:prepare-example && npm run test:run-example",
+    "test:prepare-example": "echo 'Nothing to prepare...'",
+    "test:run-example": "tsc --noEmit"
   },
   "dependencies": {
     "ipfs": "^0.58.1",

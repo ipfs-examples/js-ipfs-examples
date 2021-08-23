@@ -10,7 +10,9 @@
     "build": "webpack --env production",
     "serve": "webpack serve --hot-only --mode=development",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run test:prepare-example && npm run test:run-example",
+    "test:prepare-example": "npm run build",
+    "test:run-example": "playwright test tests"
   },
   "browserslist": [
     "last 1 Chrome version"

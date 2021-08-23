@@ -9,8 +9,9 @@
     "clean": "rm -rf ./dist",
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "test-ipfs-example",
-    "test:example": "test-ipfs-example"
+    "test:example": "npm run test:prepare-example && npm run test:run-example",
+    "test:prepare-example": "echo 'Nothing to prepare...'",
+    "test:run-example": "test-ipfs-example"
   },
   "dependencies": {
     "ipfs": "^0.58.1",

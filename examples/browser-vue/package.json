@@ -9,7 +9,9 @@
     "build": "vue-cli-service build",
     "start": "npm run serve",
     "lint": "vue-cli-service lint",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run test:prepare-example && npm run test:run-example",
+    "test:prepare-example": "npm run build",
+    "test:run-example": "playwright test tests"
   },
   "browserslist": [
     "> 1%",

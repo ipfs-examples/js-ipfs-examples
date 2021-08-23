@@ -7,7 +7,9 @@
     "clean": "echo 'Nothing to clean...'",
     "start": "node in-process-node.js & node daemon-node.js",
     "serve": "npm run start",
-    "test:example": "node tests/test.js"
+    "test:example": "npm run test:prepare-example && npm run test:run-example",
+    "test:prepare-example": "echo 'Nothing to prepare...'",
+    "test:run-example": "node tests/test.js"
   },
   "dependencies": {
     "dag-jose": "^1.0.0",

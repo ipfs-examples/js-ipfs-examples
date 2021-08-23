@@ -26,10 +26,12 @@
     "clean:build": "rimraf ./**/.parcel-cache",
     "clean:examples": "yarn workspaces run clean",
     "test:examples": "yarn workspaces run test:example",
-    "test": "yarn run test:examples",
+    "test:parallel-examples": "lerna run test:prepare-example --concurrency 4 && yarn workspaces run test:run-example",
+    "test": "yarn run test:parallel-examples",
     "chore:update-dependencies": "node scripts/update-example-deps.js"
   },
   "devDependencies": {
+    "lerna": "^4.0.0",
     "rimraf": "^3.0.2"
   },
   "engines": {
