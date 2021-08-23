@@ -5,7 +5,6 @@
   "description": "Sharing IPFS node across browsing contexts",
   "keywords": [],
   "license": "MIT",
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -15,8 +14,8 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.57.0",
-    "ipfs-message-port-client": "^0.8.0",
+    "ipfs": "^0.58.1",
+    "ipfs-message-port-client": "^0.8.3",
     "ipfs-message-port-server": "^0.9.0"
   },
   "devDependencies": {

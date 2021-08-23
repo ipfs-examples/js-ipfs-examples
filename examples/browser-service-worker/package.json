@@ -9,11 +9,12 @@
     "clean": "rm -rf ./dist",
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "test-ipfs-example"
+    "test": "test-ipfs-example",
+    "test:example": "test-ipfs-example"
   },
   "dependencies": {
-    "ipfs": "^0.57.0",
-    "ipfs-message-port-client": "^0.8.0",
+    "ipfs": "^0.58.1",
+    "ipfs-message-port-client": "^0.8.3",
     "ipfs-message-port-protocol": "^0.9.0",
     "ipfs-message-port-server": "^0.9.0",
     "process": "0.11.10"
@@ -22,7 +23,7 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
     "babel-loader": "^8.2.2",
-    "copy-webpack-plugin": "^8.1.0",
+    "copy-webpack-plugin": "^9.0.1",
     "test-ipfs-example": "^3.0.0",
     "webpack": "^5.28.0",
     "webpack-cli": "^4.5.0",

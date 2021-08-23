@@ -13,7 +13,7 @@
     "test:example": "node tests/test.js"
   },
   "dependencies": {
-    "ipfs": "^0.57.0",
+    "ipfs": "^0.58.1",
     "it-all": "^1.0.4",
     "uint8arrays": "^2.1.6"
   },

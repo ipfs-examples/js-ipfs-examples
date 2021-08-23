@@ -1,8 +1,8 @@
 'use strict'
 
-const { create: IpfsHttpClient } = require('ipfs-http-client')
-const { sleep, Logger, onEnterPress, catchAndLog } = require('./util')
-const uint8ArrayToString = require('uint8arrays/to-string')
+import { create as IpfsHttpClient } from 'ipfs-http-client'
+import { sleep, Logger, onEnterPress, catchAndLog } from './util'
+import uint8ArrayToString from 'uint8arrays/to-string'
 
 async function main () {
   const apiUrlInput = document.getElementById('api-url')

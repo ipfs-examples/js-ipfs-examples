@@ -9,32 +9,20 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+      crossorigin
     />
-    <link rel="stylesheet" href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css" />
-
-    <script src="src/index.js" defer></script>
-  </head>
-  <body></body>
-</html>
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Publish to IPNS from the browser</title>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+      href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css"
+      crossorigin
     />
-    <link rel="stylesheet" href="https://unpkg.com/ipfs-css@0.12.0/ipfs.css" />
+
+    <script type="module" src="src/index.js" defer></script>
   </head>
   <body class="sans-serif">
     <header class="pv3 ph2 ph3-l bg-navy cf mb4">
       <a href="https://ipfs.io/" title="ipfs.io">
-        <img
-          src="https://ipfs.io/images/ipfs-logo.svg"
-          class="v-mid"
-          style="height: 50px;"
-        />
+        <img src="./public/ipfs-logo.svg" class="v-mid" style="height: 50px" />
       </a>
       <h1 class="aqua fw2 montserrat dib ma0 pv2 ph1 v-mid fr f3 lh-copy">
         IPNS Publish from JS to Go Peer
@@ -48,7 +36,7 @@
         <div class="theme-default-content content__default" data-v-4f5abb4a="">
           <div
             class="custom-block callout"
-            style="font-size: 0.75em; width: 75%; margin: 1em;"
+            style="font-size: 0.75em; width: 75%; margin: 1em"
           >
             <p>
               Code repo for this demo
@@ -68,7 +56,7 @@
             <div>
               To make this demo work, you're going to need:
               <ul>
-                <li style="list-style-type: none;">
+                <li style="list-style-type: none">
                   <b>1. Access to a go-ipfs node and it's API</b>, a-la
                   <pre>/dns4/domain.com/tcp/5001</pre>
                 </li>
@@ -92,7 +80,7 @@
                 </ul>
               </ul>
               <ul>
-                <li style="list-style-type: none;">
+                <li style="list-style-type: none">
                   <b>2. Access to a go-ipfs Websocket port</b>, a-la
                   <pre>/dns4/domain.com/tcp/4003/wss/p2p/QmTheDomainPeerId</pre>
                 </li>
@@ -140,7 +128,7 @@
       </button>
       <div
         class="custom-block callout"
-        style="font-size: 0.75em; width: 75%; margin: 1em;"
+        style="font-size: 0.75em; width: 75%; margin: 1em"
       >
         For connecting to a local go-ipfs node, you can check its listening
         address similar to:
@@ -167,11 +155,9 @@
     </div>
 
     <div class="ph3 mb3">
-      <div class="fw2 tracked ttu f6 teal-muted mb2">
-        3. Choose a key:
-      </div>
+      <div class="fw2 tracked ttu f6 teal-muted mb2">3. Choose a key:</div>
       <form>
-        <ul style="list-style-type: none;">
+        <ul style="list-style-type: none">
           <li>
             <input type="radio" id="male" name="keyName" value="self" checked />
             <label for="male"
@@ -227,16 +213,40 @@
       <div class="fw2 tracked ttu f6 teal-muted mb2">Browser Console</div>
       <div
         id="console"
-        class="f7 db w-100 ph1 pv2 monospace input-reset ba b--black-20 border-box overflow-scroll"
-        style="height: 300px;"
+        class="
+          f7
+          db
+          w-100
+          ph1
+          pv2
+          monospace
+          input-reset
+          ba
+          b--black-20
+          border-box
+          overflow-scroll
+        "
+        style="height: 300px"
       ></div>
     </div>
     <div class="ph3 mb3">
       <div class="fw2 tracked ttu f6 teal-muted mb2">Server Console</div>
       <div
         id="server-console"
-        class="f7 db w-100 ph1 pv2 monospace input-reset ba b--black-20 border-box overflow-scroll"
-        style="height: 300px;"
+        class="
+          f7
+          db
+          w-100
+          ph1
+          pv2
+          monospace
+          input-reset
+          ba
+          b--black-20
+          border-box
+          overflow-scroll
+        "
+        style="height: 300px"
       ></div>
     </div>
   </body>

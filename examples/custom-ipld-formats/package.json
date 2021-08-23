@@ -1,5 +1,5 @@
 {
-  "name": "skipped-example-custom-ipld-formats",
+  "name": "example-custom-ipld-formats",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "dag-jose": "^1.0.0",
-    "ipfs-core": "^0.9.1",
-    "ipfs-daemon": "^0.8.1",
-    "ipfs-http-client": "^52.0.0",
+    "ipfs-core": "^0.10.3",
+    "ipfs-daemon": "^0.9.3",
+    "ipfs-http-client": "^52.0.1",
     "multiformats": "^9.4.1",
     "uint8arrays": "^2.1.6"
   },

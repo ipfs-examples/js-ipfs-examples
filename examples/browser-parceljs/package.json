@@ -6,7 +6,6 @@
   "keywords": [],
   "license": "ISC",
   "author": "",
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -16,7 +15,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.57.0"
+    "ipfs": "^0.58.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

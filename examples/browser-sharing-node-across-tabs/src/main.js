@@ -32,7 +32,7 @@ window.addEventListener('load', (event) => {
 
   const main = async () => {
     // connect / spawn shared ipfs worker & create a client.
-    const worker = new SharedWorker(new URL('./worker.js', import.meta.url))
+    const worker = new SharedWorker(new URL('./worker.js', import.meta.url), {type: 'module'})
     const ipfs = IPFSClient.from(worker.port)
     const path = location.hash.slice(1)
 

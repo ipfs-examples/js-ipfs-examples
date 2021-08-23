@@ -17,7 +17,7 @@
     "last 1 Chrome version"
   ],
   "dependencies": {
-    "ipfs-http-client": "^52.0.0",
+    "ipfs-http-client": "^52.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -25,12 +25,14 @@
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
+    "@playwright/test": "^1.12.3",
     "babel-loader": "^8.2.2",
-    "copy-webpack-plugin": "^8.1.0",
+    "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
-    "ipfs": "^0.57.0",
+    "ipfs": "^0.58.1",
     "node-polyfill-webpack-plugin": "^1.0.3",
+    "playwright": "^1.12.3",
     "react-hot-loader": "^4.12.21",
     "rimraf": "^3.0.2",
     "style-loader": "^3.1.0",

@@ -11,11 +11,11 @@
     <link rel="icon" href="./favicon.ico" />
 
     <!-- The app bundled with IPFS -->
-    <script src="./src/app.js" defer></script>
+    <script type="module" src="./src/app.js" defer></script>
   </head>
   <body ondragover="event.preventDefault()">
     <header>
-      <img width="200" src="public/assets/ipfs-logo.svg" alt="IPFS" />
+      <img width="200" src="public/ipfs-logo.svg" alt="IPFS" />
     </header>
 
     <main>
@@ -101,7 +101,7 @@
           </div>
 
           <div id="drag-container">
-            <img width="100" src="public/assets/upload.svg" alt="Upload" />
+            <img width="100" src="public/upload.svg" alt="Upload" />
             <p><b>Drag &amp; drop</b> a file to upload it.</p>
           </div>
 

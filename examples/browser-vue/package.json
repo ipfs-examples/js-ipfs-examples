@@ -1,8 +1,8 @@
 {
-  "name": "example-browser-vue-up",
+  "name": "example-browser-vue-3",
   "version": "1.0.0",
   "private": true,
-  "description": "A minimal demonstration of how to use js-ipfs using vue cli",
+  "description": "A minimal demonstration of how to use js-ipfs using vue 3",
   "scripts": {
     "clean": "rimraf ./dist",
     "serve": "vue-cli-service serve",
@@ -14,14 +14,15 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not dead",
+    "not ie 11"
   ],
   "eslintConfig": {
     "env": {
       "node": true
     },
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@babel/eslint-parser"
     },
     "extends": [
       "plugin:vue/vue3-essential",
@@ -31,19 +32,20 @@
     "root": true
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "ipfs": "^0.57.0",
-    "vue": "^3.0.0"
+    "core-js": "^3.8.3",
+    "ipfs": "^0.58.1",
+    "vue": "^3.0.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
     "@playwright/test": "^1.12.3",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0",
+    "@vue/cli-plugin-babel": "~5.0.0-beta.3",
+    "@vue/cli-plugin-eslint": "~5.0.0-beta.3",
+    "@vue/cli-service": "~5.0.0-beta.3",
+    "@vue/compiler-sfc": "^3.0.4",
+    "eslint": "^7.20.0",
+    "eslint-plugin-vue": "^7.2.0",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"

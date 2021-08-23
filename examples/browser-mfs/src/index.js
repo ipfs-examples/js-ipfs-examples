@@ -22,7 +22,7 @@ import {
 import mime from 'mime-sniffer'
 
 /** @type {import('ipfs-core-types/src/index').IPFS} IPFS */
-import IPFS from 'ipfs';
+import IPFS from 'ipfs'
 
 document.addEventListener('DOMContentLoaded', async () => {
   const ipfs = await IPFS.create({

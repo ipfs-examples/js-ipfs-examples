@@ -5,7 +5,6 @@
   "description": "Bundle js-ipfs with Browserify",
   "keywords": [],
   "license": "MIT",
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "copyfiles -u 1 -a './public/**/*' './dist' && browserify ./src/index.js > ./dist/bundle.js",
@@ -14,7 +13,7 @@
     "test:example": "npm run build && playwright test tests"
   },
   "dependencies": {
-    "ipfs": "^0.57.0"
+    "ipfs": "^0.58.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.12.3",
@@ -22,7 +21,7 @@
     "concat-stream": "^2.0.0",
     "copyfiles": "^2.4.1",
     "execa": "^5.0.0",
-    "http-server": "^0.12.3",
+    "http-server": "^13.0.0",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"

@@ -10,9 +10,7 @@ export default {
     // global `Buffer` until https://github.com/isaacs/core-util-is/issues/29
     // is fixed.
     new ProvidePlugin({
-      global: ['global'],
-      Buffer: ['buffer', 'Buffer'],
-      process: 'process/browser',
+      global: ['global']
     })
-  ],
+  ]
 } as Configuration;

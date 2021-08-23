@@ -5,17 +5,18 @@
   "description": "IPFS browser video streaming example",
   "keywords": [],
   "license": "MIT",
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests --browser=webkit"
+    "test:example": "npm run build && playwright test tests --browser=firefox --retries=3"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.57.0"
+    "hls.js": "^0.14.17",
+    "hlsjs-ipfs-loader": "^0.3.0",
+    "ipfs": "^0.58.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

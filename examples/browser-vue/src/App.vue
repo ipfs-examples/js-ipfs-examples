@@ -21,8 +21,8 @@ export default {
   name: "App",
   components: {
     IpfsInfo,
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 </script>
 

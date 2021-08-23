@@ -8,7 +8,6 @@
   "contributors": [
     "Victor Bjelkholm <victor@ipfs.io>"
   ],
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
@@ -18,14 +17,14 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-http-client": "^52.0.0",
+    "ipfs-http-client": "^52.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "ipfs": "^0.57.0",
+    "ipfs": "^0.58.1",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",

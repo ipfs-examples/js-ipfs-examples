@@ -1,6 +1,6 @@
-exports.sleep = (ms = 1000) => new Promise(resolve => setTimeout(resolve, ms))
+const sleep = (ms = 1000) => new Promise(resolve => setTimeout(resolve, ms))
 
-exports.Logger = outEl => {
+const Logger = outEl => {
   outEl.innerHTML = ''
   return message => {
     const container = document.createElement('div')
@@ -10,7 +10,7 @@ exports.Logger = outEl => {
   }
 }
 
-exports.onEnterPress = fn => {
+const onEnterPress = fn => {
   return e => {
     if (event.which == 13 || event.keyCode == 13) {
       e.preventDefault()
@@ -19,7 +19,7 @@ exports.onEnterPress = fn => {
   }
 }
 
-exports.catchAndLog = (fn, log) => {
+const catchAndLog = (fn, log) => {
   return async (...args) => {
     try {
       await fn(...args)
@@ -28,4 +28,11 @@ exports.catchAndLog = (fn, log) => {
       log(`<span class="red">${err.message}</span>`)
     }
   }
+}
+
+export {
+  sleep,
+  Logger,
+  onEnterPress,
+  catchAndLog
 }

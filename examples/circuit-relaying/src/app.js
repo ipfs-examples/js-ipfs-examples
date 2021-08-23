@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 'use strict'
 
-const IPFS = require('ipfs')
-const WS = require('libp2p-websockets')
-const filters = require('libp2p-websockets/src/filters')
+import IPFS from 'ipfs'
+import WS from 'libp2p-websockets'
+import filters from 'libp2p-websockets/src/filters'
+import Helpers from './helpers'
 const transportKey = WS.prototype[Symbol.toStringTag]
-const Helpers = require('./helpers')
 
 document.addEventListener('DOMContentLoaded', async () => {
   const $peerId = document.querySelector('#peer-id')

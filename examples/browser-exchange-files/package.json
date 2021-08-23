@@ -3,18 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "main": "dist/index.html",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
     "build": "parcel build index.html --no-scope-hoist",
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
     "test": "playwright test",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run build && playwright test tests --retries=3"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.57.0",
+    "ipfs": "^0.58.1",
     "it-all": "^1.0.4",
     "libp2p-websockets": "^0.16.1",
     "uint8arrays": "^2.1.6"
@@ -22,7 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "ipfs-http-client": "^52.0.0",
+    "ipfs-http-client": "^52.0.1",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
