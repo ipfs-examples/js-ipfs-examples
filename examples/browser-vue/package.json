@@ -9,11 +9,31 @@
     "build": "vue-cli-service build",
     "start": "npm run serve",
     "lint": "vue-cli-service lint",
-    "test:example": "npm run build && playwright test tests --retries=3"
+    "test:example": "npm run build && playwright test tests"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "root": true
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "ipfs": "^0.58.0",
+    "ipfs": "^0.58.1",
     "vue": "^3.0.4"
   },
   "devDependencies": {
@@ -29,25 +49,5 @@
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+  }
 }

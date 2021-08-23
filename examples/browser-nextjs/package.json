@@ -9,10 +9,10 @@
     "serve": "npm run dev",
     "start": "next start",
     "lint": "next lint",
-    "test:example": "npm run build && playwright test tests --retries=3"
+    "test:example": "npm run build && playwright test tests"
   },
   "dependencies": {
-    "ipfs": "^0.58.0",
+    "ipfs": "^0.58.1",
     "next": "11.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"

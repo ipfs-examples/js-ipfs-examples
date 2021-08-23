@@ -10,11 +10,11 @@
     "build": "parcel build index.html --no-scope-hoist",
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests --retries=3"
+    "test:example": "npm run build && playwright test tests"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.58.0",
+    "ipfs": "^0.58.1",
     "it-to-stream": "^1.0.0",
     "videostream": "^3.2.0"
   },

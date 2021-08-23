@@ -10,12 +10,12 @@
     "build": "parcel build index.html --no-scope-hoist",
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests --retries=3"
+    "test:example": "npm run build && playwright test tests"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.58.0",
-    "ipfs-message-port-client": "^0.8.1",
+    "ipfs": "^0.58.1",
+    "ipfs-message-port-client": "^0.8.3",
     "ipfs-message-port-server": "^0.9.0"
   },
   "devDependencies": {

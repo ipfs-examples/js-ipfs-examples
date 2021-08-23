@@ -11,7 +11,7 @@
     "build": "webpack --env production",
     "serve": "webpack serve --hot-only --mode=development",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests --retries=3"
+    "test:example": "npm run build && playwright test tests"
   },
   "browserslist": [
     "last 1 Chrome version"
@@ -30,7 +30,7 @@
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
-    "ipfs": "^0.58.0",
+    "ipfs": "^0.58.1",
     "node-polyfill-webpack-plugin": "^1.0.3",
     "playwright": "^1.12.3",
     "react-hot-loader": "^4.12.21",

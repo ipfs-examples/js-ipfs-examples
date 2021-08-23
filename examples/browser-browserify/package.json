@@ -10,10 +10,10 @@
     "build": "copyfiles -u 1 -a './public/**/*' './dist' && browserify ./src/index.js > ./dist/bundle.js",
     "serve": "http-server dist -a 127.0.0.1 -p 8888",
     "start": "npm run build && npm run serve",
-    "test:example": "npm run build && playwright test tests --retries=3"
+    "test:example": "npm run build && playwright test tests"
   },
   "dependencies": {
-    "ipfs": "^0.58.0"
+    "ipfs": "^0.58.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.12.3",

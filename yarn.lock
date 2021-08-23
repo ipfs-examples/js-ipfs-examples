@@ -12533,7 +12533,7 @@ global-tunnel-ng@^2.7.1:
     npm-conf "^1.1.3"
     tunnel "^0.0.6"
 
-global@^4.3.0:
+global@^4.3.0, global@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
   integrity sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==
@@ -13965,7 +13965,7 @@ ipfs-core-utils@^0.10.1:
     timeout-abort-controller "^1.1.1"
     uint8arrays "^2.1.6"
 
-ipfs-core@^0.10.1, ipfs-core@^0.10.3:
+ipfs-core@^0.10.3:
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/ipfs-core/-/ipfs-core-0.10.3.tgz#1ea0a701b2b0709c2f496617bea21a3a5f833e32"
   integrity sha512-OjoyaB1Uu7cyXDFjvGWV8R7wzAo9p+aiKMNuYAZk8Ilmo2JcXSGoLEGPjdkIOJsADqOvxtC8cAfptc3tE4V8bA==
@@ -14046,7 +14046,7 @@ ipfs-css@^1.3.0:
   resolved "https://registry.yarnpkg.com/ipfs-css/-/ipfs-css-1.3.0.tgz#e2bf680b2c7590b85ad5cb04d811bbdd3f7e9c3f"
   integrity sha512-NXou2Gc5ofjdyEedZZSr7Zzfd/WQIf/LyWktyv28xhA4R8FnxngXbuXFuiN4JnB6qx2GWjV7o1zU9Mp0SvJ7eg==
 
-ipfs-daemon@^0.9.1, ipfs-daemon@^0.9.3:
+ipfs-daemon@^0.9.3:
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/ipfs-daemon/-/ipfs-daemon-0.9.3.tgz#a7be431099db8c02d691180c58102186dd3792fd"
   integrity sha512-yg2uovD4BQ2UbIS0FIkm9OiOvDuF95WtL8TXif+mVeILeGAghqLvrwZYQsam8YMx/7qnaUHG1OWDCitnzFx2kQ==
@@ -14220,7 +14220,7 @@ ipfs-http-server@^0.7.1:
   optionalDependencies:
     prom-client "^12.0.0"
 
-ipfs-message-port-client@^0.8.1:
+ipfs-message-port-client@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/ipfs-message-port-client/-/ipfs-message-port-client-0.8.3.tgz#bbf22ff99add6659a3f681369d77165070eca809"
   integrity sha512-zUBedLuQo5/JrNO091CHq5TBKZlvgDa120j6Z9Ql1s0oErn9xc5f65/q3bBng3e0Yh5n3rrFjkTyGBNX5xpvgw==
@@ -14395,7 +14395,7 @@ ipfs-utils@^8.1.2, ipfs-utils@^8.1.4:
     react-native-fetch-api "^2.0.0"
     stream-to-it "^0.2.2"
 
-ipfs@^0.58.0:
+ipfs@^0.58.1:
   version "0.58.1"
   resolved "https://registry.yarnpkg.com/ipfs/-/ipfs-0.58.1.tgz#63e53025319c6c78e56111e7f4e6db92041bdce0"
   integrity sha512-yeFuLk/VaHznrJFJVCBkMDpWSGBlxqiloIagvv/SePEGvgNpRlyQlnd8B3uLdk6xqhHuSaiWsHHuOL0cv64gbg==

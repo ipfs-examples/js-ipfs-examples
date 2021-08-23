@@ -10,13 +10,13 @@
     "build": "webpack --env production",
     "serve": "webpack serve --hot-only --mode=development",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests --retries=3"
+    "test:example": "npm run build && playwright test tests"
   },
   "browserslist": [
     "last 1 Chrome version"
   ],
   "dependencies": {
-    "ipfs": "^0.58.0",
+    "ipfs": "^0.58.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
