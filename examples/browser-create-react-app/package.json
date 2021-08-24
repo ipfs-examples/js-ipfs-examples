@@ -10,8 +10,7 @@
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test:react": "react-scripts test",
-    "test:example": "npm run build && playwright test tests",
-    "test": "npm run test:example"
+    "test": "npm run build && playwright test tests"
   },
   "browserslist": {
     "production": [

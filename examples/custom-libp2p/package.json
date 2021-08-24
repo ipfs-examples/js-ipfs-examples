@@ -9,8 +9,7 @@
     "clean": "echo 'Nothing to clean...'",
     "start": "node index.js",
     "serve": "npm run start",
-    "test:example": "node tests/test.js",
-    "test": "npm run test:example"
+    "test": "node tests/test.js"
   },
   "dependencies": {
     "@chainsafe/libp2p-noise": "^4.0.0",

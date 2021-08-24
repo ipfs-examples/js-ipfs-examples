@@ -8,10 +8,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
-    "start": "npm run test:example",
+    "start": "npm run test",
     "serve": "npm run start",
-    "test:example": "node tests/test.js",
-    "test": "npm run test:example"
+    "test": "node tests/test.js"
   },
   "dependencies": {
     "@ipld/dag-pb": "^2.1.3",
