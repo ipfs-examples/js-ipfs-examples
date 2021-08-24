@@ -9,8 +9,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
-    "test": "react-scripts test",
-    "test:example": "npm run build && playwright test tests"
+    "test:react": "react-scripts test",
+    "test": "npm run build && playwright test tests"
   },
   "browserslist": {
     "production": [

@@ -9,8 +9,7 @@
     "clean": "rm -rf ./dist",
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "test-ipfs-example",
-    "test:example": "test-ipfs-example"
+    "test": "test-ipfs-example"
   },
   "dependencies": {
     "ipfs": "^0.58.1",

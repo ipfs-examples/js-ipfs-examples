@@ -1,5 +1,3 @@
-# BrowserAngular
-
 <p align="center">
   <a href="https://js.ipfs.io" title="JS IPFS">
     <img src="https://ipfs.io/ipfs/Qme6KJdKcp85TYbLxuLV7oQzMiLremD7HMoXLZEmgo6Rnh/js-ipfs-sticker.png" alt="IPFS in JavaScript logo" width="244" />
@@ -25,23 +23,22 @@
 
 ## Table of Contents
 
-- [BrowserAngular](#browserangular)
-  - [Table of Contents](#table-of-contents)
-  - [About The Project](#about-the-project)
-  - [Getting Started](#getting-started)
-    - [Pre requisites](#pre-requisites)
-    - [Installation and Running example](#installation-and-running-example)
-    - [Available Scripts from create-react-app](#available-scripts-from-create-react-app)
-      - [Development server](#development-server)
-      - [Code scaffolding](#code-scaffolding)
-      - [Build](#build)
-      - [Running unit tests](#running-unit-tests)
-      - [Running end-to-end tests](#running-end-to-end-tests)
-      - [Further help](#further-help)
-  - [Usage](#usage)
-  - [Documentation](#documentation)
-  - [Contributing](#contributing)
-  - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Getting Started](#getting-started)
+  - [Pre requisites](#pre-requisites)
+  - [Installation and Running example](#installation-and-running-example)
+  - [Available Scripts from create-react-app](#available-scripts-from-create-react-app)
+    - [Development server](#development-server)
+    - [Code scaffolding](#code-scaffolding)
+    - [Build](#build)
+    - [Running unit tests](#running-unit-tests)
+    - [Running end-to-end tests](#running-end-to-end-tests)
+    - [Further help](#further-help)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Want to hack on IPFS?](#want-to-hack-on-ipfs)
 
 ## About The Project
 

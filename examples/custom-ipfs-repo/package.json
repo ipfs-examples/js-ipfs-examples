@@ -9,7 +9,7 @@
     "clean": "echo 'Nothing to clean...'",
     "start": "node index.js",
     "serve": "npm run start",
-    "test:example": "node tests/test.js"
+    "test": "node tests/test.js"
   },
   "dependencies": {
     "@ipld/dag-cbor": "^6.0.5",
