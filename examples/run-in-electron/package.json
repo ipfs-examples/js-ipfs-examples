@@ -15,7 +15,8 @@
     "clean": "echo 'Nothing to clean...'",
     "start": "electron .",
     "serve": "npm run start",
-    "test:example": "node test.js"
+    "test:example": "node test.js",
+    "test": "npm run test:example"
   },
   "dependencies": {
     "ipfs": "^0.58.1"

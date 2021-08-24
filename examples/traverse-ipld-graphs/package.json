@@ -10,7 +10,8 @@
     "clean": "echo 'Nothing to clean...'",
     "start": "npm run test:example",
     "serve": "npm run start",
-    "test:example": "node tests/test.js"
+    "test:example": "node tests/test.js",
+    "test": "npm run test:example"
   },
   "dependencies": {
     "@ipld/dag-pb": "^2.1.3",

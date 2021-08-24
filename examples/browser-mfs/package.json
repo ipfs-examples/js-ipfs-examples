@@ -10,7 +10,8 @@
     "build": "parcel build index.html --no-scope-hoist",
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
-    "test:example": "npm run build && playwright test tests"
+    "test:example": "npm run build && playwright test tests",
+    "test": "npm run test:example"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
