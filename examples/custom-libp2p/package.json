@@ -20,7 +20,7 @@
     "libp2p-mdns": "^0.17.0",
     "libp2p-mplex": "^0.10.2",
     "libp2p-tcp": "^0.17.1",
-    "uint8arrays": "^2.1.6"
+    "uint8arrays": "^3.0.0"
   },
   "devDependencies": {
     "test-util-ipfs-example": "^1.0.2"

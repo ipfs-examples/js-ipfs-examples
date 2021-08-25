@@ -2,7 +2,7 @@
 
 import { create as IpfsHttpClient } from 'ipfs-http-client'
 import { sleep, Logger, onEnterPress, catchAndLog } from './util'
-import uint8ArrayToString from 'uint8arrays/to-string'
+import { toString as uint8ArrayToString } from "uint8arrays/to-string";
 
 async function main () {
   const apiUrlInput = document.getElementById('api-url')
