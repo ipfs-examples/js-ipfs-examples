@@ -30,9 +30,6 @@ bundle.js
 tsconfig-types.aegir.json
 .tsbuildinfo
 
-# Deployment files
-.npmrc
-
 # Editor files
 .idea
 .vscode
