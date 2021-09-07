@@ -124,6 +124,7 @@ The most important piece of information to note down is the name you choose for 
 - [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
 - [Examples](https://github.com/ipfs/js-ipfs/tree/master/examples)
 - [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
+- [Tutorials](https://proto.school)
 
 ## Contributing
 

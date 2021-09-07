@@ -295,6 +295,7 @@ You should add your signaling server in the IPFS config swarm addresses, so that
 - [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
 - [Examples](https://github.com/ipfs/js-ipfs/tree/master/examples)
 - [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
+- [Tutorials](https://proto.school)
 
 ## Contributing
 
