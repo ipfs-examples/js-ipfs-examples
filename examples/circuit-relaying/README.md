@@ -7,19 +7,19 @@
 <h3 align="center"><b>IPFS Circuit Relay</b></h3>
 
 <p align="center">
-    <b><i>Circuit relay, where it fits in the stack and how to use it.!</i></b>
-    <br />
-    <br />
-    <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
-    <br>
-    <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
-    ·
-    <a href="https://codesandbox.io/">View Demo</a>
-    ·
-    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
-  </p>
+  <b><i>Circuit relay, where it fits in the stack and how to use it.!</i></b>
+  <br />
+  <br />
+  <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
+  <br>
+  <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
+  ·
+  <a href="https://codesandbox.io/">View Demo</a>
+  ·
+  <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
+</p>
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@
 ## About The Project
 
 - Read the [docs](https://github.com/ipfs/js-ipfs/tree/master/docs)
-- Look into other [examples](https://github.com/ipfs/js-ipfs/tree/master/examples) to learn how to spawn an IPFS node in Node.js and in the Browser
+- Look into other [examples](https://github.com/ipfs-examples/js-ipfs-examples) to learn how to spawn an IPFS node in Node.js and in the Browser
 - Consult the [Core API docs](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api) to see what you can do with an IPFS node
 - Visit https://dweb-primer.ipfs.io to learn about IPFS and the concepts that underpin it
 - Head over to https://proto.school to take interactive tutorials that cover core IPFS APIs
@@ -182,7 +182,7 @@ Here's what we are going to be doing, today:
 
 You can use a `go-ipfs` or a `js-ipfs` node as a relay. We'll demonstrate how to set both up in this tutorial and we encourage you to try both out. That said, either js or go should do the trick!
 
-##### Setting up a `go-ipfs` node
+#### Setting up a `go-ipfs` node
 
 In order to enable the relay functionality in `go-ipfs` we need to edit it's configuration file, located under `~/.ipfs/config`:
 
@@ -216,7 +216,7 @@ We also need to make sure our go node can be dialed from the browser. For that, 
 
 The config should look similar to the above snippet after we've edited it.
 
-##### Setting up a `js-ipfs` node
+#### Setting up a `js-ipfs` node
 
 We need to go through similar steps to enable circuit relay in `jsipfs`. However, the config options are slightly different — that should change once this feature is not marked as experimental, but for now we have to deal with two different sets of options.
 
@@ -233,7 +233,7 @@ Just as we did with `go-ipfs`, go ahead and edit `js-ipfs` config file located u
 
 Note that we don't have to do anything to enable the `websocket` transport as it is enabled by default in `jsipfs`.
 
-##### Starting the relay node
+#### Starting the relay node
 
 We can start the relay nodes by either running `ipfs daemon` or `jsipfs daemon`:
 
@@ -260,17 +260,17 @@ In the case of go ipfs, the crucial `/p2p/Qm...` part of the multiaddr might be 
 ```console
 $ ipfs id
 {
-        "ID": "QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
-        "PublicKey": "CAASpgIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC84qPFzqajCfnvaJunqt48S1LIBRthXV60q5QClL+dUfOOU/m7v1ZcpNhvFFUN6tVCDaoT5AxEv0czxZiVx/njl6FVIc6tE1J+HWpc8cbAXNY6QbbyzKl/rjp7V8/QClE0JqgjIk84wnWGTwFhOEt0hnpu2XFt9iHaenSfg3EAa8K9MlbxmbawuxNLJJf7VZXkJrUNl6WOglAVU8Sqc4QaahCLVK5Dzo98zDBq1KDBxMbUgH0LTqzr6i+saxkEHZmBKO+mMVT3LzOUx1DQR4pLAw1qgoJstsIZEaJ2XLh975IiI7OKqWYH7+3NyNK2sldJK/4Zko4rH3irmnkAxLcFAgMBAAE=",
-        "Addresses": [
-                "/ip4/127.0.0.1/tcp/4001/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
-                "/ip4/192.168.1.132/tcp/4001/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
-                "/ip6/::1/tcp/4001/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
-                "/ip4/186.4.18.182/tcp/13285/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
-                "/ip4/186.4.18.182/tcp/13285/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF"
-        ],
-        "AgentVersion": "go-ipfs/0.4.14-dev/cb5bb7dd8",
-        "ProtocolVersion": "ipfs/0.1.0"
+  "ID": "QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
+  "PublicKey": "CAASpgIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC84qPFzqajCfnvaJunqt48S1LIBRthXV60q5QClL+dUfOOU/m7v1ZcpNhvFFUN6tVCDaoT5AxEv0czxZiVx/njl6FVIc6tE1J+HWpc8cbAXNY6QbbyzKl/rjp7V8/QClE0JqgjIk84wnWGTwFhOEt0hnpu2XFt9iHaenSfg3EAa8K9MlbxmbawuxNLJJf7VZXkJrUNl6WOglAVU8Sqc4QaahCLVK5Dzo98zDBq1KDBxMbUgH0LTqzr6i+saxkEHZmBKO+mMVT3LzOUx1DQR4pLAw1qgoJstsIZEaJ2XLh975IiI7OKqWYH7+3NyNK2sldJK/4Zko4rH3irmnkAxLcFAgMBAAE=",
+  "Addresses": [
+          "/ip4/127.0.0.1/tcp/4001/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
+          "/ip4/192.168.1.132/tcp/4001/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
+          "/ip6/::1/tcp/4001/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
+          "/ip4/186.4.18.182/tcp/13285/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF",
+          "/ip4/186.4.18.182/tcp/13285/p2p/QmY73BLYav2gYc9PCEnjQqbfSGiqFv3aMsRXNyKFGtUoGF"
+  ],
+  "AgentVersion": "go-ipfs/0.4.14-dev/cb5bb7dd8",
+  "ProtocolVersion": "ipfs/0.1.0"
 }
 ```
 
@@ -402,7 +402,7 @@ _For more examples, please refer to the [Documentation](#documentation)_
 
 - [Config](https://docs.ipfs.io/)
 - [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
-- [Examples](https://github.com/ipfs/js-ipfs/tree/master/examples)
+- [Examples](https://github.com/ipfs-examples/js-ipfs-examples)
 - [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
 - [Tutorials](https://proto.school)
 

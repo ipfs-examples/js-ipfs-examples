@@ -7,19 +7,19 @@
 <h3 align="center"><b>Pubsub in the browser</b></h3>
 
 <p align="center">
-    <b><i>How to use pubsub in the browser!</i></b>
-    <br />
-    <br />
-    <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
-    <br>
-    <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
-    ·
-    <a href="https://codesandbox.io/">View Demo</a>
-    ·
-    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
-  </p>
+  <b><i>How to use pubsub in the browser!</i></b>
+  <br />
+  <br />
+  <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
+  <br>
+  <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
+  ·
+  <a href="https://codesandbox.io/">View Demo</a>
+  ·
+  <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
+</p>
 
 ## Table of Contents
 
@@ -29,12 +29,11 @@
   - [Prerequisites](#prerequisites)
   - [Installation and Running example](#installation-and-running-example)
 - [Usage](#usage)
-  - [1. Get started](#1-get-started)
-  - [2. Start two IPFS nodes](#2-start-two-ipfs-nodes)
-  - [3. Start the IPFS nodes](#3-start-the-ipfs-nodes)
+  - [1. Start two IPFS nodes](#1-start-two-ipfs-nodes)
+  - [2. Start the IPFS nodes](#2-start-the-ipfs-nodes)
     - [JS IPFS node](#js-ipfs-node)
     - [GO IPFS node](#go-ipfs-node)
-  - [4. Open two browsers and connect to each node](#4-open-two-browsers-and-connect-to-each-node)
+  - [3. Open two browsers and connect to each node](#3-open-two-browsers-and-connect-to-each-node)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -42,7 +41,7 @@
 ## About The Project
 
 - Read the [docs](https://github.com/ipfs/js-ipfs/tree/master/docs)
-- Look into other [examples](https://github.com/ipfs/js-ipfs/tree/master/examples) to learn how to spawn an IPFS node in Node.js and in the Browser
+- Look into other [examples](https://github.com/ipfs-examples/js-ipfs-examples) to learn how to spawn an IPFS node in Node.js and in the Browser
 - Consult the [Core API docs](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api) to see what you can do with an IPFS node
 - Visit https://dweb-primer.ipfs.io to learn about IPFS and the concepts that underpin it
 - Head over to https://proto.school to take interactive tutorials that cover core IPFS APIs
@@ -62,12 +61,19 @@ Make sure you have installed all of the following prerequisites on your developm
 
 ### Installation and Running example
 
+With Node.js and git installed, install the project dependencies:
+
 ```console
-> npm install
-> npm start
+$ npm install
 ```
 
-Now open your browser at `http://localhost:8888`
+Start the example application:
+
+```sh
+npm start
+```
+
+You should see something similar to the following in your terminal and the web app should now be available if you navigate to http://127.0.0.1:8888 using your browser.
 
 ## Usage
 
@@ -93,37 +99,13 @@ This example is a demo web application that allows you to connect to an IPFS nod
 +-------------------+         +-------------------+
 ```
 
-### 1. Get started
-
-With Node.js and git installed, clone the repo and install the project dependencies:
-
-```console
-$ git clone https://github.com/ipfs/js-ipfs.git
-$ cd js-ipfs/examples/http-client-browser-pubsub
-$ npm install
-```
-
-Start the example application:
-
-```sh
-npm start
-```
-
-You should see something similar to the following in your terminal and the web app should now be available if you navigate to http://127.0.0.1:8888 using your browser:
-
-```sh
-Starting up http-server, serving ./
-Available on:
-  http://127.0.0.1:8888
-```
-
-### 2. Start two IPFS nodes
+### 1. Start two IPFS nodes
 
 To demonstrate pubsub we need two nodes running so pubsub messages can be passed between them.
 
-Right now the easiest way to do this is to install and start a `js-ipfs` and `go-ipfs` node. There are other ways to do this, see [this document on running multiple nodes](https://github.com/ipfs/js-ipfs/tree/master/examples/running-multiple-nodes) for details.
+Right now the easiest way to do this is to install and start a `js-ipfs` and `go-ipfs` node. There are other ways to do this, see [this document on running multiple nodes](https://github.com/ipfs-examples/js-ipfs-examples/running-multiple-nodes) for details.
 
-### 3. Start the IPFS nodes
+### 2. Start the IPFS nodes
 
 #### JS IPFS node
 
@@ -146,7 +128,7 @@ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://127.0.0
 ipfs daemon --enable-pubsub-experiment
 ```
 
-### 4. Open two browsers and connect to each node
+### 3. Open two browsers and connect to each node
 
 Now, open up **two** browser windows. This could be two tabs in the same browser or two completely different browsers, it doesn't matter. Navigate to http://127.0.0.1:8888 in both.
 
@@ -164,7 +146,7 @@ _For more examples, please refer to the [Documentation](#documentation)_
 
 - [Config](https://docs.ipfs.io/)
 - [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
-- [Examples](https://github.com/ipfs/js-ipfs/tree/master/examples)
+- [Examples](https://github.com/ipfs-examples/js-ipfs-examples)
 - [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
 - [Tutorials](https://proto.school)
 

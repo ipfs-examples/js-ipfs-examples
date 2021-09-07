@@ -7,45 +7,44 @@
 <h3 align="center"><b>Exchange files with js-ipfs</b></h3>
 
 <p align="center">
-    <b><i>Exchange files between the browser and other IPFS nodes</i></b>
-    <br />
-    <br />
-    <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
-    <br>
-    <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
-    ·
-    <a href="https://codesandbox.io/">View Demo</a>
-    ·
-    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
-  </p>
+  <b><i>Exchange files between the browser and other IPFS nodes</i></b>
+  <br />
+  <br />
+  <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
+  <br>
+  <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
+  ·
+  <a href="https://codesandbox.io/">View Demo</a>
+  ·
+  <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
+</p>
 
 ## Table of Contents
 
-- [](#)
-  - [Table of Contents](#table-of-contents)
-  - [About The Project](#about-the-project)
-  - [Getting Started](#getting-started)
-    - [Pre requisites](#pre-requisites)
-    - [Installation and Running example](#installation-and-running-example)
-  - [Usage](#usage)
-    - [Step-by-step instructions](#step-by-step-instructions)
-    - [1. Install `go-ipfs` or `js-ipfs`](#1-install-go-ipfs-or-js-ipfs)
-    - [2. Make your daemons listen on WebSockets](#2-make-your-daemons-listen-on-websockets)
-    - [3. Start the app](#3-start-the-app)
-    - [4. Dial to a node using WebSockets (your desktop ones)](#4-dial-to-a-node-using-websockets-your-desktop-ones)
-    - [5. Transfer files between all of your nodes!](#5-transfer-files-between-all-of-your-nodes)
-  - [Going to production?](#going-to-production)
-    - [Use your own `libp2p-webrtc-star` signaling server](#use-your-own-libp2p-webrtc-star-signaling-server)
-  - [Documentation](#documentation)
-  - [Contributing](#contributing)
-  - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Getting Started](#getting-started)
+  - [Pre requisites](#pre-requisites)
+  - [Installation and Running example](#installation-and-running-example)
+- [Usage](#usage)
+  - [Step-by-step instructions](#step-by-step-instructions)
+  - [1. Install `go-ipfs` or `js-ipfs`](#1-install-go-ipfs-or-js-ipfs)
+  - [2. Make your daemons listen on WebSockets](#2-make-your-daemons-listen-on-websockets)
+  - [3. Start the app](#3-start-the-app)
+  - [4. Dial to a node using WebSockets (your desktop ones)](#4-dial-to-a-node-using-websockets-your-desktop-ones)
+  - [5. Transfer files between all of your nodes!](#5-transfer-files-between-all-of-your-nodes)
+- [Going to production?](#going-to-production)
+  - [Use your own `libp2p-webrtc-star` signaling server](#use-your-own-libp2p-webrtc-star-signaling-server)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Want to hack on IPFS?](#want-to-hack-on-ipfs)
 
 ## About The Project
 
 - Read the [docs](https://github.com/ipfs/js-ipfs/tree/master/docs)
-- Look into other [examples](https://github.com/ipfs/js-ipfs/tree/master/examples) to learn how to spawn an IPFS node in Node.js and in the Browser
+- Look into other [examples](https://github.com/ipfs-examples/js-ipfs-examples) to learn how to spawn an IPFS node in Node.js and in the Browser
 - Consult the [Core API docs](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api) to see what you can do with an IPFS node
 - Visit https://dweb-primer.ipfs.io to learn about IPFS and the concepts that underpin it
 - Head over to https://proto.school to take interactive tutorials that cover core IPFS APIs
@@ -192,12 +191,10 @@ Check the `/ws` in line 5, that means it is listening. Cool.
 
 ### 3. Start the app
 
-Make sure you're in `js-ipfs/examples/exchange-files-in-browser`.
-
 We'll need to bundle the dependencies to run the app. Let's do it:
 
 ```sh
-> npm run bundle
+> npm run build
 ...
 > npm start
 ```
@@ -293,7 +290,7 @@ You should add your signaling server in the IPFS config swarm addresses, so that
 
 - [Config](https://docs.ipfs.io/)
 - [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
-- [Examples](https://github.com/ipfs/js-ipfs/tree/master/examples)
+- [Examples](https://github.com/ipfs-examples/js-ipfs-examples)
 - [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
 - [Tutorials](https://proto.school)
 
