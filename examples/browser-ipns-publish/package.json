@@ -30,7 +30,7 @@
     "it-last": "^1.0.4",
     "multihashes": "^4.0.2",
     "p-retry": "^4.2.0",
-    "uint8arrays": "^2.1.6"
+    "uint8arrays": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

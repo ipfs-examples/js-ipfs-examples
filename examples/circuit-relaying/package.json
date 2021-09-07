@@ -20,7 +20,7 @@
     "ipfs-css": "^1.3.0",
     "ipfs-pubsub-room": "^2.0.1",
     "libp2p-websockets": "^0.16.1",
-    "uint8arrays": "^2.1.6"
+    "uint8arrays": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

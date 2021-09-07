@@ -29,6 +29,7 @@ build
 bundle.js
 tsconfig-types.aegir.json
 .tsbuildinfo
+.nuxt
 
 # Editor files
 .idea
