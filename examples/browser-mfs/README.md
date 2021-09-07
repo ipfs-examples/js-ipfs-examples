@@ -36,7 +36,7 @@
 ## About The Project
 
 - Read the [docs](https://github.com/ipfs/js-ipfs/tree/master/docs)
-- Look into other [examples](https://github.com/ipfs/js-ipfs/tree/master/examples) to learn how to spawn an IPFS node in Node.js and in the Browser
+- Look into other [examples](https://github.com/ipfs-examples/js-ipfs-examples) to learn how to spawn an IPFS node in Node.js and in the Browser
 - Consult the [Core API docs](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api) to see what you can do with an IPFS node
 - Visit https://dweb-primer.ipfs.io to learn about IPFS and the concepts that underpin it
 - Head over to https://proto.school to take interactive tutorials that cover core IPFS APIs
@@ -78,8 +78,9 @@ _For more examples, please refer to the [Documentation](#documentation)_
 
 - [Config](https://docs.ipfs.io/)
 - [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
-- [Examples](https://github.com/ipfs/js-ipfs/tree/master/examples)
+- [Examples](https://github.com/ipfs-examples/js-ipfs-examples)
 - [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
+- [Tutorials](https://proto.school)
 
 ## Contributing
 

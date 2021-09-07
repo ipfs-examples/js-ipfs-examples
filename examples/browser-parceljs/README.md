@@ -7,19 +7,19 @@
 <h3 align="center"><b>js-ipfs with parcel.js</b></h3>
 
 <p align="center">
-    <b><i>Bundle js-ipfs with ParcelJS!</i></b>
-    <br />
-    <br />
-    <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
-    <br>
-    <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
-    ·
-    <a href="https://codesandbox.io/">View Demo</a>
-    ·
-    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
-  </p>
+  <b><i>Bundle js-ipfs with ParcelJS!</i></b>
+  <br />
+  <br />
+  <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
+  <br>
+  <a href="https://github.com/ipfs/js-ipfs/tree/master/docs">Explore the docs</a>
+  ·
+  <a href="https://codesandbox.io/">View Demo</a>
+  ·
+  <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/ipfs-examples/js-ipfs-examples/issues">Request Feature/Example</a>
+</p>
 
 ## Table of Contents
 
@@ -36,7 +36,7 @@
 ## About The Project
 
 - Read the [docs](https://github.com/ipfs/js-ipfs/tree/master/docs)
-- Look into other [examples](https://github.com/ipfs/js-ipfs/tree/master/examples) to learn how to spawn an IPFS node in Node.js and in the Browser
+- Look into other [examples](https://github.com/ipfs-examples/js-ipfs-examples) to learn how to spawn an IPFS node in Node.js and in the Browser
 - Consult the [Core API docs](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api) to see what you can do with an IPFS node
 - Visit https://dweb-primer.ipfs.io to learn about IPFS and the concepts that underpin it
 - Head over to https://proto.school to take interactive tutorials that cover core IPFS APIs
@@ -79,8 +79,9 @@ _For more examples, please refer to the [Documentation](#documentation)_
 
 - [Config](https://docs.ipfs.io/)
 - [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
-- [Examples](https://github.com/ipfs/js-ipfs/tree/master/examples)
+- [Examples](https://github.com/ipfs-examples/js-ipfs-examples)
 - [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
+- [Tutorials](https://proto.school)
 
 ## Contributing
 
