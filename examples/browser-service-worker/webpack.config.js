@@ -1,26 +1,122 @@
-'use strict'
 
 const path = require('path')
 const webpack = require('webpack')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { merge } = require('webpack-merge')
 
-module.exports = {
-  devtool: 'eval',
-  entry: './src/main.js',
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+/**
+ * HMR/Live Reloading broken after Webpack 5 rc.0 -> rc.1 update
+ * https://github.com/webpack/webpack-dev-server/issues/2758
+ *
+ * target: 'web' for the moment under your development mode.
+ */
+
+const paths = {
+  // Source files
+  src: path.resolve(__dirname, './src'),
+
+  // Production build files
+  build: path.resolve(__dirname, './dist'),
+
+  // Static files that get copied to build folder
+  public: path.resolve(__dirname, './public')
+}
+
+const prod = {
+  mode: 'production',
+  devtool: false,
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'main.js',
+    path: paths.build,
+    publicPath: '/',
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
+  // fix: https://github.com/webpack/webpack-dev-server/issues/2758
+  target: 'browserslist'
+}
+
+const dev = {
+  // Set the mode to development or production
+  mode: 'development',
+
+  // Control how source maps are generated
+  devtool: 'inline-source-map',
+
+  // Where webpack outputs the assets and bundles
+  output: {
+    path: paths.build,
+    filename: '[name].bundle.js',
     publicPath: '/'
   },
+
+  // Spin up a server for quick development
   devServer: {
-    serveIndex: true,
-    index: './index.html',
+    historyApiFallback: true,
+    contentBase: paths.build,
+    open: true,
     compress: true,
-    port: 3000,
-    historyApiFallback: true
+    hot: true,
+    port: 3000
   },
+
+  plugins: [
+    // Only update what has changed on hot reload
+    new webpack.HotModuleReplacementPlugin()
+  ]
+}
+
+const common = {
+// Where webpack looks to start building the bundle
+  entry: [paths.src + '/main.js'],
+
+  // Customize the webpack build process
+  plugins: [
+    // Copies files from target to destination folder
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: `${paths.public}/assets`,
+          to: 'assets',
+          globOptions: {
+            ignore: ['*.DS_Store']
+          },
+          noErrorOnMissing: true
+        }
+      ]
+    }),
+
+    // fixes Module not found: Error: Can't resolve 'stream' in '.../node_modules/nofilter/lib'
+    new NodePolyfillPlugin(),
+    // Note: stream-browserify has assumption about `Buffer` global in its
+    // dependencies causing runtime errors. This is a workaround to provide
+    // global `Buffer` until https://github.com/isaacs/core-util-is/issues/29
+    // is fixed.
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+      process: 'process/browser'
+    }),
+
+    // Generates an HTML file from a template
+    // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
+    new HtmlWebpackPlugin({
+      title: 'IPFS Viewer',
+      favicon: paths.public + '/favicon.ico',
+      template: paths.public + '/index.html', // template file
+      filename: 'index.html', // output file,
+      minify: false
+    })
+  ],
+
+  // Determine how modules within the project are treated
   module: {
     rules: [
+      // JavaScript: Use Babel to transpile JavaScript files
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -39,27 +135,25 @@ module.exports = {
             ]
           }
         }
-      }
+      },
+
+      // Images: Copy image files to build folder
+      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+
+      // Fonts and SVGs: Inline files
+      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
+
+      { test: /\.(css)$/, use: ['style-loader','css-loader'] }
     ]
   },
-  resolve: {
-    fallback: {
-      stream: require.resolve('stream-browserify')
-    }
-  },
-  plugins: [
-    new CopyWebpackPlugin({
-      patterns: [{
-        from: 'index.html'
-      }]
-    }),
-    // Note: stream-browserify has assumption about `Buffer` global in its
-    // dependencies causing runtime errors. This is a workaround to provide
-    // global `Buffer` until https://github.com/isaacs/core-util-is/issues/29
-    // is fixed.
-    new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer'],
-      process: 'process/browser'
-    })
-  ]
+
+  // fix: https://github.com/webpack/webpack-dev-server/issues/2758
+  target: 'web'
+}
+
+module.exports = (cmd) => {
+  const production = cmd.production
+  const config = production ? prod : dev
+
+  return merge(common, config)
 }

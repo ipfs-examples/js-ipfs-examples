@@ -1,12 +1,13 @@
 'use strict'
+import './app.css'
 
 // This is an entry point to our program.
-const main = async () => { 
+const main = async () => {
   // We start a shared worker where IPFS node is loaded.
   const worker = createIPFSWorker()
   // @ts-ignore - Store worker in the window so that it's available in console.
-  window.worker = createIPFSWorker()
-  
+  window.worker = worker
+
   // Service workers do not have access to the `SharedWorker` API
   // (see https://github.com/w3c/ServiceWorker/issues/678)
   // To overcome that limitation the page will listen for the service worker message
@@ -20,9 +21,9 @@ const main = async () => {
   await navigator.serviceWorker.ready
 
   // This is just for testing, lets us know when SW is ready.
-  const meta = document.createElement("meta")
-  meta.name = "sw-ready"
-  document.head.appendChild(meta)
+  const paragraph = document.getElementById("debug");
+  paragraph.textContent = 'SW is ready';
+  paragraph.style.display = 'none'
 
   // URLs like `localhost:3000/ipfs/Qmf412jQZiuVUtdgnB36FXFX7xg5V6KEbSJ4dpQuhkLyfD`
   // are loaded from service worker. However it could be that such a URL is loaded
@@ -35,7 +36,7 @@ const main = async () => {
 }
 
 /**
- * @param {string} path 
+ * @param {string} path
  */
 const load = async (path) => {
   const [,protocol] = path.split('/')
@@ -51,7 +52,7 @@ const load = async (path) => {
  * Handles ipfs message port request from service worker and
  * responds to it with it.
  *
- * @param {MessageEvent} event 
+ * @param {MessageEvent} event
  */
 const onServiceWorkerMessage = (event) => {
   /** @type {null|ServiceWorker} */

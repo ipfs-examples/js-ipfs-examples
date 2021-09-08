@@ -6,11 +6,15 @@
   "keywords": [],
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf ./dist",
-    "build": "webpack",
-    "start": "webpack-dev-server",
-    "test": "test-ipfs-example"
+    "clean": "rimraf ./dist",
+    "build": "webpack --env production",
+    "serve": "webpack serve --hot-only --mode=development",
+    "start": "npm run serve",
+    "test": "npm run build && playwright test tests"
   },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
   "dependencies": {
     "ipfs": "^0.58.1",
     "ipfs-message-port-client": "^0.8.3",
@@ -21,11 +25,20 @@
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
+    "@playwright/test": "^1.12.3",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
-    "test-ipfs-example": "^3.0.0",
-    "webpack": "^5.28.0",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "node-polyfill-webpack-plugin": "^1.0.4",
+    "playwright": "^1.12.3",
+    "rimraf": "^3.0.2",
+    "stream-browserify": "^3.0.0",
+    "style-loader": "^3.1.0",
+    "test-util-ipfs-example": "^1.0.2",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   }
 }
