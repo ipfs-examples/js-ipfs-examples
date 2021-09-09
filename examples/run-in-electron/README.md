@@ -29,6 +29,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation and Running example](#installation-and-running-example)
 - [Usage](#usage)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -65,6 +66,12 @@ Make sure you have installed all of the following prerequisites on your developm
 This example is heavily inspired by [electron-quick-start](https://github.com/electron/electron-quick-start).
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
 
 ## Documentation
 

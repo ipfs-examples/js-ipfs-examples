@@ -37,6 +37,7 @@
 - [traverse through a slice of the ethereum blockchain](#traverse-through-a-slice-of-the-ethereum-blockchain)
 - [traverse through a git repo](#traverse-through-a-git-repo)
   - [Video of the demos](#video-of-the-demos)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -123,6 +124,17 @@ Find a video with a walkthrough of this examples on Youtube:
 [![](https://ipfs.io/ipfs/QmYkeiPtVTR8TdgBNa4u46RvjfnbUFUxSDdb8BqDpqDEer)](https://youtu.be/drULwJ_ZDRQ?t=1m29s)
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [DAG](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/DAG.md)
+  - [BLOCK](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/BLOCK.md)
+  - [MULTIFORMATS](https://github.com/multiformats/js-multiformats)
+  - [IPLD](https://github.com/ipfs/js-ipfs/blob/master/docs/IPLD.md)
+- Tutorials:
+  - [Merkle DAGs](https://proto.school/merkle-dags)
 
 ## Documentation
 

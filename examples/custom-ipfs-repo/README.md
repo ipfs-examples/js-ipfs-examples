@@ -31,6 +31,7 @@
 - [Usage](#usage)
   - [Custom `storageBackends`](#custom-storagebackends)
   - [Custom Repo Lock](#custom-repo-lock)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -89,6 +90,17 @@ const repo = new Repo('/tmp/.ipfs', {
 ```
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS REPO](https://github.com/ipfs/js-ipfs-repo#setup)
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [FILES](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md)
+- Tutorials:
+  - [Regular File API](https://proto.school/regular-files-api)
+  - [libp2p](https://proto.school/introduction-to-libp2p)
 
 ## Documentation
 

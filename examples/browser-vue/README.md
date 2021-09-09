@@ -35,6 +35,7 @@
     - [Lints and fixes files](#lints-and-fixes-files)
     - [Customize configuration](#customize-configuration)
 - [Usage](#usage)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -109,6 +110,12 @@ A minimal demonstration of how to use `js-ipfs` with `Vue`.
 This project was bootstrapped with [Vue CLI](https://cli.vuejs.org/).
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
 
 ## Documentation
 

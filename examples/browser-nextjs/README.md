@@ -34,6 +34,7 @@
 - [Usage](#usage)
   - [Learn More](#learn-more)
   - [Deploy on Vercel](#deploy-on-vercel)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -110,6 +111,16 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [FILES](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md)
+- Tutorials:
+  - [MFS API](https://proto.school/mutable-file-system)
+  - [Regular File API](https://proto.school/regular-files-api)
 
 ## Documentation
 

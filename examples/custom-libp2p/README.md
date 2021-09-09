@@ -30,6 +30,7 @@
   - [Installation and Running example](#installation-and-running-example)
 - [Usage](#usage)
   - [Play with the configuration!](#play-with-the-configuration)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -72,6 +73,16 @@ With the metrics for peers and bandwidth stats being logged out, try playing aro
 This is also a good opportunity to explore the various stats that ipfs offers! Not seeing a statistic you think would be useful? We'd love to have you [contribute](https://github.com/ipfs/community/blob/master/CONTRIBUTING_JS.md)!
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [SWARM](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/SWARM.md)
+  - [STATS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/STATS.md)
+  - [LIBP2P CONFIG](https://github.com/libp2p/js-libp2p/blob/master/doc/CONFIGURATION.md)
+- Examples:
+  - [LIBP2P Examples](https://github.com/libp2p/js-libp2p/tree/master/examples)
 
 ## Documentation
 

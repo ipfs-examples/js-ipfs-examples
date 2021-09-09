@@ -30,6 +30,7 @@
   - [Installation and Running example](#installation-and-running-example)
 - [Usage](#usage)
   - [Play with the configuration!](#play-with-the-configuration)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -75,6 +76,19 @@ See the following files for different configuration:
 - [./daemon-node.js](./daemon-node.js) for running a node as a separate daemon process
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [DAG](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/DAG.md)
+  - [IPFS-HTTP-CLIENT CONFIG](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-http-client#api)
+  - [DAEMON](https://github.com/ipfs/js-ipfs/blob/master/docs/DAEMON.md)
+  - [MULTIFORMATS](https://github.com/multiformats/js-multiformats)
+  - [IPLD](https://github.com/ipfs/js-ipfs/blob/master/docs/IPLD.md)
+- Tutorials:
+  - [Merkle DAGs](https://proto.school/merkle-dags)
 
 ## Documentation
 

@@ -30,6 +30,7 @@
   - [Installation and Running example](#installation-and-running-example)
 - [Usage](#usage)
 - [Setup](#setup)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -89,6 +90,17 @@ You should see the following:
 ![](./img/screenshot.png)
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [FILES](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md)
+  - [IPFS-HTTP-CLIENT CONFIG](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-http-client#api)
+- Tutorials:
+  - [MFS API](https://proto.school/mutable-file-system)
+  - [Regular File API](https://proto.school/regular-files-api)
 
 ## Documentation
 

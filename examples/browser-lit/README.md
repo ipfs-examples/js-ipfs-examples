@@ -29,6 +29,7 @@
   - [Pre requisites](#pre-requisites)
   - [Installation and Running example](#installation-and-running-example)
 - [Usage](#usage)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -69,6 +70,12 @@ This is a minimal demonstration of how to use `js-ipfs` in a lit app.
 ![screenshot of the js ipfs node id info](./img/screenshot.png)
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
 
 ## Documentation
 

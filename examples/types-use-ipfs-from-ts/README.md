@@ -31,6 +31,7 @@
 - [Usage](#usage)
   - [IntelliSense](#intellisense)
   - [Limitations](#limitations)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -99,6 +100,12 @@ In [VSCode](https://code.visualstudio.com/) and other code editors that provide 
 - Not all APIs are fully typed so you might observe gaps and `any` types here and there. We hope to improve this over time.
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
 
 ## Documentation
 

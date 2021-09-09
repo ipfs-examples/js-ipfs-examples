@@ -37,6 +37,7 @@
   - [5. Transfer files between all of your nodes!](#5-transfer-files-between-all-of-your-nodes)
 - [Going to production?](#going-to-production)
   - [Use your own `libp2p-webrtc-star` signaling server](#use-your-own-libp2p-webrtc-star-signaling-server)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -285,6 +286,19 @@ This will give you the `webrtc-star` command. Use this to start a signaling serv
 By default it will listen to all incoming connections on port 13579. Override this with the `--host` and/or `--port` options. That is, the following multiaddr: `/ip4/127.0.0.1/tcp/13579/wss/p2p-webrtc-star`.
 
 You should add your signaling server in the IPFS config swarm addresses, so that you listen for new connections through it.
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [FILES](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md)
+  - [SWARM](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/SWARM.md)
+  - [PUBSUB](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/PUBSUB.md)
+  - [LIBP2P CONFIG](https://github.com/libp2p/js-libp2p/blob/master/doc/CONFIGURATION.md)
+- Tutorials:
+  - [Regular File API](https://proto.school/regular-files-api)
+  - [libp2p](https://proto.school/introduction-to-libp2p)
 
 ## Documentation
 

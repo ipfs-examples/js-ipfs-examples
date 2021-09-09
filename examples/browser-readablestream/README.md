@@ -29,6 +29,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation and Running example](#installation-and-running-example)
 - [Usage](#usage)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -69,6 +70,15 @@ We can use the excellent [`videostream`](https://www.npmjs.com/package/videostre
 Take a look at [`index.js`](./index.js) to see a working example.
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [FILES](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md)
+- Tutorials:
+  - [Regular File API](https://proto.school/regular-files-api)
 
 ## Documentation
 
