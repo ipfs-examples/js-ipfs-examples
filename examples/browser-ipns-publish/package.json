@@ -41,6 +41,7 @@
     "ipfsd-ctl": "^10.0.3",
     "parcel": "latest",
     "playwright": "^1.12.3",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "test-util-ipfs-example": "^1.0.2"
   }
 }
