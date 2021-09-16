@@ -53,6 +53,7 @@ jobs:
           node-version: 16
       - run: npm install
       - uses: GabrielBB/xvfb-action@v1
+        name: Run tests
         with:
           run: npm test
           working-directory: examples/${{ matrix.project }}
