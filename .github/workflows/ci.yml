@@ -51,4 +51,6 @@ jobs:
       - uses: GabrielBB/xvfb-action@v1
         with:
           working-directory: examples/${{ matrix.project }}
-          run: npm install && npm test
+          run: |
+            npm install
+            npm test
