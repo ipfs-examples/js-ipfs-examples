@@ -28,7 +28,8 @@
     "ipfs-utils": "^8.1.4",
     "ipns": "^0.13.3",
     "it-last": "^1.0.4",
-    "multihashes": "^4.0.2",
+    "libp2p-websockets": "^0.16.1",
+    "multiformats": "^9.4.7",
     "p-retry": "^4.2.0",
     "uint8arrays": "^3.0.0"
   },

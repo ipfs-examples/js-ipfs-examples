@@ -9,10 +9,10 @@ const cryptoKeys = require("human-crypto-keys"); // { getKeyPairFromSeed }
 const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
 const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
 const { sha256 } = require('multiformats/hashes/sha2')
+const { base58btc } = require('multiformats/bases/base58')
 const WS = require('libp2p-websockets')
 const transportKey = WS.prototype[Symbol.toStringTag]
 const filters = require('libp2p-websockets/src/filters')
-const mh = require('multihashes')
 
 const { sleep, Logger, onEnterPress, catchAndLog } = require("./util");
 
@@ -205,7 +205,7 @@ async function main() {
     last(ipfsAPI.name.resolve(keys.id, { stream: false })); // save the pubsub topic to the server to make them listen
 
     // set up the topic from ipns key
-    let b58 = await mh.fromB58String(keys.id);
+    let b58 = base58btc.decode(`z${keys.id}`)
     const ipnsKeys = ipns.getIdKeys(b58);
     const topic = `${namespace}${uint8ArrayToString(ipnsKeys.routingKey._buf, 'base64url')}`;
 
