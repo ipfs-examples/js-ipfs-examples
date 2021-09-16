@@ -48,6 +48,7 @@
     "eslint-plugin-vue": "^7.2.0",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
-    "test-util-ipfs-example": "^1.0.2"
+    "test-util-ipfs-example": "^1.0.2",
+    "util": "^0.12.4"
   }
 }

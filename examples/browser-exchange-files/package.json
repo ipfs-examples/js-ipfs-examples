@@ -21,6 +21,7 @@
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
     "ipfs-http-client": "^52.0.1",
+    "libp2p-webrtc-star": "^0.23.0",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
