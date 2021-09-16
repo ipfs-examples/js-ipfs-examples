@@ -9,16 +9,48 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        project:
+          - browser-add-readable-stream
+          - browser-angular
+          - browser-browserify
+          - browser-create-react-app
+          - browser-ipns-publish
+          - browser-lit
+          - browser-mfs
+          - browser-nextjs
+          - browser-parceljs
+          - browser-readablestream
+          - browser-script-tag
+          - browser-service-worker
+          - browser-sharing-node-across-tabs
+          - browser-video-streaming
+          - browser-vue
+          - browser-webpack
+          - circuit-relaying
+          - custom-ipfs-repo
+          - custom-ipld-formats
+          - custom-libp2p
+          - http-client-browser-pubsub
+          - http-client-bundle-webpack
+          - http-client-name-api
+          - http-client-upload-file
+          - ipfs-101
+          - ipfs-client-add-files
+          - run-in-electron
+          - running-multiple-nodes
+          - traverse-ipld-graphs
+          - types-use-ipfs-from-ts
+          - types-use-ipfs-from-typed-js
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: "16"
-          cache: "yarn"
-      - name: Install dependencies
-        run: yarn install
-      - name: Install dependencies for browsers
-        run: npx playwright install-deps
-      - name: Run test:examples
-        run: npx xvfb-maybe yarn run test:examples
+          node-version: 16
+      - uses: GabrielBB/xvfb-action@v1
+        with:
+          run: |
+            cd examples/${{ matrix.project }}
+            npm install
+            npm test
