@@ -43,14 +43,16 @@ jobs:
           - traverse-ipld-graphs
           - types-use-ipfs-from-ts
           - types-use-ipfs-from-typed-js
+    defaults:
+      run:
+        working-directory: examples/${{ matrix.project }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+      - run: npm install
       - uses: GabrielBB/xvfb-action@v1
         with:
+          run: npm test
           working-directory: examples/${{ matrix.project }}
-          run: |
-            npm install
-            npm test
