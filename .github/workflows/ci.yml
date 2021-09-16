@@ -17,6 +17,7 @@ jobs:
           - browser-angular
           - browser-browserify
           - browser-create-react-app
+          - browser-exchange-files
           - browser-ipns-publish
           - browser-lit
           - browser-mfs
