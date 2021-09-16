@@ -118,6 +118,10 @@ Contributions are what make the open source community such an amazing place to b
   - References for documentation/tutorials used to build the example
   - _Optional:_ Screenshots, gifs, etc... under `img/` folder
 
+- Update the CI to run the tests of the new example as standalone
+  - Edit `github/workflows/ci.yml`
+  - Add the test name to `project` under `matrix`
+
 - Extend the `test-util-ipfs-example` library if needed to reuse code in other examples
 
 ### Steps to follow after adding a new example
