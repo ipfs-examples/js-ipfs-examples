@@ -36,6 +36,7 @@
     - [Running end-to-end tests](#running-end-to-end-tests)
     - [Further help](#further-help)
 - [Usage](#usage)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -104,6 +105,12 @@ A minimal demonstration of how to use js-ipfs in a `angular` generated with [Ang
 Check the `ipfs.service.ts` file to how to use the basic of ipfs.
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
 
 ## Documentation
 

@@ -32,6 +32,7 @@
   - [Why use HLS?](#why-use-hls)
   - [hlsjs-ipfs-loader](#hlsjs-ipfs-loader)
   - [Generating HLS content](#generating-hls-content)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -117,6 +118,12 @@ $ ipfs add -Qr .
 ```
 
 The most important piece of information to note down is the name you choose for the HLS manifest (master.m3u8 in this example, but you're free to use any name), and the hash returned by `ipfs add`. Consult [streaming.js](streaming.js) for a full example of how these values are used.
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
 
 ## Documentation
 

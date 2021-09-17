@@ -34,6 +34,7 @@
     - [JS IPFS node](#js-ipfs-node)
     - [GO IPFS node](#go-ipfs-node)
   - [3. Open two browsers and connect to each node](#3-open-two-browsers-and-connect-to-each-node)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -141,6 +142,15 @@ This connects each browser to an IPFS node and now from the comfort of our brows
 Finally, use the "SUBSCRIBE TO PUBSUB TOPIC" and "SEND MESSAGE" fields to do some pubsub-ing, you should see messages sent from one browser appear in the log of the other (provided they're both subscribed to the same topic).
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [SWARM](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/SWARM.md)
+  - [PUBSUB](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/PUBSUB.md)
+  - [IPFS-HTTP-CLIENT CONFIG](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-http-client#api)
 
 ## Documentation
 

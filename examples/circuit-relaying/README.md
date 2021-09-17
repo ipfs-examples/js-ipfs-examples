@@ -44,6 +44,7 @@
   - [4. Dial the two browser nodes using a `/p2p-circuit` address](#4-dial-the-two-browser-nodes-using-a-p2p-circuit-address)
   - [5. Send data browser to browser.](#5-send-data-browser-to-browser)
   - [So what just happened?](#so-what-just-happened)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -397,6 +398,18 @@ Finally, a side note on [pubsub](https://github.com/libp2p/specs/blob/master/pub
 Cheers!
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [SWARM](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/SWARM.md)
+  - [PUBSUB](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/PUBSUB.md)
+  - [LIBP2P CONFIG](https://github.com/libp2p/js-libp2p/blob/master/doc/CONFIGURATION.md)
+- Tutorials:
+  - [libp2p](https://proto.school/introduction-to-libp2p)
+  - [Anatomy of a CID](https://proto.school/anatomy-of-a-cid)
 
 ## Documentation
 

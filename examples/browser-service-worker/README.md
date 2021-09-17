@@ -34,6 +34,7 @@
     - [`src/worker.js`](#srcworkerjs)
     - [`src/service.js`](#srcservicejs)
   - [Running example](#running-example)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -136,6 +137,17 @@ page from ipfs and appear as:
 [MessagePort]:https://developer.mozilla.org/en-US/docs/Web/API/MessagePort
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [IPFS-MESSAGE-PORT-CLIENT](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-message-port-client)
+  - [IPFS-MESSAGE-PORT-PROTOCOL](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-message-port-protocol)
+  - [IPFS-MESSAGE-PORT-SERVER](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-message-port-server)
+- Tutorials:
+  - [Anatomy of a CID](https://proto.school/anatomy-of-a-cid)
 
 ## Documentation
 

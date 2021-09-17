@@ -32,6 +32,7 @@
   - [Start two IPFS nodes](#start-two-ipfs-nodes)
     - [Install and start the Go IPFS node](#install-and-start-the-go-ipfs-node)
   - [Open the demo in a browser and connect to the go-node](#open-the-demo-in-a-browser-and-connect-to-the-go-node)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -127,6 +128,19 @@ You can choose whether to publish this record under the PeerId of the node that 
 Finally, enter `/ipfs/QmSomeHash` as the content you want to publish to IPNS. You should see the messages sent from the browser to the server appear in the logs below, ending with "Success, resolved" if it all worked.
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
+  - [SWARM](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/SWARM.md)
+  - [PUBSUB](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/PUBSUB.md)
+  - [LIBP2P CONFIG](https://github.com/libp2p/js-libp2p/blob/master/doc/CONFIGURATION.md)
+  - [IPFS-HTTP-CLIENT CONFIG](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-http-client#api)
+  - [IPNS](https://github.com/ipfs/js-ipns)
+- Tutorials:
+  - [libp2p](https://proto.school/introduction-to-libp2p)
 
 ## Documentation
 

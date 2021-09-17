@@ -33,6 +33,7 @@
     - [`npm test`](#npm-test)
     - [`npm run build`](#npm-run-build)
 - [Usage](#usage)
+- [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
@@ -114,6 +115,12 @@ Once the IPFS node is set up, `App.js` displays its ident and its version number
 **Note**: this example is useful to learn how to spawn IPFS from a web page. It is also possible to [spawn an IPFS daemon from the command line](https://docs.ipfs.io/install/command-line/) with `ipfs daemon`. While self-hosting is advised, one can also delegate IPFS operations to a third-party like Infura. See tutorials [here](https://blog.infura.io/part-2-getting-started-with-ipfs-on-infura/) and [here](https://blog.infura.io/part-2-getting-started-with-ipfs-on-infura/).
 
 _For more examples, please refer to the [Documentation](#documentation)_
+
+## References
+
+- Documentation:
+  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
+  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
 
 ## Documentation
 
