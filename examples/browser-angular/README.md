@@ -4,10 +4,10 @@
   </a>
 </p>
 
-<h3 align="center"><b>IPFS React App</b></h3>
+<h3 align="center"><b>IPFS Angular App</b></h3>
 
 <p align="center">
-  <b><i>Using js-ipfs in a `create-react-app`</i></b>
+  <b><i>Using js-ipfs with `Angular`</i></b>
   <br />
   <br />
   <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
