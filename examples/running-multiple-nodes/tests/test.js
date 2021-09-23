@@ -1,6 +1,6 @@
 'use strict'
 
-const IPFS = require('ipfs-core')
+const IPFS = require('ipfs')
 const os = require('os')
 const path = require('path')
 const { nanoid } = require('nanoid')
@@ -16,7 +16,7 @@ async function startCliNode () {
     }
   }
 
-  const ipfs = require.resolve('ipfs/src/cli.js')
+  const ipfs = IPFS.path()
 
   await node.execa(ipfs, ['init'], opts)
   await node.execa(ipfs, ['config', 'Addresses.Swarm', '--json', JSON.stringify([`/ip4/0.0.0.0/tcp/0`, `/ip4/127.0.0.1/tcp/0/ws`])], opts)

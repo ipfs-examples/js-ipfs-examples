@@ -13,7 +13,7 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "ipfs-core": "next"
+    "ipfs": "next"
   },
   "devDependencies": {
     "nanoid": "^3.1.23",
