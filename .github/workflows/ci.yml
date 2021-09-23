@@ -75,3 +75,4 @@ jobs:
         name: Run test:examples
         with:
           run: yarn run test:examples
+        continue-on-error: true
