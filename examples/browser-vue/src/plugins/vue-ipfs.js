@@ -1,7 +1,7 @@
-import IPFS from 'ipfs'
+import { create } from 'ipfs-core'
 
 export default {
   install: (app, options) => {
-    app.config.globalProperties.$ipfs = IPFS.create(options)
+    app.config.globalProperties.$ipfs = create(options)
   }
 }

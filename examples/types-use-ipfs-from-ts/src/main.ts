@@ -1,4 +1,4 @@
-import { IPFS, create } from 'ipfs'
+import { IPFS, create } from 'ipfs-core'
 import { CID } from 'multiformats/cid'
 
 export default async function main() {

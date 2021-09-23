@@ -1,13 +1,13 @@
 'use strict'
 
-import Ipfs from 'ipfs'
+import { create } from 'ipfs-core'
 import Hls from 'hls.js'
 import HlsjsIpfsLoader from 'hlsjs-ipfs-loader'
 
 document.addEventListener('DOMContentLoaded', async () => {
   const testHash = 'QmdpAidwAsBGptFB3b6A9Pyi5coEbgjHrL3K2Qrsutmj9K'
   const repoPath = 'ipfs-' + Math.random()
-  const node = await Ipfs.create({ repo: repoPath })
+  const node = await create({ repo: repoPath })
 
   Hls.DefaultConfig.loader = HlsjsIpfsLoader
   Hls.DefaultConfig.debug = false

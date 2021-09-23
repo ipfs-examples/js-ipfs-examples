@@ -1,6 +1,6 @@
 'use strict'
 
-const IPFS = require('ipfs')
+const { create } = require('ipfs-core')
 const {
   createRepo,
   locks: {
@@ -38,7 +38,7 @@ async function main () {
   }
 
   // Initialize our IPFS node with the custom repo options
-  const node = await IPFS.create({
+  const node = await create({
     repo: createRepo(path, loadCodec, {
       /**
        * IPFS repos store different types of information in separate datastores.

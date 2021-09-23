@@ -1,4 +1,4 @@
-import Ipfs from 'ipfs'
+import { create } from 'ipfs-core'
 import { useEffect, useState } from 'react'
 
 let ipfs = null
@@ -42,7 +42,7 @@ export default function useIpfsFactory () {
     } else {
       try {
         console.time('IPFS Started')
-        ipfs = await Ipfs.create()
+        ipfs = await create()
         console.timeEnd('IPFS Started')
       } catch (error) {
         console.error('IPFS init error:', error)

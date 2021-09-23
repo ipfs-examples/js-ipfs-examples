@@ -1,6 +1,6 @@
 'use strict'
 
-import Ipfs from 'ipfs'
+import { create } from 'ipfs-core'
 
 const main = async () => {
   let ipfs;
@@ -123,7 +123,7 @@ const main = async () => {
       showStatus(`Creating IPFS node...`, COLORS.active)
 
       const repoPath = `ipfs-${Math.random()}`
-      ipfs = await Ipfs.create({ repo: repoPath })
+      ipfs = await create({ repo: repoPath })
     }
 
     const id = await ipfs.id();

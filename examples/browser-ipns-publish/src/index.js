@@ -2,7 +2,7 @@
 
 const IpfsHttpClient = require("ipfs-http-client");
 const ipns = require("ipns");
-const IPFS = require("ipfs");
+const IPFS = require("ipfs-core");
 const pRetry = require("p-retry");
 const last = require("it-last");
 const cryptoKeys = require("human-crypto-keys"); // { getKeyPairFromSeed }

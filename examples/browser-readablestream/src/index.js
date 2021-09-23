@@ -1,4 +1,4 @@
-import Ipfs from 'ipfs'
+import { create } from 'ipfs-core'
 import VideoStream from 'videostream'
 import toStream from 'it-to-stream'
 import {
@@ -18,7 +18,7 @@ const App = async () => {
 
   log('IPFS: Initializing')
   const videoElement = createVideoElement()
-  const ipfs = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
+  const ipfs = await create({ repo: 'ipfs-' + Math.random() })
 
   // Allow adding files to IPFS via drag and drop
   dragDrop(ipfs, log)

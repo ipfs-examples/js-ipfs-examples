@@ -23,8 +23,8 @@
   "browserslist": "last 1 Chrome version",
   "dependencies": {
     "human-crypto-keys": "^0.1.4",
-    "ipfs": "^0.58.1",
-    "ipfs-http-client": "^52.0.1",
+    "ipfs-core": "next",
+    "ipfs-http-client": "next",
     "ipfs-utils": "^8.1.4",
     "ipns": "^0.13.3",
     "it-last": "^1.0.4",

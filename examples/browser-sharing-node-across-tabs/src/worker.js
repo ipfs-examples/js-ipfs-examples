@@ -1,6 +1,6 @@
 'use strict'
 
-import IPFS from 'ipfs'
+import { create } from 'ipfs-core'
 import { Server, IPFSService } from 'ipfs-message-port-server'
 
 const main = async () => {
@@ -13,7 +13,7 @@ const main = async () => {
 
   // Start an IPFS node & create server that will expose it's API to all clients
   // over message channel.
-  const ipfs = await IPFS.create()
+  const ipfs = await create()
   const service = new IPFSService(ipfs)
   const server = new Server(service)
 

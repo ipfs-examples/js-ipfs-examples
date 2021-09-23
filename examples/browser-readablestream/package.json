@@ -14,7 +14,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.58.1",
+    "ipfs-core": "next",
     "it-to-stream": "^1.0.0",
     "videostream": "^3.2.0"
   },

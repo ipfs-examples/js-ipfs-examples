@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ipfsLogo from './ipfs-logo.svg'
-import IPFS from 'ipfs'
+import { create } from 'ipfs-core'
 
 function App() {
   const [output, setOutput] = useState([]);
@@ -36,7 +36,7 @@ function App() {
     if (!ipfs) {
       showStatus('Creating IPFS node...', COLORS.active)
 
-      node = await IPFS.create({
+      node = await create({
         repo: String(Math.random() + Date.now()),
         init: { alogorithm: 'ed25519' }
       })

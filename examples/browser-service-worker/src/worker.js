@@ -1,6 +1,6 @@
 'use strict'
 
-const IPFS = require('ipfs')
+const { create } = require('ipfs-core')
 const { Server, IPFSService } = require('ipfs-message-port-server')
 
 const main = async () => {
@@ -12,7 +12,7 @@ const main = async () => {
 
   // Start an IPFS node & create server that will expose its API to all clients
   // over message channel
-  const ipfs = await IPFS.create()
+  const ipfs = await create()
   // And add hello world for tests
   await ipfs.add({ content: 'hello world' })
 

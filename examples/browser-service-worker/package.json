@@ -16,10 +16,10 @@
     "last 1 Chrome version"
   ],
   "dependencies": {
-    "ipfs": "^0.58.1",
-    "ipfs-message-port-client": "^0.8.3",
-    "ipfs-message-port-protocol": "^0.9.0",
-    "ipfs-message-port-server": "^0.9.0",
+    "ipfs-core": "next",
+    "ipfs-message-port-client": "next",
+    "ipfs-message-port-protocol": "next",
+    "ipfs-message-port-server": "next",
     "process": "0.11.10"
   },
   "devDependencies": {

@@ -12,12 +12,12 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-client": "^0.6.0"
+    "ipfs-client": "next"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "ipfs": "^0.58.1",
+    "ipfs": "next",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",

@@ -12,7 +12,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs": "^0.58.1",
+    "ipfs-core": "next",
     "it-all": "^1.0.4",
     "libp2p-websockets": "^0.16.1",
     "uint8arrays": "^3.0.0"
@@ -20,7 +20,9 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "ipfs-http-client": "^52.0.1",
+    "ipfs": "next",
+    "ipfs-core-types": "next",
+    "ipfs-http-client": "next",
     "libp2p-webrtc-star": "^0.23.0",
     "parcel": "latest",
     "playwright": "^1.12.3",

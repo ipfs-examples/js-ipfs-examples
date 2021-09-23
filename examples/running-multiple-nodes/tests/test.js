@@ -1,6 +1,6 @@
 'use strict'
 
-const IPFS = require('ipfs')
+const IPFS = require('ipfs-core')
 const os = require('os')
 const path = require('path')
 const { nanoid } = require('nanoid')
