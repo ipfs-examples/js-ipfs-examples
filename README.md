@@ -29,6 +29,7 @@
 - [Structure](#structure)
 - [IPFS Tutorials at ProtoSchool](#ipfs-tutorials-at-protoschool)
 - [Documentation](#documentation)
+- [ipfs or ipfs-core?](#ipfs-or-ipfs-core)
 - [Contributing](#contributing)
   - [Guidelines](#guidelines)
   - [Steps to follow after adding a new example](#steps-to-follow-after-adding-a-new-example)
@@ -87,6 +88,16 @@ Explore [ProtoSchool's IPFS tutorials](https://proto.school/#/tutorials?course=i
 - [Examples](https://github.com/ipfs-examples/js-ipfs-examples)
 - [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
 - [Tutorials](https://proto.school)
+
+## ipfs or ipfs-core?
+
+The JavaScript implementation of IPFS is available as two packages, `ipfs-core` and `ipfs`.
+
+`ipfs-core` contains the [core api](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api) and is intended to be used to run an IPFS node as part of your application without the need to start external processes or manage API ports and servers.
+
+`ipfs` is built on `ipfs-core` but also includes the CLI, an HTTP RPC API server and other tools to run `ipfs` as a background process so is a larger install with more dependencies.
+
+If you are writing an application that needs to access the IPFS network, use `ipfs-core`.  If you wish to use js-IPFS in a terminal window or run it as a server for use by multiple otherwise unrelated processes, use `ipfs`.
 
 ## Contributing
 
