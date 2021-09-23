@@ -3,7 +3,10 @@
 const { create } = require('ipfs-core')
 const { Server, IPFSService } = require('ipfs-message-port-server')
 
+console.info('hello world')
+
 const main = async () => {
+  try {
   // start listening to all incoming connections - they will be from browsing
   // contexts that run `new SharedWorker(...)`
   // Note: It is important to start listening before we do any async work to
@@ -29,6 +32,9 @@ const main = async () => {
       server.connect(port)
     }
   }
+}catch (err) {
+  console.error(err)
+}
 }
 
 /**

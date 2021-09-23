@@ -1,10 +1,10 @@
 // @ts-check
 /* eslint-env browser, serviceworker */
-import IPFS from "ipfs-message-port-client"
+import { IPFSClient } from "ipfs-message-port-client"
 import { defer, selectClient, toReadableStream } from "./service/util"
 
 /**
- * @param {LifecycleEvent} event 
+ * @param {LifecycleEvent} event
  */
 const oninstall = async (event) => {
   // We don't want to wait for old workers to be deactivated before the
@@ -13,7 +13,7 @@ const oninstall = async (event) => {
 }
 
 /**
- * @param {LifecycleEvent} event 
+ * @param {LifecycleEvent} event
  */
 const onactivate = async (event) => {
   // We want to start handling requests right away, so that requests from the
@@ -23,7 +23,7 @@ const onactivate = async (event) => {
 }
 
 /**
- * @param {Fetch} event 
+ * @param {Fetch} event
  */
 const onfetch = (event) => {
   const url = new URL(event.request.url)
@@ -65,10 +65,10 @@ const onfetch = (event) => {
 
 /**
  * Generates a simple page which:
- * 
+ *
  * 1. Embeds JS that will provide us message port on request.
  * 2. Embeds iframe to load an actual content.
- * 
+ *
  * @param {Object} options
  * @param {URL} options.url
  */
@@ -86,14 +86,14 @@ const fetchViewer = async ({ url }) => {
 `], { type: 'text/html'})
   return new Response(body, {
     status: 200
-  })  
+  })
 }
 
 
 
 /**
- * Fetches content from the IPFS and responds with it. 
- * 
+ * Fetches content from the IPFS and responds with it.
+ *
  * @param {Object} options
  * @param {Fetch} options.event
  * @param {string} options.path
@@ -121,7 +121,7 @@ const fetchContent = async ({ event, path }) => {
 
 /**
  * @param {Object} options
- * @param {Fetch} options.event 
+ * @param {Fetch} options.event
  * @param {string} options.path
  */
 const fetchIPNSContent = async ({/* path, event */}) => {
@@ -140,7 +140,7 @@ const fetchIPNSContent = async ({/* path, event */}) => {
 
 /**
  * @param {Object} options
- * @param {Fetch} options.event 
+ * @param {Fetch} options.event
  * @param {string} options.path
  */
 const fetchIPFSContent = async ({ event, path }) => {
@@ -198,7 +198,7 @@ const fetchIPFSContent = async ({ event, path }) => {
 }
 
 /**
- * @param {IPFS} ipfs 
+ * @param {IPFS} ipfs
  * @param {string} path
  */
 const fetchIPFSFile = async (ipfs, path) => {
@@ -220,7 +220,7 @@ const fetchIPFSFile = async (ipfs, path) => {
 }
 
 /**
- * @param {IPFS} ipfs 
+ * @param {IPFS} ipfs
  * @param {string} path
  */
 const fetchIPFSDirectory = async (ipfs, path) => {
@@ -233,7 +233,7 @@ const fetchIPFSDirectory = async (ipfs, path) => {
 }
 
 /**
- * @param {IPFS} ipfs 
+ * @param {IPFS} ipfs
  * @param {string} path
  * @param {number} [limit=174]
  * @returns {AsyncIterable<Uint8Array>}
@@ -241,7 +241,7 @@ const fetchIPFSDirectory = async (ipfs, path) => {
 const renderDirectory = async function * (ipfs, path, limit = 64) {
   const encoder = new TextEncoder()
   yield encoder.encode(`<html><h3>Index of ${path}<h3><ul>`)
-  
+
   for await (const entry of ipfs.ls(path)) {
     yield encoder.encode(renderDirectoryEntry(path, entry))
     if (--limit < 0) {
@@ -267,7 +267,7 @@ const renderDirectoryEntry = (base, entry) =>
 
 
 /**
- * @param {string} protocol 
+ * @param {string} protocol
  */
 const unsupportedProtocol = async (protocol) => {
   return new Response(`<html>
@@ -293,7 +293,7 @@ const createIPFSClient = async (context) => {
   // IPFS client and returns it
   const client = await selectClient(context.target)
   const port = await requestIPFSPort(client)
-  return IPFS.from(port)
+  return IPFSClient.from(port)
 }
 
 
@@ -332,7 +332,7 @@ const portRequests = Object.create(null)
  * Listens to the messages from the clients if it is response to pending message
  * port request resolves it.
  *
- * @param {MessageEvent} event 
+ * @param {MessageEvent} event
  */
 const onmessage = ({data}) => {
   if (data) {
@@ -352,7 +352,7 @@ const onmessage = ({data}) => {
 
 /**
  * Sets up service worker event handlers.
- * @param {any} self 
+ * @param {any} self
  */
 const setup = (self) => {
   self.oninstall = oninstall
@@ -367,6 +367,6 @@ setup(self)
 /**
  * @typedef {FetchEvent & { target: Scope }} Fetch
  * @typedef {ExtendableEvent & { target: Scope }} LifecycleEvent
- * @typedef {ServiceWorkerGlobalScope & { onMessagePort: (event:MessageEvent) => void }} Scope 
+ * @typedef {ServiceWorkerGlobalScope & { onMessagePort: (event:MessageEvent) => void }} Scope
  * @typedef {Object} MessagePortRequest
  */

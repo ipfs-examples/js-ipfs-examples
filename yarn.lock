@@ -13946,10 +13946,10 @@ ipfs-bitswap@^6.0.0:
     uint8arrays "^3.0.0"
     varint-decoder "^1.0.0"
 
-ipfs-cli@^0.8.9-rc.12+98e3c7213:
-  version "0.8.9-rc.12"
-  resolved "https://registry.yarnpkg.com/ipfs-cli/-/ipfs-cli-0.8.9-rc.12.tgz#69591e9291f0a38fd2583c8cc52aacf6c19a34c9"
-  integrity sha512-9RBkZ9D4Itffo8ap7XoPI96dAM5oWvA4OwBSjfvPUe4XZBdr8HTqyS5LVCu8IMuthE60WeltAWMvHaKiiqY0Cw==
+ipfs-cli@^0.8.9-rc.15+5de1b13b:
+  version "0.8.9-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-cli/-/ipfs-cli-0.8.9-rc.15.tgz#7b6b447755aa815e4cb934db0213921b7157592a"
+  integrity sha512-ffqVxrBKcoHtfHVxyRSfwVK6GjD0nohX9XMFbeOtkdcjd0IkmOMqGgimRE6Xuh5PyUKbbp5/HF7leyRK/4w/nA==
   dependencies:
     "@ipld/dag-cbor" "^6.0.5"
     "@ipld/dag-pb" "^2.1.3"
@@ -13958,11 +13958,11 @@ ipfs-cli@^0.8.9-rc.12+98e3c7213:
     err-code "^3.0.1"
     execa "^5.0.0"
     get-folder-size "^2.0.1"
-    ipfs-core "^0.10.9-rc.12+98e3c7213"
-    ipfs-core-types "^0.7.4-rc.12+98e3c7213"
-    ipfs-core-utils "^0.10.6-rc.12+98e3c7213"
-    ipfs-daemon "^0.9.9-rc.12+98e3c7213"
-    ipfs-http-client "^52.0.6-rc.12+98e3c7213"
+    ipfs-core "^0.10.9-rc.15+5de1b13b"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-core-utils "^0.10.6-rc.15+5de1b13b"
+    ipfs-daemon "^0.9.9-rc.15+5de1b13b"
+    ipfs-http-client "^52.0.6-rc.15+5de1b13b"
     ipfs-repo "^12.0.0"
     ipfs-utils "^8.1.4"
     it-all "^1.0.4"
@@ -13987,18 +13987,18 @@ ipfs-cli@^0.8.9-rc.12+98e3c7213:
     yargs "^16.0.3"
 
 ipfs-client@next:
-  version "0.6.7-rc.12"
-  resolved "https://registry.yarnpkg.com/ipfs-client/-/ipfs-client-0.6.7-rc.12.tgz#ef5e0c6403dbeed0be9198eab2843cbe72d7d2ce"
-  integrity sha512-GpdrFC4sa2cqtzcU9S1VtPUa5v13yE+/qG7R4BfKS5BQqBQ72q5KRIE3Dx3Wfn5P0cR2lMIR1p6mc+ERK77xEg==
+  version "0.6.7-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-client/-/ipfs-client-0.6.7-rc.15.tgz#76e5b0f3fbc06ad38406c92aae78b8be68c7584c"
+  integrity sha512-d4DqcS8zjuhidWtOz4puBp6I3GYQ0okvAoLUrqd6GYF+OA2o0pIfa/1ar6WbBdKuMR1Xa0EGY7bEfbyh5nHYWA==
   dependencies:
-    ipfs-grpc-client "^0.6.6-rc.12+98e3c7213"
-    ipfs-http-client "^52.0.6-rc.12+98e3c7213"
+    ipfs-grpc-client "^0.6.6-rc.15+5de1b13b"
+    ipfs-http-client "^52.0.6-rc.15+5de1b13b"
     merge-options "^3.0.4"
 
-ipfs-core-config@^0.0.2-rc.6170+98e3c7213:
-  version "0.0.2-rc.6171"
-  resolved "https://registry.yarnpkg.com/ipfs-core-config/-/ipfs-core-config-0.0.2-rc.6171.tgz#b7bc78321a79505578233ebdb6faeb14c3556ae8"
-  integrity sha512-xQFnSkJ+DCB4U5qs8tgvK8SRMwGA6bjNNhBwGKpxJmspHnj7r6anzK/jvQ8TnzZpSpsr0uN+3U979Sn8gm3kdg==
+ipfs-core-config@^0.0.2-rc.6173+5de1b13b:
+  version "0.0.2-rc.6173"
+  resolved "https://registry.yarnpkg.com/ipfs-core-config/-/ipfs-core-config-0.0.2-rc.6173.tgz#0ec556db0215e442ab651f5641ff9a5ba33b876b"
+  integrity sha512-ZI9ZyMEJ23h0o2WmyKtN61aDDG6Oi8mW5BBYy+H7eGr70GlX1s6LOZQ75ZbocUOLn6BBLZIneJ3zQW+E6GjSHw==
   dependencies:
     "@chainsafe/libp2p-noise" "^4.0.0"
     blockstore-datastore-adapter "^1.0.2"
@@ -14025,25 +14025,25 @@ ipfs-core-config@^0.0.2-rc.6170+98e3c7213:
     p-queue "^6.6.1"
     uint8arrays "^3.0.0"
 
-ipfs-core-types@^0.7.4-rc.12+98e3c7213, ipfs-core-types@^0.7.4-rc.13+1d568430, ipfs-core-types@next:
-  version "0.7.4-rc.13"
-  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.7.4-rc.13.tgz#17b5b924fecce5d437ce7d4a07418a7d2c42ba32"
-  integrity sha512-WkDjemOqEZmehF70VbZ+VPXBSlyb7jL6qK9cR+U7yZHHqBiXGxsvSlrYmkIMAMA2LhgqP+mwH3PenHx5B1mYVg==
+ipfs-core-types@^0.7.4-rc.15+5de1b13b, ipfs-core-types@next:
+  version "0.7.4-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.7.4-rc.15.tgz#22e348ba385f7592f4f13b3f2a705e1c17e0f1b0"
+  integrity sha512-6EPIIS0S8D22kGc/8DvqLtXdAL/FINgahweMNHiSOiCPHDkhCONTjCcKx8I27Vyoi6JPONIQYckhoEg8A4FMTg==
   dependencies:
     interface-datastore "^5.2.0"
     multiaddr "^10.0.0"
     multiformats "^9.4.1"
 
-ipfs-core-utils@^0.10.6-rc.12+98e3c7213, ipfs-core-utils@^0.10.6-rc.13+1d568430:
-  version "0.10.6-rc.13"
-  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.10.6-rc.13.tgz#29d1f3642433168a6bee864ecc33a848a9b66f2b"
-  integrity sha512-fArJpf5+OAfVxV1N/3e6bTwMeIhnmG50AUarXfTPEEtx/UfOCsGNObC10zHXnDOExvQht+DDzyCrev6jXqfHJw==
+ipfs-core-utils@^0.10.6-rc.15+5de1b13b:
+  version "0.10.6-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.10.6-rc.15.tgz#2e32a80ece26d57b535158dad1ca0e331777c80c"
+  integrity sha512-R3VuQ1Wn/kFF9KJSfx3P880JfxHlUV9VDFlRcORu9QB5gP74Gi3jm35Wv+aE9ApgMQmVaC+TNUI62gSx3RCY3A==
   dependencies:
     any-signal "^2.1.2"
     blob-to-it "^1.0.1"
     browser-readablestream-to-it "^1.0.1"
     err-code "^3.0.1"
-    ipfs-core-types "^0.7.4-rc.13+1d568430"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
     ipfs-unixfs "^6.0.3"
     ipfs-utils "^8.1.4"
     it-all "^1.0.4"
@@ -14059,10 +14059,10 @@ ipfs-core-utils@^0.10.6-rc.12+98e3c7213, ipfs-core-utils@^0.10.6-rc.13+1d568430:
     timeout-abort-controller "^1.1.1"
     uint8arrays "^3.0.0"
 
-ipfs-core@^0.10.9-rc.12+98e3c7213, ipfs-core@next:
-  version "0.10.9-rc.12"
-  resolved "https://registry.yarnpkg.com/ipfs-core/-/ipfs-core-0.10.9-rc.12.tgz#88c24cd2fc252605a08418ec2dd9975f08f7f3e3"
-  integrity sha512-YMPFUQ2qiWRxgHmgJAjw2B2m7sqem/wzOUeY1Fwx9+mVI/bWa+e0HSO3tIvcgLG5kn81gewukox6qUm/jDgB7g==
+ipfs-core@^0.10.9-rc.15+5de1b13b, ipfs-core@next:
+  version "0.10.9-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-core/-/ipfs-core-0.10.9-rc.15.tgz#9d2572c6248af23cacbb98948f3404f6df355048"
+  integrity sha512-OZbA5lhO9A5JdLlct16DY4KDKputRcF0eIwSWz4/AfBc6FfaFiF9+PaoZfesIr2/GMrLs9UaINvBvmQnZITCcw==
   dependencies:
     "@chainsafe/libp2p-noise" "^4.0.0"
     "@ipld/car" "^3.1.0"
@@ -14082,10 +14082,10 @@ ipfs-core@^0.10.9-rc.12+98e3c7213, ipfs-core@next:
     interface-blockstore "^1.0.0"
     interface-datastore "^5.2.0"
     ipfs-bitswap "^6.0.0"
-    ipfs-core-config "^0.0.2-rc.6170+98e3c7213"
-    ipfs-core-types "^0.7.4-rc.12+98e3c7213"
-    ipfs-core-utils "^0.10.6-rc.12+98e3c7213"
-    ipfs-http-client "^52.0.6-rc.12+98e3c7213"
+    ipfs-core-config "^0.0.2-rc.6173+5de1b13b"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-core-utils "^0.10.6-rc.15+5de1b13b"
+    ipfs-http-client "^52.0.6-rc.15+5de1b13b"
     ipfs-repo "^12.0.0"
     ipfs-unixfs "^6.0.3"
     ipfs-unixfs-exporter "^7.0.3"
@@ -14101,6 +14101,7 @@ ipfs-core@^0.10.9-rc.12+98e3c7213, ipfs-core@next:
     it-last "^1.0.4"
     it-map "^1.0.4"
     it-merge "^1.0.2"
+    it-parallel "^1.0.0"
     it-peekable "^1.0.2"
     it-pipe "^1.1.0"
     it-pushable "^1.4.2"
@@ -14124,7 +14125,6 @@ ipfs-core@^0.10.9-rc.12+98e3c7213, ipfs-core@next:
     pako "^1.0.2"
     parse-duration "^1.0.0"
     peer-id "^0.15.1"
-    streaming-iterables "^6.0.0"
     timeout-abort-controller "^1.1.1"
     uint8arrays "^3.0.0"
 
@@ -14133,18 +14133,18 @@ ipfs-css@^1.3.0:
   resolved "https://registry.yarnpkg.com/ipfs-css/-/ipfs-css-1.3.0.tgz#e2bf680b2c7590b85ad5cb04d811bbdd3f7e9c3f"
   integrity sha512-NXou2Gc5ofjdyEedZZSr7Zzfd/WQIf/LyWktyv28xhA4R8FnxngXbuXFuiN4JnB6qx2GWjV7o1zU9Mp0SvJ7eg==
 
-ipfs-daemon@^0.9.9-rc.12+98e3c7213, ipfs-daemon@next:
-  version "0.9.9-rc.12"
-  resolved "https://registry.yarnpkg.com/ipfs-daemon/-/ipfs-daemon-0.9.9-rc.12.tgz#2271c835e0215437727e42674b2783bd8199dca1"
-  integrity sha512-6XpuOpleG/BD7N/RVSBrlDABFyWbeTyeD1CR6ECJxT1K1A+8rA28H+VDaPqOMsU1SpgNFKP29znaYbMGWAd2dw==
+ipfs-daemon@^0.9.9-rc.15+5de1b13b, ipfs-daemon@next:
+  version "0.9.9-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-daemon/-/ipfs-daemon-0.9.9-rc.15.tgz#3c1a0889adf10ab68c64f7337315a4b43f81ea8c"
+  integrity sha512-kMuOt6iN3dLf1sCJr9uJRtt23ANzDXH5iVx6x2en689fM5QehgIVtyIgsuNNbJQVXZR6Y8xZ2ChiHXawIWg4fg==
   dependencies:
     "@mapbox/node-pre-gyp" "^1.0.5"
     debug "^4.1.1"
-    ipfs-core "^0.10.9-rc.12+98e3c7213"
-    ipfs-core-types "^0.7.4-rc.12+98e3c7213"
-    ipfs-grpc-server "^0.6.7-rc.12+98e3c7213"
-    ipfs-http-gateway "^0.6.6-rc.12+98e3c7213"
-    ipfs-http-server "^0.7.7-rc.12+98e3c7213"
+    ipfs-core "^0.10.9-rc.15+5de1b13b"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-grpc-server "^0.6.7-rc.15+5de1b13b"
+    ipfs-http-gateway "^0.6.6-rc.15+5de1b13b"
+    ipfs-http-server "^0.7.7-rc.15+5de1b13b"
     ipfs-utils "^8.1.4"
     just-safe-set "^2.2.1"
     libp2p "^0.32.0"
@@ -14155,18 +14155,18 @@ ipfs-daemon@^0.9.9-rc.12+98e3c7213, ipfs-daemon@next:
     prometheus-gc-stats "^0.6.0"
     wrtc "^0.4.6"
 
-ipfs-grpc-client@^0.6.6-rc.12+98e3c7213:
-  version "0.6.6-rc.13"
-  resolved "https://registry.yarnpkg.com/ipfs-grpc-client/-/ipfs-grpc-client-0.6.6-rc.13.tgz#2b0572fd4df3a064a2426efb1d6683779a3c8200"
-  integrity sha512-YqUu3mqUUgHLVROzCY7F4MERjTrc//XZETaJ2Bh5Go3YHfs3ZpkrxZfAKmvEE3OOxLnKbfeAwDmkJPpavHLmtQ==
+ipfs-grpc-client@^0.6.6-rc.15+5de1b13b:
+  version "0.6.6-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-grpc-client/-/ipfs-grpc-client-0.6.6-rc.15.tgz#9addde3ac7c9fc1a1261db453cfbc1fc77ecfbda"
+  integrity sha512-MO0FVe/YUfhBagaMMbtQWgjIKc2TBrONCn2vyw7kimkSuT4EkELzf+cO3yaxwTUHQetXTGWviG046L2ZFy1mXA==
   dependencies:
     "@improbable-eng/grpc-web" "^0.14.0"
     change-case "^4.1.1"
     debug "^4.1.1"
     err-code "^3.0.1"
-    ipfs-core-types "^0.7.4-rc.13+1d568430"
-    ipfs-core-utils "^0.10.6-rc.13+1d568430"
-    ipfs-grpc-protocol "^0.4.2-rc.15+1d568430"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-core-utils "^0.10.6-rc.15+5de1b13b"
+    ipfs-grpc-protocol "^0.4.2-rc.17+5de1b13b"
     ipfs-unixfs "^6.0.3"
     it-first "^1.0.4"
     it-pushable "^1.4.2"
@@ -14177,22 +14177,22 @@ ipfs-grpc-client@^0.6.6-rc.12+98e3c7213:
     wherearewe "^1.0.0"
     ws "^7.3.1"
 
-ipfs-grpc-protocol@^0.4.2-rc.15+1d568430:
-  version "0.4.2-rc.15"
-  resolved "https://registry.yarnpkg.com/ipfs-grpc-protocol/-/ipfs-grpc-protocol-0.4.2-rc.15.tgz#c12f57db4bbf115016423fa25b77125fb1098972"
-  integrity sha512-50m/BgkBo9NmqZ0pLqxrXPgO/vjC91ANVTlHkpcI3KaNXSTZIwZ5axCNF20glvm6Mif4SV6gqkWi5lImNORkyg==
+ipfs-grpc-protocol@^0.4.2-rc.17+5de1b13b:
+  version "0.4.2-rc.17"
+  resolved "https://registry.yarnpkg.com/ipfs-grpc-protocol/-/ipfs-grpc-protocol-0.4.2-rc.17.tgz#59b1c9b4e9f123c96aef6d36c75c1e906d56e35b"
+  integrity sha512-eFL0nTJkE6l6AzyxYPktFX7AgkT+plzJNZEFrJ3s+3NLXsqztHcE1eml8AmDOjWilzLzbq+rzj69ZNXSYYy+8g==
 
-ipfs-grpc-server@^0.6.7-rc.12+98e3c7213:
-  version "0.6.7-rc.13"
-  resolved "https://registry.yarnpkg.com/ipfs-grpc-server/-/ipfs-grpc-server-0.6.7-rc.13.tgz#d6f00a339768f922ff1c30489bb8339c9ae6c5b2"
-  integrity sha512-xmFoCvi0QCugryBmg7DnJcUgY9b+MqBwbYkAWbCWt1hNXeRAsWvnfy4/6SSFXsRERiXTHqXvzxrzZfaHaJcfog==
+ipfs-grpc-server@^0.6.7-rc.15+5de1b13b:
+  version "0.6.7-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-grpc-server/-/ipfs-grpc-server-0.6.7-rc.15.tgz#4c5348f0d668a8015a95e5046c32d59900a183d7"
+  integrity sha512-ehAf16QOlY3WOOfTm3BIaRDQk1Xfh9c4joFJ9BNiNI0PSXsy08vthlJuXUfeErWbZyjJUZHrE9c18GIBtVt1qA==
   dependencies:
     "@grpc/grpc-js" "^1.1.8"
     change-case "^4.1.1"
     coercer "^1.1.2"
     debug "^4.1.1"
-    ipfs-core-types "^0.7.4-rc.13+1d568430"
-    ipfs-grpc-protocol "^0.4.2-rc.15+1d568430"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-grpc-protocol "^0.4.2-rc.17+5de1b13b"
     it-first "^1.0.4"
     it-map "^1.0.4"
     it-peekable "^1.0.2"
@@ -14203,10 +14203,10 @@ ipfs-grpc-server@^0.6.7-rc.12+98e3c7213:
     protobufjs "^6.10.2"
     ws "^7.3.1"
 
-ipfs-http-client@^52.0.6-rc.12+98e3c7213, ipfs-http-client@next:
-  version "52.0.6-rc.13"
-  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-52.0.6-rc.13.tgz#70c39b6d9d07d24caa85bd6ae068aa1532f182c4"
-  integrity sha512-hv9XODstawOZuHwp7jiqUmzJ73w9LW0FiY+aox2NnqSrGhRIw7iSST0VImnbQHyzLCsxpz7jwG4dTeyjlYdI5g==
+ipfs-http-client@^52.0.6-rc.15+5de1b13b, ipfs-http-client@next:
+  version "52.0.6-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-52.0.6-rc.15.tgz#07e215ac33f349dc647c3227188dd6599e8dd22c"
+  integrity sha512-N/Q2hSskkagPqTfttx+HOKhqPBTt6YsxE8w3ev87XC3maXASfOrQOJV//KiD8hxHZMKB5atpg5KZIOlmYc3vqw==
   dependencies:
     "@ipld/dag-cbor" "^6.0.5"
     "@ipld/dag-pb" "^2.1.3"
@@ -14214,8 +14214,8 @@ ipfs-http-client@^52.0.6-rc.12+98e3c7213, ipfs-http-client@next:
     any-signal "^2.1.2"
     debug "^4.1.1"
     err-code "^3.0.1"
-    ipfs-core-types "^0.7.4-rc.13+1d568430"
-    ipfs-core-utils "^0.10.6-rc.13+1d568430"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-core-utils "^0.10.6-rc.15+5de1b13b"
     ipfs-utils "^8.1.4"
     it-first "^1.0.6"
     it-last "^1.0.4"
@@ -14227,17 +14227,17 @@ ipfs-http-client@^52.0.6-rc.12+98e3c7213, ipfs-http-client@next:
     stream-to-it "^0.2.2"
     uint8arrays "^3.0.0"
 
-ipfs-http-gateway@^0.6.6-rc.12+98e3c7213, ipfs-http-gateway@^0.6.6-rc.13+1d568430:
-  version "0.6.6-rc.13"
-  resolved "https://registry.yarnpkg.com/ipfs-http-gateway/-/ipfs-http-gateway-0.6.6-rc.13.tgz#757c1b599e9dbb14cf9843c3fc8f6dec3a291482"
-  integrity sha512-ZwUjXF+47R/C/Y1jLiBJEGg0VBfSKju6F2Ui7KTdQ8T/iKHcpQnTPp0wG5crSEtvV5RT7z0yohssB6UJuYtYkA==
+ipfs-http-gateway@^0.6.6-rc.15+5de1b13b:
+  version "0.6.6-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-http-gateway/-/ipfs-http-gateway-0.6.6-rc.15.tgz#f3cb2e069addc25da658451619e456c23b3f12c8"
+  integrity sha512-0zGjI6JqGF4t7MjxRYUKhOAiY+Sans7QV39LKUyv1nrW7U9ExbDF1hNoccfQ6si/HCFq4Iukyno1orzaydHLng==
   dependencies:
     "@hapi/ammo" "^5.0.1"
     "@hapi/boom" "^9.1.0"
     "@hapi/hapi" "^20.0.0"
     debug "^4.1.1"
     hapi-pino "^8.3.0"
-    ipfs-core-types "^0.7.4-rc.13+1d568430"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
     ipfs-http-response "^1.0.1"
     is-ipfs "^6.0.1"
     it-last "^1.0.4"
@@ -14264,10 +14264,10 @@ ipfs-http-response@^1.0.1:
     multiformats "^9.2.0"
     p-try-each "^1.0.1"
 
-ipfs-http-server@^0.7.7-rc.12+98e3c7213:
-  version "0.7.7-rc.13"
-  resolved "https://registry.yarnpkg.com/ipfs-http-server/-/ipfs-http-server-0.7.7-rc.13.tgz#9268e273265f418d84acf45308817c180e29956f"
-  integrity sha512-mTQI6XpE87rE/9+qblaPs+ZraX2lhZKP7LdaJI02e0mNjepk7xifiKWH7DBexauNSUMPoxOHkgZk9ijtfehokA==
+ipfs-http-server@^0.7.7-rc.15+5de1b13b:
+  version "0.7.7-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-http-server/-/ipfs-http-server-0.7.7-rc.15.tgz#510b25c88ab9d2ba06aff25ed55635005e13aa24"
+  integrity sha512-tw7uiY3UZmjui64rFzFOky6AowW29N3yewOg7uuGsVf9ndwPgDjg0s6Jnp6Ld5bwY+BZqXPXEVuDeaBuyp70vg==
   dependencies:
     "@hapi/boom" "^9.1.0"
     "@hapi/content" "^5.0.2"
@@ -14278,9 +14278,9 @@ ipfs-http-server@^0.7.7-rc.12+98e3c7213:
     dlv "^1.1.3"
     err-code "^3.0.1"
     hapi-pino "^8.3.0"
-    ipfs-core-types "^0.7.4-rc.13+1d568430"
-    ipfs-core-utils "^0.10.6-rc.13+1d568430"
-    ipfs-http-gateway "^0.6.6-rc.13+1d568430"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-core-utils "^0.10.6-rc.15+5de1b13b"
+    ipfs-http-gateway "^0.6.6-rc.15+5de1b13b"
     ipfs-unixfs "^6.0.3"
     it-all "^1.0.4"
     it-drain "^1.0.3"
@@ -14306,31 +14306,31 @@ ipfs-http-server@^0.7.7-rc.12+98e3c7213:
     prom-client "^12.0.0"
 
 ipfs-message-port-client@next:
-  version "0.8.9-rc.12"
-  resolved "https://registry.yarnpkg.com/ipfs-message-port-client/-/ipfs-message-port-client-0.8.9-rc.12.tgz#f15ed6394f69ab267a7c781da9f199ca559eee8c"
-  integrity sha512-01Hia7kYyUuj+2JT8WKkXc2sZOavR/2U3jl5ZMI+dWN67XFAu2vL1S1Pe+MqCsZQtgH6/XljATE5uAqPvauZoA==
+  version "0.8.9-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-message-port-client/-/ipfs-message-port-client-0.8.9-rc.15.tgz#ddde47fe4a66c27c072ec766560c7315a4ed8529"
+  integrity sha512-zsrWZ0ZQaBuJL23/Na934ynHFvFZiQgF+md5/7oVFFZuq2f6DBgbS4J2B7WzNzMXoEEKMcQ8TUkEcWZFk6Prvg==
   dependencies:
     browser-readablestream-to-it "^1.0.1"
-    ipfs-core-types "^0.7.4-rc.12+98e3c7213"
-    ipfs-message-port-protocol "^0.9.5-rc.12+98e3c7213"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-message-port-protocol "^0.9.5-rc.15+5de1b13b"
     ipfs-unixfs "^6.0.3"
     multiformats "^9.4.1"
 
-ipfs-message-port-protocol@^0.9.5-rc.12+98e3c7213, ipfs-message-port-protocol@next:
-  version "0.9.5-rc.13"
-  resolved "https://registry.yarnpkg.com/ipfs-message-port-protocol/-/ipfs-message-port-protocol-0.9.5-rc.13.tgz#0f0c644ada34c4e76ae346d120899100fdc6288d"
-  integrity sha512-nqiHK8kYYgu9UFNs7nyH61aD3jHoNIrJgawFfg1ldDA74Ludkl7HzcscdTIYPIafgFwx5MBIIfbAja/NatcdNg==
+ipfs-message-port-protocol@^0.9.5-rc.15+5de1b13b, ipfs-message-port-protocol@next:
+  version "0.9.5-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-message-port-protocol/-/ipfs-message-port-protocol-0.9.5-rc.15.tgz#b1e578af4af85d1c064e7a7639f8650f27be077d"
+  integrity sha512-t74rQPz7BGCwuvpKB7LC0fhS7V/fTYKPd2yL93YEN1BuuRP1h/GZwBWqLAosW2QxHYsW+0fWXNHk0UJaRknkmg==
   dependencies:
-    ipfs-core-types "^0.7.4-rc.13+1d568430"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
     multiformats "^9.4.1"
 
 ipfs-message-port-server@next:
-  version "0.9.5-rc.12"
-  resolved "https://registry.yarnpkg.com/ipfs-message-port-server/-/ipfs-message-port-server-0.9.5-rc.12.tgz#f05b67c4a9de525bf990081e91bacc93d03678a4"
-  integrity sha512-vwXa41Ws4ZDocyJ2QYm83JBWxsQ/vyR6s+vsHVnnroo1Qfj2Q31L6RC7N6c2wxhYY7KNF4R/k6XJQU758H+6ww==
+  version "0.9.5-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs-message-port-server/-/ipfs-message-port-server-0.9.5-rc.15.tgz#896c250f72618dcb5bf384a0d892586b8455ca03"
+  integrity sha512-WquHRMhpvo7S8r/GGUhNzTFDmDUrtiXG1rNW/bU3Hn8MzFZj82xNIK2gefPKXmSe/GeZFg6rWcD/p3xheCgVDQ==
   dependencies:
-    ipfs-core-types "^0.7.4-rc.12+98e3c7213"
-    ipfs-message-port-protocol "^0.9.5-rc.12+98e3c7213"
+    ipfs-core-types "^0.7.4-rc.15+5de1b13b"
+    ipfs-message-port-protocol "^0.9.5-rc.15+5de1b13b"
     it-all "^1.0.4"
     multiformats "^9.4.1"
 
@@ -14482,13 +14482,13 @@ ipfs-utils@^8.1.2, ipfs-utils@^8.1.4:
     stream-to-it "^0.2.2"
 
 ipfs@next:
-  version "0.58.7-rc.12"
-  resolved "https://registry.yarnpkg.com/ipfs/-/ipfs-0.58.7-rc.12.tgz#ed6bc9526a01b67b7bb47bd835d0b948cb87e548"
-  integrity sha512-4uQ9U49RlAgJcP2oLhamyYgsadZZN+AOv08kdtrIPRTxy8BIukRTkbIdZc309dDjkHCcBWbE4EwooAgPKxqjSQ==
+  version "0.58.7-rc.15"
+  resolved "https://registry.yarnpkg.com/ipfs/-/ipfs-0.58.7-rc.15.tgz#bfc0a6e469c129335bb162327e1d9bfac0100709"
+  integrity sha512-psNC8hpBcHONlbJK0fa0ZkF4bofIK1Urcv/Y4qpDW2B2QLZ3elme8ftZiVpt3Cl3nkEeX1+vc9Dhz8wv0nWYHg==
   dependencies:
     debug "^4.1.1"
-    ipfs-cli "^0.8.9-rc.12+98e3c7213"
-    ipfs-core "^0.10.9-rc.12+98e3c7213"
+    ipfs-cli "^0.8.9-rc.15+5de1b13b"
+    ipfs-core "^0.10.9-rc.15+5de1b13b"
     semver "^7.3.2"
     update-notifier "^5.0.0"
 
@@ -15555,6 +15555,13 @@ it-parallel-batch@^1.0.9:
   integrity sha512-lfCxXsHoEtgyWj5HLrEQXlZF0p3c0hfYeVJAbxQIHIzHLq4lkYplUIe3UGxYl4n1Sjpcs6YL/87352399aVeIA==
   dependencies:
     it-batch "^1.0.8"
+
+it-parallel@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/it-parallel/-/it-parallel-1.0.0.tgz#d8761d75e469718828bcbb61d041b748ed94013d"
+  integrity sha512-kYlBKkNoHGOX++1Pf3M8IZOfozuTIln7F3Ldk2C/XnNW/XkqBqtiEWDoJHI0mkUHenxWnbaaCioM/aNQimNPlA==
+  dependencies:
+    p-defer "^3.0.0"
 
 it-pb-rpc@^0.1.11:
   version "0.1.11"
@@ -18964,9 +18971,9 @@ nan@^2.12.1, nan@^2.13.2, nan@^2.14.0, nan@^2.14.2:
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
 nanocolors@^0.1.0, nanocolors@^0.1.5:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.1.10.tgz#483592972fdc82a0bea31e382d9d0c36a6971950"
-  integrity sha512-LvrbDAujZQ23MgimwlfNglBelJmCKG0O2XRDIgivruYfHwt5vipSwbTmOYOYYyRQT188PVjjoGtTTrRAsrCJXA==
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.1.12.tgz#8577482c58cbd7b5bb1681db4cf48f11a87fd5f6"
+  integrity sha512-2nMHqg1x5PU+unxX7PGY7AuYxl2qDx7PSrTRjizr8sxdd3l/3hBuWWaki62qmtYm2U5i4Z5E7GbjlyDFhs9/EQ==
 
 nanoid@^2.1.0:
   version "2.1.11"
