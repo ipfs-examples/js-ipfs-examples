@@ -8,7 +8,7 @@
     "test": "tsc --noEmit"
   },
   "dependencies": {
-    "ipfs-core": "next",
+    "ipfs-core": "^0.11.0",
     "multiformats": "^9.4.1"
   },
   "devDependencies": {
