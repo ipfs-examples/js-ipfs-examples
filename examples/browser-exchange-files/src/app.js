@@ -1,7 +1,7 @@
 /* global location */
 'use strict'
 
-const IPFS = require('ipfs')
+const IPFS = require('ipfs-core')
 const WS = require('libp2p-websockets')
 const filters = require('libp2p-websockets/src/filters')
 const transportKey = WS.prototype[Symbol.toStringTag]
@@ -41,7 +41,7 @@ let workspace = (location.hash || 'default-workspace').replace(/^#/, '')
 
 let fileSize = 0
 
-/** @type {import('ipfs').IPFS} */
+/** @type {import('ipfs-core-types').IPFS} */
 let node
 let info
 

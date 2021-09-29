@@ -10,7 +10,7 @@ const play = test.extend({
   ...playwright.daemons(
     {
       ipfsHttpModule: require('ipfs-http-client'),
-      ipfsBin: require.resolve('ipfs/src/cli.js')
+      ipfsBin: require('ipfs').path()
     },
     {},
     [

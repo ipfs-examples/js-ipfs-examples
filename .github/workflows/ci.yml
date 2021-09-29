@@ -21,7 +21,7 @@ jobs:
           - browser-ipns-publish
           - browser-lit
           - browser-mfs
-          - browser-nextjs
+          #- browser-nextjs
           - browser-parceljs
           - browser-readablestream
           - browser-script-tag

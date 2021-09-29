@@ -14,13 +14,12 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-http-client": "^52.0.1"
+    "ipfs-http-client": "^53.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
     "go-ipfs": "0.9.1",
-    "ipfs": "^0.58.1",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",

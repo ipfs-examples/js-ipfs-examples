@@ -20,12 +20,10 @@ import {
   hideForms
 } from './forms'
 import mime from 'mime-sniffer'
-
-/** @type {import('ipfs-core-types/src/index').IPFS} IPFS */
-import IPFS from 'ipfs'
+import { create } from 'ipfs-core'
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const ipfs = await IPFS.create({
+  const ipfs = await create({
     repo: `ipfs-${Math.random()}`
   })
 

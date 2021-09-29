@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Ipfs from 'ipfs'
+import { create } from 'ipfs-core'
 
 const IpfsComponent = () => {
   const [id, setId] = useState(null);
@@ -11,7 +11,7 @@ const IpfsComponent = () => {
     const init = async () => {
       if (ipfs) return
 
-      const node = await Ipfs.create();
+      const node = await create();
 
       const nodeId = await node.id();
       const nodeVersion = await node.version();

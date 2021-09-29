@@ -22,7 +22,7 @@ const play = test.extend({
   ),
   ...playwright.daemons(
     {
-      ipfsModule: require('ipfs'),
+      ipfsModule: require('ipfs-core'),
       ipfsHttpModule: require('ipfs-http-client')
     },
     {},

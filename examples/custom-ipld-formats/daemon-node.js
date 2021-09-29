@@ -1,4 +1,4 @@
-const IPFSDaemon = require('ipfs-daemon')
+const { Daemon } = require('ipfs-daemon')
 const ipfsHttpClient = require('ipfs-http-client')
 const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
 const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
@@ -13,7 +13,7 @@ async function main () {
   }
 
   // start an IPFS Daemon
-  const daemon = new IPFSDaemon({
+  const daemon = new Daemon({
     ipld: {
       codecs: [
         codec

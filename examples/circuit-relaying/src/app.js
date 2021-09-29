@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 'use strict'
 
-import IPFS from 'ipfs'
+import { create } from 'ipfs-core'
 import WS from 'libp2p-websockets'
 import filters from 'libp2p-websockets/src/filters'
 import Helpers from './helpers'
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return 'ipfs/pubsub-demo/' + Math.random()
   }
 
-  const ipfs = await IPFS.create({
+  const ipfs = await create({
     repo: repo(),
     relay: {
       enabled: true, // enable relay dialer/listener (STOP)

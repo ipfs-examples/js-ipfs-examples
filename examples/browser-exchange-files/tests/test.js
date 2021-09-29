@@ -25,7 +25,7 @@ const play = test.extend({
       ipfsHttpModule: require('ipfs-http-client')
     }, {
       js: {
-        ipfsBin: require.resolve('ipfs/src/cli.js')
+        ipfsBin: require('ipfs').path()
       }
     },
     [

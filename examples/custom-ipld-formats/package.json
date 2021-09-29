@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "dag-jose": "^1.0.0",
-    "ipfs-core": "^0.10.3",
-    "ipfs-daemon": "^0.9.3",
-    "ipfs-http-client": "^52.0.1",
+    "ipfs-core": "^0.11.0",
+    "ipfs-daemon": "next",
+    "ipfs-http-client": "^53.0.0",
     "multiformats": "^9.4.1",
     "uint8arrays": "^3.0.0"
   },

@@ -1,6 +1,6 @@
 'use strict'
 
-const IPFS = require('ipfs')
+const IPFS = require('ipfs-core')
 const all = require('it-all')
 const { concat: uint8ArrayConcat } = require('uint8arrays/concat')
 const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')

@@ -1,7 +1,7 @@
 "use strict";
 
 const { app, BrowserWindow } = require("electron");
-const IPFS = require("ipfs");
+const IPFS = require("ipfs-core");
 
 let mainWindow;
 

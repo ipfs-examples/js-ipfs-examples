@@ -1,7 +1,7 @@
 'use strict'
 
 import {html, LitElement} from 'lit';
-import IPFS from 'ipfs'
+import { create } from 'ipfs-core'
 
 export class IPFSInfo extends LitElement {
   static get properties() {
@@ -29,7 +29,7 @@ export class IPFSInfo extends LitElement {
   }
 
   async initIPFS() {
-    const ipfs = await IPFS.create();
+    const ipfs = await create();
     const id = await ipfs.id();
     const version = await ipfs.version();
 

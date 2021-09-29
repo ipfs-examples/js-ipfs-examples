@@ -12,7 +12,7 @@
     "test": "npm run build && playwright test tests"
   },
   "dependencies": {
-    "ipfs": "^0.58.1",
+    "ipfs-core": "^0.11.0",
     "next": "11.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"

@@ -1,7 +1,7 @@
 'use strict'
 
 const Libp2p = require('libp2p')
-const IPFS = require('ipfs')
+const IPFS = require('ipfs-core')
 const TCP = require('libp2p-tcp')
 const MulticastDNS = require('libp2p-mdns')
 const Bootstrap = require('libp2p-bootstrap')

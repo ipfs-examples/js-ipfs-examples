@@ -1,6 +1,6 @@
 'use strict'
 
-const IPFS = require('ipfs')
+const IPFS = require('ipfs-core')
 
 function createNode (options) {
   options = options || {}

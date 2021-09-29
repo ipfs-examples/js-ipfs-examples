@@ -12,7 +12,7 @@ const play = test.extend({
     },
     {
       js: {
-        ipfsBin: require.resolve('ipfs/src/cli.js')
+        ipfsBin: require('ipfs').path()
       },
       go: {
         ipfsBin: require('go-ipfs').path(),

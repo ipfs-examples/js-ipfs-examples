@@ -1,9 +1,12 @@
 'use strict'
 
-const IPFS = require('ipfs')
+const { create } = require('ipfs-core')
 const { Server, IPFSService } = require('ipfs-message-port-server')
 
+console.info('hello world')
+
 const main = async () => {
+  try {
   // start listening to all incoming connections - they will be from browsing
   // contexts that run `new SharedWorker(...)`
   // Note: It is important to start listening before we do any async work to
@@ -12,7 +15,7 @@ const main = async () => {
 
   // Start an IPFS node & create server that will expose its API to all clients
   // over message channel
-  const ipfs = await IPFS.create()
+  const ipfs = await create()
   // And add hello world for tests
   await ipfs.add({ content: 'hello world' })
 
@@ -29,6 +32,9 @@ const main = async () => {
       server.connect(port)
     }
   }
+}catch (err) {
+  console.error(err)
+}
 }
 
 /**
