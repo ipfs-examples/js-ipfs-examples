@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "workspaces": [
-    "examples/*"
+    "examples/!(browser-nextjs)"
   ],
   "scripts": {
     "clean": "yarn run clean:examples && yarn run clean:yarn && yarn run clean:build && yarn run clean:npm",
