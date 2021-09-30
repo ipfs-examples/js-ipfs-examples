@@ -1,12 +1,8 @@
 'use strict'
 
 const { create } = require('ipfs-core')
-const {
-  createRepo,
-  locks: {
-    fs: fsLock
-  }
-} = require('ipfs-repo')
+const { createRepo } = require('ipfs-repo')
+const FSLock = require('ipfs-repo/locks/fs')
 const all = require('it-all')
 const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
 const { concat: uint8ArrayConcat } = require('uint8arrays/concat')
@@ -80,7 +76,7 @@ async function main () {
        * A custom lock can be added here. Or the build in Repo `fs` or `memory` locks can be used.
        * See https://github.com/ipfs/js-ipfs-repo for more details on setting the lock.
        */
-      lock: fsLock
+      lock: FSLock
     }),
 
     // This just means we dont try to connect to the network which isn't necessary
