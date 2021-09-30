@@ -110,12 +110,14 @@ const main = async () => {
       }
     })
 
-    const data = await ipfs.add(stream)
-
-    // The last data event will contain the directory hash
-    if (data.path === directory) {
-      return data.cid
+    for await (const data of ipfs.addAll(stream)) {
+      // The last data event will contain the directory hash
+      if (data.path === directory) {
+        return data.cid
+      }
     }
+
+    throw new Error('Could not find directory in `ipfs.addAll` output')
   }
 
   const addFile = async (name, content, directory) => {
