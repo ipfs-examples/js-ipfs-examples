@@ -116,6 +116,9 @@ Contributions are what make the open source community such an amazing place to b
 - Follow the [example-template](`https://github.com/ipfs-examples/example-template`)
   - This repository serves as template to create new examples to guarantee consistency between examples. It contains all the necessary files to create a new example
 
+- Follow the [example-template-fork-&-go](`https://github.com/ipfs-examples/example-fork-go-template`)
+  - This repository serves as template to be used as a reference of how to implement the CI in order to sync the example with a standalone repo (correspondent to each example)
+
 - Examples must:
   - Live inside the `/examples/` folder
   - Have tests and should make use of `test-util-ipfs-example` library

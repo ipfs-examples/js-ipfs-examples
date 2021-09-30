@@ -1,0 +1,20 @@
+name: Sync
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Pull from another repository
+        uses: ipfs-examples/actions-pull-directory-from-repo@main
+        with:
+          source-repo: "ipfs-examples/js-ipfs-examples"
+          source-folder-path: "examples/browser-parceljs"
+          source-branch: "master"
+          target-branch: "main"
+          git-username: github-actions
+          git-email: github-actions@github.com
