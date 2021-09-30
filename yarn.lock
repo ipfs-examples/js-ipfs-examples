@@ -5899,19 +5899,7 @@ blockstore-core@^1.0.0, blockstore-core@^1.0.2:
     it-take "^1.0.1"
     multiformats "^9.4.7"
 
-blockstore-datastore-adapter@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/blockstore-datastore-adapter/-/blockstore-datastore-adapter-1.0.2.tgz#43562f7108d725e0915339a24ee89eaf19de8c2a"
-  integrity sha512-pUR5L0ihiA3SaHZ1AsltiPuCdKXGjjKRYt+6uM94FIYnOWnBryXmA1nmXacQW5R/j6BjU+vpwbHNgA4VYccA1g==
-  dependencies:
-    err-code "^3.0.1"
-    interface-blockstore "^1.0.0"
-    interface-datastore "^5.0.0"
-    it-drain "^1.0.1"
-    it-pushable "^1.4.2"
-    multiformats "^9.1.0"
-
-blockstore-datastore-adapter@^2.0.2:
+blockstore-datastore-adapter@^2.0.2, blockstore-datastore-adapter@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/blockstore-datastore-adapter/-/blockstore-datastore-adapter-2.0.3.tgz#77f8d4c06126f7b154947e6130a4ec499b4a1929"
   integrity sha512-s6j6ay+qLu7sOx5DanHJlg2dBX61B9Yrbg6qo8oP3oiWnj6ZFCad4CKVb8do1f4u/Q4r2XPuSM4JYCe684USrQ==
@@ -7940,22 +7928,6 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-datastore-core@^5.0.0:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/datastore-core/-/datastore-core-5.0.2.tgz#909505b75a9bb8bc95ddc121919b6215a700e456"
-  integrity sha512-jEOl/KDmI8mov8ZZEI4RoDOiYBQ8GVWWCK8e8Zu2vJSJqUVKVP128MPLc2fwOaz5h71ZdPA3IYh4ycwOjygYVQ==
-  dependencies:
-    debug "^4.1.1"
-    interface-datastore "^5.1.1"
-    it-drain "^1.0.4"
-    it-filter "^1.0.2"
-    it-map "^1.0.5"
-    it-merge "^1.0.1"
-    it-pipe "^1.1.0"
-    it-pushable "^1.4.2"
-    it-take "^1.0.1"
-    uint8arrays "^3.0.0"
-
 datastore-core@^6.0.5, datastore-core@^6.0.7:
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/datastore-core/-/datastore-core-6.0.7.tgz#f06bc2bbd7a7fc4365f7587662bb22a768876431"
@@ -7972,19 +7944,6 @@ datastore-core@^6.0.5, datastore-core@^6.0.7:
     it-pushable "^1.4.2"
     it-take "^1.0.1"
     uint8arrays "^3.0.0"
-
-datastore-fs@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/datastore-fs/-/datastore-fs-5.0.2.tgz#bf832b4033d999bcfc8179210877095d99f05b32"
-  integrity sha512-dev6pLENwKPsJVBOTeR+Xg/FceK/0OwdzlrDan3LOFZ6Rbro2bwLd9vxT//nk9F+iJiK+Ba8J+eLOsoa8C9D8w==
-  dependencies:
-    datastore-core "^5.0.0"
-    fast-write-atomic "^0.2.0"
-    interface-datastore "^5.1.1"
-    it-glob "0.0.13"
-    it-map "^1.0.5"
-    it-parallel-batch "^1.0.9"
-    mkdirp "^1.0.4"
 
 datastore-fs@^6.0.1:
   version "6.0.1"
@@ -11553,7 +11512,7 @@ interface-blockstore@^2.0.2:
     interface-store "^2.0.1"
     multiformats "^9.0.4"
 
-interface-datastore@^5.0.0, interface-datastore@^5.1.1:
+interface-datastore@^5.1.1:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/interface-datastore/-/interface-datastore-5.2.0.tgz#9341b13a8babbfb23961ca7c732c0263f85e5007"
   integrity sha512-nthO4C4BMJM2j9x/mT2KFa/g/sbcY8yf9j/kOBgli3u5mq9ZdPvQyDxi0OhKzr4JmoM81OYh5xcFjyebquqwvA==
@@ -13308,14 +13267,6 @@ it-first@^1.0.2, it-first@^1.0.4, it-first@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/it-first/-/it-first-1.0.6.tgz#a015ecfc62d2d517382138da4142b35e61f4131e"
   integrity sha512-wiI02c+G1BVuu0jz30Nsr1/et0cpSRulKUusN8HDZXxuX4MdUzfMp2P4JUk+a49Wr1kHitRLrnnh3+UzJ6neaQ==
-
-it-glob@0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/it-glob/-/it-glob-0.0.13.tgz#78913fe835fcf0d46afcdb6634eb069acdfc4fbc"
-  integrity sha512-0Hcd5BraJUPzL28NWiFbdNrcdyNxNTKKdU3sjdFiYynNTQpwlG2UKW31X7bp+XhJwux/oPzIquo5ioztVmc2RQ==
-  dependencies:
-    "@types/minimatch" "^3.0.4"
-    minimatch "^3.0.4"
 
 it-glob@^1.0.0, it-glob@^1.0.1:
   version "1.0.1"
