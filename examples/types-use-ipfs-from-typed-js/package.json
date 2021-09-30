@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "multiformats": "^9.4.1",
+    "ipfs-core-types": "^0.8.0",
     "typescript": "4.3.5"
   }
 }
