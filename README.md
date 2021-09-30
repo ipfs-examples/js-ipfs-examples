@@ -33,6 +33,8 @@
 - [Contributing](#contributing)
   - [Guidelines](#guidelines)
   - [Steps to follow after adding a new example](#steps-to-follow-after-adding-a-new-example)
+    - [Create a repo](#create-a-repo)
+    - [Update `js-ipfs` to run tests against the repo](#update-js-ipfs-to-run-tests-against-the-repo)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
 
 ## About The Project
@@ -137,15 +139,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ### Steps to follow after adding a new example
 
-- Update `js-ipfs` CI to run the test script of the example
-  - Edit the `.travis.yml`, search for the test examples section and add the following:
-
-```yml
-- stage: test
-  name: examples - {TODO_EXAMPLE NAME}
-  script:
-    - npm run test:external -- -- -- https://github.com/ipfs-examples/{TODO_GIT_URL}.git
-```
+#### Create a repo
 
 - Create a new repository based on (https://github.com/ipfs-examples/example-fork-go-template) following the name: `js-ipfs-{EXAMPLE_NAME}` with a description
 
@@ -162,6 +156,22 @@ Contributions are what make the open source community such an amazing place to b
 </p>
 
 - Follow the instruction inside the README
+
+#### Update `js-ipfs` to run tests against the repo
+
+Open a PR to the [ipfs/js-ipfs](https://github.com/ipfs/js-ipfs) project that edits the `.github/workflows/test.yml` in order to make sure a js-ipfs release does not break your new example.
+
+Search `.github/workflows/test.yml` for the `test-examples` section and add a block at the end of the `example` matrix key similar to:
+
+```yml
+- name: my super fun new example
+  repo: https://github.com/ipfs-examples/js-ipfs-my-super-fun-new-example.git
+  deps: ipfs-core@$PWD/packages/ipfs-core/dist,ipfs-http-client@$PWD/packages/ipfs-http-client/dist
+```
+
+The value of the `deps` key will vary depending on which modules from js-ipfs your example uses. Above we override the `ipfs-core` and `ipfs-http-client` modules, but your example may different deps.
+
+Please see the existing setup in `.github/workflows/test.yml` for how to ensure you are overriding the correct modules.
 
 ## Want to hack on IPFS?
 
