@@ -14749,37 +14749,6 @@ libp2p-interfaces@^1.0.0, libp2p-interfaces@^1.0.1, libp2p-interfaces@^1.1.0:
     protobufjs "^6.10.2"
     uint8arrays "^3.0.0"
 
-libp2p-kad-dht@^0.23.1:
-  version "0.23.4"
-  resolved "https://registry.yarnpkg.com/libp2p-kad-dht/-/libp2p-kad-dht-0.23.4.tgz#fd5f10681fe8c042d866b4d461e904c246c8d1d4"
-  integrity sha512-twJNewxCoPZfkrUia7ny/nH/qE1FnMRYcmirt+JFwPnLjzx8MF3rSaFdrcXht1dvlsXpinHocEBdqvJqsMJgfw==
-  dependencies:
-    abort-controller "^3.0.0"
-    debug "^4.3.1"
-    err-code "^3.0.0"
-    hashlru "^2.3.0"
-    heap "~0.2.6"
-    interface-datastore "^5.1.1"
-    it-first "^1.0.4"
-    it-length-prefixed "^5.0.2"
-    it-pipe "^1.1.0"
-    k-bucket "^5.1.0"
-    libp2p-crypto "^0.19.5"
-    libp2p-interfaces "^1.0.0"
-    libp2p-record "^0.10.4"
-    multiaddr "^10.0.0"
-    multiformats "^9.4.5"
-    p-map "^4.0.0"
-    p-queue "^6.6.2"
-    p-timeout "^4.1.0"
-    p-times "^3.0.0"
-    peer-id "^0.15.0"
-    protobufjs "^6.10.2"
-    streaming-iterables "^6.0.0"
-    uint8arrays "^3.0.0"
-    varint "^6.0.0"
-    xor-distance "^2.0.0"
-
 libp2p-kad-dht@^0.25.0:
   version "0.25.0"
   resolved "https://registry.yarnpkg.com/libp2p-kad-dht/-/libp2p-kad-dht-0.25.0.tgz#b96a776b07252c480d746e5cade2d53cf8ceee0e"
@@ -17231,13 +17200,6 @@ p-timeout@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-4.1.0.tgz#788253c0452ab0ffecf18a62dff94ff1bd09ca0a"
   integrity sha512-+/wmHtzJuWii1sXn3HCuH/FTwGhrp4tmJTxSKJbfS+vkipci6osxXM5mY0jUiRzWKMTgUT8l7HFbeSwZAynqHw==
-
-p-times@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/p-times/-/p-times-3.0.0.tgz#477ff51aa8cfe7edef4cfcd4bc7e0250b13b4183"
-  integrity sha512-/Z7mcs8Liie8E7IHI9SBtmkHVW/GjLroQ94ALoAMIG20mqFMuh56/3WYhtOTqX9ccRSOxgaCkFC94Bat1Ofskg==
-  dependencies:
-    p-map "^4.0.0"
 
 p-try-each@^1.0.1:
   version "1.0.1"
@@ -23589,11 +23551,6 @@ xmlhttprequest-ssl@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-2.0.0.tgz#91360c86b914e67f44dce769180027c0da618c67"
   integrity sha512-QKxVRxiRACQcVuQEYFsI1hhkrMlrXHPegbbd1yn9UHOmRxY+si12nQYzri3vbzt8VdTTRviqcKxcyllFas5z2A==
-
-xor-distance@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/xor-distance/-/xor-distance-2.0.0.tgz#cad3920d3a1e3d73eeedc61a554e51972dae0798"
-  integrity sha512-AsAqZfPAuWx7qB/0kyRDUEvoU3QKsHWzHU9smFlkaiprEpGfJ/NBbLze2Uq0rdkxCxkNM9uOLvz/KoNBCbZiLQ==
 
 xsalsa20@^1.1.0:
   version "1.1.0"
