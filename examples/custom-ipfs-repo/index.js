@@ -1,17 +1,13 @@
 'use strict'
 
 const { create } = require('ipfs-core')
-const {
-  createRepo,
-  locks: {
-    fs: fsLock
-  }
-} = require('ipfs-repo')
+const { createRepo } = require('ipfs-repo')
+const FSLock = require('ipfs-repo/locks/fs')
 const all = require('it-all')
 const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
 const { concat: uint8ArrayConcat } = require('uint8arrays/concat')
-const DatastoreFS = require('datastore-fs')
-const BlockstoreDatastoreAdapter = require('blockstore-datastore-adapter')
+const { FsDatastore } = require('datastore-fs')
+const { BlockstoreDatastoreAdapter } = require('blockstore-datastore-adapter')
 
 // multiformat codecs to support
 const codecs = [
@@ -46,7 +42,7 @@ async function main () {
        * you could store your keys in a levelDB database while everything else is in files.
        * See https://www.npmjs.com/package/interface-datastore for more about datastores.
        */
-      root: new DatastoreFS(path, {
+      root: new FsDatastore(path, {
         extension: '.ipfsroot', // Defaults to '', appended to all files
         errorIfExists: false, // If the datastore exists, don't throw an error
         createIfMissing: true // If the datastore doesn't exist yet, create it
@@ -54,23 +50,23 @@ async function main () {
       // blocks is a blockstore, all other backends are datastores - but we can wrap a datastore
       // in an adapter to turn it into a blockstore
       blocks: new BlockstoreDatastoreAdapter(
-        new DatastoreFS(`${path}/blocks`, {
+        new FsDatastore(`${path}/blocks`, {
           extension: '.ipfsblock',
           errorIfExists: false,
           createIfMissing: true
         })
       ),
-      keys: new DatastoreFS(`${path}/keys`, {
+      keys: new FsDatastore(`${path}/keys`, {
         extension: '.ipfskey',
         errorIfExists: false,
         createIfMissing: true
       }),
-      datastore: new DatastoreFS(`${path}/datastore`, {
+      datastore: new FsDatastore(`${path}/datastore`, {
         extension: '.ipfsds',
         errorIfExists: false,
         createIfMissing: true
       }),
-      pins: new DatastoreFS(`${path}/pins`, {
+      pins: new FsDatastore(`${path}/pins`, {
         extension: '.ipfspin',
         errorIfExists: false,
         createIfMissing: true
@@ -80,7 +76,7 @@ async function main () {
        * A custom lock can be added here. Or the build in Repo `fs` or `memory` locks can be used.
        * See https://github.com/ipfs/js-ipfs-repo for more details on setting the lock.
        */
-      lock: fsLock
+      lock: FSLock
     }),
 
     // This just means we dont try to connect to the network which isn't necessary
