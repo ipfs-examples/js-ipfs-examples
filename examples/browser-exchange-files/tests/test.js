@@ -1,6 +1,6 @@
 'use strict'
 
-const webRTCStarSigServer = require('libp2p-webrtc-star/src/sig-server')
+const webRTCStarSigServer = require('libp2p-webrtc-star-signalling-server')
 
 const { test, expect } = require('@playwright/test');
 const { playwright } = require('test-util-ipfs-example');
