@@ -36,7 +36,7 @@ export default {
         this.id = id;
         // Set successful status text.
         this.status = "Connected to IPFS =)";
-        this.online = ipfs.isOnline;
+        this.online = ipfs.isOnline();
       } catch (err) {
         // Set error status text.
         this.status = `Error: ${err}`;
