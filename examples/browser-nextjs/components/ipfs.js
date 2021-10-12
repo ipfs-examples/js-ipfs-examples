@@ -15,7 +15,7 @@ const IpfsComponent = () => {
 
       const nodeId = await node.id();
       const nodeVersion = await node.version();
-      const nodeIsOnline = node.isOnline;
+      const nodeIsOnline = node.isOnline();
 
       setIpfs(node);
       setId(nodeId.id);
