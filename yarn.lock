@@ -14852,32 +14852,20 @@ libp2p-webrtc-peer@^10.0.1:
     randombytes "^2.0.3"
     readable-stream "^3.4.0"
 
-libp2p-webrtc-star@^0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/libp2p-webrtc-star/-/libp2p-webrtc-star-0.23.0.tgz#4882e5e3e211f266ddf0384ba017a6c983570399"
-  integrity sha512-0dLuSFMBQug/Y08kwV6/aOgh2Sn1Nq3GBY6h0o0eQXvVtKFOL+HkbFmcC4jkkaabVvu8JUaYRV2JHlUxJJru9A==
+libp2p-webrtc-star-signalling-server@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/libp2p-webrtc-star-signalling-server/-/libp2p-webrtc-star-signalling-server-0.1.0.tgz#b196d79f42c9381859d4b0d38d92ea5a341984a7"
+  integrity sha512-tweBpncOwYZlOP50y455TkpwEWr6us9LzqT9H2yb9QDtYyW+eau0D3dYN7wlEZ2KlknmPR1CZJNeaxnSZv7U4A==
   dependencies:
     "@hapi/hapi" "^20.0.0"
     "@hapi/inert" "^6.0.3"
-    abortable-iterator "^3.0.0"
-    class-is "^1.1.0"
     debug "^4.2.0"
-    err-code "^3.0.1"
-    ipfs-utils "^8.1.2"
-    it-pipe "^1.1.0"
-    libp2p-utils "^0.4.0"
-    libp2p-webrtc-peer "^10.0.1"
-    mafmt "^10.0.0"
     menoetius "0.0.2"
     minimist "^1.2.5"
     multiaddr "^10.0.0"
-    p-defer "^3.0.0"
-    peer-id "^0.15.0"
     prom-client "^13.0.0"
     socket.io "^4.1.2"
     socket.io-client "^4.1.2"
-    stream-to-it "^0.2.2"
-    streaming-iterables "^6.0.0"
 
 libp2p-webrtc-star@^0.24.0:
   version "0.24.0"
@@ -22189,10 +22177,15 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@4.3.5, typescript@~4.3.5:
+typescript@4.3.5:
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
   integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
+
+typescript@4.4.4, typescript@~4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
+  integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
 
 ua-parser-js@^0.7.28:
   version "0.7.28"
