@@ -36,18 +36,24 @@ async function main () {
     hello: 'world'
   }
 
-  const cid = await client.dag.put(data, {
+  // we cannot use the DAG API to put a custom codec unless that codec is on
+  // the server and can handle our input data, but the BLOCK API accepts our
+  // encoded bytes and "format"
+  const encoded = codec.encode(data)
+  const cid = await client.block.put(encoded, {
     format: 'dag-test',
-    hashAlg: 'sha2-256'
+    mhtype: 'sha2-256'
   })
 
-  console.info(`Put ${JSON.stringify(data)} = CID(${cid})`)
+  console.info(`BLOCK Put ${JSON.stringify(data)} = CID(${cid})`)
 
-  const {
-    value
-  } = await client.dag.get(cid)
+  // as with PUT, we can't use the DAG API to get the block unless the server
+  // knows how about the codec, instead we use the BLOCK API to get the raw
+  // bytes and decode it locally
+  const bytes = await client.block.get(cid)
+  const value = codec.decode(bytes)
 
-  console.info(`Get CID(${cid}) = ${JSON.stringify(value)}`)
+  console.info(`BLOCK Get CID(${cid}) = ${JSON.stringify(value)}`)
 
   await daemon.stop()
 }

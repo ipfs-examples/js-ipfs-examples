@@ -25,18 +25,44 @@ async function main () {
     hello: 'world'
   }
 
-  const cid = await node.dag.put(data, {
-    format: 'dag-test',
-    hashAlg: 'sha2-256'
-  })
+  // we can use the DAG API for an in-process IPFS since we're adding the codec
+  // directly into IPFS which will do the encoding and decoding
+  const dagApi = async () => {
+    const cid = await node.dag.put(data, {
+      storeCodec: 'dag-test',
+      hashAlg: 'sha2-256'
+    })
 
-  console.info(`Put ${JSON.stringify(data)} = CID(${cid})`)
+    console.info(`DAG Put ${JSON.stringify(data)} = CID(${cid})`)
 
-  const {
-    value
-  } = await node.dag.get(cid)
+    const {
+      value
+    } = await node.dag.get(cid)
 
-  console.info(`Get CID(${cid}) = ${JSON.stringify(value)}`)
+    console.info(`DAG Get CID(${cid}) = ${JSON.stringify(value)}`)
+  }
+
+  // alternatively we can use the codec directly and put the encoded bytes
+  // into IPFS using the BLOCK API and then decode with the codec from the
+  // bytes fetched from IPFS
+  const blockApi = async () => {
+    const encoded = codec.encode(data)
+    const cid = await node.block.put(encoded, {
+      format: 'dag-test',
+      mhtype: 'sha2-256',
+      version: 1
+    })
+
+    console.info(`BLOCK Put ${JSON.stringify(data)} = CID(${cid})`)
+
+    const bytes = await node.block.get(cid)
+    const value = codec.decode(bytes)
+
+    console.info(`BLOCK Get CID(${cid}) = ${JSON.stringify(value)}`)
+  }
+
+  await dagApi()
+  await blockApi()
 
   await node.stop()
 }
