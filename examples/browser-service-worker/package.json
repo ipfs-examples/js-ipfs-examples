@@ -38,7 +38,7 @@
     "test-util-ipfs-example": "^1.0.2",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "^4.5.0",
     "webpack-merge": "^5.8.0"
   }
 }
