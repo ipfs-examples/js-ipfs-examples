@@ -10,6 +10,9 @@ const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
 const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
 const { sha256 } = require('multiformats/hashes/sha2')
 const { base58btc } = require('multiformats/bases/base58')
+const { base36 } = require('multiformats/bases/base36')
+const { CID } = require('multiformats/cid')
+const Digest = require('multiformats/hashes/digest')
 const WS = require('libp2p-websockets')
 const transportKey = WS.prototype[Symbol.toStringTag]
 const filters = require('libp2p-websockets/src/filters')
@@ -75,9 +78,12 @@ async function main() {
   }
 
   async function wsConnect(addr) {
-    if (!addr) throw new Error("Missing peer multiaddr");
-    if (!ipfsBrowser)
+    if (!addr) {
+      throw new Error("Missing peer multiaddr");
+    }
+    if (!ipfsBrowser) {
       throw new Error("Wait for the local IPFS node to start first");
+    }
     log(`Connecting to peer ${addr}`);
     await ipfsBrowser.swarm.connect(addr);
     log(`<span class="green">Success!</span>`);
@@ -87,11 +93,9 @@ async function main() {
     peers.forEach((peer) => {
       //console.log(`peer: ${JSON.stringify(peer, null, 2)}`);
       const fullAddr = `${peer.addr}/ipfs/${peer.peer}`;
-      log(
-        `<span class="${
+      log(`<span class="${
           addr.endsWith(peer.peer) ? "teal" : ""
-        }">${fullAddr}</span>`
-      );
+        }">${fullAddr}</span>`);
     });
     log(`(${peers.length} peers total)`);
     document.getElementById("topic").disabled = false;
@@ -127,7 +131,7 @@ async function main() {
       topic,
       (msg) => {
         const from = msg.from;
-        const seqno = msg.seqno.toString("hex");
+        const seqno = uint8ArrayToString(msg.seqno, "hex");
 
         tLog(
           `${new Date(
@@ -137,18 +141,13 @@ async function main() {
 
         let regex = "/record/";
         if (topic.match(regex) ? topic.match(regex).length > 0 : false) {
-          tLog(
-            "\n#" +
-              ipns.unmarshal(msg.data).sequence.toString() +
-              ") Topic: " +
-              msg.topicIDs[0].toString()
-          );
-          tLog("Value:\n" + ipns.unmarshal(msg.data).value.toString());
+          tLog(`\n#${ipns.unmarshal(msg.data).sequence.toString()} Topic: ${msg.topicIDs[0].toString()}`);
+          tLog(`Value:\n${uint8ArrayToString(ipns.unmarshal(msg.data).value, 'hex')}`);
         } else {
           try {
             tLog(JSON.stringify(msg.data.toString(), null, 2));
           } catch (_) {
-            tLog(msg.data.toString("hex"));
+            tLog(uint8ArrayToString(msg.data, "hex"));
           }
         }
       }
@@ -176,12 +175,19 @@ async function main() {
   }
 
   async function publish(content) {
-    if (!content) throw new Error("Missing ipns content to publish");
-    if (!ipfsAPI) throw new Error("Connect to a go-server node first");
-    if (!ipfsAPI.name.pubsub.state() || !ipfsBrowser.name.pubsub.state())
+    if (!content) {
+      throw new Error("Missing ipns content to publish");
+    }
+
+    if (!ipfsAPI) {
+      throw new Error("Connect to a go-server node first");
+    }
+
+    if (!ipfsAPI.name.pubsub.state() || !ipfsBrowser.name.pubsub.state()) {
       throw new Error(
         "IPNS Pubsub must be enabled on bother peers, use --enable-namesys-pubsub"
       );
+    }
 
     log(`Publish to IPNS`); // subscribes the server to our IPNS topic
 
@@ -193,9 +199,11 @@ async function main() {
     let keys = { name: "self", id: browserNode.id }; // default init
 
     if (keyName != "self") {
-      if (!(await ipfsBrowser.key.list()).find((k) => k.name == keyName))
+      if (!(await ipfsBrowser.key.list()).find((k) => k.name == keyName)) {
         // skip if custom key exists already
         await createKey(keyName);
+      }
+
       let r = await ipfsBrowser.key.list();
       keys = r.find((k) => k.name == keyName);
       log(JSON.stringify(keys));
@@ -207,7 +215,7 @@ async function main() {
     // set up the topic from ipns key
     let b58 = base58btc.decode(`z${keys.id}`)
     const ipnsKeys = ipns.getIdKeys(b58);
-    const topic = `${namespace}${uint8ArrayToString(ipnsKeys.routingKey._buf, 'base64url')}`;
+    const topic = `${namespace}${uint8ArrayToString(ipnsKeys.routingKey.uint8Array(), 'base64url')}`;
 
     // subscribe and log on both nodes
     await subs(ipfsBrowser, topic, log); // browserLog
@@ -218,17 +226,26 @@ async function main() {
     await waitForNotificationOfSubscription(ipfsBrowser, topic, serverNode.id); // confirm they are on OUR list
 
     let remList = await ipfsAPI.pubsub.ls(); // API
-    if (!remList.includes(topic))
+    if (!remList.includes(topic)) {
       sLog(`<span class="red">[Fail] !Pubsub.ls ${topic}</span>`);
-    else sLog(`[Pass] Pubsub.ls`);
+    } else {
+      sLog(`[Pass] Pubsub.ls`);
+    }
 
     let remListSubs = await ipfsAPI.name.pubsub.subs(); // API
-    if (!remListSubs.includes(`/ipns/${keys.id}`))
-      sLog(`<span class="red">[Fail] !Name.Pubsub.subs ${keys.id}</span>`);
-    else sLog(`[Pass] Name.Pubsub.subs`);
+    const multihash = uint8ArrayFromString(keys.id, 'base58btc')
+    const digest = Digest.decode(multihash)
+    const libp2pKey = CID.createV1(0x72, digest)
+    const ipnsName = `/ipns/${libp2pKey.toString(base36)}`
+
+    if (!remListSubs.includes(ipnsName)) {
+      sLog(`<span class="red">[Fail] !Name.Pubsub.subs ${ipnsName}</span>`);
+    } else {
+      sLog(`[Pass] Name.Pubsub.subs`);
+    }
 
     // publish will send a pubsub msg to the server to update their ipns record
-    log(`Publishing ${content} to ${keys.name} /ipns/${keys.id}`);
+    log(`Publishing ${content} to ${keyName} ${ipnsName}`);
     const results = await ipfsBrowser.name.publish(content, {
       resolve: false,
       key: keyName,
@@ -245,13 +262,9 @@ async function main() {
     log(`Resolved: ${name}`);
     if (name == content) {
       log(`<span class="green">IPNS Publish Success!</span>`);
-      log(
-        `<span class="green">Look at that! /ipns/${keys.id} resolves to ${content}</span>`
-      );
+      log(`<span class="green">Look at that! ${keys.id} resolves to ${content}</span>`);
     } else {
-      log(
-        `<span class="red">Error, resolve did not match ${name} !== ${content}</span>`
-      );
+      log(`<span class="red">Error, resolve did not match ${name} !== ${content}</span>`);
     }
   }
 
