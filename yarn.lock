@@ -12603,23 +12603,6 @@ ipld-git@^0.6.1:
     strftime "^0.10.0"
     uint8arrays "^3.0.0"
 
-ipns@^0.13.3:
-  version "0.13.4"
-  resolved "https://registry.yarnpkg.com/ipns/-/ipns-0.13.4.tgz#86c2e02e639aa282a27890ab3ddb324f729e2362"
-  integrity sha512-8fPbYdhtA9y3IBuNCW2KRdWIHZlcBk3AS8W+h7YuBn8ftUla6kQ1ngWiO9Z/Pf1ZtIJdoIXLQWpkmJDlGy/ung==
-  dependencies:
-    cborg "^1.3.3"
-    debug "^4.2.0"
-    err-code "^3.0.1"
-    interface-datastore "^5.1.1"
-    libp2p-crypto "^0.19.5"
-    long "^4.0.0"
-    multiformats "^9.4.5"
-    peer-id "^0.15.0"
-    protobufjs "^6.10.2"
-    timestamp-nano "^1.0.0"
-    uint8arrays "^3.0.0"
-
 ipns@^0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/ipns/-/ipns-0.15.0.tgz#22fe14ce3f38438d334f41f1bb00390c0f3f9750"
@@ -12633,6 +12616,23 @@ ipns@^0.15.0:
     long "^4.0.0"
     multiformats "^9.4.5"
     peer-id "^0.15.0"
+    protobufjs "^6.10.2"
+    timestamp-nano "^1.0.0"
+    uint8arrays "^3.0.0"
+
+ipns@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/ipns/-/ipns-0.16.0.tgz#656bf36d78a6a9eb829ff798b4ca875ba9a3d0d4"
+  integrity sha512-fBYkRjN3/fc6IQujUF4WBEyOXegK715w+wx9IErV6H2B5JXsMnHOBceUKn3L90dj+wJfHs6T+hM/OZiTT6mQCw==
+  dependencies:
+    cborg "^1.3.3"
+    debug "^4.2.0"
+    err-code "^3.0.1"
+    interface-datastore "^6.0.2"
+    libp2p-crypto "^0.21.0"
+    long "^4.0.0"
+    multiformats "^9.4.5"
+    peer-id "^0.16.0"
     protobufjs "^6.10.2"
     timestamp-nano "^1.0.0"
     uint8arrays "^3.0.0"
