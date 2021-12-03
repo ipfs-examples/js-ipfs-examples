@@ -21,7 +21,7 @@
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
     "ipfs": "^0.59.0",
-    "ipfs-core-types": "^0.8.0",
+    "ipfs-core-types": "^0.8.4",
     "ipfs-http-client": "^53.0.0",
     "libp2p-webrtc-star-signalling-server": "^0.1.0",
     "parcel": "latest",

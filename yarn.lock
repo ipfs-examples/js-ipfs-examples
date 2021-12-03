@@ -11794,23 +11794,14 @@ ipfs-core-config@^0.1.2-rc.0+5ddd0c55:
     p-queue "^6.6.1"
     uint8arrays "^3.0.0"
 
-ipfs-core-types@^0.8.0, ipfs-core-types@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.8.1.tgz#381dec9a05612691ee708faee1561666cfd5c482"
-  integrity sha512-9pfHaPGbl8EWeQZTSodN/y+lBQ9vyh6RYvpmw6Ik0ksy5QLj7soEkH4msHO78t5ZMeChpPIYpZS/oo1bOld1cw==
+ipfs-core-types@^0.8.1, ipfs-core-types@^0.8.2-rc.0+5ddd0c55, ipfs-core-types@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.8.4.tgz#4d483dc6035714ea48a0b02e3f82b6c6d55c8525"
+  integrity sha512-sbRZA1QX3xJ6ywTiVQZMOxhlhp4osAZX2SXx3azOLxAtxmGWDMkHYt722VV4nZ2GyJy8qyk5GHQIZ0uvQnpaTg==
   dependencies:
     interface-datastore "^6.0.2"
     multiaddr "^10.0.0"
-    multiformats "^9.4.1"
-
-ipfs-core-types@^0.8.2-rc.0+5ddd0c55:
-  version "0.8.2-rc.0"
-  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.8.2-rc.0.tgz#bdfc9cc8a5b39977c0e7b1ef57422a8ad83b772c"
-  integrity sha512-rmOzGYsVhYKxZrOJl349ZUklScgfOCMcO9c90sakSuP8a0Nu6EpU6V7tiPJ3hVcDROHA40rHKrODB8oTiNvlUw==
-  dependencies:
-    interface-datastore "^6.0.2"
-    multiaddr "^10.0.0"
-    multiformats "^9.4.1"
+    multiformats "^9.4.13"
 
 ipfs-core-utils@^0.11.1:
   version "0.11.1"
@@ -16182,10 +16173,10 @@ multicodec@^3.0.1, multicodec@^3.1.0:
     uint8arrays "^3.0.0"
     varint "^6.0.0"
 
-multiformats@^9.0.0, multiformats@^9.0.2, multiformats@^9.0.4, multiformats@^9.1.0, multiformats@^9.1.2, multiformats@^9.4.1, multiformats@^9.4.2, multiformats@^9.4.3, multiformats@^9.4.5, multiformats@^9.4.7:
-  version "9.4.8"
-  resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-9.4.8.tgz#46f74ec116f7871f2a334cc6d4ad3d810dbac341"
-  integrity sha512-EOJL02/kv+FD5hoItMhKgkYUUruJYMYFq4NQ6YkCh3jVQ5CuHo+OKdHeR50hAxEQmXQ9yvrM9BxLIk42xtfwnQ==
+multiformats@^9.0.0, multiformats@^9.0.2, multiformats@^9.0.4, multiformats@^9.1.0, multiformats@^9.1.2, multiformats@^9.4.1, multiformats@^9.4.13, multiformats@^9.4.2, multiformats@^9.4.3, multiformats@^9.4.5, multiformats@^9.4.7:
+  version "9.5.2"
+  resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-9.5.2.tgz#14256e49bac8b6a5ecb558c4d3c347bb94873d65"
+  integrity sha512-nLQ9s7YOVtZdeNOVvCkNyFiZdS3wyq0gvCIvdm7Zy1zw3zBoColJKjMkIPXNdTqT7ruuq+G7HrezIN0cXiAZ0w==
 
 multihashes@^4.0.1, multihashes@^4.0.2:
   version "4.0.3"
