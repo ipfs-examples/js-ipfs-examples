@@ -12516,10 +12516,10 @@ ipfs@^0.59.0:
     semver "^7.3.2"
     update-notifier "^5.0.0"
 
-ipfsd-ctl@^10.0.3:
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/ipfsd-ctl/-/ipfsd-ctl-10.0.4.tgz#cadcd6ab7a9295007ce419f61243ac22861fc3e5"
-  integrity sha512-BTi61AbgEpWWickU6gjIwKVr5x/j/hD1jHDTwXGDjhy8LjlhX6J20lUccLNti7RTXy6+W4ZJ0ziosdeg2l+/Xg==
+ipfsd-ctl@^10.0.5:
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/ipfsd-ctl/-/ipfsd-ctl-10.0.5.tgz#0c4fb336d6f74f0b3ec4dc6776aaee7203487c50"
+  integrity sha512-qYHFHuxREI1TcQiUD+4k7/qCAv8KZwKwV0Y+xDaQfXBiNgddSGPuRzAe6SN0MZsHBbwqiUPG2WEZ3QgeBpnnJw==
   dependencies:
     "@hapi/boom" "^9.1.0"
     "@hapi/hapi" "^20.0.0"
