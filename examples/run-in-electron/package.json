@@ -18,7 +18,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "ipfs-core": "^0.11.0"
+    "ipfs-core": "^0.12.2"
   },
   "devDependencies": {
     "electron": "^13.1.9",
