@@ -12,15 +12,15 @@
     "test": "npm run build && playwright test tests"
   },
   "dependencies": {
-    "ipfs-core": "^0.11.0",
-    "next": "11.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "ipfs-core": "^0.12.2",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.12.3",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.0.0",
+    "eslint": "^7.20.0",
+    "eslint-config-next": "^11.0.0",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.0"
