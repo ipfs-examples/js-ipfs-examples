@@ -21,7 +21,7 @@
     "concat-stream": "^2.0.0",
     "copyfiles": "^2.4.1",
     "execa": "^5.0.0",
-    "http-server": "^13.0.0",
+    "http-server": "^14.0.0",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
