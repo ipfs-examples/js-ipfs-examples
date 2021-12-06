@@ -2094,10 +2094,10 @@
     multiformats "^9.0.0"
     varint "^6.0.0"
 
-"@ipld/dag-cbor@^6.0.0", "@ipld/dag-cbor@^6.0.3", "@ipld/dag-cbor@^6.0.4", "@ipld/dag-cbor@^6.0.5":
-  version "6.0.11"
-  resolved "https://registry.yarnpkg.com/@ipld/dag-cbor/-/dag-cbor-6.0.11.tgz#bf98ac9652ae9af2a9773cde87dbe77a5c296f9c"
-  integrity sha512-W9hpFAFS7+n0orqlq7w06ADeORealpTJ92jQZBZDywYMjOlcVfVKKKkVgCq/pUbwlSRqip+9kgzEvdfd5N3zcQ==
+"@ipld/dag-cbor@^6.0.0", "@ipld/dag-cbor@^6.0.14", "@ipld/dag-cbor@^6.0.3", "@ipld/dag-cbor@^6.0.4", "@ipld/dag-cbor@^6.0.5":
+  version "6.0.14"
+  resolved "https://registry.yarnpkg.com/@ipld/dag-cbor/-/dag-cbor-6.0.14.tgz#f803ca39dd20f4ea1f4b96bf0391bcbe65572951"
+  integrity sha512-Gv1EEXLCao0v1XhLgrkAN7z8Pe83puquQ9Cq+gQ3kby4kZHP7+Pq+9on+PKl5juB0hDtzgtxEnKSQqLrdcemaw==
   dependencies:
     cborg "^1.2.1"
     multiformats "^9.0.0"
