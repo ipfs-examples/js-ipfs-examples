@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "ipfs-core": "^0.12.2",
-    "it-all": "^1.0.4",
+    "it-all": "^1.0.6",
     "uint8arrays": "^3.0.0"
   },
   "devDependencies": {

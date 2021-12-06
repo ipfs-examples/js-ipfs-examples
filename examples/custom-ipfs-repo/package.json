@@ -18,7 +18,7 @@
     "datastore-fs": "^6.0.1",
     "ipfs-core": "^0.12.2",
     "ipfs-repo": "^13.0.5",
-    "it-all": "^1.0.4",
+    "it-all": "^1.0.6",
     "multiformats": "^9.4.1",
     "uint8arrays": "^3.0.0"
   },
