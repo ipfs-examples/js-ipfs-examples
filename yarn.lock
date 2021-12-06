@@ -11726,13 +11726,13 @@ ipfs-cli@^0.9.1:
     uint8arrays "^3.0.0"
     yargs "^16.0.3"
 
-ipfs-client@^0.7.0:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/ipfs-client/-/ipfs-client-0.7.1.tgz#22a6f08bcb9597356cfe29f75f2ab0439ef4ff63"
-  integrity sha512-/w9pHbCOysyMcd6UgDoxuPM5hG/ZsBTjRHoZ6z70IcnHvlUs/9IfnpOJzjVI0XRixwZrPtOzcpSeuYL7yVWWnA==
+ipfs-client@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/ipfs-client/-/ipfs-client-0.7.4.tgz#202aac3292182e0c9f8c93bb6b8d11e7e85b83f5"
+  integrity sha512-PDqrDpWggoAXE3+FNghgNpEGyfHNdHhYBVZF9TULXcbQ1X4ZNFNYZbm9GbXtxuzHDiir36IxbffTAmfRxNYl8w==
   dependencies:
-    ipfs-grpc-client "^0.7.1"
-    ipfs-http-client "^53.0.1"
+    ipfs-grpc-client "^0.8.2"
+    ipfs-http-client "^54.0.2"
     merge-options "^3.0.4"
 
 ipfs-core-config@^0.1.1, ipfs-core-config@^0.1.4:
@@ -12013,23 +12013,23 @@ ipfs-daemon@^0.10.4:
     prometheus-gc-stats "^0.6.0"
     wrtc "^0.4.6"
 
-ipfs-grpc-client@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/ipfs-grpc-client/-/ipfs-grpc-client-0.7.1.tgz#29474b2f9ed79c182700410b59f988889e78f680"
-  integrity sha512-pJJGaSsoLUcR8lTqbvjXizzzSDpknNmNo41k5EWSmbeuP9+0cE5T90IAOjWbbVBCrhlpntYtdqXMJHVYBz055Q==
+ipfs-grpc-client@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/ipfs-grpc-client/-/ipfs-grpc-client-0.8.2.tgz#8e20864874c439266499be210987bb9385246a61"
+  integrity sha512-1qvDLySBj6hrX5cP4XrSLYq1vskzcP87MxcPNbUq9JE5CWyq2MVaKjdjBgaVWWGDGl1HabeExl5hg5BXccYSzQ==
   dependencies:
     "@improbable-eng/grpc-web" "^0.14.0"
     change-case "^4.1.1"
     debug "^4.1.1"
     err-code "^3.0.1"
-    ipfs-core-types "^0.8.1"
-    ipfs-core-utils "^0.11.1"
-    ipfs-grpc-protocol "^0.5.1"
+    ipfs-core-types "^0.8.4"
+    ipfs-core-utils "^0.12.2"
+    ipfs-grpc-protocol "^0.5.4"
     ipfs-unixfs "^6.0.3"
     it-first "^1.0.4"
     it-pushable "^1.4.2"
     multiaddr "^10.0.0"
-    multiformats "^9.4.1"
+    multiformats "^9.4.13"
     p-defer "^3.0.0"
     protobufjs "^6.10.2"
     wherearewe "^1.0.0"
