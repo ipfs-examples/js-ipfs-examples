@@ -29,7 +29,7 @@
     "ipns": "^0.16.0",
     "it-last": "^1.0.4",
     "libp2p-websockets": "^0.16.1",
-    "multiformats": "^9.4.7",
+    "multiformats": "^9.5.2",
     "p-retry": "^4.2.0",
     "uint8arrays": "^3.0.0"
   },

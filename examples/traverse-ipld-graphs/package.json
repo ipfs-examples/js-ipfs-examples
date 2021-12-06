@@ -19,7 +19,7 @@
     "ipld-format-to-blockcodec": "0.0.1",
     "ipld-git": "^0.6.1",
     "js-sha3": "^0.8.0",
-    "multiformats": "^9.4.1"
+    "multiformats": "^9.5.2"
   },
   "devDependencies": {
     "test-util-ipfs-example": "^1.0.2"

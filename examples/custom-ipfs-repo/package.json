@@ -19,7 +19,7 @@
     "ipfs-core": "^0.11.1",
     "ipfs-repo": "^13.0.5",
     "it-all": "^1.0.4",
-    "multiformats": "^9.4.1",
+    "multiformats": "^9.5.2",
     "uint8arrays": "^3.0.0"
   },
   "devDependencies": {
