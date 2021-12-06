@@ -33,7 +33,7 @@
     "playwright": "^1.12.3",
     "react-hot-loader": "^4.12.21",
     "rimraf": "^3.0.2",
-    "style-loader": "^3.1.0",
+    "style-loader": "^3.3.1",
     "test-util-ipfs-example": "^1.0.2",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
