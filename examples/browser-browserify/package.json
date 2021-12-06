@@ -22,7 +22,7 @@
     "copyfiles": "^2.4.1",
     "execa": "^5.0.0",
     "http-server": "^13.0.0",
-    "playwright": "^1.12.3",
+    "playwright": "^1.17.1",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
   }

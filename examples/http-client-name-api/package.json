@@ -21,7 +21,7 @@
     "@playwright/test": "^1.12.3",
     "go-ipfs": "0.9.1",
     "parcel": "latest",
-    "playwright": "^1.12.3",
+    "playwright": "^1.17.1",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"
   }

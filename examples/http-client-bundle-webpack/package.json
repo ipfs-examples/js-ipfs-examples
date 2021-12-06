@@ -32,7 +32,7 @@
     "html-webpack-plugin": "^5.3.1",
     "ipfs": "^0.59.0",
     "node-polyfill-webpack-plugin": "^1.0.3",
-    "playwright": "^1.12.3",
+    "playwright": "^1.17.1",
     "react-hot-loader": "^4.12.21",
     "rimraf": "^3.0.2",
     "style-loader": "^3.1.0",
