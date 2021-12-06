@@ -31,9 +31,5 @@
   },
   "devDependencies": {
     "rimraf": "^3.0.2"
-  },
-  "engines": {
-    "npm": "please-use-yarn",
-    "yarn": ">= 1.22.0"
   }
 }
