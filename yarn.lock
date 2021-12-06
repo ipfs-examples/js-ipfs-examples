@@ -14970,10 +14970,10 @@ libp2p@^0.33.0:
     wherearewe "^1.0.0"
     xsalsa20 "^1.1.0"
 
-libp2p@^0.35.0:
-  version "0.35.0"
-  resolved "https://registry.yarnpkg.com/libp2p/-/libp2p-0.35.0.tgz#ece8ab4b1c926dd29c0f0509b36f6ea0c1e7542a"
-  integrity sha512-hQgwdQQROPy/pufMOC7XYoiBCZq48Jc0zRm0K9xy34uk1sHk7V/KWVdHiMrAD09HJ2kQUk0AL8Y4esbJYtaZCw==
+libp2p@^0.35.1:
+  version "0.35.1"
+  resolved "https://registry.yarnpkg.com/libp2p/-/libp2p-0.35.1.tgz#718832fed2a51be6b06cc813f6fa9878e0cd4aec"
+  integrity sha512-n/YRQHDHOLZ9oQtPmnlM2mFSud4+HAAkREirHU3GjUHsPk+7XmnO7iiFFsz7TxY0KDnolitP/xEvwATPObv4Gg==
   dependencies:
     "@motrix/nat-api" "^0.3.1"
     "@vascosantos/moving-average" "^1.1.0"
