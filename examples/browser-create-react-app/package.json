@@ -46,7 +46,7 @@
     "web-vitals": "^2.1.2"
   },
   "devDependencies": {
-    "@playwright/test": "^1.12.3",
+    "@playwright/test": "^1.17.1",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2"

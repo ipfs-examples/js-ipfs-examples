@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
-    "@playwright/test": "^1.12.3",
+    "@playwright/test": "^1.17.1",
     "ipfs": "^0.59.0",
     "ipfs-core-types": "^0.8.0",
     "ipfs-http-client": "^53.0.0",

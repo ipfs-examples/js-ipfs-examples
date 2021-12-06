@@ -16,7 +16,7 @@
     "ipfs-core": "^0.12.2"
   },
   "devDependencies": {
-    "@playwright/test": "^1.12.3",
+    "@playwright/test": "^1.17.1",
     "browserify": "^17.0.0",
     "concat-stream": "^2.0.0",
     "copyfiles": "^2.4.1",
