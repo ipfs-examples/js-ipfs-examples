@@ -13,7 +13,7 @@
     "dag-jose": "^1.0.0",
     "ipfs-core": "^0.12.2",
     "ipfs-daemon": "^0.10.4",
-    "ipfs-http-client": "^53.0.0",
+    "ipfs-http-client": "^54.0.2",
     "multiformats": "^9.4.1",
     "uint8arrays": "^3.0.0"
   },
