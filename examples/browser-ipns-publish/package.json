@@ -27,7 +27,7 @@
     "ipfs-http-client": "^53.0.0",
     "ipfs-utils": "^9.0.2",
     "ipns": "^0.16.0",
-    "it-last": "^1.0.4",
+    "it-last": "^1.0.6",
     "libp2p-websockets": "^0.16.1",
     "multiformats": "^9.4.7",
     "p-retry": "^4.2.0",
