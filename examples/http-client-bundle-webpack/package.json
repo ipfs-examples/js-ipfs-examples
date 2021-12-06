@@ -30,7 +30,7 @@
     "copy-webpack-plugin": "^10.0.0",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
-    "ipfs": "^0.59.0",
+    "ipfs": "^0.60.2",
     "node-polyfill-webpack-plugin": "^1.0.3",
     "playwright": "^1.12.3",
     "react-hot-loader": "^4.12.21",

@@ -13,7 +13,7 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "ipfs": "^0.59.0"
+    "ipfs": "^0.60.2"
   },
   "devDependencies": {
     "nanoid": "^3.1.23",
