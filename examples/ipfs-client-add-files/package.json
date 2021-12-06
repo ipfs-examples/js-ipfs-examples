@@ -15,7 +15,7 @@
     "ipfs-client": "^0.7.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.8",
+    "@babel/core": "^7.16.0",
     "@playwright/test": "^1.12.3",
     "ipfs": "^0.59.0",
     "parcel": "latest",

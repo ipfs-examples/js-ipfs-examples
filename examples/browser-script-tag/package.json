@@ -14,7 +14,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "devDependencies": {
-    "@babel/core": "^7.14.8",
+    "@babel/core": "^7.16.0",
     "@playwright/test": "^1.12.3",
     "parcel": "latest",
     "playwright": "^1.12.3",
