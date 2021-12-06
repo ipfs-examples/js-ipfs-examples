@@ -16,7 +16,7 @@
     "ipfs": "^0.59.0"
   },
   "devDependencies": {
-    "nanoid": "^3.1.23",
+    "nanoid": "^3.1.30",
     "test-util-ipfs-example": "^1.0.2"
   }
 }
