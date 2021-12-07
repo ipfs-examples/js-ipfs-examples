@@ -12,7 +12,7 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "@chainsafe/libp2p-noise": "^4.0.0",
+    "@chainsafe/libp2p-noise": "^5.0.0",
     "ipfs-core": "^0.12.2",
     "libp2p": "^0.35.0",
     "libp2p-bootstrap": "^0.14.0",
