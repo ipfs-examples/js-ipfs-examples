@@ -45,6 +45,6 @@
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2",
-    "typescript": "~4.3.5"
+    "typescript": "~4.5.4"
   }
 }
