@@ -24,7 +24,7 @@
   "dependencies": {
     "human-crypto-keys": "^0.1.4",
     "ipfs-core": "^0.12.2",
-    "ipfs-http-client": "^54.0.2",
+    "ipfs-http-client": "^55.0.0",
     "ipfs-utils": "^9.0.2",
     "ipns": "^0.16.0",
     "it-last": "^1.0.4",
