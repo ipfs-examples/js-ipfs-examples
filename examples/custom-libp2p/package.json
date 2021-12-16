@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@chainsafe/libp2p-noise": "^5.0.0",
-    "ipfs-core": "^0.12.2",
+    "ipfs-core": "^0.13.0",
     "libp2p": "^0.35.0",
     "libp2p-bootstrap": "^0.14.0",
     "libp2p-kad-dht": "^0.27.2",

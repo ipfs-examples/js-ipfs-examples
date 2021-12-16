@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "ipfs-core": "^0.12.2",
+    "ipfs-core": "^0.13.0",
     "vue": "^3.0.4"
   },
   "devDependencies": {
