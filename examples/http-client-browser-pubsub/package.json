@@ -20,7 +20,7 @@
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
     "go-ipfs": "0.10.0",
-    "ipfs": "^0.60.2",
+    "ipfs": "^0.61.0",
     "parcel": "latest",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
