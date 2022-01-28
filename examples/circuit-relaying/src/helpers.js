@@ -86,7 +86,7 @@ module.exports = (ipfs, peersSet) => {
 
         for (let k = 0; k < 5; k++) {
           // protocols is undefined until the connection is negotiated so try a few times
-          const protocols = ipfs.libp2p.peerStore.protoBook.get(con.remotePeer)
+          const protocols = await ipfs.libp2p.peerStore.protoBook.get(con.remotePeer)
 
           if (!protocols) {
             await new Promise ((r) => {

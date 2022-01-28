@@ -15,7 +15,7 @@ async function main () {
   }
 
   const pbNodeCid = await ipfs.dag.put(pbNode, {
-    format: 'dag-pb',
+    storeCodec: 'dag-pb',
     hashAlg: 'sha2-256'
   })
 
@@ -26,7 +26,7 @@ async function main () {
   }
 
   const cborNodeCid = await ipfs.dag.put(myData, {
-    format: 'dag-cbor',
+    storeCodec: 'dag-cbor',
     hashAlg: 'sha2-512'
   })
 
