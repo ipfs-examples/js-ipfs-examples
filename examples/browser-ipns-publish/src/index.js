@@ -5,10 +5,8 @@ const ipns = require("ipns");
 const IPFS = require("ipfs-core");
 const pRetry = require("p-retry");
 const last = require("it-last");
-const cryptoKeys = require("human-crypto-keys"); // { getKeyPairFromSeed }
 const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
 const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
-const { sha256 } = require('multiformats/hashes/sha2')
 const { base58btc } = require('multiformats/bases/base58')
 const { base36 } = require('multiformats/bases/base36')
 const { CID } = require('multiformats/cid')
@@ -169,14 +167,11 @@ async function main() {
   async function createKey(keyName) {
     return new Promise(async (resolve, reject) => {
       try {
-        // quick and dirty key gen, don't do this in real life
-        const key = await sha256.digest(
-          uint8ArrayFromString(keyName + Math.random().toString(36).substring(2))
-        );
-        const keyPair = await cryptoKeys.getKeyPairFromSeed(key.bytes, "rsa");
+        // generate a key on the browser IPNS keychain with the specified name
+        await ipfsAPI.key.gen(keyName, {
+          type: 'ed25519'
+        })
 
-        // put it on the browser IPNS keychain and name it
-        await ipfsBrowser.key.import(keyName, keyPair.privateKey);
         // now this key can be used to publish to this ipns publicKey
         resolve(true);
       } catch (err) {

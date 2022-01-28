@@ -22,7 +22,6 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "human-crypto-keys": "^0.1.4",
     "ipfs-core": "^0.14.0",
     "ipfs-http-client": "^56.0.0",
     "ipfs-utils": "^9.0.2",
