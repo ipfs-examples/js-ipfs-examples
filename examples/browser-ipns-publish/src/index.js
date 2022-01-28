@@ -17,7 +17,7 @@ const WS = require('libp2p-websockets')
 const transportKey = WS.prototype[Symbol.toStringTag]
 const filters = require('libp2p-websockets/src/filters')
 
-const { sleep, Logger, onEnterPress, catchAndLog } = require("./util");
+const { Logger, onEnterPress, catchAndLog } = require("./util");
 
 async function main() {
   const apiUrlInput = document.getElementById("api-url");
@@ -88,8 +88,20 @@ async function main() {
     await ipfsBrowser.swarm.connect(addr);
     log(`<span class="green">Success!</span>`);
     log("Listing swarm peers...");
-    await sleep();
-    const peers = await ipfsBrowser.swarm.peers();
+
+    const peers = await pRetry(async () => {
+      const peers = await ipfsBrowser.swarm.peers();
+
+      if (peers.find(peer => addr.endsWith(peer.peer))) {
+        return peers
+      }
+
+      throw new Error('Could not find go-ipfs peer in swarm peers')
+    })
+      .catch(err => {
+        sLog(`<span class="red">[Fail] ${err.message}</span>`);
+      })
+
     peers.forEach((peer) => {
       //console.log(`peer: ${JSON.stringify(peer, null, 2)}`);
       const fullAddr = `${peer.addr}/ipfs/${peer.peer}`;
@@ -179,6 +191,10 @@ async function main() {
       throw new Error("Missing ipns content to publish");
     }
 
+    if (!content.startsWith('/ipfs/')) {
+      throw new Error("Content should start with /ipfs/");
+    }
+
     if (!ipfsAPI) {
       throw new Error("Connect to a go-server node first");
     }
@@ -232,17 +248,23 @@ async function main() {
       sLog(`[Pass] Pubsub.ls`);
     }
 
-    let remListSubs = await ipfsAPI.name.pubsub.subs(); // API
     const multihash = uint8ArrayFromString(keys.id, 'base58btc')
     const digest = Digest.decode(multihash)
     const libp2pKey = CID.createV1(0x72, digest)
     const ipnsName = `/ipns/${libp2pKey.toString(base36)}`
 
-    if (!remListSubs.includes(ipnsName)) {
-      sLog(`<span class="red">[Fail] !Name.Pubsub.subs ${ipnsName}</span>`);
-    } else {
-      sLog(`[Pass] Name.Pubsub.subs`);
-    }
+    await pRetry(async () => {
+      let remListSubs = await ipfsAPI.name.pubsub.subs(); // API
+
+      if (!remListSubs.includes(ipnsName)) {
+        throw new Error(`!Name.Pubsub.subs ${ipnsName}`)
+      } else {
+        sLog(`[Pass] Name.Pubsub.subs`);
+      }
+    })
+      .catch(err => {
+        sLog(`<span class="red">[Fail] ${err.message}</span>`);
+      })
 
     // publish will send a pubsub msg to the server to update their ipns record
     log(`Publishing ${content} to ${keyName} ${ipnsName}`);

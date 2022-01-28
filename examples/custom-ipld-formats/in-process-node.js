@@ -26,7 +26,7 @@ async function main () {
   }
 
   const cid = await node.dag.put(data, {
-    format: 'dag-test',
+    storeCodec: 'dag-test',
     hashAlg: 'sha2-256'
   })
 

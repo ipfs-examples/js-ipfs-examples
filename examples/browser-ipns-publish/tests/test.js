@@ -71,6 +71,8 @@ play.describe('http ipns publish:', () => {
       .filter(addr => addr.includes("/ws/p2p/"))
       .pop()
 
+    await page.waitForSelector(`${consoleDOM}:has-text('Browser IPFS ready!')`);
+
     await page.waitForSelector(apiSelector);
     await page.fill(apiSelector, apiAddress);
     await page.click(nodeConnect);

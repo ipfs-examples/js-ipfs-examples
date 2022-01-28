@@ -8,11 +8,11 @@
     "test": "tsc --noEmit"
   },
   "dependencies": {
-    "ipfs-core": "^0.12.2"
+    "ipfs-core": "^0.14.0"
   },
   "devDependencies": {
     "multiformats": "^9.4.1",
-    "ipfs-core-types": "^0.8.0",
-    "typescript": "4.3.5"
+    "ipfs-core-types": "^0.10.0",
+    "typescript": "^4.5.5"
   }
 }

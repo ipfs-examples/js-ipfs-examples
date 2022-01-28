@@ -20,7 +20,7 @@ async function runTest () {
   await node.waitForOutput('302516', 'node', [path.resolve(__dirname, '../eth.js')])
 
   console.info('Testing git.js')
-  await node.waitForOutput("CID(baf4bcfhoohhpkaa3qsydcrby65wpblgthcrp2ii)", 'node', [path.resolve(__dirname, '../git.js')])
+  await node.waitForOutput("CID(baf4bcfhgrzxw4mmfpb32ph6wwokwrgcdno22o3y)", 'node', [path.resolve(__dirname, '../git.js')])
 
   console.info('Done!')
 }

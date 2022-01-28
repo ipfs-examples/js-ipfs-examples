@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import dotProp from 'dot-prop'
+import { getProperty } from 'dot-prop'
 // dot-prop: used to obtain a property of an object when the name of property is a string
 // here we get ipfs.id when calling dotProp.get(ipfs, cmd), with cmd = 'id'
 // and we get ipfs.hash when calling with cmd = 'hash' etc.
@@ -22,7 +22,7 @@ export default function useIpfs (ipfs, cmd, opts) {
 async function callIpfs (ipfs, cmd, setRes, ...opts) {
   if (!ipfs) return null
   console.log(`Call ipfs.${cmd}`)
-  const ipfsCmd = dotProp.get(ipfs, cmd)
+  const ipfsCmd = getProperty(ipfs, cmd)
   const res = await ipfsCmd(...opts)
   console.log(`Result ipfs.${cmd}`, res)
   setRes(res)
