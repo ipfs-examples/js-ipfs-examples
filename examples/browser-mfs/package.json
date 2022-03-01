@@ -20,9 +20,11 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "parcel": "latest",
+    "parcel": "^2.3.2",
     "playwright": "^1.12.3",
+    "process": "^0.11.10",
     "rimraf": "^3.0.2",
-    "test-util-ipfs-example": "^1.0.2"
+    "test-util-ipfs-example": "^1.0.2",
+    "util": "^0.12.4"
   }
 }
