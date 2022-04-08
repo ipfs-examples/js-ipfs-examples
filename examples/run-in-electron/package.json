@@ -21,7 +21,7 @@
     "ipfs-core": "^0.14.0"
   },
   "devDependencies": {
-    "electron": "^17.0.0",
+    "electron": "^18.0.3",
     "electron-rebuild": "^3.1.1",
     "test-util-ipfs-example": "^1.0.2"
   },
