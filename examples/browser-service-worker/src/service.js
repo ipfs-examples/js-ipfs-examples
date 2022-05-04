@@ -76,7 +76,7 @@ const fetchViewer = async ({ url }) => {
   const body = new Blob([`<html data-viewer>
 <head>
   <title>${url.pathname}</title>
-  <script src="/main.js"></script>
+  <script src="/main.bundle.js"></script>
 </head>
 <body>
   <iframe id="viewer" style="width:100%;height:100%;position:fixed;top:0;left:0;border:none;" src="/view${url.pathname}"></iframe>

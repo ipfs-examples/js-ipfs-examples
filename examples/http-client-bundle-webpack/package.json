@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "webpack --env production",
-    "serve": "webpack serve --hot-only --mode=development",
+    "serve": "webpack serve --hot only --mode=development",
     "start": "npm run serve",
     "test": "npm run build && playwright test tests"
   },
