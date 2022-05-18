@@ -32,6 +32,7 @@
     "root": true
   },
   "dependencies": {
+    "buffer": "^6.0.3",
     "core-js": "^3.8.3",
     "ipfs-core": "^0.14.0",
     "vue": "^3.0.4"

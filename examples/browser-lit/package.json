@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf ./dist ./.cache ./.parcel-cache",
+    "prebuild": "sed -i '/*zoom/d' ../../node_modules/tachyons/css/tachyons.css",
     "build": "parcel build index.html --no-scope-hoist",
     "serve": "parcel serve index.html --open -p 8888",
     "start": "npm run serve",
