@@ -14,7 +14,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-http-client": "^56.0.0"
+    "ipfs-http-client": "^57.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

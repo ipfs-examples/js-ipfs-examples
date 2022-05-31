@@ -27,7 +27,7 @@
     "@playwright/test": "^1.12.3",
     "events": "^3.3.0",
     "fs-extra": "^10.0.0",
-    "ipfs-http-client": "^56.0.0",
+    "ipfs-http-client": "^57.0.0",
     "parcel": "^2.3.2",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
