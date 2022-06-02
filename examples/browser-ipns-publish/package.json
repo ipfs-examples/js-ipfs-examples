@@ -22,7 +22,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-core": "^0.14.0",
+    "ipfs-core": "^0.15.1",
     "ipfs-http-client": "^56.0.0",
     "ipfs-utils": "^9.0.2",
     "ipns": "^0.16.0",
