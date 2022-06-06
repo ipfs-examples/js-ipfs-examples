@@ -22,7 +22,7 @@
     "@playwright/test": "^1.12.3",
     "ipfs": "^0.62.0",
     "ipfs-core-types": "^0.10.0",
-    "ipfs-http-client": "^56.0.0",
+    "ipfs-http-client": "^57.0.1",
     "libp2p-webrtc-star-signalling-server": "^0.1.0",
     "parcel": "^2.3.2",
     "playwright": "^1.12.3",
