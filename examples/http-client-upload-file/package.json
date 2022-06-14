@@ -24,7 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "ipfs": "^0.62.0",
+    "ipfs": "^0.63.3",
     "parcel": "^2.3.2",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
