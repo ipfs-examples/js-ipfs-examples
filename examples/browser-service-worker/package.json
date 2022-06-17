@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "ipfs-core": "^0.14.0",
-    "ipfs-message-port-client": "^0.11.0",
+    "ipfs-message-port-client": "^0.12.2",
     "ipfs-message-port-protocol": "^0.11.0",
     "ipfs-message-port-server": "^0.11.0"
   },
