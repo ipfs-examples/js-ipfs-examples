@@ -13,7 +13,7 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "ipfs-core": "^0.14.0",
+    "ipfs-core": "^0.15.2",
     "it-all": "^1.0.4",
     "uint8arrays": "^3.0.0"
   },

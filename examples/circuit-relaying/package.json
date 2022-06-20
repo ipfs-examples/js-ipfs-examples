@@ -16,7 +16,7 @@
   "browserslist": "last 1 Chrome version",
   "dependencies": {
     "delay": "^5.0.0",
-    "ipfs-core": "^0.14.0",
+    "ipfs-core": "^0.15.2",
     "ipfs-css": "^1.3.0",
     "ipfs-pubsub-room": "^2.0.1",
     "libp2p-websockets": "^0.16.1",

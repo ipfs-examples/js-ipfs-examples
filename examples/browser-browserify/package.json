@@ -13,7 +13,7 @@
     "test": "npm run build && playwright test tests"
   },
   "dependencies": {
-    "ipfs-core": "^0.14.0"
+    "ipfs-core": "^0.15.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.12.3",
