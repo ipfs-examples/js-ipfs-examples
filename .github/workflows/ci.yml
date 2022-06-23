@@ -15,19 +15,18 @@ jobs:
         project:
           - browser-add-readable-stream
           - browser-angular
-          - browser-browserify
           - browser-create-react-app
           - browser-exchange-files
           - browser-ipns-publish
           - browser-lit
           - browser-mfs
           - browser-nextjs
-          - browser-parceljs
           - browser-readablestream
           - browser-script-tag
           - browser-service-worker
           - browser-sharing-node-across-tabs
           - browser-video-streaming
+          - browser-vite
           - browser-vue
           - browser-webpack
           - circuit-relaying
