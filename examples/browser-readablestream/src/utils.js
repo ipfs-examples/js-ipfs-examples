@@ -1,6 +1,4 @@
-'use strict'
-
-const log = (line) => {
+export const log = (line) => {
   if (!line) return
 
   const output = document.getElementById('output')
@@ -23,7 +21,7 @@ const log = (line) => {
   }
 }
 
-const dragDrop = (ipfs) => {
+export const dragDrop = (ipfs) => {
   const container = document.querySelector('#container')
 
   container.ondragover = (event) => {
@@ -65,7 +63,7 @@ const dragDrop = (ipfs) => {
   }
 }
 
-const statusMessages = (stream) => {
+export const statusMessages = (stream) => {
   let time = 0
   const timeouts = [
     'Stream: Still loading data from IPFS...',
@@ -95,7 +93,7 @@ const statusMessages = (stream) => {
   })
 }
 
-const createVideoElement = () => {
+export const createVideoElement = () => {
   const videoElement = document.getElementById('video')
   videoElement.addEventListener('loadedmetadata', () => {
     videoElement.play()
@@ -132,11 +130,4 @@ const createVideoElement = () => {
   })
 
   return videoElement
-}
-
-export {
-  log,
-  dragDrop,
-  createVideoElement,
-  statusMessages
 }

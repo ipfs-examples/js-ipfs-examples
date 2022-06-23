@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-'use strict'
-
 import { create } from 'ipfs-http-client'
 import React, { useState, useEffect } from 'react'
-import logo from "url:./../public/ipfs-logo.svg";
+import logo from '../public/ipfs-logo.svg'
 
 const Connect = ({ setIpfs }) => {
   const [multiaddr, setMultiaddr] = useState('/ip4/127.0.0.1/tcp/5001')
@@ -153,7 +151,7 @@ const Details = ({keys, obj}) => {
       {keys?.map((key) => (
         <div className='mb4' key={key}>
           <h2 className='f5 ma0 pb2 aqua fw4'>{key}</h2>
-          <div className='bg-white pa2 br2 truncate monospace' data-test={key}>{obj[key]}</div>
+          <div className='bg-white pa2 br2 truncate monospace' data-test={key}>{obj[key].toString()}</div>
         </div>
       ))}
     </>
@@ -221,4 +219,4 @@ const App = () => {
   )
 }
 
-module.exports = App
+export default App

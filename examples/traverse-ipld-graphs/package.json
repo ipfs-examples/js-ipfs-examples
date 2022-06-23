@@ -2,6 +2,7 @@
   "name": "example-traverse-ipld-graphs",
   "version": "2.0.1",
   "private": true,
+  "type": "module",
   "description": "How to traverse IPLD graphs",
   "keywords": [],
   "license": "MIT",
@@ -14,12 +15,12 @@
   },
   "dependencies": {
     "@ipld/dag-pb": "^2.1.3",
-    "ipfs-core": "^0.14.0",
+    "ipfs-core": "^0.15.2",
     "ipld-ethereum": "^6.0.0",
     "ipld-format-to-blockcodec": "0.0.1",
     "ipld-git": "^0.6.1",
     "js-sha3": "^0.8.0",
-    "multiformats": "^9.4.1"
+    "multiformats": "^9.6.5"
   },
   "devDependencies": {
     "test-util-ipfs-example": "^1.0.2"

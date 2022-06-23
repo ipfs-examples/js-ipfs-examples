@@ -1,7 +1,5 @@
-'use strict'
-
-const createNode = require('./create-node')
-const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
+import createNode from './create-node.js'
+import { fromString as uint8ArrayFromString } from 'uint8arrays/from-string'
 
 async function main () {
   const ipfs = await createNode()

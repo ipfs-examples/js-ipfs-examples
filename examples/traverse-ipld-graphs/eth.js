@@ -1,19 +1,21 @@
-'use strict'
+import createNode from './create-node.js'
+import path from 'path'
+import { CID } from 'multiformats/cid'
+import * as MultihashDigest from 'multiformats/hashes/digest'
+import fs from 'fs/promises'
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
+import { convert } from 'ipld-format-to-blockcodec'
+import sha3 from 'js-sha3'
+import { fileURLToPath } from 'url'
+import * as ipldEth from 'ipld-ethereum'
 
-const createNode = require('./create-node')
-const path = require('path')
-const { CID } = require('multiformats/cid')
-const MultihashDigest = require('multiformats/hashes/digest')
-const fs = require('fs').promises
-const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
-const { convert } = require('ipld-format-to-blockcodec')
-const sha3 = require('js-sha3')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 async function main () {
   const ipfs = await createNode({
     ipld: {
       codecs: [
-        ...Object.values(require('ipld-ethereum')).map(format => convert(format))
+        ...Object.values(ipldEth).map(format => convert(format))
       ],
       hashers: [{
         name: 'keccak-256',

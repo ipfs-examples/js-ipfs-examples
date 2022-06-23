@@ -1,5 +1,3 @@
-'use strict'
-
 import {html, LitElement} from 'lit';
 import { create } from 'ipfs-core'
 

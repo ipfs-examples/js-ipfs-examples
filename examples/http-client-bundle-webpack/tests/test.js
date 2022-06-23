@@ -1,15 +1,15 @@
-'use strict'
-
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
+import { test, expect } from '@playwright/test';
+import { playwright } from 'test-util-ipfs-example';
+import * as ipfsModule from 'ipfs'
+import * as ipfsHttpModule from 'ipfs-http-client'
 
 // Setup
 const play = test.extend({
   ...playwright.servers(),
   ...playwright.daemons(
     {
-      ipfsHttpModule: require('ipfs-http-client'),
-      ipfsBin: require('ipfs').path()
+      ipfsHttpModule,
+      ipfsBin: ipfsModule.path()
     },
     {},
     [
@@ -52,12 +52,12 @@ play.describe('bundle http client with webpack:', () => {
   })
 
   play('should upload a file without file name and display a valid link to preview', async ({ page, daemons}) => {
-    const jsDaemon = daemons.find(m => m.api.peerId.agentVersion.includes("js-ipfs"))
+    const jsDaemon = daemons.find(m => m._peerId.agentVersion.includes("js-ipfs"))
 
     let jsAddress = jsDaemon.apiAddr.toString().split('/');
     jsAddress.pop();
     jsAddress = jsAddress.join('/')
-    const jsPeerId = jsDaemon.api.peerId.id.toString();
+    const jsPeerId = jsDaemon.peer.id.toString();
 
     const text = "hello world from webpack IPFS"
     await page.fill(textInput, text);

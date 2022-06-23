@@ -1,7 +1,8 @@
-'use strict'
+import { node } from 'test-util-ipfs-example'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-const { node } = require('test-util-ipfs-example');
-const path = require('path')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 async function test () {
   await node.waitForOutput('Added file contents: Hello World 101', 'node', [path.resolve(__dirname, '../index.js')])

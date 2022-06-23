@@ -1,21 +1,22 @@
-'use strict'
-
-const { test } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
+import { test } from '@playwright/test';
+import { playwright } from 'test-util-ipfs-example'
+import * as ipfsModule from 'ipfs'
+import * as ipfsHttpModule from 'ipfs-http-client'
+import * as goIpfsModule from 'go-ipfs'
 
 // Setup
 const play = test.extend({
   ...playwright.servers(),
   ...playwright.daemons(
     {
-      ipfsHttpModule: require('ipfs-http-client'),
+      ipfsHttpModule,
     },
     {
       js: {
-        ipfsBin: require('ipfs').path()
+        ipfsBin: ipfsModule.path()
       },
       go: {
-        ipfsBin: require('go-ipfs').path(),
+        ipfsBin: goIpfsModule.path(),
         args: ['--enable-pubsub-experiment']
       }
     },
@@ -89,14 +90,17 @@ play.describe('http client pubsub:', () => {
     const pageOne = pages[0];
     const pageTwo = pages[1];
 
-    const jsDaemon = daemons.find(m => m.api.peerId.agentVersion.includes("js-ipfs"))
-    const goDaemon = daemons.find(m => m.api.peerId.agentVersion.includes("go-ipfs"))
+    const jsDaemon = daemons.find(m => {
+      console.info(m._peerId.agentVersion)
+      return m._peerId.agentVersion.includes("js-ipfs")
+    })
+    const goDaemon = daemons.find(m => m._peerId.agentVersion.includes("go-ipfs"))
 
     const goAddress = goDaemon.apiAddr.toString();
     const jsAddress = jsDaemon.apiAddr.toString()
 
-    const goPeerIdAddress = goDaemon.api.peerId.addresses[0].toString()
-    const jsPeerIdAddress = jsDaemon.api.peerId.addresses[0].toString()
+    const goPeerIdAddress = goDaemon._peerId.addresses[0].toString()
+    const jsPeerIdAddress = jsDaemon._peerId.addresses[0].toString()
 
     await pageOne.fill(apiInput, jsAddress);
     await pageOne.click(connectBtn);
@@ -107,7 +111,6 @@ play.describe('http client pubsub:', () => {
     await pageTwo.waitForSelector(`${output}:has-text('Connecting to ${goAddress}')`);
 
     // Connect to Peer
-
     await pageOne.fill(peerAddressInput, goPeerIdAddress);
     await pageOne.click(peerAddressBtn);
     await pageOne.waitForSelector(`${output}:has-text('Connecting to peer ${goPeerIdAddress}')`);

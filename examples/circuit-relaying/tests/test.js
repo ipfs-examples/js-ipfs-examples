@@ -1,10 +1,7 @@
-'use strict'
-
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
-const path = require('path')
-const os = require('os')
-const fs = require('fs-extra')
+import { test, expect } from '@playwright/test';
+import { playwright } from 'test-util-ipfs-example';
+import * as ipfsHttpModule from 'ipfs-http-client'
+import * as ipfsCoreModule from 'ipfs-core'
 
 // Setup
 const play = test.extend({
@@ -22,8 +19,8 @@ const play = test.extend({
   ),
   ...playwright.daemons(
     {
-      ipfsModule: require('ipfs-core'),
-      ipfsHttpModule: require('ipfs-http-client')
+      ipfsModule: ipfsCoreModule,
+      ipfsHttpModule
     },
     {},
     [

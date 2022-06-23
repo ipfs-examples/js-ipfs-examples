@@ -1,5 +1,3 @@
-'use strict'
-
 const modalScreen = document.getElementById('modal-screen')
 
 modalScreen.onclick = (event) => {
@@ -33,7 +31,7 @@ const getValue = (id) => {
   return element.value.trim()
 }
 
-const hideForms = () => {
+export const hideForms = () => {
   modalScreen.style.display = 'none'
 
   Object.values(forms)
@@ -42,7 +40,7 @@ const hideForms = () => {
     })
 }
 
-const showForm = (form) => {
+export const showForm = (form) => {
   return (event) => {
     event.preventDefault()
 
@@ -51,7 +49,7 @@ const showForm = (form) => {
   }
 }
 
-const mkdirForm = (onMkdir) => {
+export const mkdirForm = (onMkdir) => {
   const button = document.getElementById('button-mkdir')
   const submit = document.getElementById('button-form-mkdir-submit')
 
@@ -71,7 +69,7 @@ const mkdirForm = (onMkdir) => {
   button.disabled = false
 }
 
-const mvForm = (onMv) => {
+export const mvForm = (onMv) => {
   const button = document.getElementById('button-mv')
   const submit = document.getElementById('button-form-mv-submit')
 
@@ -92,7 +90,7 @@ const mvForm = (onMv) => {
   button.disabled = false
 }
 
-const cpForm = (onCp) => {
+export const cpForm = (onCp) => {
   const button = document.getElementById('button-cp')
   const submit = document.getElementById('button-form-cp-submit')
 
@@ -113,7 +111,7 @@ const cpForm = (onCp) => {
   button.disabled = false
 }
 
-const rmForm = (onRm) => {
+export const rmForm = (onRm) => {
   const button = document.getElementById('button-rm')
   const submit = document.getElementById('button-form-rm-submit')
 
@@ -130,7 +128,7 @@ const rmForm = (onRm) => {
   button.disabled = false
 }
 
-const statForm = (onStat) => {
+export const statForm = (onStat) => {
   const button = document.getElementById('button-stat')
   const submit = document.getElementById('button-form-stat-submit')
 
@@ -149,7 +147,7 @@ const statForm = (onStat) => {
   button.disabled = false
 }
 
-const readForm = (onRead) => {
+export const readForm = (onRead) => {
   const button = document.getElementById('button-read')
   const submit = document.getElementById('button-form-read-submit')
 
@@ -165,14 +163,4 @@ const readForm = (onRead) => {
   }
 
   button.disabled = false
-}
-
-export {
-  mkdirForm,
-  mvForm,
-  rmForm,
-  cpForm,
-  statForm,
-  readForm,
-  hideForms
 }

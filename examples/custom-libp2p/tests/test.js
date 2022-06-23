@@ -1,13 +1,14 @@
-'use strict'
+import path from 'path'
+import { node } from 'test-util-ipfs-example'
+import { createLibp2p } from 'libp2p'
+import { TCP } from '@libp2p/tcp'
+import { Mplex } from '@libp2p/mplex'
+import { Noise } from '@chainsafe/libp2p-noise'
+import { createEd25519PeerId } from '@libp2p/peer-id-factory'
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
+import { fileURLToPath } from 'url'
 
-const path = require('path')
-const { node } = require('test-util-ipfs-example');
-const Libp2p = require('libp2p')
-const TCP = require('libp2p-tcp')
-const MPLEX = require('libp2p-mplex')
-const { NOISE } = require('@chainsafe/libp2p-noise')
-const PeerId = require('peer-id')
-const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 async function test () {
   let output = ''
@@ -27,23 +28,21 @@ async function test () {
 
         console.info('Dialling', address)
 
-        const peerId = await PeerId.create()
-        const libp2p = await Libp2p.create({
+        const peerId = await createEd25519PeerId()
+        const libp2p = await createLibp2p({
           peerId,
           addresses: {
             listen: ['/ip4/127.0.0.1/tcp/0']
           },
-          modules: {
-            transport: [
-              TCP
-            ],
-            streamMuxer: [
-              MPLEX
-            ],
-            connEncryption: [
-              NOISE
-            ]
-          }
+          transports: [
+            new TCP()
+          ],
+          streamMuxers: [
+            new Mplex()
+          ],
+          connectionEncryption: [
+            new Noise()
+          ]
         })
         await libp2p.start()
         await libp2p.dial(address)

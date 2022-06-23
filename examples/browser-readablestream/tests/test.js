@@ -1,8 +1,6 @@
-'use strict'
-
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
-const fs = require('fs');
+import { test, expect } from '@playwright/test';
+import { playwright } from 'test-util-ipfs-example';
+import fs from 'fs';
 
 // Setup
 const play = test.extend({

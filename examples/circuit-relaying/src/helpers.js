@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-'use strict'
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
+import Room from 'ipfs-pubsub-room'
 
-const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
-
-const Room = require('ipfs-pubsub-room')
 const $message = document.querySelector('#message')
 const $msgs = document.querySelector('#msgs')
 const $addrs = document.querySelector('#addrs')

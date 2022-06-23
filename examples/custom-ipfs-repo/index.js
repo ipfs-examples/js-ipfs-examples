@@ -1,19 +1,20 @@
-'use strict'
-
-const { create } = require('ipfs-core')
-const { createRepo } = require('ipfs-repo')
-const FSLock = require('ipfs-repo/locks/fs')
-const all = require('it-all')
-const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
-const { concat: uint8ArrayConcat } = require('uint8arrays/concat')
-const { FsDatastore } = require('datastore-fs')
-const { BlockstoreDatastoreAdapter } = require('blockstore-datastore-adapter')
+import { create } from 'ipfs-core'
+import { createRepo } from 'ipfs-repo'
+import { FSLock } from 'ipfs-repo/locks/fs'
+import all from 'it-all'
+import { fromString as uint8ArrayFromString } from 'uint8arrays/from-string'
+import { concat as uint8ArrayConcat } from 'uint8arrays/concat'
+import { FsDatastore } from 'datastore-fs'
+import { BlockstoreDatastoreAdapter } from 'blockstore-datastore-adapter'
+import * as dagPb from '@ipld/dag-pb'
+import * as dagCbor from '@ipld/dag-cbor'
+import * as raw from 'multiformats/codecs/raw'
 
 // multiformat codecs to support
 const codecs = [
-  require('@ipld/dag-pb'),
-  require('@ipld/dag-cbor'),
-  require('multiformats/codecs/raw')
+  dagPb,
+  dagCbor,
+  raw
 ].reduce((acc, curr) => {
   acc[curr.name] = curr
   acc[curr.code] = curr

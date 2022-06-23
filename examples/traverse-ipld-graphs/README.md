@@ -84,15 +84,19 @@ By default IPFS is bundled with [dag-pb](https://www.npmjs.com/package/ipld-dag-
 To configure other types, we must pass the `ipld.formats` option to the `IPFS.create()` function:
 
 ```javascript
-const IPFS = require("ipfs");
+import * as IPFS from 'ipfs'
+import * as ipldGit from 'ipld-git'
+import * as ipldZcash from 'ipld-zcash'
+import * as ipldBitcoin from 'ipld-bitcoin'
+import * as ipldEth from 'ipld-ethereum'
 
 const node = await IPFS.create({
   ipld: {
     formats: [
-      require("ipld-git"),
-      require("ipld-zcash"),
-      require("ipld-bitcoin"),
-      ...Object.values(require("ipld-ethereum")), // this format exports multiple codecs so flatten into a list
+      ipldGit,
+      ipldZcash,
+      ipldBitcoin,
+      ...Object.values(ipldEth), // this format exports multiple codecs so flatten into a list
       // etc, etc
     ],
   },

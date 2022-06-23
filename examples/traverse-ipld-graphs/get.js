@@ -1,6 +1,4 @@
-'use strict'
-
-const createNode = require('./create-node')
+import createNode from './create-node.js'
 
 async function main () {
   const ipfs = await createNode()

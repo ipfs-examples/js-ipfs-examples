@@ -1,10 +1,8 @@
-'use strict'
-
-const IPFS = require('ipfs-core')
-const all = require('it-all')
-const { concat: uint8ArrayConcat } = require('uint8arrays/concat')
-const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
-const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
+import * as IPFS from 'ipfs-core'
+import all from 'it-all'
+import { concat as uint8ArrayConcat } from 'uint8arrays/concat'
+import { fromString as uint8ArrayFromString } from 'uint8arrays/from-string'
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
 
 async function main () {
   const node = await IPFS.create()

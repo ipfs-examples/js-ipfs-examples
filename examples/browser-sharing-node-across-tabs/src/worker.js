@@ -1,5 +1,3 @@
-'use strict'
-
 import { create } from 'ipfs-core'
 import { Server, IPFSService } from 'ipfs-message-port-server'
 

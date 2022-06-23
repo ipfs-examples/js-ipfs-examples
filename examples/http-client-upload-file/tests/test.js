@@ -1,16 +1,19 @@
-'use strict'
+import { test, expect } from '@playwright/test';
+import path from 'path'
+import { playwright } from 'test-util-ipfs-example';
+import { fileURLToPath } from 'url'
+import * as ipfsModule from 'ipfs'
+import * as ipfsHttpModule from 'ipfs-http-client'
 
-const { test, expect } = require('@playwright/test');
-const path = require('path')
-const { playwright } = require('test-util-ipfs-example');
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Setup
 const play = test.extend({
   ...playwright.servers(),
   ...playwright.daemons(
     {
-      ipfsHttpModule: require('ipfs-http-client'),
-      ipfsBin: require('ipfs').path()
+      ipfsHttpModule,
+      ipfsBin: ipfsModule.path()
     },
     {},
     [

@@ -36,7 +36,7 @@
   - [4. Dial to a node using WebSockets (your desktop ones)](#4-dial-to-a-node-using-websockets-your-desktop-ones)
   - [5. Transfer files between all of your nodes!](#5-transfer-files-between-all-of-your-nodes)
 - [Going to production?](#going-to-production)
-  - [Use your own `libp2p-webrtc-star` signalling server](#use-your-own-libp2p-webrtc-star-signalling-server)
+  - [Use your own `@libp2p/webrtc-star` signalling server](#use-your-own-libp2pwebrtc-star-signalling-server)
 - [References](#references)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
@@ -101,7 +101,7 @@ Here's what we are going to be doing:
 
 1. Install a `go-ipfs` or `js-ipfs` node in your machine
 2. Make your daemons listen on WebSockets
-3. Start a `libp2p-webrtc-star` signalling server
+3. Start a `@libp2p/webrtc-star` signalling server
 4. Start the app
 5. Dial to a node using WebSockets (your desktop ones)
 6. Transfer files between all of your nodes!
@@ -267,14 +267,14 @@ _For more examples, please refer to the [Documentation](#documentation)_
 
 This example uses public webrtc-star servers. These servers should be used for experimenting and demos, they **MUST** not be used in production as there is no guarantee on availability.
 
-### Use your own `libp2p-webrtc-star` signalling server
+### Use your own `@libp2p/webrtc-star` signalling server
 
 This server allows the two browser nodes to talk to each other by doing the initial handshake and network introductions.
 
-First install the `libp2p-webrtc-star-signalling-server` module globally:
+First install the `@libp2p/webrtc-star-signalling-server` module globally:
 
 ```sh
-> npm install -g libp2p-webrtc-star-signalling-server
+> npm install -g @libp2p/webrtc-star-signalling-server
 ```
 
 This will give you the `webrtc-star` command. Use this to start a signalling server:

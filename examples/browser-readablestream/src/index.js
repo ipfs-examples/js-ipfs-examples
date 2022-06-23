@@ -6,7 +6,7 @@ import {
   statusMessages,
   createVideoElement,
   log
-} from './utils'
+} from './utils.js'
 
 const App = async () => {
   // DOM

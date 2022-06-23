@@ -1,7 +1,5 @@
-'use strict'
-
-const PATH = require('path')
-const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
+import path from 'path'
+import { fromString as uint8ArrayFromString } from 'uint8arrays/from-string'
 
 /**
  * Uses an object in an S3 bucket as a lock to signal that an IPFS repo is in use.

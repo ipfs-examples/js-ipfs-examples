@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
     "start": "node in-process-node.js & node daemon-node.js",
@@ -11,10 +12,10 @@
   },
   "dependencies": {
     "dag-jose": "^1.0.0",
-    "ipfs-core": "^0.14.0",
-    "ipfs-daemon": "^0.12.0",
-    "ipfs-http-client": "^56.0.0",
-    "multiformats": "^9.4.1",
+    "ipfs-core": "^0.15.2",
+    "ipfs-daemon": "^0.13.3",
+    "ipfs-http-client": "^57.0.1",
+    "multiformats": "^9.6.5",
     "uint8arrays": "^3.0.0"
   },
   "devDependencies": {

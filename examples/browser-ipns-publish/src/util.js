@@ -1,4 +1,4 @@
-exports.Logger = outEl => {
+export const Logger = outEl => {
   outEl.innerHTML = ''
   return message => {
     const container = document.createElement('div')
@@ -8,7 +8,7 @@ exports.Logger = outEl => {
   }
 }
 
-exports.onEnterPress = fn => {
+export const onEnterPress = fn => {
   return e => {
     if (event.which == 13 || event.keyCode == 13) {
       e.preventDefault()
@@ -17,7 +17,7 @@ exports.onEnterPress = fn => {
   }
 }
 
-exports.catchAndLog = (fn, log) => {
+export const catchAndLog = (fn, log) => {
   return async (...args) => {
     try {
       await fn(...args)

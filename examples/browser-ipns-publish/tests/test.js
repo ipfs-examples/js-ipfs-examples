@@ -1,15 +1,15 @@
-'use strict'
-
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
+import { test, expect } from '@playwright/test'
+import { playwright } from 'test-util-ipfs-example'
+import * as goIpfsModule from 'go-ipfs'
+import * as ipfsHttpModule from 'ipfs-http-client'
 
 // Setup
 const play = test.extend({
   ...playwright.servers(),
   ...playwright.daemons(
     {
-      ipfsHttpModule: require("ipfs-http-client"),
-      ipfsBin: require("go-ipfs").path(),
+      ipfsHttpModule,
+      ipfsBin: goIpfsModule.path(),
       args: [
         "--enable-pubsub-experiment",
         '--enable-namesys-pubsub'
@@ -54,7 +54,7 @@ play.describe('http ipns publish:', () => {
   const publish = "#publish"
 
   play.beforeEach(async ({servers, page, daemons}) => {
-    await daemons[0].api.swarm.connect(await daemons[1].api.peerId.addresses[0])
+    await daemons[0].api.swarm.connect(await daemons[1]._peerId.addresses[0])
 
     await page.goto(`http://localhost:${servers[0].port}/`);
   })
@@ -66,7 +66,7 @@ play.describe('http ipns publish:', () => {
     const { cid } = await goNode.api.add(`Some data ${Date.now()}`)
     const topic = `/ipfs/${cid}`;
 
-    const peerAddr = goNode.api.peerId.addresses
+    const peerAddr = goNode._peerId.addresses
       .map(addr => addr.toString())
       .filter(addr => addr.includes("/ws/p2p/"))
       .pop()

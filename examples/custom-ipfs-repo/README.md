@@ -81,7 +81,7 @@ This example leverages [datastore-fs](https://github.com/ipfs/js-datastore-fs) t
 This example uses one of the locks that comes with IPFS Repo. If you would like to control how locking happens, such as with a centralized S3 IPFS Repo, you can pass in your own custom lock. See [custom-lock.js](./custom-lock.js) for an example of a custom lock that can be used for [datastore-s3](https://github.com/ipfs/js-datastore-s3). This is also being used in the [full S3 example](https://github.com/ipfs/js-datastore-s3/tree/master/examples/full-s3-repo).
 
 ```js
-const S3Lock = require('./custom-lock')
+import S3Lock from './custom-lock.js'
 
 const repo = new Repo('/tmp/.ipfs', {
   ...

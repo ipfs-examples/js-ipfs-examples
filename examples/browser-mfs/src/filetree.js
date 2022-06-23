@@ -1,8 +1,6 @@
-'use strict'
-
-const {
+import {
   createNode
-} = require('./utils')
+} from './utils.js'
 
 const FILE_TYPES = {
   FILE: 'file',
@@ -11,7 +9,7 @@ const FILE_TYPES = {
 
 let selected = {}
 
-const getSelected = () => {
+export const getSelected = () => {
   return Object.values(selected)
 }
 
@@ -55,7 +53,7 @@ const listFiles = (parent, files, prefix) => {
   })
 }
 
-const updateTree = async (ipfs) => {
+export const updateTree = async (ipfs) => {
   const files = await loadFiles(ipfs, '/')
   const container = document.querySelector('#files')
 
@@ -66,9 +64,4 @@ const updateTree = async (ipfs) => {
   container.appendChild(createNode('pre', '/'))
 
   listFiles(container, files, '')
-}
-
-export {
-  getSelected,
-  updateTree
 }

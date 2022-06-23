@@ -1,6 +1,4 @@
 /* eslint-disable no-console */
-'use strict'
-
 import { create as ipfsHttp } from 'ipfs-http-client'
 
 const App = () => {

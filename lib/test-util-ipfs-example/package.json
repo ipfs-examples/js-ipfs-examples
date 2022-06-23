@@ -2,6 +2,7 @@
   "name": "test-util-ipfs-example",
   "version": "1.0.2",
   "description": "Utilities to test ipfs examples",
+  "type": "module",
   "keywords": [
     "test",
     "examples",
@@ -19,16 +20,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "clean": "echo Nothing to clean..."
   },
   "dependencies": {
-    "execa": "^5.1.1",
-    "fs-extra": "^9.1.0",
-    "ipfsd-ctl": "^10.0.3",
+    "execa": "^6.0.0",
+    "fs-extra": "^10.1.0",
+    "ipfsd-ctl": "^11.0.1",
     "polka": "^0.5.2",
-    "sirv": "^1.0.12",
+    "sirv": "^2.0.2",
     "stoppable": "^1.1.0",
-    "uint8arrays": "^2.1.7",
+    "uint8arrays": "^3.0.0",
     "which": "^2.0.2"
   }
 }

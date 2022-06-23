@@ -5,8 +5,8 @@ import 'tachyons'
 import "ipfs-css";
 import './index.css'
 
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './App.js';
+import reportWebVitals from './reportWebVitals.js';
 
 ReactDOM.render(
   <React.StrictMode>

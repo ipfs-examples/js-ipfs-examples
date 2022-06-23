@@ -1,21 +1,16 @@
-"use strict";
-
-const IpfsHttpClient = require("ipfs-http-client");
-const ipns = require("ipns");
-const IPFS = require("ipfs-core");
-const pRetry = require("p-retry");
-const last = require("it-last");
-const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
-const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
-const { base58btc } = require('multiformats/bases/base58')
-const { base36 } = require('multiformats/bases/base36')
-const { CID } = require('multiformats/cid')
-const Digest = require('multiformats/hashes/digest')
-const WS = require('libp2p-websockets')
-const transportKey = WS.prototype[Symbol.toStringTag]
-const filters = require('libp2p-websockets/src/filters')
-
-const { Logger, onEnterPress, catchAndLog } = require("./util");
+import * as IpfsHttpClient from "ipfs-http-client";
+import * as ipns from "ipns";
+import * as IPFS from "ipfs-core";
+import pRetry from "p-retry";
+import last from "it-last";
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
+import { fromString as uint8ArrayFromString } from 'uint8arrays/from-string'
+import { base36 } from 'multiformats/bases/base36'
+import { CID } from 'multiformats/cid'
+import * as Digest from 'multiformats/hashes/digest'
+import { WebSockets } from '@libp2p/websockets'
+import * as filters from '@libp2p/websockets/filters'
+import { Logger, onEnterPress, catchAndLog } from "./util";
 
 async function main() {
   const apiUrlInput = document.getElementById("api-url");
@@ -46,16 +41,14 @@ async function main() {
     pass: "01234567890123456789",
     EXPERIMENTAL: { ipnsPubsub: true },
     libp2p: {
-      config: {
-        transport: {
-          // This is added for local demo!
-          // In a production environment the default filter should be used
-          // where only DNS + WSS addresses will be dialed by websockets in the browser.
-          [transportKey]: {
-            filter: filters.all
-          }
-        }
-      }
+      transports: [
+        // This is added for local demo!
+        // In a production environment the default filter should be used
+        // where only DNS + WSS addresses will be dialed by websockets in the browser.
+        new WebSockets({
+          filter: filters.all
+        })
+      ]
     }
   });
   const { id } = await ipfsBrowser.id();
@@ -224,8 +217,7 @@ async function main() {
     last(ipfsAPI.name.resolve(keys.id, { stream: false })); // save the pubsub topic to the server to make them listen
 
     // set up the topic from ipns key
-    let b58 = base58btc.decode(`z${keys.id}`)
-    const ipnsKeys = ipns.getIdKeys(b58);
+    const ipnsKeys = ipns.peerIdToRoutingKey(browserNode.id);
     const topic = `${namespace}${uint8ArrayToString(ipnsKeys.routingKey.uint8Array(), 'base64url')}`;
 
     // subscribe and log on both nodes

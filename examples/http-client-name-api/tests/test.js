@@ -1,15 +1,15 @@
-'use strict'
-
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
+import { test, expect } from '@playwright/test';
+import { playwright } from 'test-util-ipfs-example';
+import * as ipfsHttpModule from 'ipfs-http-client'
+import * as goIpfsModule from 'go-ipfs'
 
 // Setup
 const play = test.extend({
   ...playwright.servers(),
   ...playwright.daemons(
     {
-      ipfsHttpModule: require('ipfs-http-client'),
-      ipfsBin: require('go-ipfs').path(),
+      ipfsHttpModule,
+      ipfsBin: goIpfsModule.path(),
       args: ['--enable-pubsub-experiment']
     },
     {},

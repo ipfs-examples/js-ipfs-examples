@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IpfsService } from './ipfs.service';
+import { PeerId } from '@libp2p/interface-peer-id';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { IpfsService } from './ipfs.service';
 })
 export class AppComponent implements OnInit {
   title = 'browser-angular';
-  id: string | null = null;
+  id: PeerId | null = null;
   version: string | null  = null;
   status: string | null  = null;
 

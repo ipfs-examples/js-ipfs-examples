@@ -1,7 +1,8 @@
-'use strict'
+import path from 'path'
+import { node } from 'test-util-ipfs-example'
+import { fileURLToPath } from 'url'
 
-const path = require('path')
-const { node } = require('test-util-ipfs-example');
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const testInProcessNode = async () => {
   await node.waitForOutput(

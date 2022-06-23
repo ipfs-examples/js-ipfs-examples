@@ -1,13 +1,11 @@
-'use strict'
-
-const Libp2p = require('libp2p')
-const IPFS = require('ipfs-core')
-const TCP = require('libp2p-tcp')
-const MulticastDNS = require('libp2p-mdns')
-const Bootstrap = require('libp2p-bootstrap')
-const KadDHT = require('libp2p-kad-dht')
-const MPLEX = require('libp2p-mplex')
-const { NOISE } = require('@chainsafe/libp2p-noise')
+import { createLibp2p } from 'libp2p'
+import * as IPFS from 'ipfs-core'
+import { TCP } from '@libp2p/tcp'
+import { MulticastDNS } from '@libp2p/mdns'
+import { Bootstrap } from '@libp2p/bootstrap'
+import { KadDHT } from '@libp2p/kad-dht'
+import { Mplex } from '@libp2p/mplex'
+import { Noise } from '@chainsafe/libp2p-noise'
 
 /**
  * Options for the libp2p bundle
@@ -30,7 +28,7 @@ const libp2pBundle = (opts) => {
 
   // Build and return our libp2p node
   // n.b. for full configuration options, see https://github.com/libp2p/js-libp2p/blob/master/doc/CONFIGURATION.md
-  return Libp2p.create({
+  return createLibp2p({
     peerId,
     addresses: {
       listen: ['/ip4/127.0.0.1/tcp/0']
@@ -39,56 +37,34 @@ const libp2pBundle = (opts) => {
     connectionManager: {
       minPeers: 25,
       maxPeers: 100,
-      pollInterval: 5000
+      pollInterval: 5000,
+      autoDial: true, // auto dial to peers we find when we have less peers than `connectionManager.minPeers`
     },
-    modules: {
-      transport: [
-        TCP
-      ],
-      streamMuxer: [
-        MPLEX
-      ],
-      connEncryption: [
-        NOISE
-      ],
-      peerDiscovery: [
-        MulticastDNS,
-        Bootstrap
-      ],
-      dht: KadDHT
-    },
-    config: {
-      peerDiscovery: {
-        autoDial: true, // auto dial to peers we find when we have less peers than `connectionManager.minPeers`
-        mdns: {
-          interval: 10000,
-          enabled: true
-        },
-        bootstrap: {
-          interval: 30e3,
-          enabled: true,
-          list: bootstrapList
-        }
-      },
-      // Turn on relay with hop active so we can connect to more peers
-      relay: {
+    transports: [
+      new TCP()
+    ],
+    streamMuxers: [
+      new Mplex()
+    ],
+    connectionEncryption: [
+      new Noise()
+    ],
+    peerDiscovery: [
+      new MulticastDNS({
+        interval: 10000
+      }),
+      new Bootstrap({
+        interval: 30e3,
+        list: bootstrapList
+      })
+    ],
+    dht: new KadDHT(),
+    // Turn on relay with hop active so we can connect to more peers
+    relay: {
+      enabled: true,
+      hop: {
         enabled: true,
-        hop: {
-          enabled: true,
-          active: true
-        }
-      },
-      dht: {
-        enabled: true,
-        kBucketSize: 20,
-        randomWalk: {
-          enabled: true,
-          interval: 10e3, // This is set low intentionally, so more peers are discovered quickly. Higher intervals are recommended
-          timeout: 2e3 // End the query quickly since we're running so frequently
-        }
-      },
-      pubsub: {
-        enabled: true
+        active: true
       }
     },
     metrics: {
