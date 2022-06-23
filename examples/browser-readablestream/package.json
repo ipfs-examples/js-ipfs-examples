@@ -15,13 +15,16 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
+    "buffer": "^6.0.3",
     "ipfs-core": "^0.15.2",
     "it-to-stream": "^1.0.0",
     "videostream": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
     "@playwright/test": "^1.12.3",
+    "@rollup/plugin-inject": "^4.0.4",
     "events": "^3.3.0",
     "playwright": "^1.12.3",
     "process": "^0.11.10",

@@ -16,7 +16,7 @@ const mkRoomName = (name) => {
 
 export default (ipfs, peersSet) => {
   const createRoom = (name) => {
-    const room = new Room(ipfs, mkRoomName(name))
+    const room = new Room(ipfs.libp2p, mkRoomName(name))
 
     room.on('peer joined', (peer) => {
       console.log('peer ' + peer + ' joined')
