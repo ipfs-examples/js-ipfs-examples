@@ -2,6 +2,7 @@
   "name": "example-browser-nextjs",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "clean": "rimraf ./dist ./.next",
     "dev": "next dev",

@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "workspaces": [
-    "examples/!(browser-nextjs)",
+    "examples/*",
     "lib/*"
   ],
   "scripts": {
