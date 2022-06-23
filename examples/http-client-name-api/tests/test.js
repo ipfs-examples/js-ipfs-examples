@@ -60,7 +60,7 @@ play.describe('bundle http client with webpack: ', () => {
   const resolveResult = '#resolve-result'
 
   play.beforeEach(async ({servers, page, daemons}) => {
-    await daemons[0].api.swarm.connect(await daemons[1].api.peerId.addresses[0])
+    await daemons[0].api.swarm.connect(await daemons[1]._peerId.addresses[0])
     await page.goto(`http://localhost:${servers[0].port}/`);
   })
 
