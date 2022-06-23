@@ -20,7 +20,7 @@
     "delay": "^5.0.0",
     "ipfs-core": "^0.15.2",
     "ipfs-css": "^1.3.0",
-    "ipfs-pubsub-room": "^2.0.1",
+    "ipfs-pubsub-room": "^2.0.2",
     "uint8arrays": "^3.0.0"
   },
   "devDependencies": {

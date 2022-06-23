@@ -3,7 +3,6 @@ import { create } from 'ipfs-core'
 import { WebSockets } from '@libp2p/websockets'
 import * as filters from '@libp2p/websockets/filters'
 import Helpers from './helpers.js'
-const transportKey = WS.prototype[Symbol.toStringTag]
 
 document.addEventListener('DOMContentLoaded', async () => {
   const $peerId = document.querySelector('#peer-id')

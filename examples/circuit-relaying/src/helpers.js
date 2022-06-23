@@ -14,7 +14,7 @@ const mkRoomName = (name) => {
   return `${NAMESPACE}-${name}`
 }
 
-module.exports = (ipfs, peersSet) => {
+export default (ipfs, peersSet) => {
   const createRoom = (name) => {
     const room = new Room(ipfs, mkRoomName(name))
 
@@ -68,7 +68,6 @@ module.exports = (ipfs, peersSet) => {
 
     // see which peers support the circuit relay protocol
     const relayAddrs = []
-    const connections = ipfs.libp2p.connections
     const peers = await ipfs.swarm.peers()
 
     for (let i = 0; i < peers.length; i++) {
@@ -76,7 +75,7 @@ module.exports = (ipfs, peersSet) => {
         peer: peerId
       } = peers[i]
 
-      const cons = connections.get(peerId)
+      const cons = ipfs.libp2p.getConnections(peerId)
 
       for (let j = 0; j < cons.length; j++) {
         const con = cons[j]
