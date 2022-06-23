@@ -38,7 +38,7 @@ jobs:
           - http-client-name-api
           - http-client-upload-file
           - ipfs-101
-          - ipfs-client-add-files
+          #- ipfs-client-add-files
           - run-in-electron
           - running-multiple-nodes
           - traverse-ipld-graphs
