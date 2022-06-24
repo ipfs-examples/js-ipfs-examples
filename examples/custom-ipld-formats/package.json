@@ -11,7 +11,7 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "dag-jose": "^1.0.0",
+    "dag-jose": "^2.0.0",
     "ipfs-core": "^0.15.2",
     "ipfs-daemon": "^0.13.3",
     "ipfs-http-client": "^57.0.1",
