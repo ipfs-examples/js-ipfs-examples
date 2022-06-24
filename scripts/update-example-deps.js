@@ -1,8 +1,9 @@
-'use strict'
+import path from 'path'
+import fs from 'fs'
+import execa from 'execa'
+import { fileURLToPath } from 'url'
 
-const path = require('path')
-const fs = require('fs')
-const execa = require('execa')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Where an example depends on `"ipfs": "^0.51.0"` and we've just released `ipfs@0.52.0`,
 // go through all of the examples and update the version to `"ipfs": "^0.52.0"` - do

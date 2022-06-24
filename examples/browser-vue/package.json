@@ -2,6 +2,7 @@
   "name": "example-browser-vue-3",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "A minimal demonstration of how to use js-ipfs using vue 3",
   "scripts": {
     "clean": "rimraf ./dist",
@@ -33,7 +34,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "ipfs-core": "^0.14.0",
+    "ipfs-core": "^0.15.2",
     "vue": "^3.0.4"
   },
   "devDependencies": {

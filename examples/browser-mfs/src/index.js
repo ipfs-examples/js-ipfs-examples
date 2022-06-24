@@ -1,15 +1,13 @@
-'use strict'
-
 /* eslint-env browser */
 
 import {
   dragDrop,
   log,
   bufferToArrayBuffer
-} from './utils'
+} from './utils.js'
 import {
   updateTree
-} from './filetree'
+} from './filetree.js'
 import {
   mvForm,
   mkdirForm,
@@ -18,7 +16,7 @@ import {
   statForm,
   readForm,
   hideForms
-} from './forms'
+} from './forms.js'
 import mime from 'mime-sniffer'
 import { create } from 'ipfs-core'
 

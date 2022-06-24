@@ -1,7 +1,5 @@
-'use strict'
-
-const { create } = require('ipfs-core')
-const { Server, IPFSService } = require('ipfs-message-port-server')
+import { create } from 'ipfs-core'
+import { Server, IPFSService } from 'ipfs-message-port-server'
 
 console.info('hello world')
 

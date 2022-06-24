@@ -1,5 +1,5 @@
 import { IPFS, create } from 'ipfs-core'
-import type { CID } from 'ipfs-core'
+import type { CID } from 'multiformats/cid'
 
 export default async function main() {
   const node = await create()

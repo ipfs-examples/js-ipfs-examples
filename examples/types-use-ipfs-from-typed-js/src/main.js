@@ -1,8 +1,8 @@
-const { create } = require('ipfs-core')
+import { create } from 'ipfs-core'
 
 /**
  * @typedef {import('ipfs-core').IPFS} IPFS
- * @typedef {import('ipfs-core').CID} CID
+ * @typedef {import('multiformats/cid').CID} CID
  */
 
 async function main () {

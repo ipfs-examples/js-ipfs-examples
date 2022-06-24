@@ -1,7 +1,7 @@
 // @ts-check
 /* eslint-env browser, serviceworker */
 import { IPFSClient } from "ipfs-message-port-client"
-import { defer, selectClient, toReadableStream } from "./service/util"
+import { defer, selectClient, toReadableStream } from "./service/util.js"
 
 /**
  * @param {LifecycleEvent} event

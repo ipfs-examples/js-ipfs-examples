@@ -1,15 +1,15 @@
-'use strict'
-
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
+import { test, expect } from '@playwright/test';
+import { playwright } from 'test-util-ipfs-example';
+import * as ipfsModule from 'ipfs'
+import * as ipfsClientModule from 'ipfs-client'
 
 // Setup
 const play = test.extend({
   ...playwright.servers(),
   ...playwright.daemons(
     {
-      ipfsClientModule: require('ipfs-client'),
-      ipfsBin: require('ipfs').path()
+      ipfsClientModule,
+      ipfsBin: ipfsModule.path()
     },
     {},
     [

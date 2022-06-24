@@ -1,3 +1,6 @@
+import { Buffer } from 'buffer'
+globalThis.Buffer = Buffer
+
 import { create } from 'ipfs-core'
 import VideoStream from 'videostream'
 import toStream from 'it-to-stream'
@@ -6,7 +9,7 @@ import {
   statusMessages,
   createVideoElement,
   log
-} from './utils'
+} from './utils.js'
 
 const App = async () => {
   // DOM

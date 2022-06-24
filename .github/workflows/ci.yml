@@ -15,19 +15,18 @@ jobs:
         project:
           - browser-add-readable-stream
           - browser-angular
-          - browser-browserify
           - browser-create-react-app
           - browser-exchange-files
           - browser-ipns-publish
           - browser-lit
           - browser-mfs
           - browser-nextjs
-          - browser-parceljs
           - browser-readablestream
           - browser-script-tag
           - browser-service-worker
           - browser-sharing-node-across-tabs
           - browser-video-streaming
+          - browser-vite
           - browser-vue
           - browser-webpack
           - circuit-relaying
@@ -39,7 +38,7 @@ jobs:
           - http-client-name-api
           - http-client-upload-file
           - ipfs-101
-          - ipfs-client-add-files
+          #- ipfs-client-add-files
           - run-in-electron
           - running-multiple-nodes
           - traverse-ipld-graphs

@@ -75,7 +75,7 @@ You can find a complete version of this tutorial in [1.js](./1.js). For this tut
 Creating an IPFS instance can be done in one line, after requiring the module, you simply have to:
 
 ```js
-const IPFS = require("ipfs");
+import * as IPFS from 'ipfs-core';
 
 async function main() {
   const node = await IPFS.create();
@@ -88,7 +88,7 @@ main();
 As a test, we are going to check the version of the node.
 
 ```js
-const IPFS = require("ipfs");
+import * as IPFS from 'ipfs-core';
 
 async function main() {
   const node = await IPFS.create();
@@ -115,7 +115,7 @@ Now let's make it more interesting and add a file to IPFS using `node.add`. A fi
 You can learn about the IPFS File API at [interface-ipfs-core](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md).
 
 ```js
-const IPFS = require("ipfs");
+import * as IPFS from 'ipfs-core';
 
 async function main() {
   const node = await IPFS.create();
@@ -149,7 +149,7 @@ Added file: hello.txt QmXgZAUWd8yo4tvjBETqzUy3wLx5YRzuDwUQnBwRGrAmAo
 The last step of this tutorial is retrieving the file back using the `cat` 😺 call.
 
 ```js
-const IPFS = require("ipfs");
+import * as IPFS from 'ipfs-core';
 
 async function main() {
   const node = await IPFS.create();

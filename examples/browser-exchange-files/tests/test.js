@@ -1,9 +1,8 @@
-'use strict'
-
-const webRTCStarSigServer = require('libp2p-webrtc-star-signalling-server')
-
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
+import { sigServer } from '@libp2p/webrtc-star-signalling-server'
+import { test, expect } from '@playwright/test'
+import { playwright } from 'test-util-ipfs-example'
+import * as ipfsModule from 'ipfs'
+import * as ipfsHttpModule from 'ipfs-http-client'
 
 // Setup
 const play = test.extend({
@@ -21,11 +20,11 @@ const play = test.extend({
   ),
   ...playwright.daemons(
     {
-      ipfsModule: require('ipfs'),
-      ipfsHttpModule: require('ipfs-http-client')
+      ipfsModule,
+      ipfsHttpModule
     }, {
       js: {
-        ipfsBin: require('ipfs').path()
+        ipfsBin: ipfsModule.path()
       }
     },
     [
@@ -81,18 +80,18 @@ play.describe('upload file using http client: ', () => {
     await page.click(workspaceBtn)
   }
 
-  let sigServer;
+  let sigallingServer;
 
   play.beforeAll(async () => {
-    sigServer = await webRTCStarSigServer.start({
+    sigallingServer = await sigServer({
       host: '127.0.0.1',
       port: 13579
     })
   })
 
   play.afterAll(async () => {
-    if (sigServer) {
-      await sigServer.stop()
+    if (sigallingServer) {
+      await sigallingServer.stop()
     }
   })
 
@@ -160,5 +159,4 @@ play.describe('upload file using http client: ', () => {
 
     expect(passed).toBeTruthy()
   });
-
 });

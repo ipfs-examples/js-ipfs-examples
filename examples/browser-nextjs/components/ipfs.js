@@ -26,13 +26,13 @@ const IpfsComponent = () => {
     init()
   }, [ipfs]);
 
-  if (!ipfs) {
+  if (!ipfs || !id) {
     return <h4>Connecting to IPFS...</h4>
   }
 
   return (
     <div>
-      <h4 data-test="id">ID: {id}</h4>
+      <h4 data-test="id">ID: {id.toString()}</h4>
       <h4 data-test="version">Version: {version}</h4>
       <h4 data-test="status">Status: {isOnline ? 'Online' : 'Offline'}</h4>
     </div>

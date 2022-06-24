@@ -1,14 +1,12 @@
-'use strict'
-
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
+import { test, expect } from '@playwright/test';
+import { playwright } from 'test-util-ipfs-example';
 
 // Setup
 const play = test.extend({
   ...playwright.servers(),
 });
 
-play.describe('bundle ipfs with browserify:', () => {
+play.describe('bundle ipfs with parceljs:', () => {
   // DOM
   const nameInput = "#file-name"
   const contentInput = "#file-content"

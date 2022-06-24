@@ -17,13 +17,14 @@
   },
   "license": "MIT",
   "workspaces": [
-    "examples/!(browser-nextjs)"
+    "examples/!(ipfs-client-add-files)",
+    "lib/*"
   ],
   "scripts": {
     "clean": "yarn run clean:examples && yarn run clean:yarn && yarn run clean:build && yarn run clean:npm",
     "clean:npm": "rimraf ./**/package-lock.json ./**/node_modules",
     "clean:yarn": "rimraf ./**/yarn.lock",
-    "clean:build": "rimraf ./**/.parcel-cache ./**/build ./**/dist ./**/.next",
+    "clean:build": "rimraf ./**/node_modules/.vite ./**/build ./**/dist ./**/.next",
     "clean:examples": "yarn workspaces run clean",
     "test:examples": "yarn workspaces run test",
     "test": "yarn run test:examples",
@@ -31,5 +32,8 @@
   },
   "devDependencies": {
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@libp2p/webrtc-star-signalling-server": "^2.0.1"
   }
 }

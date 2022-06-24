@@ -1,11 +1,12 @@
+import path from 'path'
+import webpack from 'webpack'
+import { merge } from 'webpack-merge'
+import { fileURLToPath } from 'url'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import NodePolyfillPlugin from 'node-polyfill-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-const path = require('path')
-const webpack = require('webpack')
-const { merge } = require('webpack-merge')
-
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 /**
  * HMR/Live Reloading broken after Webpack 5 rc.0 -> rc.1 update
@@ -151,7 +152,7 @@ const common = {
   target: 'web'
 }
 
-module.exports = (cmd) => {
+export default (cmd) => {
   const production = cmd.production
   const config = production ? prod : dev
 

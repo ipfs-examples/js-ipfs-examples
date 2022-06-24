@@ -1,6 +1,4 @@
-'use strict'
-
-const createNode = (type, content, attrbutes) => {
+export const createNode = (type, content, attrbutes) => {
   attrbutes = attrbutes || {}
 
   const node = document.createElement(type)
@@ -19,7 +17,7 @@ const createNode = (type, content, attrbutes) => {
   return node
 }
 
-const log = (line) => {
+export const log = (line) => {
   const output = document.querySelector('#log')
   let message
   let className = ''
@@ -47,7 +45,7 @@ const log = (line) => {
   return node
 }
 
-const dragDrop = (onFiles) => {
+export const dragDrop = (onFiles) => {
   const container = document.querySelector('#container')
 
   container.ondragover = (event) => {
@@ -73,7 +71,7 @@ const dragDrop = (onFiles) => {
   }
 }
 
-const bufferToArrayBuffer = (buffer) => {
+export const bufferToArrayBuffer = (buffer) => {
   const ab = new ArrayBuffer(buffer.length)
   const view = new Uint8Array(ab)
 
@@ -82,11 +80,4 @@ const bufferToArrayBuffer = (buffer) => {
   }
 
   return ab
-}
-
-export {
-  log,
-  dragDrop,
-  createNode,
-  bufferToArrayBuffer
 }

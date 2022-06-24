@@ -10,15 +10,15 @@
   ],
   "license": "MIT",
   "author": "David Dias <daviddias@ipfs.io>",
-  "main": "main.js",
+  "main": "main.cjs",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
     "start": "electron .",
     "serve": "npm run start",
-    "test": "node test.js"
+    "test": "node test.mjs"
   },
   "dependencies": {
-    "ipfs-core": "^0.14.0"
+    "ipfs-core": "^0.15.2"
   },
   "devDependencies": {
     "electron": "^17.0.0",

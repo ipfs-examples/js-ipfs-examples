@@ -1,5 +1,3 @@
-'use strict'
-
 import { create } from 'ipfs-core'
 
 const main = async () => {

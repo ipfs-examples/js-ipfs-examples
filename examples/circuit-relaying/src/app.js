@@ -1,11 +1,8 @@
 /* eslint-disable no-console */
-'use strict'
-
 import { create } from 'ipfs-core'
-import WS from 'libp2p-websockets'
-import filters from 'libp2p-websockets/src/filters'
-import Helpers from './helpers'
-const transportKey = WS.prototype[Symbol.toStringTag]
+import { WebSockets } from '@libp2p/websockets'
+import * as filters from '@libp2p/websockets/filters'
+import Helpers from './helpers.js'
 
 document.addEventListener('DOMContentLoaded', async () => {
   const $peerId = document.querySelector('#peer-id')
@@ -43,16 +40,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       Bootstrap: []
     },
     libp2p: {
-      config: {
-        transport: {
-          // This is added for local demo!
-          // In a production environment the default filter should be used
-          // where only DNS + WSS addresses will be dialed by websockets in the browser.
-          [transportKey]: {
-            filter: filters.all
-          }
-        }
-      }
+      transports: [
+        // This is added for local demo!
+        // In a production environment the default filter should be used
+        // where only DNS + WSS addresses will be dialed by websockets in the browser.
+        new WebSockets({
+          filter: filters.all
+        })
+      ]
     }
   })
 

@@ -1,6 +1,4 @@
-'use strict'
-
-const IPFS = require('ipfs-core')
+import * as IPFS from 'ipfs-core'
 
 function createNode (options) {
   options = options || {}
@@ -20,4 +18,4 @@ function createNode (options) {
   })
 }
 
-module.exports = createNode
+export default createNode

@@ -1,8 +1,10 @@
-'use strict'
+import { test, expect } from '@playwright/test';
+import { playwright } from 'test-util-ipfs-example';
+import fs from 'fs';
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-const { test, expect } = require('@playwright/test');
-const { playwright } = require('test-util-ipfs-example');
-const fs = require('fs');
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Setup
 const play = test.extend({

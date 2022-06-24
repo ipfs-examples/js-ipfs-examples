@@ -2,27 +2,28 @@
   "name": "example-ipfs-client-add-files",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "",
   "scripts": {
-    "clean": "rimraf ./dist ./.cache ./.parcel-cache",
-    "build": "parcel build index.html --no-scope-hoist",
-    "serve": "parcel serve index.html --open -p 8888",
+    "clean": "rimraf ./dist ./.cache ./node_modules/.vite",
+    "build": "vite build",
+    "serve": "vite dev --port 8888",
     "start": "npm run serve",
     "test": "npm run build && playwright test tests"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-client": "^0.7.6"
+    "ipfs-client": "^0.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "ipfs": "^0.62.0",
-    "parcel": "^2.3.2",
+    "ipfs": "^0.63.3",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2",
-    "util": "^0.12.4"
+    "util": "^0.12.4",
+    "vite": "^3.0.0-beta.1"
   }
 }

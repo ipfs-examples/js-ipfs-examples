@@ -1,7 +1,4 @@
-"use strict";
-
-const { app, BrowserWindow } = require("electron");
-const IPFS = require("ipfs-core");
+const { app, BrowserWindow } = require('electron')
 
 let mainWindow;
 
@@ -30,6 +27,7 @@ app.on("ready", async () => {
   createWindow();
 
   try {
+    const IPFS = await import('ipfs-core')
     const node = await IPFS.create();
     const id = await node.id();
     console.log(id);

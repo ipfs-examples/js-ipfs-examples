@@ -1,5 +1,3 @@
-'use strict'
-
 import { create } from 'ipfs-core'
 import Hls from 'hls.js'
 import HlsjsIpfsLoader from 'hlsjs-ipfs-loader'

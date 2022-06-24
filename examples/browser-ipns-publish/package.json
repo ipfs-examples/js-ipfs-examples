@@ -2,6 +2,7 @@
   "name": "example-browser-ipns-publish",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "An example demonstrating publishing to IPNS in the browser",
   "keywords": [
     "IPNS",
@@ -14,21 +15,21 @@
   "license": "MIT",
   "author": "Doug Anderson",
   "scripts": {
-    "clean": "rimraf ./dist ./.cache ./.parcel-cache",
-    "build": "parcel build index.html --no-scope-hoist",
-    "serve": "parcel serve index.html --open -p 8888",
+    "clean": "rimraf ./dist ./.cache ./node_modules/.vite",
+    "build": "vite build",
+    "serve": "vite dev --port 8888",
     "start": "npm run serve",
     "test": "npm run build && playwright test tests --retries=3 --timeout=120000"
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-core": "^0.14.0",
-    "ipfs-http-client": "^56.0.0",
-    "ipfs-utils": "^9.0.2",
-    "ipns": "^0.16.0",
+    "@libp2p/websockets": "^1.0.8",
+    "ipfs-core": "^0.15.2",
+    "ipfs-http-client": "^57.0.1",
+    "ipfs-utils": "^9.0.6",
+    "ipns": "^1.0.2",
     "it-last": "^1.0.4",
-    "libp2p-websockets": "^0.16.1",
-    "multiformats": "^9.4.7",
+    "multiformats": "^9.6.5",
     "p-retry": "^4.2.0",
     "uint8arrays": "^3.0.0"
   },
@@ -38,12 +39,12 @@
     "delay": "^5.0.0",
     "execa": "^6.0.0",
     "go-ipfs": "^0.11.0",
-    "ipfsd-ctl": "^10.0.3",
-    "parcel": "^2.3.2",
+    "ipfsd-ctl": "^11.0.1",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2",
-    "util": "^0.12.4"
+    "util": "^0.12.4",
+    "vite": "^3.0.0-beta.1"
   }
 }

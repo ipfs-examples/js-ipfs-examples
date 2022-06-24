@@ -1,6 +1,4 @@
-'use strict'
-
-const IPFS = require('ipfs-core')
+import { create } from 'ipfs-core'
 
 const App = () => {
   let ipfs
@@ -62,7 +60,7 @@ const App = () => {
     if (!ipfs) {
       showStatus('Creating IPFS node...', COLORS.active)
 
-      ipfs = await IPFS.create({
+      ipfs = await create({
         repo: String(Math.random() + Date.now()),
         init: { alogorithm: 'ed25519' }
       })

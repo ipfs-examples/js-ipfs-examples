@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-'use strict'
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
+import Room from 'ipfs-pubsub-room'
 
-const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
-
-const Room = require('ipfs-pubsub-room')
 const $message = document.querySelector('#message')
 const $msgs = document.querySelector('#msgs')
 const $addrs = document.querySelector('#addrs')
@@ -16,9 +14,9 @@ const mkRoomName = (name) => {
   return `${NAMESPACE}-${name}`
 }
 
-module.exports = (ipfs, peersSet) => {
+export default (ipfs, peersSet) => {
   const createRoom = (name) => {
-    const room = new Room(ipfs, mkRoomName(name))
+    const room = new Room(ipfs.libp2p, mkRoomName(name))
 
     room.on('peer joined', (peer) => {
       console.log('peer ' + peer + ' joined')
@@ -34,9 +32,9 @@ module.exports = (ipfs, peersSet) => {
 
     // send and receive messages
     room.on('message', (message) => {
-      console.log('got message from ' + message.from + ': ' + uint8ArrayToString(message.data))
+      console.log('got message from ' + message.from.toString() + ': ' + uint8ArrayToString(message.data))
       const node = document.createElement('li')
-      node.innerText = `${message.from.substr(-4)}: ${uint8ArrayToString(message.data)}`
+      node.innerText = `${message.from.toString().substr(-4)}: ${uint8ArrayToString(message.data)}`
       $msgs.appendChild(node)
     })
 
@@ -70,7 +68,6 @@ module.exports = (ipfs, peersSet) => {
 
     // see which peers support the circuit relay protocol
     const relayAddrs = []
-    const connections = ipfs.libp2p.connections
     const peers = await ipfs.swarm.peers()
 
     for (let i = 0; i < peers.length; i++) {
@@ -78,7 +75,7 @@ module.exports = (ipfs, peersSet) => {
         peer: peerId
       } = peers[i]
 
-      const cons = connections.get(peerId)
+      const cons = ipfs.libp2p.getConnections(peerId)
 
       for (let j = 0; j < cons.length; j++) {
         const con = cons[j]

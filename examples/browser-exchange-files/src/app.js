@@ -1,14 +1,13 @@
 /* global location */
-'use strict'
 
-const IPFS = require('ipfs-core')
-const WS = require('libp2p-websockets')
-const filters = require('libp2p-websockets/src/filters')
-const transportKey = WS.prototype[Symbol.toStringTag]
+import { create } from 'ipfs-core'
+import { WebSockets } from '@libp2p/websockets'
+import * as filters from '@libp2p/websockets/filters'
 
-const all = require('it-all')
-const { concat: uint8ArrayConcat } = require('uint8arrays/concat')
-const { fromString: uint8ArrayFromString } = require('uint8arrays/from-string')
+import all from 'it-all'
+import { concat as uint8ArrayConcat } from 'uint8arrays/concat'
+import { fromString as uint8ArrayFromString } from 'uint8arrays/from-string'
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
 
 // Node
 const $nodeId = document.querySelector('.node-id')
@@ -51,7 +50,7 @@ let info
 
 async function start () {
   if (!node) {
-    node = await IPFS.create({
+    node = await create({
       repo: 'ipfs-' + Math.random(),
       config: {
         Addresses: {
@@ -66,16 +65,14 @@ async function start () {
         Bootstrap: []
       },
       libp2p: {
-        config: {
-          transport: {
-            // This is added for local demo!
-            // In a production environment the default filter should be used
-            // where only DNS + WSS addresses will be dialed by websockets in the browser.
-            [transportKey]: {
-              filter: filters.all
-            }
-          }
-        }
+        transports: [
+          // This is added for local demo!
+          // In a production environment the default filter should be used
+          // where only DNS + WSS addresses will be dialed by websockets in the browser.
+          new WebSockets({
+            filter: filters.all
+          })
+        ]
       }
     })
 
@@ -147,7 +144,7 @@ async function start () {
 
 const messageHandler = (message) => {
   const myNode = info.id.toString()
-  const hash = message.data.toString()
+  const hash = uint8ArrayToString(message.data)
   const messageSender = message.from
 
   // append new files when someone uploads them

@@ -1,10 +1,8 @@
-'use strict'
-
-const IPFS = require('ipfs')
-const os = require('os')
-const path = require('path')
-const { nanoid } = require('nanoid')
-const { node } = require('test-util-ipfs-example');
+import * as IPFS from 'ipfs'
+import os from 'os'
+import path from 'path'
+import { nanoid } from 'nanoid'
+import { node } from 'test-util-ipfs-example'
 
 async function startCliNode () {
   const repoDir = path.join(os.tmpdir(), `repo-${nanoid()}`)

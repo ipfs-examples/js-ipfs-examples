@@ -1,19 +1,21 @@
-'use strict'
+import createNode from './create-node.js'
+import path from 'path'
+import { CID } from 'multiformats/cid'
+import * as MultihashDigest from 'multiformats/hashes/digest'
+import fs from 'fs/promises'
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
+import { convert } from 'ipld-format-to-blockcodec'
+import crypto from 'crypto'
+import { fileURLToPath } from 'url'
+import ipldGit from 'ipld-git'
 
-const createNode = require('./create-node')
-const path = require('path')
-const { CID } = require('multiformats/cid')
-const MultihashDigest = require('multiformats/hashes/digest')
-const fs = require('fs').promises
-const { toString: uint8ArrayToString } = require('uint8arrays/to-string')
-const { convert } = require('ipld-format-to-blockcodec')
-const crypto = require('crypto')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 async function main () {
   const ipfs = await createNode({
     ipld: {
       codecs: [
-        convert(require('ipld-git'))
+        convert(ipldGit)
       ],
       hashers: [{
         name: 'sha1',

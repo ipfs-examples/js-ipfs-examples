@@ -62,7 +62,7 @@ const App = () => {
 
       contents += decoder.decode()
 
-      setId(id.id)
+      setId(id.id.toString())
       setVersion(id.agentVersion)
       setProtocolVersion(id.protocolVersion)
       setAddedFileHash(hash.toString())
