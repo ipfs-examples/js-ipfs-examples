@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "workspaces": [
-    "examples/*",
+    "examples/!(ipfs-client-add-files)",
     "lib/*"
   ],
   "scripts": {

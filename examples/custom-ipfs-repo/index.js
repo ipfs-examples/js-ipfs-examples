@@ -1,3 +1,5 @@
+import log from 'why-is-node-running'
+
 import { create } from 'ipfs-core'
 import { createRepo } from 'ipfs-repo'
 import { FSLock } from 'ipfs-repo/locks/fs'
@@ -84,6 +86,12 @@ async function main () {
     // to demonstrate custom repos
     config: {
       Bootstrap: []
+    },
+
+    libp2p: {
+      nat: {
+        enabled: false
+      }
     }
   })
 

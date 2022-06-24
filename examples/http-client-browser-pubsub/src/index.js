@@ -74,10 +74,15 @@ async function main () {
     log(`Subscribing to ${nextTopic}...`)
 
     await ipfs.pubsub.subscribe(nextTopic, msg => {
+      console.info('got message', msg)
       const from = msg.from
-      const seqno = uint8ArrayToString(msg.seqno, 'base16')
-      if (from === peerId) return log(`Ignoring message ${seqno} from self`)
-      log(`Message ${seqno} from ${from}:`)
+
+      if (peerId.equals(from)) {
+        return log(`Ignoring message ${msg.sequenceNumber} from self`)
+      }
+
+      log(`Message ${msg.sequenceNumber} from ${from}:`)
+
       try {
         log(JSON.stringify(uint8ArrayToString(msg.data), null, 2))
       } catch (_) {

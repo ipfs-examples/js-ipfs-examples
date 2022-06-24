@@ -21,7 +21,8 @@
     "ipfs-repo": "^14.0.1",
     "it-all": "^1.0.4",
     "multiformats": "^9.6.5",
-    "uint8arrays": "^3.0.0"
+    "uint8arrays": "^3.0.0",
+    "why-is-node-running": "^2.2.2"
   },
   "devDependencies": {
     "test-util-ipfs-example": "^1.0.2"

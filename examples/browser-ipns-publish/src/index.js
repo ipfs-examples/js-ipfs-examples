@@ -123,7 +123,7 @@ async function main() {
     pRetry(async () => {
       const res = await daemon.pubsub.peers(topic);
 
-      if (!res || !res.length || !res.includes(peerId)) {
+      if (!res || !res.length || !res.map(p => p.toString()).includes(peerId.toString())) {
         throw new Error("Could not find peer subscribing");
       }
     }, retryOptions);
@@ -134,12 +134,11 @@ async function main() {
       topic,
       (msg) => {
         const from = msg.from;
-        const seqno = uint8ArrayToString(msg.seqno, "hex");
 
         tLog(
           `${new Date(
             Date.now()
-          ).toLocaleTimeString()}\n Message ${seqno} from ${from}`
+          ).toLocaleTimeString()}\n Message ${msg.sequenceNumber} from ${from}`
         );
 
         let regex = "/record/";
@@ -217,8 +216,8 @@ async function main() {
     last(ipfsAPI.name.resolve(keys.id, { stream: false })); // save the pubsub topic to the server to make them listen
 
     // set up the topic from ipns key
-    const ipnsKeys = ipns.peerIdToRoutingKey(browserNode.id);
-    const topic = `${namespace}${uint8ArrayToString(ipnsKeys.routingKey.uint8Array(), 'base64url')}`;
+    const routingKey = ipns.peerIdToRoutingKey(browserNode.id);
+    const topic = `${namespace}${uint8ArrayToString(routingKey, 'base64url')}`;
 
     // subscribe and log on both nodes
     await subs(ipfsBrowser, topic, log); // browserLog
@@ -263,12 +262,15 @@ async function main() {
 
     log(`Try resolve ${keys.id} on server through API`);
 
-    let name = await last(
-      ipfsAPI.name.resolve(keys.id, {
-        stream: false,
-      })
-    );
-    log(`Resolved: ${name}`);
+    let name
+
+    for await (const res of ipfsAPI.name.resolve(keys.id, {
+      stream: false,
+    })) {
+      log(`Resolved: ${res}`);
+      name = res;
+    }
+
     if (name == content) {
       log(`<span class="green">IPNS Publish Success!</span>`);
       log(`<span class="green">Look at that! ${keys.id} resolves to ${content}</span>`);
