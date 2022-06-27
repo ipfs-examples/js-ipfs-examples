@@ -43,7 +43,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "node-polyfill-webpack-plugin": "^1.1.4",
+    "node-polyfill-webpack-plugin": "^2.0.0",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2",
