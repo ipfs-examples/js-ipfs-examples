@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    name: Test ${{ matrix.project }}
+    strategy:
+      matrix:
+        project:
+          - browser-add-readable-stream
+          - browser-angular
+          - browser-create-react-app
+          - browser-exchange-files
+          - browser-ipns-publish
+          - browser-lit
+          - browser-mfs
+          - browser-nextjs
+          - browser-readablestream
+          - browser-script-tag
+          - browser-service-worker
+          - browser-sharing-node-across-tabs
+          - browser-video-streaming
+          - browser-vite
+          - browser-vue
+          - browser-webpack
+          - circuit-relaying
+          - custom-ipfs-repo
+          - custom-ipld-formats
+          - custom-libp2p
+          - http-client-browser-pubsub
+          - http-client-bundle-webpack
+          - http-client-name-api
+          - http-client-upload-file
+          - ipfs-101
+          #- ipfs-client-add-files
+          - run-in-electron
+          - running-multiple-nodes
+          - traverse-ipld-graphs
+          - types-use-ipfs-from-ts
+          - types-use-ipfs-from-typed-js
+    defaults:
+      run:
+        working-directory: examples/${{ matrix.project }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+      - run: npm install
+      - uses: GabrielBB/xvfb-action@v1
+        name: Run tests
+        with:
+          run: npm test
+          working-directory: examples/${{ matrix.project }}
+
+  monorepo:
+    runs-on: ubuntu-latest
+    name: Test monorepo
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm install
+      - uses: GabrielBB/xvfb-action@v1
+        name: Run test:examples
+        with:
+          run: npm run test:examples
