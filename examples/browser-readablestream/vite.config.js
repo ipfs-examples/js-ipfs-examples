@@ -4,7 +4,6 @@ import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfil
 export default {
   build: {
     target: 'esnext',
-    minify: false,
     rollupOptions: {
       plugins: [inject({ Buffer: ['Buffer', 'Buffer'] })],
     }
