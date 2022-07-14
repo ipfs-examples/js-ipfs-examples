@@ -13,7 +13,7 @@ jobs:
         uses: ipfs-examples/actions-pull-directory-from-repo@main
         with:
           source-repo: "ipfs-examples/js-ipfs-examples"
-          source-folder-path: "examples/browser-parceljs"
+          source-folder-path: "examples/browser-esbuild"
           source-branch: "master"
           target-branch: "main"
           git-username: github-actions
