@@ -18,6 +18,7 @@
   "license": "MIT",
   "workspaces": [
     "examples/!(ipfs-client-add-files)",
+    "examples/!(browser-vue)",
     "lib/*"
   ],
   "scripts": {

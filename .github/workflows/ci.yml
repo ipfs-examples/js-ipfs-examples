@@ -27,7 +27,7 @@ jobs:
           - browser-sharing-node-across-tabs
           - browser-video-streaming
           - browser-vite
-          - browser-vue
+          #- browser-vue
           - browser-webpack
           - circuit-relaying
           - custom-ipfs-repo

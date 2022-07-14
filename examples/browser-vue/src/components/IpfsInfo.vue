@@ -1,12 +1,14 @@
 <template>
-  <h3>{{ status }}</h3>
-  <div v-if="online" class="ipfs-info">
-    <h3>
-      ID: <span id="ipfs-info-id">{{ id }}</span>
-    </h3>
-    <h3>
-      Agent version: <span id="ipfs-info-agent">{{ agentVersion }}</span>
-    </h3>
+  <div>
+    <h3>{{ status }}</h3>
+    <div v-if="online" class="ipfs-info">
+      <h3>
+        ID: <span id="ipfs-info-id">{{ id }}</span>
+      </h3>
+      <h3>
+        Agent version: <span id="ipfs-info-agent">{{ agentVersion }}</span>
+      </h3>
+    </div>
   </div>
 </template>
 
