@@ -1,7 +1,6 @@
 export default {
   build: {
-    target: 'esnext',
-    minify: false
+    target: 'esnext'
   },
   define: {
     'process.env.NODE_DEBUG': 'false',
