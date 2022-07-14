@@ -4,10 +4,10 @@
   </a>
 </p>
 
-<h3 align="center"><b>js-ipfs with vite</b></h3>
+<h3 align="center"><b>js-ipfs with esbuild</b></h3>
 
 <p align="center">
-  <b><i>Bundle js-ipfs with vite!</i></b>
+  <b><i>Bundle js-ipfs with esbuil!</i></b>
   <br />
   <br />
   <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
