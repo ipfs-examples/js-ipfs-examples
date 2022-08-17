@@ -17,7 +17,7 @@
     "@libp2p/bootstrap": "^2.0.0",
     "@libp2p/kad-dht": "^3.0.0",
     "@libp2p/mdns": "^2.0.0",
-    "@libp2p/mplex": "^3.0.0",
+    "@libp2p/mplex": "^5.0.0",
     "@libp2p/tcp": "^3.0.0",
     "ipfs-core": "^0.15.2",
     "libp2p": "^0.37.3",
