@@ -35,11 +35,15 @@ async function main () {
  * @returns {Promise<string>}
  */
 const readFile = async (ipfs, cid) => {
-    const decoder = new TextDecoder()
+  const decoder = new TextDecoder()
   let content = ''
+
   for await (const chunk of ipfs.cat(cid)) {
-    content += decoder.decode(chunk)
+    content += decoder.decode(chunk, {
+      stream: true
+    })
   }
+
   return content
 }
 

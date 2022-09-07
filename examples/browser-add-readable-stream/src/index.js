@@ -162,7 +162,6 @@ const main = async () => {
       const decoder = new TextDecoder()
       let content = ''
 
-
       for await (const chunk of ipfs.cat(file.cid)) {
         content += decoder.decode(chunk, {
           stream: true

@@ -47,10 +47,13 @@ const App = () => {
   }
 
   const cat = async (cid) => {
-    const content = []
+    const decoder = new TextDecoder()
+    let content = ''
 
-    for await (const chunk of ipfs.cat(cid)) {
-      content.push(chunk)
+    for await (const chunk of ipfs.cat(file.cid)) {
+      content += decoder.decode(chunk, {
+        stream: true
+      })
     }
 
     return content
