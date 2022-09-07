@@ -13,8 +13,8 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "@libp2p/websockets": "^1.0.8",
-    "ipfs-core": "^0.15.2",
+    "@libp2p/websockets": "^3.0.3",
+    "ipfs-core": "^0.16.0",
     "it-all": "^1.0.4",
     "uint8arrays": "^3.0.0"
   },
@@ -22,9 +22,9 @@
     "@babel/core": "^7.14.8",
     "@libp2p/webrtc-star-signalling-server": "^2.0.1",
     "@playwright/test": "^1.12.3",
-    "ipfs": "^0.63.3",
-    "ipfs-core-types": "^0.11.0",
-    "ipfs-http-client": "^57.0.1",
+    "ipfs": "^0.64.0",
+    "ipfs-core-types": "^0.12.0",
+    "ipfs-http-client": "^58.0.0",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
     "rimraf": "^3.0.2",

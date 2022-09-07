@@ -159,13 +159,17 @@ const main = async () => {
     DOM.content.innerHTML = '';
 
     for await (const file of fileList) {
-      const content = [];
+      const decoder = new TextDecoder()
+      let content = ''
+
 
       for await (const chunk of ipfs.cat(file.cid)) {
-        content.push(chunk)
+        content += decoder.decode(chunk, {
+          stream: true
+        })
       }
 
-      showStatus(`\u2514\u2500 ${file.name} ${file.path} ${content.toString()}`)
+      showStatus(`\u2514\u2500 ${file.name} ${file.path} ${content}`)
       showStatus(`Preview: https://ipfs.io/ipfs/${file.path}`, COLORS.success)
       addFileDOM(file.name, content, DOM.content, false)
     }
