@@ -14,10 +14,10 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "ipfs": "^0.63.3"
+    "ipfs": "^0.64.0"
   },
   "devDependencies": {
-    "nanoid": "^3.1.23",
+    "nanoid": "^4.0.0",
     "test-util-ipfs-example": "^1.0.2"
   }
 }

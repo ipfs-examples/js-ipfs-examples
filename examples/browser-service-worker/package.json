@@ -17,10 +17,10 @@
     "last 1 Chrome version"
   ],
   "dependencies": {
-    "ipfs-core": "^0.15.2",
-    "ipfs-message-port-client": "^0.12.2",
-    "ipfs-message-port-protocol": "^0.12.0",
-    "ipfs-message-port-server": "^0.12.0"
+    "ipfs-core": "^0.16.0",
+    "ipfs-message-port-client": "^0.13.0",
+    "ipfs-message-port-protocol": "^0.13.0",
+    "ipfs-message-port-server": "^0.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
