@@ -94,7 +94,7 @@ play.describe('http client pubsub:', () => {
       console.info(m._peerId.agentVersion)
       return m._peerId.agentVersion.includes("js-ipfs")
     })
-    const goDaemon = daemons.find(m => m._peerId.agentVersion.includes("go-ipfs"))
+    const goDaemon = daemons.find(m => m._peerId.agentVersion.includes("kubo"))
 
     const goAddress = goDaemon.apiAddr.toString();
     const jsAddress = jsDaemon.apiAddr.toString()

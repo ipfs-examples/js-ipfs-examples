@@ -15,9 +15,9 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-core": "^0.15.2",
-    "ipfs-message-port-client": "^0.12.2",
-    "ipfs-message-port-server": "^0.12.0"
+    "ipfs-core": "^0.16.0",
+    "ipfs-message-port-client": "^0.13.0",
+    "ipfs-message-port-server": "^0.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
@@ -27,6 +27,6 @@
     "rimraf": "^3.0.2",
     "test-util-ipfs-example": "^1.0.2",
     "util": "^0.12.4",
-    "vite": "^3.0.0-beta.1"
+    "vite": "^3.1.0"
   }
 }

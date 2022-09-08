@@ -13,14 +13,14 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "@chainsafe/libp2p-noise": "^7.0.0",
+    "@chainsafe/libp2p-noise": "^8.0.1",
     "@libp2p/bootstrap": "^2.0.0",
-    "@libp2p/kad-dht": "^3.0.0",
-    "@libp2p/mdns": "^2.0.0",
-    "@libp2p/mplex": "^3.0.0",
-    "@libp2p/tcp": "^3.0.0",
-    "ipfs-core": "^0.15.2",
-    "libp2p": "^0.37.3",
+    "@libp2p/kad-dht": "^3.0.4",
+    "@libp2p/mdns": "^3.0.0",
+    "@libp2p/mplex": "^5.2.0",
+    "@libp2p/tcp": "^3.0.6",
+    "ipfs-core": "^0.16.0",
+    "libp2p": "^0.39.0",
     "uint8arrays": "^3.0.0"
   },
   "devDependencies": {

@@ -58,13 +58,16 @@ function App() {
     showStatus(`Added to ${file.cid}`, COLORS.success, file.cid)
     showStatus('Reading file...', COLORS.active)
 
-    const text = []
+    const decoder = new TextDecoder()
+    let text = ''
 
     for await (const chunk of node.cat(file.cid)) {
-      text.push(chunk)
+      text += decoder.decode(chunk, {
+        stream: true
+      })
     }
 
-    showStatus(`\u2514\u2500 ${file.path} ${text.toString()}`)
+    showStatus(`\u2514\u2500 ${file.path} ${text}`)
     showStatus(`Preview: https://ipfs.io/ipfs/${file.cid}`, COLORS.success)
   }
 

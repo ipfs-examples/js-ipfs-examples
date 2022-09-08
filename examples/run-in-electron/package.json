@@ -18,10 +18,10 @@
     "test": "node test.mjs"
   },
   "dependencies": {
-    "ipfs-core": "^0.15.2"
+    "ipfs-core": "^0.16.0"
   },
   "devDependencies": {
-    "electron": "^17.0.0",
+    "electron": "^20.1.1",
     "electron-rebuild": "^3.1.1",
     "test-util-ipfs-example": "^1.0.2"
   },

@@ -164,12 +164,16 @@ async function main() {
 
   console.log("Added file:", fileAdded.path, fileAdded.cid);
 
-  const chunks = [];
+  const decoder = new TextDecoder()
+  let text = ''
+
   for await (const chunk of node.cat(fileAdded.cid)) {
-    chunks.push(chunk);
+    text += decoder.decode(chunk, {
+      stream: true
+    })
   }
 
-  console.log("Added file contents:", uint8ArrayConcat(chunks).toString());
+  console.log("Added file contents:", text);
 }
 
 main();
