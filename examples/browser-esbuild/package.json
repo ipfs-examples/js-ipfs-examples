@@ -15,12 +15,12 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-core": "^0.15.2"
+    "ipfs-core": "^0.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
-    "esbuild": "^0.14.49",
+    "esbuild": "^0.15.7",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
     "rimraf": "^3.0.2",
