@@ -16,6 +16,7 @@ jobs:
           - browser-add-readable-stream
           - browser-angular
           - browser-create-react-app
+          - browser-esbuild
           - browser-exchange-files
           - browser-ipns-publish
           - browser-lit

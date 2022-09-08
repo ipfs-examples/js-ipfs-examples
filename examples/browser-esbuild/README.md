@@ -4,10 +4,10 @@
   </a>
 </p>
 
-<h3 align="center"><b>js-ipfs with vite</b></h3>
+<h3 align="center"><b>js-ipfs with esbuild</b></h3>
 
 <p align="center">
-  <b><i>Bundle js-ipfs with vite!</i></b>
+  <b><i>Bundle js-ipfs with esbuil!</i></b>
   <br />
   <br />
   <img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
@@ -65,7 +65,7 @@ Now open your browser at `http://localhost:8888`
 
 ## Usage
 
-In this example, you will find a boilerplate you can use to guide yourself into bundling js-ipfs with [browserify](http://browserify.org/), so that you can use it in your own web app!
+In this example, you will find a boilerplate you can use to guide yourself into bundling js-ipfs with [esbuild](https://esbuild.github.io/), so that you can use it in your own web app!
 
 You should see the following:
 

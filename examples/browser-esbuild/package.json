@@ -1,0 +1,30 @@
+{
+  "name": "example-browser-esbuild",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bundle js-ipfs with esbuild",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "mkdir -p dist && cp src/index.html src/style.css src/ipfs-logo.svg dist && node esbuild.js",
+    "start": "npm run build && esbuild --servedir=dist",
+    "test": "npm run build && playwright test tests"
+  },
+  "browserslist": "last 1 Chrome version",
+  "dependencies": {
+    "ipfs-core": "^0.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@playwright/test": "^1.12.3",
+    "esbuild": "^0.15.7",
+    "playwright": "^1.12.3",
+    "process": "^0.11.10",
+    "rimraf": "^3.0.2",
+    "test-util-ipfs-example": "^1.0.2",
+    "util": "^0.12.4"
+  }
+}
