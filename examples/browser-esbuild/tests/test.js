@@ -6,7 +6,7 @@ const play = test.extend({
   ...playwright.servers(),
 });
 
-play.describe('bundle ipfs with parceljs:', () => {
+play.describe('bundle ipfs with esbuild:', () => {
   // DOM
   const nameInput = "#file-name"
   const contentInput = "#file-content"
