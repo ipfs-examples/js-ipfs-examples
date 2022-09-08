@@ -44,7 +44,7 @@ const play = test.extend({
   )
 });
 
-test.setTimeout(1000 * 60 * 2);
+test.setTimeout(1000 * 60 * 10);
 
 play.describe('upload file using http client: ', () => {
   // DOM
