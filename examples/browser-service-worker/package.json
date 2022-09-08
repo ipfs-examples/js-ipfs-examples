@@ -30,7 +30,7 @@
     "copy-webpack-plugin": "^10.0.0",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
-    "node-polyfill-webpack-plugin": "^1.0.4",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "playwright": "^1.12.3",
     "rimraf": "^3.0.2",
     "stream-browserify": "^3.0.0",
