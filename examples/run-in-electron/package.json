@@ -10,7 +10,7 @@
   ],
   "license": "MIT",
   "author": "David Dias <daviddias@ipfs.io>",
-  "main": "main.cjs",
+  "main": "main.js",
   "scripts": {
     "clean": "echo 'Nothing to clean...'",
     "start": "electron .",
