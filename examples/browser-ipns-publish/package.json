@@ -25,7 +25,7 @@
   "dependencies": {
     "@libp2p/websockets": "^3.0.3",
     "ipfs-core": "^0.16.0",
-    "ipfs-http-client": "^58.0.0",
+    "kubo-rpc-client": "^1.0.1",
     "ipfs-utils": "^9.0.6",
     "ipns": "^2.0.3",
     "it-last": "^1.0.4",

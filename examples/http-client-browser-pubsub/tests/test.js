@@ -2,6 +2,7 @@ import { test } from '@playwright/test';
 import { playwright } from 'test-util-ipfs-example'
 import * as ipfsModule from 'ipfs'
 import * as ipfsHttpModule from 'ipfs-http-client'
+import * as kuboRpcModule from 'kubo-rpc-client'
 import * as goIpfsModule from 'go-ipfs'
 
 // Setup
@@ -9,14 +10,15 @@ const play = test.extend({
   ...playwright.servers(),
   ...playwright.daemons(
     {
-      ipfsHttpModule,
     },
     {
       js: {
+        ipfsHttpModule,
         ipfsBin: ipfsModule.path()
       },
       go: {
         ipfsBin: goIpfsModule.path(),
+        kuboRpcModule,
         args: ['--enable-pubsub-experiment']
       }
     },
