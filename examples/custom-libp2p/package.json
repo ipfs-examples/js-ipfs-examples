@@ -15,7 +15,7 @@
   "dependencies": {
     "@chainsafe/libp2p-noise": "^8.0.1",
     "@libp2p/bootstrap": "^2.0.0",
-    "@libp2p/kad-dht": "^3.0.4",
+    "@libp2p/kad-dht": "^4.0.0",
     "@libp2p/mdns": "^3.0.0",
     "@libp2p/mplex": "^5.2.0",
     "@libp2p/tcp": "^3.0.6",
