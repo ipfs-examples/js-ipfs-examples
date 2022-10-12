@@ -24,7 +24,7 @@
     "@babel/core": "^7.14.8",
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
     "@playwright/test": "^1.12.3",
-    "@rollup/plugin-inject": "^4.0.4",
+    "@rollup/plugin-inject": "^5.0.0",
     "events": "^3.3.0",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
