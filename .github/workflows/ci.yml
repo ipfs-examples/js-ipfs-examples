@@ -59,12 +59,19 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-      - run: npm install && npx -y playwright install-deps
-      - uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d # https://github.com/GabrielBB/xvfb-action/releases/tag/v1.6
-        name: Run tests
-        with:
-          run: npm test
-          working-directory: examples/${{ matrix.project }}
+      - name: Install dependencies
+        run: npm install
+      - name: Install Playwright
+        run: npx -y playwright install --with-deps
+      - name: Run tests
+        run: npm run test
+        env:
+          CI: true
+      # - uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d # https://github.com/GabrielBB/xvfb-action/releases/tag/v1.6
+      #   name: Run tests
+      #   with:
+      #     run: npm test
+      #     working-directory: examples/${{ matrix.project }}
 
   monorepo:
     runs-on: ubuntu-latest
@@ -75,8 +82,14 @@ jobs:
         with:
           node-version: lts/*
       - name: Install dependencies
-        run: npm install && npx -y playwright install-deps
-      - uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d # https://github.com/GabrielBB/xvfb-action/releases/tag/v1.6
-        name: Run test:examples
-        with:
-          run: npm run test:examples
+        run: npm install
+      - name: Install Playwright
+        run: npx -y playwright install --with-deps
+      - name:  Run test:examples
+        run: npm run test:examples
+        env:
+          CI: true
+      # - uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d # https://github.com/GabrielBB/xvfb-action/releases/tag/v1.6
+      #   name: Run test:examples
+      #   with:
+      #     run: npm run test:examples
