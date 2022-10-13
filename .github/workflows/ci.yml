@@ -54,7 +54,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: lts/*
-      - run: npm install && && npx -y playwright install-deps
+      - run: npm install && npx -y playwright install-deps
       - uses: GabrielBB/xvfb-action@v1
         name: Run tests
         with:
