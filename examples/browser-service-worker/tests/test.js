@@ -12,11 +12,13 @@ play.describe('browser service worker:', () => {
   const textDOM = "body"
   const debugDOM = "#debug"
 
-  play.beforeEach(async ({servers, page}) => {
-    await page.goto(`http://localhost:${servers[0].port}/`);
-  })
+  // play.beforeEach(async ({servers, page}) => {
+  //   await page.goto(`http://localhost:${servers[0].port}/`);
+  // })
 
-  play('should properly load the content of an IPFS hash', async ({ page }) => {
+  play('should properly load the content of an IPFS hash', async ({ servers, page }) => {
+    const currentURL = `http://localhost:${servers[0].port}/`
+    await page.goto(currentURL);
     await page.waitForSelector(textDOM)
     await page.waitForSelector(linkDOM)
 
@@ -27,7 +29,7 @@ play.describe('browser service worker:', () => {
       state: 'attached'
     })
 
-    const currentURL = await page.url();
+    // const currentURL = await page.url();
     await page.goto(`${currentURL}ipfs/Qmf412jQZiuVUtdgnB36FXFX7xg5V6KEbSJ4dpQuhkLyfD`);
     await page.waitForSelector(textDOM)
 
