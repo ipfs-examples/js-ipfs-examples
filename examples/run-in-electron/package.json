@@ -18,13 +18,13 @@
     "test": "xvfb-maybe node test.mjs"
   },
   "dependencies": {
-    "ipfs-core": "^0.16.0",
-    "xvfb-maybe": "^0.2.1"
+    "ipfs-core": "^0.16.0"
   },
   "devDependencies": {
     "electron": "^20.1.1",
     "electron-rebuild": "^3.1.1",
-    "test-util-ipfs-example": "^1.0.2"
+    "test-util-ipfs-example": "^1.0.2",
+    "xvfb-maybe": "^0.2.1"
   },
   "greenkeeper": {
     "ignore": [
