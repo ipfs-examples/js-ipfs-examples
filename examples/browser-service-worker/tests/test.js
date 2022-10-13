@@ -6,6 +6,8 @@ const play = test.extend({
   ...playwright.servers(),
 });
 
+play.setTimeout(60 * 1000)
+
 play.describe('browser service worker:', () => {
   // DOM
   const linkDOM = "a"
