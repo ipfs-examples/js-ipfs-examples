@@ -15,10 +15,11 @@
     "clean": "echo 'Nothing to clean...'",
     "start": "electron .",
     "serve": "npm run start",
-    "test": "node test.mjs"
+    "test": "xvfb-maybe node test.mjs"
   },
   "dependencies": {
-    "ipfs-core": "^0.16.0"
+    "ipfs-core": "^0.16.0",
+    "xvfb-maybe": "^0.2.1"
   },
   "devDependencies": {
     "electron": "^20.1.1",
