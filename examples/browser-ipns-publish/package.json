@@ -29,7 +29,7 @@
     "ipfs-utils": "^9.0.6",
     "ipns": "^2.0.3",
     "it-last": "^1.0.4",
-    "multiformats": "^9.6.5",
+    "multiformats": "^10.0.0",
     "p-retry": "^5.1.1",
     "uint8arrays": "^3.0.0"
   },
