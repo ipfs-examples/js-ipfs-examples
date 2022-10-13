@@ -1,8 +1,9 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
-    branches: [master]
+    branches: [master, test-pr-workflows]
   pull_request:
     branches: [master]
 
@@ -53,7 +54,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: lts/*
-      - run: npm install
+      - run: npm install && && npx -y playwright install-deps
       - uses: GabrielBB/xvfb-action@v1
         name: Run tests
         with:
@@ -69,7 +70,7 @@ jobs:
         with:
           node-version: lts/*
       - name: Install dependencies
-        run: npm install
+        run: npm install && npx -y playwright install-deps
       - uses: GabrielBB/xvfb-action@v1
         name: Run test:examples
         with:
