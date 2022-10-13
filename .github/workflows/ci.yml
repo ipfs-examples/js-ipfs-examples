@@ -67,11 +67,6 @@ jobs:
         run: npm run test
         env:
           CI: true
-      # - uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d # https://github.com/GabrielBB/xvfb-action/releases/tag/v1.6
-      #   name: Run tests
-      #   with:
-      #     run: npm test
-      #     working-directory: examples/${{ matrix.project }}
 
   monorepo:
     runs-on: ubuntu-latest
@@ -89,7 +84,3 @@ jobs:
         run: npm run test:examples
         env:
           CI: true
-      # - uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d # https://github.com/GabrielBB/xvfb-action/releases/tag/v1.6
-      #   name: Run test:examples
-      #   with:
-      #     run: npm run test:examples
