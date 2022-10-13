@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test ${{ matrix.project }}
     strategy:
+      fail-fast: false
       matrix:
         project:
           - browser-add-readable-stream
