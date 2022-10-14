@@ -3,7 +3,7 @@ name: CI
 on:
   workflow_dispatch:
   push:
-    branches: [master, test-pr-workflows]
+    branches: [master]
   pull_request:
     branches: [master]
 
