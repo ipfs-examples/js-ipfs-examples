@@ -4,19 +4,13 @@ import { playwright } from 'test-util-ipfs-example';
 
 // Setup
 const play = test.extend({
-  ...playwright.servers([], true),
+  ...playwright.servers(),
 });
-
-/**
- * attempt to prevent net::ERR_ABORTED error
- */
-play.setTimeout(120 * 1000)
 
 play.describe('browser service worker:', () => {
   // DOM
   const linkDOM = "a"
   const textDOM = "body"
-  const debugDOM = "#debug"
 
   play.beforeEach(async ({servers, page}) => {
     await page.goto(`http://localhost:${servers[0].port}/`);
@@ -27,12 +21,15 @@ play.describe('browser service worker:', () => {
     page.on("pageerror", (err) => {
       console.trace(`pageerror: ${err.message}`)
     })
-    // await page.waitForSelector(textDOM)
-    // await page.waitForSelector(linkDOM)
 
     expect(await page.textContent(textDOM)).toContain("Load content by adding IPFS path to the URL")
     expect(await page.textContent(linkDOM)).toContain("/ipfs/bafy")
 
+    /**
+     * Request /view path directly, as this is still handled by the service worker but doesn't break tests in github CI.
+     * @see https://github.com/ipfs-examples/js-ipfs-examples/blob/master/examples/browser-service-worker/src/service.js#L48-L52
+     * @see https://github.com/ipfs-examples/js-ipfs-examples/pull/527
+     */
     const ipfsRequestUrl = `http://localhost:${servers[0].port}/view/ipfs/Qmf412jQZiuVUtdgnB36FXFX7xg5V6KEbSJ4dpQuhkLyfD`
 
     /**
@@ -52,76 +49,19 @@ play.describe('browser service worker:', () => {
         })
       }));
     });
-    // await page.waitForSelector(`${debugDOM}:has-text("SW is ready")`, {
-    //   state: 'attached'
-    // })
 
-    context.on('request', (request) => {
-      console.log(`request.url(): ${request.url()}`)
-    })
-    context.on('requestfailed', (request) => {
-      console.log(`context.requestfailed: ${request.url()}`)
-      console.log(`context.requestfailed request?.failure()?.errorText: `, request?.failure()?.errorText);
-    })
-    page.on('requestfailed', (request) => {
-      console.log(`page.requestfailed: ${request.url()}`)
-      console.log(`page.requestfailed request?.failure()?.errorText: `, request?.failure()?.errorText);
-    })
-    const serviceWorkerResponsePromise = new Promise((resolve, reject) => {
+    const serviceWorkerResponsePromise = new Promise((resolve) => {
       context.on('response', async (response) => {
-        console.log(`context.response response.url(): ${response.url()}`)
         if (response.url() === ipfsRequestUrl && response.fromServiceWorker()) {
           resolve(response);
         }
       })
     })
 
-    // const currentURL = await page.url();
     await page.goto(ipfsRequestUrl, {waitUntil: 'commit'});
     const serviceWorkerResponse = await serviceWorkerResponsePromise
-    page.on('request', async (request) => {
-      try {
-        console.log(`page.request request.url(): ${request.url()}`)
-        console.log(`page.request (await request.response())?.status(): ${(await request.response())?.status()}`)
-        console.log(`page.request await (await request.response())?.text(): ${await (await request.response())?.text()}`)
-        console.log(`request.serviceWorker(): `, request.serviceWorker());
-      } catch {}
-    });
 
     expect(await serviceWorkerResponse.status()).toBe(200)
     expect(await serviceWorkerResponse.text()).toContain("hello world")
-    // await page.waitForSelector('#viewer', {state: 'visible'})
-
-    // const frameText2 = page.frameLocator('#viewer').locator(textDOM)
-    // // await frameText2.waitFor({state: 'visible'})
-
-    // // loop over all of the frames and log their content
-    // const frames = await page.frames();
-    // for (const frame of frames) {
-    //   console.log('page.frames textContent: ', await frame.textContent(textDOM));
-    //   console.log('page.frames innerText: ', await frame.innerText(textDOM));
-    // }
-
-    // expect(await frameText2.textContent()).toContain("hello world")
-
-    // const elementFrame = await page.waitForSelector("iframe")
-    // /**
-    //  * @type {import('playwright').Frame}
-    //  */
-    // // @ts-ignore
-    // const frame = await elementFrame.contentFrame()
-    // if (frame == null) {
-    //   throw new Error('frame is null')
-    // }
-    // const frameText = await frame.textContent(textDOM)
-
-    // expect(frameText).toContain("hello world")
   });
-
-  play.afterAll(async ({servers}) => {
-    // now stop all servers
-    for (const server of servers) {
-      await server.stop()
-    }
-  })
 });
