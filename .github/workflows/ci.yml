@@ -1,16 +1,22 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
     branches: [master]
   pull_request:
     branches: [master]
+
+concurrency:
+  group: ${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
 
 jobs:
   examples:
     runs-on: ubuntu-latest
     name: Test ${{ matrix.project }}
     strategy:
+      fail-fast: false
       matrix:
         project:
           - browser-add-readable-stream
@@ -49,28 +55,32 @@ jobs:
       run:
         working-directory: examples/${{ matrix.project }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-      - run: npm install
-      - uses: GabrielBB/xvfb-action@v1
-        name: Run tests
-        with:
-          run: npm test
-          working-directory: examples/${{ matrix.project }}
+      - name: Install dependencies
+        run: npm install
+      - name: Install Playwright
+        run: npx -y playwright install --with-deps
+      - name: Run tests
+        run: npm run test
+        env:
+          CI: true
 
   monorepo:
     runs-on: ubuntu-latest
     name: Test monorepo
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: lts/*
       - name: Install dependencies
         run: npm install
-      - uses: GabrielBB/xvfb-action@v1
-        name: Run test:examples
-        with:
-          run: npm run test:examples
+      - name: Install Playwright
+        run: npx -y playwright install --with-deps
+      - name:  Run test:examples
+        run: npm run test:examples
+        env:
+          CI: true
