@@ -15,7 +15,7 @@
   "dependencies": {
     "@libp2p/websockets": "^3.0.3",
     "ipfs-core": "^0.16.0",
-    "it-all": "^1.0.4",
+    "it-all": "^2.0.0",
     "uint8arrays": "^3.0.0"
   },
   "devDependencies": {

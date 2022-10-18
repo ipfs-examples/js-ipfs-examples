@@ -19,7 +19,7 @@
     "datastore-fs": "^8.0.0",
     "ipfs-core": "^0.16.0",
     "ipfs-repo": "^15.0.2",
-    "it-all": "^1.0.4",
+    "it-all": "^2.0.0",
     "multiformats": "^9.6.5",
     "uint8arrays": "^3.0.0",
     "why-is-node-running": "^2.2.2"
