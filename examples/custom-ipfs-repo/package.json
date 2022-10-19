@@ -15,7 +15,7 @@
   "dependencies": {
     "@ipld/dag-cbor": "^7.0.0",
     "@ipld/dag-pb": "^2.1.3",
-    "blockstore-datastore-adapter": "^3.0.1",
+    "blockstore-datastore-adapter": "^4.0.0",
     "datastore-fs": "^8.0.0",
     "ipfs-core": "^0.16.0",
     "ipfs-repo": "^15.0.2",
