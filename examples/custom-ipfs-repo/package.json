@@ -20,7 +20,7 @@
     "ipfs-core": "^0.16.0",
     "ipfs-repo": "^15.0.2",
     "it-all": "^1.0.4",
-    "multiformats": "^9.6.5",
+    "multiformats": "^10.0.2",
     "uint8arrays": "^3.0.0",
     "why-is-node-running": "^2.2.2"
   },
