@@ -13,7 +13,7 @@
   "dependencies": {
     "dag-jose": "^2.0.1",
     "ipfs-core": "^0.16.0",
-    "ipfs-daemon": "^0.14.0",
+    "ipfs-daemon": "^0.15.0",
     "ipfs-http-client": "^58.0.0",
     "multiformats": "^9.6.5",
     "uint8arrays": "^3.0.0"
