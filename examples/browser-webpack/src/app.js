@@ -38,7 +38,7 @@ function App() {
 
       node = await create({
         repo: String(Math.random() + Date.now()),
-        init: { alogorithm: 'ed25519' }
+        init: { algorithm: 'Ed25519' }
       })
 
       setIpfs(node)
