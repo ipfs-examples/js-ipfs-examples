@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test'
 import { playwright } from 'test-util-ipfs-example'
 import * as goIpfsModule from 'go-ipfs'
-import * as ipfsHttpModule from 'ipfs-http-client'
+import * as kuboRpcModule from 'kubo-rpc-client'
 
 // Setup
 const play = test.extend({
   ...playwright.servers(),
   ...playwright.daemons(
     {
-      ipfsHttpModule,
+      kuboRpcModule,
       ipfsBin: goIpfsModule.path(),
       args: [
         "--enable-pubsub-experiment",
