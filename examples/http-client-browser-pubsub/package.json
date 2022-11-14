@@ -22,7 +22,7 @@
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
     "go-ipfs": "^0.15.0",
-    "ipfs": "^0.64.0",
+    "ipfs": "^0.65.0",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
     "rimraf": "^3.0.2",
