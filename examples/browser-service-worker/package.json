@@ -17,7 +17,7 @@
     "last 1 Chrome version"
   ],
   "dependencies": {
-    "ipfs-core": "^0.16.0",
+    "ipfs-core": "^0.17.0",
     "ipfs-message-port-client": "^0.13.0",
     "ipfs-message-port-protocol": "^0.13.0",
     "ipfs-message-port-server": "^0.13.0"

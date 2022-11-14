@@ -18,7 +18,7 @@
     "test": "xvfb-maybe node test.mjs"
   },
   "dependencies": {
-    "ipfs-core": "^0.16.0"
+    "ipfs-core": "^0.17.0"
   },
   "devDependencies": {
     "electron": "^20.1.1",
