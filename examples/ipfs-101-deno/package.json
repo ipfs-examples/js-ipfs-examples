@@ -1,0 +1,21 @@
+{
+  "name": "example-ipfs-101-deno",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Using ipfs with deno",
+  "license": "MIT",
+  "scripts": {
+    "clean": "echo 'Nothing to clean...'",
+    "start": "deno run --allow-read=node_modules --unstable --allow-env index.ts",
+    "serve": "npm run start",
+    "test:example": "node tests/test.js"
+  },
+  "devDependencies": {
+    "test-util-ipfs-example": "^1.0.2"
+  },
+  "dependencies": {
+    "ipfs": "^0.56.0",
+    "it-all": "^1.0.4",
+    "uint8arrays": "^2.1.6"
+  }
+}
