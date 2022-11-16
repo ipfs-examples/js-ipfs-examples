@@ -13,7 +13,7 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "@chainsafe/libp2p-noise": "^8.0.1",
+    "@chainsafe/libp2p-noise": "^10.1.0",
     "@libp2p/bootstrap": "^2.0.0",
     "@libp2p/kad-dht": "^3.0.4",
     "@libp2p/mdns": "^3.0.0",
