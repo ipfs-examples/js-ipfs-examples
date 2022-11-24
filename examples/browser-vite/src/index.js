@@ -65,7 +65,7 @@ const App = () => {
 
       ipfs = await create({
         repo: String(Math.random() + Date.now()),
-        init: { alogorithm: 'ed25519' }
+        init: { algorithm: 'Ed25519' }
       })
     }
 
