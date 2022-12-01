@@ -27,7 +27,7 @@
     "@babel/core": "^7.14.8",
     "@playwright/test": "^1.12.3",
     "events": "^3.3.0",
-    "fs-extra": "^10.0.0",
+    "fs-extra": "^11.1.0",
     "ipfs-http-client": "^58.0.0",
     "playwright": "^1.12.3",
     "process": "^0.11.10",
