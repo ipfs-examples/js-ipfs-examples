@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "execa": "^6.0.0",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.1.0",
     "ipfsd-ctl": "^12.0.2",
     "polka": "^0.5.2",
     "sirv": "^2.0.2",
