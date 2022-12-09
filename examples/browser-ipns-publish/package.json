@@ -23,7 +23,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "@libp2p/websockets": "^3.0.3",
+    "@libp2p/websockets": "^5.0.1",
     "ipfs-core": "^0.16.0",
     "kubo-rpc-client": "^1.0.1",
     "ipfs-utils": "^9.0.6",
