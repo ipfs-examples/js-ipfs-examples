@@ -18,7 +18,7 @@
     "@angular/compiler": "^13.2.0",
     "@angular/core": "^13.2.0",
     "@angular/forms": "^13.2.0",
-    "@angular/platform-browser": "^13.2.0",
+    "@angular/platform-browser": "^15.0.4",
     "@angular/platform-browser-dynamic": "^13.2.0",
     "@angular/router": "^13.2.0",
     "@libp2p/interface-peer-id": "^1.0.2",
