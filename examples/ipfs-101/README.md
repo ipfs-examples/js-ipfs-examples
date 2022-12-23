@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h3 align="center"><b>Tutorial 101</b></h3>
+<h3 align="center"><b>Tutorial 101 (CJS version)</b></h3>
 
 <p align="center">
   <b><i>Demo of "Using go-ipfs as a library" with js-ipfs</i></b>
@@ -25,181 +25,16 @@
 
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation and Running example](#installation-and-running-example)
-- [Usage](#usage)
-  - [Code analysis](#code-analysis)
-- [References](#references)
-- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
 
 ## About The Project
 
-- Read the [docs](https://github.com/ipfs/js-ipfs/tree/master/docs)
-- Look into other [examples](https://github.com/ipfs-examples/js-ipfs-examples) to learn how to spawn an IPFS node in Node.js and in the Browser
-- Consult the [Core API docs](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api) to see what you can do with an IPFS node
-- Visit https://dweb-primer.ipfs.io to learn about IPFS and the concepts that underpin it
-- Head over to https://proto.school to take interactive tutorials that cover core IPFS APIs
-- Check out https://docs.ipfs.io for tips, how-tos and more
-- See https://blog.ipfs.io for news and more
-- Need help? Please ask 'How do I?' questions on https://discuss.ipfs.io
+`js-ipfs@0.63` switched from [CJS](https://en.wikipedia.org/wiki/CommonJS) to [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) which means you can no longer `require` IPFS, you have to use `import` instead - please see the [upgrade guide](https://github.com/ipfs/js-ipfs/blob/master/docs/upgrading/v0.62-v0.63.md?rgh-link-date=2022-11-22T18%3A12%3A34Z#esm) for more information.
 
-## Getting Started
+If your project is ESM you are using `import` already, but if it's CJS (or TypeScript that compiles to CJS) you have to use the [dynamic import function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import).
 
-### Prerequisites
-
-Make sure you have installed all of the following prerequisites on your development machine:
-
-- Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
-- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
-
-### Installation and Running example
-
-```console
-> npm install
-> npm start
-```
-
-## Usage
-
-This tutorial is the sibling of the [go-ipfs "Using go-ipfs as a library" tutorial](https://github.com/ipfs/go-ipfs/tree/master/docs/examples/go-ipfs-as-a-library).
-
-In this tutorial, we go through spawning an IPFS node, adding a file and cat'ing the file multihash locally and through the gateway.
-
-You can find a complete version of this tutorial in [1.js](./1.js). For this tutorial, you need to install `ipfs` using `npm install ipfs`.
-
-### Code analysis
-
-Creating an IPFS instance can be done in one line, after requiring the module, you simply have to:
-
-```js
-import * as IPFS from 'ipfs-core';
-
-async function main() {
-  const node = await IPFS.create();
-  // ...
-}
-
-main();
-```
-
-As a test, we are going to check the version of the node.
-
-```js
-import * as IPFS from 'ipfs-core';
-
-async function main() {
-  const node = await IPFS.create();
-  const version = await node.version();
-
-  console.log("Version:", version.version);
-  // ...
-}
-
-main();
-```
-
-(If you prefer not to use `async`/`await`, you can instead use `.then()` as you would with any promise, or pass an [error-first callback](https://nodejs.org/api/errors.html#errors_error_first_callbacks), e.g. `node.version((err, version) => { ... })`)
-
-Running the code above gets you:
-
-```bash
-> node 1.js
-Version: 0.31.2
-```
-
-Now let's make it more interesting and add a file to IPFS using `node.add`. A file consists of a path and content.
-
-You can learn about the IPFS File API at [interface-ipfs-core](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md).
-
-```js
-import * as IPFS from 'ipfs-core';
-
-async function main() {
-  const node = await IPFS.create();
-  const version = await node.version();
-
-  console.log("Version:", version.version);
-
-  const fileAdded = await node.add({
-    path: "hello.txt",
-    content: "Hello World 101",
-  });
-
-  console.log("Added file:", fileAdded.path, fileAdded.cid);
-  // ...
-}
-
-main();
-```
-
-You can now go to an IPFS Gateway and load the printed hash from a gateway. Go ahead and try it!
-
-```bash
-> node 1.js
-Version: 0.31.2
-
-Added file: hello.txt QmXgZAUWd8yo4tvjBETqzUy3wLx5YRzuDwUQnBwRGrAmAo
-# Copy that hash and load it on the gateway, here is a prefiled url:
-# https://ipfs.io/ipfs/QmXgZAUWd8yo4tvjBETqzUy3wLx5YRzuDwUQnBwRGrAmAo
-```
-
-The last step of this tutorial is retrieving the file back using the `cat` 😺 call.
-
-```js
-import * as IPFS from 'ipfs-core';
-
-async function main() {
-  const node = await IPFS.create();
-  const version = await node.version();
-
-  console.log("Version:", version.version);
-
-  const fileAdded = await node.add({
-    path: "hello.txt",
-    content: "Hello World 101",
-  });
-
-  console.log("Added file:", fileAdded.path, fileAdded.cid);
-
-  const decoder = new TextDecoder()
-  let text = ''
-
-  for await (const chunk of node.cat(fileAdded.cid)) {
-    text += decoder.decode(chunk, {
-      stream: true
-    })
-  }
-
-  console.log("Added file contents:", text);
-}
-
-main();
-```
-
-That's it! You just added and retrieved a file from the Distributed Web!
-
-_For more examples, please refer to the [Documentation](#documentation)_
-
-## References
-
-- Documentation:
-  - [IPFS CONFIG](https://github.com/ipfs/js-ipfs/blob/master/docs/CONFIG.md)
-  - [MISCELLANEOUS](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/MISCELLANEOUS.md)
-  - [FILES](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md)
-- Tutorials:
-  - [MFS API](https://proto.school/mutable-file-system)
-  - [Regular File API](https://proto.school/regular-files-api)
-
-## Documentation
-
-- [Config](https://docs.ipfs.io/)
-- [Core API](https://github.com/ipfs/js-ipfs/tree/master/docs/core-api)
-- [Examples](https://github.com/ipfs-examples/js-ipfs-examples)
-- [Development](https://github.com/ipfs/js-ipfs/blob/master/docs/DEVELOPMENT.md)
-- [Tutorials](https://proto.school)
+This example is a copy of [ipfs-101](https://github.com/ipfs-examples/js-ipfs-101) that shows how to use the dynamic import function from a CJS runtime.
 
 ## Contributing
 
