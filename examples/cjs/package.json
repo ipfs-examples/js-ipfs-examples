@@ -1,0 +1,22 @@
+{
+  "name": "example-cjs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "this package.json needs to exist because of new npm config https://github.com/ipfs/js-ipfs/issues/977#issuecomment-326741092",
+  "license": "MIT",
+  "main": "1.js",
+  "scripts": {
+    "clean": "echo 'Nothing to clean...'",
+    "start": "node index.js",
+    "serve": "npm run start",
+    "test": "node tests/test.js"
+  },
+  "dependencies": {
+    "ipfs-core": "^0.16.0",
+    "it-all": "^1.0.4",
+    "uint8arrays": "^3.0.0"
+  },
+  "devDependencies": {
+    "test-util-ipfs-example": "^1.0.2"
+  }
+}

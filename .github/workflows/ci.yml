@@ -37,6 +37,7 @@ jobs:
           - browser-vue
           - browser-webpack
           - circuit-relaying
+          - cjs
           - custom-ipfs-repo
           - custom-ipld-formats
           - custom-libp2p
