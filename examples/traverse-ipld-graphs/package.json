@@ -14,7 +14,7 @@
     "test": "node tests/test.js"
   },
   "dependencies": {
-    "@ipld/dag-pb": "^2.1.3",
+    "@ipld/dag-pb": "^4.0.0",
     "ipfs-core": "^0.16.0",
     "ipld-ethereum": "^6.0.0",
     "ipld-format-to-blockcodec": "0.0.1",
