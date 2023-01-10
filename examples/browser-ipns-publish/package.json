@@ -27,7 +27,7 @@
     "ipfs-core": "^0.16.0",
     "kubo-rpc-client": "^1.0.1",
     "ipfs-utils": "^9.0.6",
-    "ipns": "^2.0.3",
+    "ipns": "^5.0.1",
     "it-last": "^1.0.4",
     "multiformats": "^9.6.5",
     "p-retry": "^5.1.1",
