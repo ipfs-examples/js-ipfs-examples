@@ -16,7 +16,7 @@
     "ipfs-daemon": "^0.14.0",
     "ipfs-http-client": "^58.0.0",
     "multiformats": "^9.6.5",
-    "uint8arrays": "^3.0.0"
+    "uint8arrays": "^4.0.3"
   },
   "devDependencies": {
     "test-util-ipfs-example": "^1.0.2"
