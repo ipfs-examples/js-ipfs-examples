@@ -15,7 +15,7 @@
   },
   "browserslist": "last 1 Chrome version",
   "dependencies": {
-    "ipfs-core": "^0.16.0",
+    "ipfs-core": "^0.18.0",
     "mime-sniffer": "~0.0.3"
   },
   "devDependencies": {
