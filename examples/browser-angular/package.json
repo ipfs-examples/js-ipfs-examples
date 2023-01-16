@@ -24,7 +24,7 @@
     "@libp2p/interface-peer-id": "^1.0.2",
     "global": "^4.4.0",
     "ipfs-core": "^0.16.0",
-    "ipfs-core-types": "^0.12.0",
+    "ipfs-core-types": "^0.14.0",
     "rxjs": "^7.5.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
